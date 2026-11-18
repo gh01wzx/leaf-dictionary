@@ -1,0 +1,12 @@
+Open Dictionary v2.0 / Leaf corrected data edition 1
+Source: https://github.com/ahpxex/open-dictionary/releases/tag/v2.0
+Upstream: English Wiktionary contributors, extracted with Wiktextract.
+License: Creative Commons Attribution-ShareAlike 4.0 International.
+https://creativecommons.org/licenses/by-sa/4.0/
+Changes by Leaf: structural validation, exact deduplication, presentation
+classification, original Chinese editorial additions, reviewed sense patches,
+spelling/form lookup repair. This derivative data is shared under CC BY-SA 4.0.
+Original generated notes and the immutable source archive are retained in the
+build inputs and audit records; unreviewed usage rules and memory hooks are not
+presented as verified dictionary guidance. Whole-corpus semantic correctness
+has not been established. No model or network is required for runtime lookup.

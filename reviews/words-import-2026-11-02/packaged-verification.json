@@ -1,0 +1,11 @@
+{
+  "app_version": "0.9.1",
+  "packaged_lookup_checks": 911,
+  "library_entries": 911,
+  "core_definitions_match": true,
+  "original_cards_unchanged": 137,
+  "reviews_preserved": 49,
+  "source_file_unchanged": true,
+  "automatic_collection_during_checks": false,
+  "backup_before_import": "user_data/backups/before-reviewed-words-import-20261102T103806494554Z.sqlite3"
+}

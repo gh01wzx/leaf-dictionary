@@ -1,0 +1,6399 @@
+{
+  "source_records_checked": 865,
+  "source_unique_original_headwords": 841,
+  "source_words_after_split": 842,
+  "source_records_missing": 0,
+  "existing_cards_preserved": 137,
+  "added_cards": 774,
+  "final_cards": 911,
+  "rewritten_core_definitions": 911,
+  "missing_definitions": 0,
+  "duplicate_cards": 0,
+  "existing_review_records_preserved": 49,
+  "existing_encounters_preserved": 0,
+  "lookup_checks_passed": 911,
+  "review_definition_checks_passed": 911,
+  "sqlite_integrity": "ok",
+  "checks": [
+    {
+      "word": "count",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "55015f8f7642be5f5545a60603f8fd75c2729939feeb164af79c2066a24f2399"
+    },
+    {
+      "word": "regime",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8dfc95a9b10635e7bad8db815fcba28667a16aa5b74ea0b762b536e51b3093fc"
+    },
+    {
+      "word": "coalition",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6a5fbd0351450145bcbde6d6b3f2bdeb552d7364527c1d00922ead8e59d458a8"
+    },
+    {
+      "word": "premier",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "01f6900a61f26b6812e45c39395bced46d0df9db652579d573d5f3923a986d14"
+    },
+    {
+      "word": "genteel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d8612b95b6835937f61842f6294554e510a3390bf6e3cd3a2d589c975274c55f"
+    },
+    {
+      "word": "stratified",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3a7e80f1c97dec795e67efcb0848a33ae9a34dc866de4cf4433c664cc8ce989e"
+    },
+    {
+      "word": "rigid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2af026754518b6ec06ac154cffffc4b150beed625ba7a9e243be14cf20e8bb7d"
+    },
+    {
+      "word": "emancipation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "88026a8a2a2f59be5f677b82600c6913ba34c2dfabf936010e1db698ec2daf88"
+    },
+    {
+      "word": "patrons",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f22d1e11a5630bfa19993b861c193cdca00f322fcff13e6b01a253b672d39dfa"
+    },
+    {
+      "word": "municipal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5b75a6290ee0939ad568a90ea6db987b3f62e1a47b97aeabd131602629b44fdd"
+    },
+    {
+      "word": "comintern",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ce050310b6e8b0b2ca752e721209ba60eb8fa8021433249173ea3d20ed79879c"
+    },
+    {
+      "word": "plebiscite",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dfcba7ec5cc4ba50599b4277ce66c451686cb0b2a01c342d154f3e2525c87f15"
+    },
+    {
+      "word": "administered",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c559550fc17f439ebfebc0170bef8fc0fe0423f1bebf71a8d4254ec64566d03"
+    },
+    {
+      "word": "status quo",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "067b98140376838de939eda1eb7ba85b8d2011a3facc5e0ff92d7cc8ae205890"
+    },
+    {
+      "word": "swastikas",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a1f9b89a1f73d31d8a15beafdcae94192587b585dd8cab2571a267392dba87c2"
+    },
+    {
+      "word": "curtail",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "76b42ca703baa7d67071911839ecd754fa314667f940c4d6d642fe4efdf4a8bc"
+    },
+    {
+      "word": "provision",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8d7369dafe42dca9a21e1a3535f98dc741c52fd60601c565164adb16b6f2c77c"
+    },
+    {
+      "word": "triumvirate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e9aec584fc981c11e6e7f885de21f1fd7d01fc791582fd1a2ceba27edb4493a1"
+    },
+    {
+      "word": "mandate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "71f22ac29b12ae5c83513842936c688034ad246424ff5cdb78513f0446a59eb9"
+    },
+    {
+      "word": "impose",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "19081e3601ed5a593ec042e3ff357a07c8d2fade09ed220060c88e7885176a87"
+    },
+    {
+      "word": "ravage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "af6a260b545918a6459e9f3a2cae9564e02ec6860adc8477615fdac5c12101fe"
+    },
+    {
+      "word": "peril",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6c8d3d148e2a2bfdad561c6406fb666fa40e2a52360bd1c145663220f71b3632"
+    },
+    {
+      "word": "gulf",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "792fd853d2624284168fa3978acf9722f1808f15c4a87b4ad323b8bf6a14cb29"
+    },
+    {
+      "word": "destitute",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a851ee34b5c1a3bac5dfe589c07c8bdcf8e94cc77f06b589bb08d152f00012c2"
+    },
+    {
+      "word": "disheveled",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "18a77b9f36232ce73ebcbef912e715efe56547d02bf285202bf1c48587e0db50"
+    },
+    {
+      "word": "ceded",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1b563155a615205ef7f869ef43f5f91cd334f5df35d0e8b52faeb801a3be6712"
+    },
+    {
+      "word": "streamed into",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "69e223ce91a347c076117f73fa5674071e3815ab3805c3bb2c0cdae4d26cab9b"
+    },
+    {
+      "word": "barter",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ee84482197b32013d347ce8e47216c6784f3a18ceee18482ff13f94667292443"
+    },
+    {
+      "word": "turnip",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "192a598bb5dec993ea8c51e93a3dd0eb3f77c2f5ea060b2dee541fc3999a2698"
+    },
+    {
+      "word": "barges",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1e5e726166ebdce67366ec835756ace1ad5f300123f42f9e7e7bead684d59460"
+    },
+    {
+      "word": "dreaded",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "02218c940690887e549aeba45aa21f76605346936ad5526efa4aae43bbdfcee6"
+    },
+    {
+      "word": "hounded",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c71fd3a3e6b6c2002745a59436974c932b3b42cf90c032e2a77cfef675dc2e49"
+    },
+    {
+      "word": "havoc",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2dc5c1c3697f38272a1109b4462b9c22606e8217ac19d0522ee3309ebbae3c4a"
+    },
+    {
+      "word": "pandemonium",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1daf154dde3d60398233a06b2bd3facd689e34dd67855676e676258633363295"
+    },
+    {
+      "word": "repercussion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "205908c2531b7eb5c66deb21e9f5cb874f43c22f433bf6fb94eb0ed8332a42a6"
+    },
+    {
+      "word": "swindle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8e091cf71852f2af1b294b5025782f0dbae52c7b23b6b577a22b9814ef798456"
+    },
+    {
+      "word": "pretext",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1cf116d4eb1e4f6c2c374ddad12bdbae98d08971f84f358dc30d081ea29ca7ac"
+    },
+    {
+      "word": "scarcity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5fc3b49791bf378ad7d25d3965c22c63b245c2cdfa1654b3150924b73c4cf535"
+    },
+    {
+      "word": "deprivation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "295df01710de39cfa18a8c7064cee5957b216d49581951c52967aa99dc04d7c5"
+    },
+    {
+      "word": "standstill",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "02003ec60b0d5c2f5554d28f3961ffa8df4077091bfb8f796c7d1e0128be80ab"
+    },
+    {
+      "word": "besiege",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "618f8b7ce70298d28e6e64d975aea81643523ad4024bab77268a04f795c42284"
+    },
+    {
+      "word": "exodus",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b5913591fe291227d9c673c15aba28aa0d74666e8551f1414c0808d5065793ba"
+    },
+    {
+      "word": "exacerbate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b8407166ba2c2338d4f30597172229af62b75ad9d3b8efd3d774ebfa4b90a624"
+    },
+    {
+      "word": "clandestine",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3269de3ad7b22e6087f0b0215cb46720a8d51328bde30d711ddb60f8f7215e89"
+    },
+    {
+      "word": "beleaguered",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b911a5d2cf1c9855fe6b083d8cb33858831a935af86a306b09d41333953d1e58"
+    },
+    {
+      "word": "ore",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b6f13b39beceab3dd1b6baba0886a7828636daa636e32b12a3e5735e7d0e339c"
+    },
+    {
+      "word": "horde",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aca3d81648ef510470a1e4286a07f50c169544ebfb3c5dd71c0624e7850e95b3"
+    },
+    {
+      "word": "abortive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f8b24d84dd08778f7b44f3dec24d38a62da44985141635ae435c0e15aa6a86cd"
+    },
+    {
+      "word": "dugout",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e0260980452c67c51e42fbbb26e6eabca18c5b164465fb547d930075603985f4"
+    },
+    {
+      "word": "toehold",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "898c99c55293b1ad9702bd8f93f763677d0fdf95b0c9925b4b5b858f1778300f"
+    },
+    {
+      "word": "barrage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3897913cb658369cef33d2ca026c7d05fb310f03c2a81599eff3ffab144558d9"
+    },
+    {
+      "word": "swerved",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "267bcbf4a4d56148eab42d0e95c8566bf917bdc3e60999ccd523223877de2a00"
+    },
+    {
+      "word": "crutches",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "35319ba5bc49d5cd3e33c90e9237c274fa237656773031cfb43450451c8fffd0"
+    },
+    {
+      "word": "grotesque",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4c763da81d6ba791b0491fa3dca9b55e6f68241fed9bc10bcafe4e94f8422b11"
+    },
+    {
+      "word": "haggard",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fdaff0d69f007e4c3290498bbf287fc83cbdb85977f63055d7e32f12a2212872"
+    },
+    {
+      "word": "wanton",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "849c47ef0f3be74ccd66fe6554c55475c870413b49ee47e3dd5744610a4f406f"
+    },
+    {
+      "word": "resignation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "82d4703f7113cb2921d0fbb7e60a3eca7338a8159953b9db111ab232671d3af9"
+    },
+    {
+      "word": "rejoice",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "416859bd614c1a9708ce1e37a72ff909186dd1a0b95cbd566c13e6373c34caa5"
+    },
+    {
+      "word": "pluckiness",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "333dd20c34ae2d513976ce94e07342256f423ffb97c21d139b7af8c4175eb55a"
+    },
+    {
+      "word": "watchfulness",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9118c4f01788f728883e52fcf6541c800ddd35558367caa7dab79b14d3fb5b06"
+    },
+    {
+      "word": "prodigious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4d51836f8959157f9b86adf209c9dd5025827badb7174565d16f11b32506d3b4"
+    },
+    {
+      "word": "anticlimactic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7b40712b45f091c1484003f8dc71c40db446ce64bc3c306df16aba5cd9dc90de"
+    },
+    {
+      "word": "tedium",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7823ca932fb5838b2d26b147f7722789a1e59792b464c22fe234830ea6a1adc2"
+    },
+    {
+      "word": "bronchitis",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "24247dc74d14838f8ecc9e50d242fca02f3586c6f786fc48e7d9078b25f0fe2f"
+    },
+    {
+      "word": "immense",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a8ea1a8f3decc1340d5e1c3d94f77fe5a7fb56d08b3d8e6adef1c4c7aec6d74c"
+    },
+    {
+      "word": "ordeal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7ef4113653b492db37a7f0f83dd7e593a510220e91cb02c843a3c4d140386bd0"
+    },
+    {
+      "word": "wrenching",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "07349206c8491f048ccf18efd66bf53331d95021d4d1ff76dc5e1a6e2d65332a"
+    },
+    {
+      "word": "meticulous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "22633bfc319407765f9fc03f331501363c31d5d24ff840ac4e79e7856a90cffa"
+    },
+    {
+      "word": "relish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "87fd2bddfe86d676ed3a48b6bb4e829ac45963729a0d09476f7886c138cb9dbd"
+    },
+    {
+      "word": "omniscient",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c9fe5694db55294b836c015ff7c56b3931f7199229a17d2df3d78ced8a4cf3bd"
+    },
+    {
+      "word": "anguish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1fccaa61ba031e1bc484c47bdbf58701637399a1b6ef97877a3e024ecff06c48"
+    },
+    {
+      "word": "profligate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aecece59ec435e16168e8bbb3168b1e01d00a53a487723a15940015cd81146df"
+    },
+    {
+      "word": "sangfroid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d17f0b2a137a5b396cf508ace0f6a92b5f623d9e27296042ac08ed7debbf72c2"
+    },
+    {
+      "word": "bereft",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4186c3e1bc0cf785f5e4f1df8542b4a50211bcb19aa598d76e0e3c8d25052d5b"
+    },
+    {
+      "word": "hysterical",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b7955d2fc35cc2c35422ecf3b4a77834c54044e73fae3d6f7bdbcd659724a498"
+    },
+    {
+      "word": "audacious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d41506b6d60123720f2442c65e463d3d5b381f729a7cd6ab93b2b03a061a997e"
+    },
+    {
+      "word": "posturing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "80820eec3859c28327aef80f3a3361a5dd31e9f055df68263d0e13c4f4bc2dee"
+    },
+    {
+      "word": "crippling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b368c8071760aa70ae3280e35b7a46b3865359b7d9691f0e7db9e7b0d988c416"
+    },
+    {
+      "word": "strafe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "da9e669e8f5deff746844606186fd12917fdbb53a6dc32b6f7f41549e86f8c33"
+    },
+    {
+      "word": "lull",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ceadc9d1c9f3997e64554b93fe4a50096d0a2783b6f692d36248028d05e430c4"
+    },
+    {
+      "word": "ramble",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e692276c784cd8f787e866a79f72591888c28d45f9910edc5116c81b8bfa39ed"
+    },
+    {
+      "word": "trek",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4b5a92107fa32b31ab142cb3d148fe9ca303be49ab2d31749ec365d4660821da"
+    },
+    {
+      "word": "clutch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1d5f11a035173b1c390edb5328e0add84dbc4f0ebbec41c000b34553b74b13c5"
+    },
+    {
+      "word": "catapult",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "374b1c127e496fd4bf2a55034ba4a282b014eba7e7bbbf20eff395dd1799ace2"
+    },
+    {
+      "word": "granary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6fa976a9a406892ab311ae0977d39f0bd71bf83ad6f820cde638a984b142ba70"
+    },
+    {
+      "word": "lump",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "48a4688a524eddafc9e4c902c2bf6f65382e6034fcced81c5be55eafe0670b3c"
+    },
+    {
+      "word": "burgeon",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2c713b0358c3778c1bd593abf5845af0c7daff0df272d0e8a7864d9a9f3f6ebc"
+    },
+    {
+      "word": "pounce",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "74e14012580c1f827dccbb46b719ec03fe17e32283af26418a60286c6ad6b12a"
+    },
+    {
+      "word": "flare",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c2cd2e507fff6304633d167436d7516c37a87b41eb4510eef1ccdfd9925f6ae1"
+    },
+    {
+      "word": "culminate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "72958ffc916a97d1c3a3ec2f6cd14e12dc6d94f875b034a4b19af88a6df46083"
+    },
+    {
+      "word": "diversion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a3399a935a5a28cf221aa76bac05682959da960f970b685b78bc2f0f88c58b0c"
+    },
+    {
+      "word": "siesta",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d5c63f68e1b6b71a37b911dddb42bec6d0c0d567c014c9dfad0d3bee6ac55b0"
+    },
+    {
+      "word": "bustling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "35446f2c0729e71c9ab747dcc8655acd1e4aa36537131aeaa85b7caefed9413e"
+    },
+    {
+      "word": "liaison",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6d9d8f68f6544d8ffb5d9dc87e34e0e98302c9303ce17062f8f9e10d1f335597"
+    },
+    {
+      "word": "neat",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6867420cc72f0cf309b0084a55db3b167d26a40919b9dd28a468882c5528f191"
+    },
+    {
+      "word": "careering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "668ebd17d2a66e7ef8d6402b75b18b1cf5fd6a46d74a02c5ee6d3e35fc6fff53"
+    },
+    {
+      "word": "sideswipe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2168e4af5d941408e1e64e320b366b566951752da9b7c562af04483431fd541b"
+    },
+    {
+      "word": "lain",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c87146d0d23170ca3062dc5c3c72c8c4b6b1e2b1e48fd49e4d807d8dbd0d44f"
+    },
+    {
+      "word": "convalescing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4f1d4c292c9b8504781e36d40701e7557e2d5f5b51d627c928057ebda823b760"
+    },
+    {
+      "word": "readily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "84d3586cf469e6677478929d3490a5b9771c06fc3f3432dc2a153f3a97ebff81"
+    },
+    {
+      "word": "swig",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "854df45b8dcc77df180f6631e0fb28dfb6b8845fcf5556ded14d6e384b770df7"
+    },
+    {
+      "word": "confer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "38ef562e64998edc269d895f34ba1f518af65faabc832d80983a4c8e090ffa76"
+    },
+    {
+      "word": "cosmopolitan",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3d81e0001269150cd60a31824e24e37f429c45f7ed64065d3c4435e4bacbf559"
+    },
+    {
+      "word": "ornate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b89e66e8fd865c92707aa95f9996cc20cfee3ed1364b52c238bca8e1f434a81c"
+    },
+    {
+      "word": "pictorialist",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "426aa0e10611a326ef10c6c30bba55d7e198a40d51a69bab84a27bc4e1ffd569"
+    },
+    {
+      "word": "imitative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "04a8a91ad5c3cb132ad1f68eaa94e1e109e8da41b22738d5a186f111e4db7c05"
+    },
+    {
+      "word": "pinochle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "accc351718652712768f6cb6c5c7de2f37b3759c23d29f8ee49fa7029d7c1643"
+    },
+    {
+      "word": "chaise",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "912650719d16ec3eea4b91b19a661d48c93e43482dd3db9d2300647fb3157e26"
+    },
+    {
+      "word": "heady",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "971ecf198d151d3157aa8833b5db257d675a6b1e77503d4d71ecbe009e7d0933"
+    },
+    {
+      "word": "subsided",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bba934d74cfd901ffea38da01669092651f338449d66675858ad0cf4363ff987"
+    },
+    {
+      "word": "squeal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3ebf2138e2c4adc9d2a78493c6b917938a08076b1cdca03a2f6e09584fc30a85"
+    },
+    {
+      "word": "rambunctious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "23d0291e8b69a5de7dec76d0e136cfc726a910dba26b059b8026c951e310b13d"
+    },
+    {
+      "word": "brandished",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fab34bac8b35381fb046c7d5c8845462a3350dc72ce0e44e0966ee0f4522c9f7"
+    },
+    {
+      "word": "formidable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8f5b262b22ee5298cdd0ec3d582b801fd4351d1572585016a1cb8ab9ada7d47d"
+    },
+    {
+      "word": "boasted",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6fb4690f721eb16a13ebebd4c691bbbeb58b576eed55bea8f5d2c14ecb857d15"
+    },
+    {
+      "word": "smacked",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "84464e893da1861ee9754fcb9a20b67a573eb9102366e9681008ac4066558cc3"
+    },
+    {
+      "word": "avidly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ad2989e981daefe6d0dad7a28382be696e686cbbd5e066c03c7faf980a5f1e1e"
+    },
+    {
+      "word": "cogwheel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "10e1a1e7ea3fdb544f30cde0b1d20fe6bb8c8745f7c8e0c63d56ddde1f68ba83"
+    },
+    {
+      "word": "atelier",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "94f93637b38bf548b8f606648ca9aab4d687518d6e177142c6c5aba2136e9d64"
+    },
+    {
+      "word": "promenade",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d1cd442e0ab725ff83cc96e6af600039b9fe70f345a134d42e2d444d9ecd22d2"
+    },
+    {
+      "word": "garment",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "43a285aeac87ea2d3f4e8879db1e02b8d909d173d3be4bccb311bd1bda347950"
+    },
+    {
+      "word": "bohemian",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f1b6a477f614df1c4c861e34ee6ab297c6fd5634e68035b1b30322e3a3573a02"
+    },
+    {
+      "word": "picaresque",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e2ea51a30e3421169db84f03ba06c18deb717120dc71ebc658f5b91b2b4ee3db"
+    },
+    {
+      "word": "boulevardier",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3db4a1218d71b3d2935cb24f02d82898e2c10a0c90aeed3da9569dbaaf09b9b5"
+    },
+    {
+      "word": "sketch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "80cddc0c7ee0485fa66cf03e18d514bd9ada84a862be5c61e336630fe6e3a3d0"
+    },
+    {
+      "word": "lark",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "698b4c38cc101214c27f16476b0ae1143ba4be87aedf1bfe110294aa21cf0cd7"
+    },
+    {
+      "word": "gondola",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "edb0b666e8f9c9691324ca7a880dcec618fcaff69e4aecf3e19ee5789dba57c0"
+    },
+    {
+      "word": "felt hat",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "746139a17443049fc78f0917db6c016d6ced4945215728651b151567d61c6004"
+    },
+    {
+      "word": "ménage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e0144bae9b9099b8f428c5c46ff4322a1a21e1b030a012a50cd45cac9f8a6c52"
+    },
+    {
+      "word": "cortege",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "66d7eb7e169d4f14a2aa497ad11a0f31494cbe0bdae4ca1cc5e081b260232475"
+    },
+    {
+      "word": "valise",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c40671f0c22875d547d0bd205f325c7599cb02e1f5d41be0df94dad5b0f76aeb"
+    },
+    {
+      "word": "amber",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "78752789490088fab215893279503f6a881e98da6c939fb0f6eeb557c0fea505"
+    },
+    {
+      "word": "chic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "faca72106d6e430fc240e160eab4ecedd0d4a0689d22e5724a732ae5959bb4fe"
+    },
+    {
+      "word": "sprig",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bce721ea6dd4528b4833bbbefb838d06a8a06124235751a99b74d83a61c10503"
+    },
+    {
+      "word": "lily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "00bbc98e1551e10a283ff2327140a540b81f9fe022c883c8360f9940d2d87daa"
+    },
+    {
+      "word": "packard",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "94b1e04cd3c1319d5a0dd7db039baa2fc50c9753acfbd482c94d282f99b0b305"
+    },
+    {
+      "word": "dainty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "57040772b8dc006ca49e33c5136c159e86a9a4b3f2e8a8bfcba4e128c0d13c04"
+    },
+    {
+      "word": "masonry",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "01bcacf704728f30e1e9e6b6cd5d052a1463f05b990f46773483e23121aa4e4f"
+    },
+    {
+      "word": "plaque",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b7bef04af2dcc21fda821576c8895bf434e2e1df5e71fb3b5f73307251957fc7"
+    },
+    {
+      "word": "glint",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4794e1e51613992a1605b9a8848509b8622e868fb94ab89b42999349ec4dba9d"
+    },
+    {
+      "word": "beakish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dc706dabedf90bd85738e3cce7cad937dcb42f3b22a03204b5f3a057f1c817ac"
+    },
+    {
+      "word": "aristocratic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8954fb149c54d0fbe188455817b689e720e30dd71e391b2c776cad264838e3fa"
+    },
+    {
+      "word": "candid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f45833c4bd85a2344b28a3dca5cd63afb600a9e8599328eb19601f22308f6b06"
+    },
+    {
+      "word": "callous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0440c1345ed456e09a65f9510ab30852fadf7e439994df358c52e56833851554"
+    },
+    {
+      "word": "wily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6e5418c1525de2b36f53f38238f92c20b40eea7130644094f6d4bd922b76e3df"
+    },
+    {
+      "word": "flippantly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e9dd19e80975958da74d7371cb8406771ab053df96696836419b59a383f0f50a"
+    },
+    {
+      "word": "reserve",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cb3b02021f431707c8f67d252a7b65282ccd115d9ade394b49d73be9a4f9cdd9"
+    },
+    {
+      "word": "grace",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4ba6886d1dc8494005103ca14a2ccdd402344a8abeaa7e490d00c77695d51ba0"
+    },
+    {
+      "word": "wit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c2327eb05f171804ae0f9eefa76ac4444a05bd03c2114f12b536a9a3faf446c2"
+    },
+    {
+      "word": "spontaneity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3a89d4fec1fb850183f04a3b9c644968370a4d41b9cf62f65cd5d41c7954bf9c"
+    },
+    {
+      "word": "untrammeled",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "de11f42b90a3437aefb3b3ecb3d8fe599c226bf0b99f0de7ff0a04c4ecd71165"
+    },
+    {
+      "word": "scornful",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8c555031a49c1053249fe19e96f8ed17f99461642f5e1d171c1a6189c86136b3"
+    },
+    {
+      "word": "vivacious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f9ad5f10af2260ba5be2bfe2057a66f4d1d7f1497549e9d6e426285923ff2bad"
+    },
+    {
+      "word": "cunning",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "260f1857a2a4ef7f07c0f86aa0520801c1838e04292b454eedf230672acfaf17"
+    },
+    {
+      "word": "shrewd",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7514c05d95a333115d85e86dc3de0ba813147b6cd3552af07f6eafa5854362d4"
+    },
+    {
+      "word": "petite",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dfdc978765c1c594a3937a139c99be995ddf98ec6738d33d236c0a37b157dc1a"
+    },
+    {
+      "word": "rabid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "42824cba0b5850da906846b348bfe0b399e707218eb197733d8e281e51de96e2"
+    },
+    {
+      "word": "unruly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "865eba05860d323993c7da35e7f345bf5d05c034fa5befaa392234b050f8067c"
+    },
+    {
+      "word": "astute",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4dbc2dd11466d9526a5601ecb4ae32a56f9af53096bcb31e1f20fcaf06de4d2c"
+    },
+    {
+      "word": "aspiring",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8f0fda914af41382e06076f4f7c7784f2566b23407d16c571a5c6a695caa0cce"
+    },
+    {
+      "word": "congenial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "77739e5ec883ee583ecdc16a9614cce6e3e17022d0cf6526869ec81752208842"
+    },
+    {
+      "word": "filial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e70b84159ff3950ab1c341fbff4984edf25c3a9895296b52a8e51cbb8364ce4b"
+    },
+    {
+      "word": "prodigal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3fb1cfbc367e44d687a0424b4d046e97e53176f6a0f5b63cf2c6f3ead5b7afc2"
+    },
+    {
+      "word": "ardent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "681e5c962d6c7fda57ab346e487be89a1a7181b27c9c265f29594370208ab402"
+    },
+    {
+      "word": "straggler",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c7f5af1bbb98778e8df7a91cd75eb5f3ad774eca49f4ccf49e8d4c2fa228ce07"
+    },
+    {
+      "word": "lanky",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c86a6a7350027ab192ff27f38a556ebc2047a6b03bfb56aaa175c3f4e38b43ae"
+    },
+    {
+      "word": "macho",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "db107a849efaab14396b865de22657f4188d04ba93a501b1cf0879bd7c9bd76c"
+    },
+    {
+      "word": "ruddy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e49c1136eca4319aee55f38c1872d5e19caed0bd4ddcfa0cbd6aaf6e369f4433"
+    },
+    {
+      "word": "heroine",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8026b6b87a1da51f9807dae2ec573c7366e329175b53747d84e653a55c41d050"
+    },
+    {
+      "word": "ostentatious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ed404c648ad61554271dcc3470d83182c04f937e65caec4e0bef63864378d2b1"
+    },
+    {
+      "word": "lithe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "32a172710ba4050f3e18e0d8efdbbd4ffd77f8ca09495469ba84b59ac0c08d12"
+    },
+    {
+      "word": "precarious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "50f6b982e4b36bb85cba14dd3f11a86b6f48129d6f00784b503ff13151321e01"
+    },
+    {
+      "word": "elusive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "93eb67353a4163bd83b3f74a5ce2d7749d499f7ab10dfcdfe9f40b247a113b28"
+    },
+    {
+      "word": "secrecy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7054350454566802240eecf9f2dbf0f473c9d7d3f4b5af8518525a752dfdff11"
+    },
+    {
+      "word": "hothouse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "abec689575a9ea004be52b2d483686ace5dc7b1101b09cf0acb65ef6d279b758"
+    },
+    {
+      "word": "manifest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ef770682fce6817b50ca6a53dd7ddf00f29b37dc3596cc082c0bf047cfa4d763"
+    },
+    {
+      "word": "enviable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fdeea25162be70a95a36c568936f69fcc8e4e7ce112da357a4ce32f2320dbf2a"
+    },
+    {
+      "word": "juxtaposition",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7d5fb97bbd1c2a74b0093af651218de517c797bb740cae1acc171bf11db7115f"
+    },
+    {
+      "word": "delicacy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "25f715c57a41e74cd1d271b07baebd9954d38696f43e12df2821219224407f42"
+    },
+    {
+      "word": "ambivalent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ac0fc2773659f311c0b46ad2bc5ef99b2be35abf375386dc6c29ed1f3033ef13"
+    },
+    {
+      "word": "glamorous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6f3b49327219905ae8d69a701e08445c1458e3b03a8c98e891a97f959e7190f9"
+    },
+    {
+      "word": "euphoric",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c0185f251d5b8f3a40283210c4d81321e63e42781567f93a7d9892f349f7d1c9"
+    },
+    {
+      "word": "teeter",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0fc25dc9767fb6707e51ba67ff0365752613907430f7f21e0a9791fab0d2d070"
+    },
+    {
+      "word": "satirical",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e8af4486b412c8ad8c748f318b8f8013fae32b0b740042303eee7ff82b1c0f49"
+    },
+    {
+      "word": "impermanence",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3bd0d37606656c580539a19f7f679e9b9638dc911933b32d1bebc6339b77bab3"
+    },
+    {
+      "word": "ferocious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f1944455e4f87f682a2e9ff4f8bc07f9b3a0a410485c7e9933e81cd83e184cb4"
+    },
+    {
+      "word": "fomenting",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1d2df3f0b034800cee75571475c472bae584587b172584a0eb86ae09d19f3532"
+    },
+    {
+      "word": "dissension",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0f5ef15a121e3f6fc8dc790355014e6433d3c53c11a87150a8061f7fadfa80f7"
+    },
+    {
+      "word": "denunciation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "807164e140e713e297cbe70a858b52cbc7a2c197236cf54130b1a03663d5a72c"
+    },
+    {
+      "word": "precipitate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "292a1c9d3f5965659803d1fe3bed9725c322ab0aefc374318a2c700b15324304"
+    },
+    {
+      "word": "evade",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a4979d05651e86d3a671ea8baae78696cdb04bcc85cdf999bbad24c36263f1b7"
+    },
+    {
+      "word": "imparted",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "21001fc06edf44e39c88ee965974c77358534847ac7489578fb4ded596d7df56"
+    },
+    {
+      "word": "recuperate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6bede73c062d785b9bf5d32c980f6d617c28f7e4c7e125719faf7538b6b609d6"
+    },
+    {
+      "word": "ripped up",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "93567d874b4b7ef360a7282c8eb5f577378c6c50abf0782cdba9656015eb0ec7"
+    },
+    {
+      "word": "hurl",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8cbc96daa6d98d5dadd3ff4091a0fab51912e757275e8c907dd34131c6b32912"
+    },
+    {
+      "word": "cordon",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1b0cd0299b97e32100cdf0586d339759722c91a1d2ab5a2a030b1a718cf2f5a2"
+    },
+    {
+      "word": "chant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0b34bfb05cd453d148ef2437451263a6ad8ffde410b91b93a55492e4c0d0edc3"
+    },
+    {
+      "word": "repulse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b7d71f760bca6394a6235f14b2c72a94ba551f99d09fcac38f22ad4ca194200c"
+    },
+    {
+      "word": "pelt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1fad58ec4cf363341527d2025506b9ac91a942f77f1548f34f935aa6c9ae29ab"
+    },
+    {
+      "word": "saber",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "540b3ea6f3ef96cf1c107a54b929b64519314fcbd309ad7656fedaa301aae6d6"
+    },
+    {
+      "word": "tamer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "97e4ca230cd3691af65be2a6330db824fc2c3f2ac86340767f5aeb3f236171a6"
+    },
+    {
+      "word": "scolded",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a663b5b6c09b07d63b1ddc980cb71187f3005a578e278bc0fda13c16580cd8ce"
+    },
+    {
+      "word": "counseled",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b4f4b781107e0441f736cab2e7e4585dcbbf7a648d1137afa448db844e0453bb"
+    },
+    {
+      "word": "heed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d371bbf64c89d12ef5f51afe7a7b982124633f5abe00cbec9d02e3fb6df195c1"
+    },
+    {
+      "word": "partisan",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "13f53ff0b05a3853126a506551c4555c6853883b47f01489b618925c4a8539d7"
+    },
+    {
+      "word": "overtures",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1149814ef76fb0d501ac8c57eda68c6678e2f5b9c81119896f1aefb9c22d59f7"
+    },
+    {
+      "word": "slander",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "20f50202e6c5b4b20499a7a179a3aa8fd05491d7c503974b7a90fe6ae154526a"
+    },
+    {
+      "word": "treachery",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ce38466f83cb14c56cbd09fc5083cadff7a0fa3c048227c3815d5609735ad36"
+    },
+    {
+      "word": "price in",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bad2076f70c0cec7c908b4df5004d71ecc2cefc3c8d54743e296f2552922ec77"
+    },
+    {
+      "word": "obligatory",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4093d68972f9b925849014635dc7c54cf901e394887a16c55eb6375000b2ae33"
+    },
+    {
+      "word": "incarcerate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "42ccbf38666f2348c0a0af205f9a339b12f4587e51d5c0353e1b3a2e0e32295e"
+    },
+    {
+      "word": "assuage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b70e968b17a15af4e708eb51e8286d4b98035de049f8aa7eca55eef98029c8e0"
+    },
+    {
+      "word": "plummet",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4504c83e0f1e7c8ac1b91d4d8b9f9a80a5544f80ec082dba0885b78c25c7c18b"
+    },
+    {
+      "word": "infuse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ca0101abbd7866857dfbab3f6327cba4f2f2c65b2a3380680240c681de0f2a20"
+    },
+    {
+      "word": "proliferate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c78ec63368de0f3fc835bf70d4a3661f8b99dfe821b71ec22819220038673c81"
+    },
+    {
+      "word": "presume",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a20ededf6dcc4093e5103057949bfe16977c7e74a77fc29ce6e6cfa3930242ef"
+    },
+    {
+      "word": "vandalism",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5e75ba5f80826110f783fb7cfedebd72a6ec42aeffd111d3e87824306ad4fe1b"
+    },
+    {
+      "word": "ballot",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "20df74bc07d4a9fc7db8235f926491b8a05533ea96a8c77b1a3cabd5638b7bf1"
+    },
+    {
+      "word": "referendum",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3d1f5ff9fd3c53113519459e6ff32692210aa2aff33ae2fc72f217e830affa5e"
+    },
+    {
+      "word": "contest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5596219dc1378543453c792ba5b41612e4dcf41cd8cb3fbdf64dda6acfc4925d"
+    },
+    {
+      "word": "guerrilla",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "44db6b6288c97e5e04bcfa90708a2dda1180aba7ad80fdd1484f5bba76793fa6"
+    },
+    {
+      "word": "chum",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b1beab786497935106e6bc2b72d3892d2ad653ddb27893804a001340a16cd0f3"
+    },
+    {
+      "word": "blackwater fever",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "26fd2d47765af3918cd18227699e9bb87980a90ab61ae04d2de81041b1e2d0ea"
+    },
+    {
+      "word": "premise",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a7aa60fd8d00494e70a59a5600feda9f053031d8ad8c79fb227403c655c32dda"
+    },
+    {
+      "word": "protégé",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ce08f29343794a918699ef709878a1b31594294728349f5f605256b6a9bec8e2"
+    },
+    {
+      "word": "bore",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6c0cd13c5b0a4f42375a7b8cd07aef91b933c9f2a17d3da03922735457befee6"
+    },
+    {
+      "word": "filch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "909285ba010856422d58dc038499941ea60a5a60d479195c16ebede5b4de8fa7"
+    },
+    {
+      "word": "in sympathy with",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a053bddf654b37d099b7e616e68aaa5f252bb024ee982dc415840f3a9f467f34"
+    },
+    {
+      "word": "affiliate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "51ab6c6f9f81085f9e65a80f52fc60e451e108be239a34f01fa6b0ae5e74e631"
+    },
+    {
+      "word": "tit for tat",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "57aa917122d98cdc7fa8bf16a794a49a6e7e1127521e4ecfb479951a68b08e26"
+    },
+    {
+      "word": "startlingly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "54ee724c04d5c3c0246b84224fee3e07604bca52a0e96cbdf0fc21eef0b8b969"
+    },
+    {
+      "word": "remark",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7c88f84cb00450a461cec2ee6e4619c044b506d2818ffe6ad56704ab59428540"
+    },
+    {
+      "word": "cropped",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ed5bf1d49ecd414c00360fa4c65ad974f630252f7394ced4029ca50343e090dd"
+    },
+    {
+      "word": "motif",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3c72143744828be1d5f0990a26b4b007dd1de445625c433f1bc64cd1c35f29b4"
+    },
+    {
+      "word": "belated",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eba379fca60ce7eff9ed1769af3d4df7ce9250deec025ececb68ec5c5e5b78ab"
+    },
+    {
+      "word": "debut",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f748cc2ea7c3cb2a526f8ba97c3b2525f752bad2cdfaf7e4dcabd860454ea6cf"
+    },
+    {
+      "word": "rheumatic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a73fc077ba315dd32c8cebed8dfd4d4e583699957c8a5a3aca8129dbfb18b746"
+    },
+    {
+      "word": "assurance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "043f49484b8bfd977c15e59e87f2f7cf25472cb818f298b9527d132c300f4c5e"
+    },
+    {
+      "word": "preoccupation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d822b45a31859b8a9e87b43e57d26dd6063048d28a4e708094f2e03446fb97f"
+    },
+    {
+      "word": "pittance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8fca81301b31a92af2146b224c3c6ddeff6ce313f14d835afead83d74e1b4d0f"
+    },
+    {
+      "word": "aftermath",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f23acc18a46b04769b40299b5610a662f662079b24bbe6e49275cd1991bb9b9e"
+    },
+    {
+      "word": "commotion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "51cefa8f2ecd8a206fa00e57c30a8afdb208270912b81c3affd3c71cdabc886e"
+    },
+    {
+      "word": "mishaps",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "773df34afcf0e8a802738a01003a31e5bd72e9085313fbf4acaf16994a37688c"
+    },
+    {
+      "word": "furor",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d62f94ada9c00008858fded0c83835ce8db6eb5b3387cca5821b2b847d946647"
+    },
+    {
+      "word": "concise",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f2523461a4f250aba73619012ab0cf75f1e86ac74708b0c05b19989ce790c3b7"
+    },
+    {
+      "word": "ascent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d26d6a0d02ed0cad65eb8e1717fba06fcbfa37f74f990557f3b53d9399456c7c"
+    },
+    {
+      "word": "lucrative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "222a1afffa295995f2c9d1846368428439a044b0f70afb7055656c1e29de2314"
+    },
+    {
+      "word": "parade",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aea0396c5ff5defb9fc6d2d93c9051cef0a3c78919886f8dbf6c2866a5ed0e27"
+    },
+    {
+      "word": "observance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "56a2851fed6c10e394aa8b74a565206dfab98a5e80d267e4b1cfed614cad8310"
+    },
+    {
+      "word": "profane",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9bcad6445e1810454c4277b84e9af6b43a48065e8426c5bcb04c288c1484eee2"
+    },
+    {
+      "word": "boisterous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "89c28fbb0bbf468f1b769973d2853ee0e541fc07602eb0aeb275bcc866695cd1"
+    },
+    {
+      "word": "dwindle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c882d9d9841f6c4f3451fe60460f6d549c8793635c51dbb69ceddc938876bea"
+    },
+    {
+      "word": "compound",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c5849421f1ff56d0038b7c78433719a4f751331ffdbc02881be657ef3d0e434f"
+    },
+    {
+      "word": "shell out",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ecc0995478e26bee338ec39f8082cff9ed92a2b66e0b1571a0d9318c3fb7e9dc"
+    },
+    {
+      "word": "petty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1af0380ceb57ab4627b46c7b3e92f52c777dfcf457d04e6ab66662c4ff3de2a9"
+    },
+    {
+      "word": "pension",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0609e95dfada894f5549d880cf998379914b6f236a811f9463ed190ef5a0c5ea"
+    },
+    {
+      "word": "singe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7d62b458578a39a23fbcc01d14049f91036fc5bbda2f453d029821cd6a351652"
+    },
+    {
+      "word": "offshore",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "55b8758bd1871e3a40d77030077ef017d0f3d932d14d67cca140bfbeeb0f19e4"
+    },
+    {
+      "word": "sparsely",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ce689f65ce99c202b0e6b94a4ffb1d1a2c77546c29a7774461b008277e21fabe"
+    },
+    {
+      "word": "bask",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c69b07be8becfa32df2b26c6b0115efd651c489de00378e4745f3af7af531457"
+    },
+    {
+      "word": "sheer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ea8eb08eb34fd7ada83859c05ff54d6544d8faed7430a670e3d395fc099aff8c"
+    },
+    {
+      "word": "churn",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0fafb5e5312d4bf8ec395c5dc88dd130df905d275d9bf1d81f605982bb417917"
+    },
+    {
+      "word": "potboiler",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9a9637ee9ddfd6a764bacb6838c3dcaec92cd6464efe017c2cfc2a575ec878d6"
+    },
+    {
+      "word": "usher",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2b5ab68dda6f3778843be32e76059c3a0b9b18d8331703981286f746efd8f8ae"
+    },
+    {
+      "word": "influx",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "93c4e23ea243d0f24a4ed0db9a3557604130ce0c259b31bf760a594ec893aff5"
+    },
+    {
+      "word": "modest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5dae2b288e38ccb7daf63be53711ed2c503b622ec7496152e660d3509b01a8ec"
+    },
+    {
+      "word": "princely",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "80952f442f28d343efee73e4b9330d01d5ae6dea8cb659492c6983f954eeb95a"
+    },
+    {
+      "word": "catcall",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a9d0a7dd062d8a9da3ae17887333407c93162febd34f1e5ecfe44079762db4fe"
+    },
+    {
+      "word": "devise",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2bfb30c0e4f8df0dac1b6f64fcc25dd6dbd27c75bcc09f3a12971c13755b8389"
+    },
+    {
+      "word": "alter ego",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7afa08590b5712d40f1198a4ea39184c3bf20f61c2b0818d409075debb424951"
+    },
+    {
+      "word": "pseudonym",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e00129fff82decd4f18c7f090674c74ee22f213dbb6effd5a08252ded3bc0459"
+    },
+    {
+      "word": "fabulous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fe2806ea79cf1fb1d270f78bd78c39a6e54847aac1831b7fffa2b52aa8a3827d"
+    },
+    {
+      "word": "ruse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3147610bedc58281891ad7c08e10f2c5c7864829ee70d8ec1a10e8ddebf6c5e2"
+    },
+    {
+      "word": "outtakes",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e037dcb6bcc42ebc737b166e2a7011536b5ffc2793d8af40ba42f9615474c9d3"
+    },
+    {
+      "word": "henceforth",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f9fa4d788703d6a14523f987e0c982cae465405220ab37a55943d5895e2c8fcd"
+    },
+    {
+      "word": "tarot",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b5dbde7a65b1ef08ff8ac5453618f94a9e0a19b65f12413cae6b3077b96caff3"
+    },
+    {
+      "word": "femme fatale",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cad73e954b29a58741aca5ed2f40f8073a50938e56f02f17326fd6893c5a1d92"
+    },
+    {
+      "word": "allusion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eaa1247dc30ad50fe51722eed3d29fd91ea558d8d671aeae041bbb02d0ab3db2"
+    },
+    {
+      "word": "overtones",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4d6e3789ecf8f1bd2c75941ee52aa0377fc7e2bdbfe3ad564650953f25a49eff"
+    },
+    {
+      "word": "embellish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3da6394ffba3b3a7af850636e1f88739cf121b912fc293dcff5cf0bee15c3916"
+    },
+    {
+      "word": "embody",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d1badfe35b25f58552916e6cc67a048292fb615a39ef72324ee78342cc795640"
+    },
+    {
+      "word": "commemorative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7b24394bb4cbbaba6e8a7d2dabdff8b8a06126bdc83fff3b9b8d481b914a002a"
+    },
+    {
+      "word": "martyrs",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eec19be3b7dc1f902323ef3206700cb53a67e034da126e6030bb2b9c763e2b5a"
+    },
+    {
+      "word": "placards",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a444a38c86c44b81a177c87a0e50d4a10e381eb9232d4aadcdc2d22e9e69e537"
+    },
+    {
+      "word": "peculiarity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b9e0960fdfa4340867525016102be55be65d9d4a6dc14ecc18813e3c82af329a"
+    },
+    {
+      "word": "plurality",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2e7f6798c6dbe74a8a4e5e4c7d0111335803b28dcc39210c35eb732211e4d24b"
+    },
+    {
+      "word": "tantamount",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8b3ae179dd0a00d7ea8b558e11331afee44452b479fa9ab1637a2bdc427dea7a"
+    },
+    {
+      "word": "arsenal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d698c995b8d95616c25fa9fb5163166cca393b547d1533698516cde1085b1620"
+    },
+    {
+      "word": "tribute",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5e0561c434eba829bbe6ddc4df0c71fedfd74ba7a6dd65bb8722edca8d5be028"
+    },
+    {
+      "word": "rattle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7e223e02be6bf13a53af702f056cf39ab24b0901565807ede92b8641dd889d63"
+    },
+    {
+      "word": "clamber",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5deed6d71f1d0c3973b5eed428ee6760a91b89261465c571cc391514ab0afcf7"
+    },
+    {
+      "word": "fling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "97f057d4c522234002db6c3d346d05fe8301bf19fd0f98a1b6feb43d834f9947"
+    },
+    {
+      "word": "trample",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "44fd7c6d7cb730b9fb04305e0b7f1909e69c3ccfbcb8b41d6c6b01a1fb8fb2dc"
+    },
+    {
+      "word": "slid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "884e32c6e63f363165939a6f21bc7801ab730213bf3483339c37e01cb528508f"
+    },
+    {
+      "word": "struck",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "61e28c5793301b55756973d4e51e6c29d75a891d2acb232697a07ff892e93292"
+    },
+    {
+      "word": "reel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3a90bfa22fc726bba12b768dae35a8df5d704a662ce368756851f562efd1fb59"
+    },
+    {
+      "word": "detonate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6c75f83b0ea5d1ac78e8f918e1973777c16ed99d953035e9a38fc823f2e07ab8"
+    },
+    {
+      "word": "mutter",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b11738b7a207c37cf4da5ef0da4af0475d07acc8b9769e2a8acc529ffeb0919e"
+    },
+    {
+      "word": "retelling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fec0fbe176a78531af89c7e91d89a887694a3179ba487ba79927f589eac0d05e"
+    },
+    {
+      "word": "purport",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6b829db13a95e31a57b690677077943c36f6d95fb2cc655d094519ee3cd79ca2"
+    },
+    {
+      "word": "caught wind of",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5bcff69bb9509a40d1ad808121c2aef2a91fe47b1643b3798f8bbdaf215896b9"
+    },
+    {
+      "word": "pessimistic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d2f449276aff182cc1918c4a3989edfdcbde7945fbeb6b51d230924b5f2c8cc"
+    },
+    {
+      "word": "morbid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ec8b9e5bd1a6319992564b68101f3b44746b83a65b2298045b7801ec0797e3de"
+    },
+    {
+      "word": "improbable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "68893fa10f785bffdf732be13e070b63f7ac187f07e0bbb053cdb696ba021efd"
+    },
+    {
+      "word": "anonymity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4e298f2eeaa113e3e62c75b65a3ccdb83038a05fe267dd900a8d731eee66aa10"
+    },
+    {
+      "word": "tumultuous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0faf5f196d83c1620209ce18185c02c31c75989c9cc5772207fe048b29c76758"
+    },
+    {
+      "word": "gully",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "de7924b5f1ebba1f2cf88b06ffc21323dbdcdbd4699424dedc0e4b9181d75046"
+    },
+    {
+      "word": "grove",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fee618d1f0129691445900df2588ab11b64a670fe08d4d6a46e06b7b25635fd7"
+    },
+    {
+      "word": "stethoscope",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ea41bb9915837788f595e65a26202b18b9c9de09309df3cc65ea51e51f16693a"
+    },
+    {
+      "word": "hail",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "89c9ad98e6513ef6ff3f61adf33daa16a8d64129820d07f27302e9cb28d19bbf"
+    },
+    {
+      "word": "whiz",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0621eedd391aab05b235b2af3088b067605183e76e346d290080356d26113870"
+    },
+    {
+      "word": "collectivize",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "714cc9a22cadd76ca1011d0bb46a99b4bda040fb55ce6345236a48d3ff306e5e"
+    },
+    {
+      "word": "thresh",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a6a5f07a670fb75af8c3b350abb4eee951280a03fcf5ed7656b34a6ce76f43a4"
+    },
+    {
+      "word": "conducive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "04c89d53fb7dff1d1904427f6554ad59ac6969bc70c695798cbd4193b5a9a880"
+    },
+    {
+      "word": "column",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "136a259f56ba8c83ba595374ec6dd07f2e787d00d3e9a829a3f21f7e134fca2e"
+    },
+    {
+      "word": "insurgent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fc67c0d4c9402ba2f1a5f1affe288b686b23a7b2b35149137610534bd8629863"
+    },
+    {
+      "word": "bleak",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e6f9c2f9850f7ea524cb7b6a6b1ea763b08322c9c8b8e2f787b961af74edcfa7"
+    },
+    {
+      "word": "prospect",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3d5eff129d98ca912efa65eda5b7a829b9cd869069ec5b9bd0b61500dcbec83f"
+    },
+    {
+      "word": "impregnable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9d3fbb0b1ea537905091f9c796476cb0798a35d5c587994be76b9905935f40c5"
+    },
+    {
+      "word": "chronological",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "040b5b3ad12641aa64d778aff28d3d2147bbfbdc6f662ac2d72f53ea37ed1899"
+    },
+    {
+      "word": "tomb",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "341f1acdaa6058a2758d768b67dd96310b97c12ce4bdb56012fdaacc1fefa14a"
+    },
+    {
+      "word": "lob",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a8c326f403082d9ef4abe350b28cf048918959a425b3e725306e1039b5c8a834"
+    },
+    {
+      "word": "erred",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "10d4edbba42249af36d5dba9da3f44c06775c3f4c0b17d269f39299269ca89e7"
+    },
+    {
+      "word": "envoy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1cded1f3d171da080cd52053a3e3497b46d3c97a76ff39a9dc52c64d52ca45f4"
+    },
+    {
+      "word": "shrieks",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "293f13870edcdaf1bfa0d167437b2d2b21f4a0d26a1e7a71611c9c93ac4b8c69"
+    },
+    {
+      "word": "bombardment",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7f0eb5bfc40861ae3f4e75b3a81e3a0c185f350e172b7ec54b93bd74c39bcdc2"
+    },
+    {
+      "word": "plight",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e89f7921d74db2362806cc1cc0fe36499c2b4c4b1cd7a51bfac9a8bfd22a0a56"
+    },
+    {
+      "word": "centimos",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6b95f72597530af53b44905e9c287db18629de8539acf97ec10a0349239ce735"
+    },
+    {
+      "word": "ensuing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b97a446b6f03d426c2b42e60cb59e3b907327ebcc8dbe558df8f984c59687f12"
+    },
+    {
+      "word": "manor",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4f39bba322fcee9ebb936383dea088a19c3877835ddc9d14b931e6532e31c53b"
+    },
+    {
+      "word": "nucleus",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "11fc5674551d868e999706258a1516beff5ae9528481d86ce24a5c73d023ec94"
+    },
+    {
+      "word": "stumble",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "786608c1019ce2262755aeff1061a8332b2fee10266956243a5a6b61150b1403"
+    },
+    {
+      "word": "armistice",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "820a1b7b0bd8b16c5937a48df643198b5f25988d0166b6901873ab557f5ba6f0"
+    },
+    {
+      "word": "scramble",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3df4c5ae70c3c30eee3b6d8dc125a8a288488c7cf93c3a553a484ba2504464bf"
+    },
+    {
+      "word": "resound",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "714eb413d3f89401599fb9d85a7d756e6fa5f2d9fada74ffbe8f9e9987e77ed3"
+    },
+    {
+      "word": "dismay",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9f6fc239aa6e65eaf3f2f42c7a72c0d129c60357658e4f9dfb86e9e5e9df3274"
+    },
+    {
+      "word": "grandiloquent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f5feac276fb1be7932f26a330514ad5ca9d3fcaabe5c841dbcf4f95a2a2cda0e"
+    },
+    {
+      "word": "treacherous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "637e1143481421e28abbbaf46f9a24254045bc9178d48b2fee2d16b439224f9a"
+    },
+    {
+      "word": "retainer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9cd1e3815d0c62b770255be1a7d4faecf841edf2158af023782d9c1facc4c448"
+    },
+    {
+      "word": "duress",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0d57a426d120b77f40b8705e03ca2e7b4f6d92b25778d2bba509baa6a50f3d3d"
+    },
+    {
+      "word": "enlist",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "01cf57b7cf0e79d8af0c4f506b8cfa1814af7366c67efc0be174232ce2079283"
+    },
+    {
+      "word": "corps",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3d7c93fdcf928b65891570e2e0b4cfe9394e95bff0a5dc557fd716f16c49b27f"
+    },
+    {
+      "word": "superfluous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d6e0a73753a90a2603e12d2968a5b18201a1599b60e38c2c69885cb3b23996c8"
+    },
+    {
+      "word": "dapper",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ab7c75a9939efb6cde0b03fc519d401714839d7d85ce1799a9fb41515ef9df9"
+    },
+    {
+      "word": "nemesis",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "de41fd8c577f2d53718727616b9e620173195139e1c1be4ec6443f8e6b984826"
+    },
+    {
+      "word": "preempted",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "43dbde39e6d2ab08c37babbc63e0109623f4b03b45218cf907672273414423b6"
+    },
+    {
+      "word": "breed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5808bca1b2e2850b7f4b73e45259445e952d20aa78ced9658c482bd2f075bd87"
+    },
+    {
+      "word": "earshot",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "69e1a2147a0f0b44aa9cb352a4e42c1426d3da658458e98584d577224e3cc1c5"
+    },
+    {
+      "word": "harmonica",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ac768cb0a5975886c02f2113dca97cd6bdfe16cdb89a43c230686f06633b7eed"
+    },
+    {
+      "word": "desolation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "da5a601ca549c31aa9740cffa6da052a1468c262f7d57d5e4df55892a2d3bd23"
+    },
+    {
+      "word": "strewn",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6528459139280db2dd8d5181cbb322e6430012077b7b4525f6632244cdec7c3f"
+    },
+    {
+      "word": "rampart",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bcde3fddc6b55651d57780fb261e418d2b65c8a8924f84c4dddfa014ebe31ea9"
+    },
+    {
+      "word": "wistfully",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ff92bd0b632945d46396d8ec2daf9ca8d8a09fe9ca5a3716b10eb31c79637cc3"
+    },
+    {
+      "word": "ministration",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d758db35c3bda7b7c4af552972444c44c366b3cc196036f681e18eb6827f70d8"
+    },
+    {
+      "word": "universality",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "980625ab814e8bea69b710690a19e7c4755b6182cb3571b79afa7fd709e0c01f"
+    },
+    {
+      "word": "penitentiary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2d851b3bc542e98fadc32f8d7740859f3a540c475e467519ec3abbfc1ada91b2"
+    },
+    {
+      "word": "shacks",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6bd1f2c5c6f1d4bab9fff4c0b1a1af275747eed2d10af1194fca3952d5f4da17"
+    },
+    {
+      "word": "incongruously",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "356ed734d95187663f76cd6b5f10b2b58f8c6f9c14802a86892383c9ed0dc6b2"
+    },
+    {
+      "word": "thwart",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "00b06bbce4b149ca7dd63ba19656d613f4ddb76c573ce3c5524c67541f1f6571"
+    },
+    {
+      "word": "slit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "72e63bd321b75eea94dc5d346f2cee14fce168ff4845cae6ea80e20576b0193f"
+    },
+    {
+      "word": "mumps",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6e4928f28da91aa8e5aa21972ea830e5c871e16ffe6104ea86ea60e101af67ff"
+    },
+    {
+      "word": "emulsion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "08a109b5a0b9c537552d0c96a1128cea016f017d2534b27a88d2616748367bd5"
+    },
+    {
+      "word": "tacked",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a4321210fe9c6f9a38107f416c448f91e269186ca1143a8b92853712051ab9c3"
+    },
+    {
+      "word": "prefiguration",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "37b69fd207a0c5c16e8c2b246c348e26ef57e8bab853165034c43d9963df3c5f"
+    },
+    {
+      "word": "amphibious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d40a4115d02ba64c6751ad36abc04c41af6257688cde4273611188cf81e78cfd"
+    },
+    {
+      "word": "dike",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "370e1778e6a8aa4efd597d40316469b056f36441bde92f2e6cd33cf9d5147179"
+    },
+    {
+      "word": "inundate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "778e6cc263952e6b3b517bb2aee53bf365ed2b8bf5818e4975f831eabbc1771a"
+    },
+    {
+      "word": "exclaim",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9d017936c3f29a76484ad2bb689e70d0623bcb17c4f92a859d78d9200a46cddf"
+    },
+    {
+      "word": "suave",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c56b117d68740c046eae8de2ef0076f9a84798224b49e2e8dbaed59e67289b8"
+    },
+    {
+      "word": "spaniel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3dc65f3c4ed314c077e33a3e59fdb903953e67956f9996e8f9d8f5c64457445d"
+    },
+    {
+      "word": "shinnied up",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4b94dc7c86990505bdeee3bd392701678c014c629a63a5ac3c0f7af16d8e22af"
+    },
+    {
+      "word": "flurry",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "303ba8cebb8a9e0df7c5b247d07eef1c7bfdc982ba5612fc99e377fd4a8127d0"
+    },
+    {
+      "word": "dysentery",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "28c35fc29a96e34e7c29e18cf594e851e94a38424dbe4c877cf3b4caa6f46da4"
+    },
+    {
+      "word": "arduous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0df20240578ed5165033e3a475d70f91fb9f1f5bed21ad5a44b18e85467c38e4"
+    },
+    {
+      "word": "cagey",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c0e90d9e85fa92416ebd2b873109321547f11913f9c88283b1bb55f5aabfa573"
+    },
+    {
+      "word": "encumbering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1f67c433853d42aa9e51f5d8dd1d0a956960c57bdce7d03860a4a49d0748eccf"
+    },
+    {
+      "word": "fraternity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a61715a38ef6360e23c127e3f5e46c3588b603327450e7e2b1334dcf13cce094"
+    },
+    {
+      "word": "alas",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c427c8d1757b7e65e992b200ffa0c85326a793992f7d7393ce563e26f3d4f3f5"
+    },
+    {
+      "word": "tuberculosis",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dfa81cf6fe6d69ae76e915f5409256df687491e96ca6389212d9df0c66661bc4"
+    },
+    {
+      "word": "grim",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "94f26615c00787b72204b1c750ede72de8c8f6dd47bf7528ddb366e3f1a9f007"
+    },
+    {
+      "word": "fervent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2a65558b1eb591f824bf113e03b9d5b4c6941d5b336db65770d16c54673a1e44"
+    },
+    {
+      "word": "appalled",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fdad9902851571ffb801decc4d3f40c150d5e02722c381bec1e33fa2047f6c73"
+    },
+    {
+      "word": "voyeur",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6a648c3f51935778b817361f9c44cc1e185a02e08c2bf843a3b617a482b99236"
+    },
+    {
+      "word": "vantage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b618ccdb24e8b56b4bf4e223ec40848e7e9779c60a98e03cf51fc153087c1cf5"
+    },
+    {
+      "word": "earmark",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a6282ab9a2370f9eba46762844eb042f5a9c9e1f6c4dbb1b6050a3619d71309f"
+    },
+    {
+      "word": "bombardier",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "352a3a5e8539612afad495bd58910a7a4ad15bdc9e4d279dafc8c6fe33ea4f1b"
+    },
+    {
+      "word": "guerrillas",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f17be04c80acf8561836dff0d4882fbbe17c3911a77e6dbc52442db83286fc6f"
+    },
+    {
+      "word": "fliers",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7fb2a4bf53d80e71ff4279ddd54e7e93723771b2fe6d0b04c453d58f61afcbd9"
+    },
+    {
+      "word": "earnest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1bd3595f97ad38f64cbe340bb63ce83e1105680c781d3fca171f4754ff93bf1d"
+    },
+    {
+      "word": "acerbic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "751d8e4b495ee1190d88e643757e4352f0fcc7068aaae2bb65ba706698ed3752"
+    },
+    {
+      "word": "forthright",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cee7959bc2c84fcb4a52ec0a17fa3fe37a4a2c2b44f2ab4697ec39209baa55de"
+    },
+    {
+      "word": "courteous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "22246d52310b293e4ad44b0c18f29ac7ed18c0392ae5222a1a5c7aac55adec7b"
+    },
+    {
+      "word": "cocoa",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a3d150a771d18a96c7701f60e820fef7b6d37bc00d21865535b19f971318043d"
+    },
+    {
+      "word": "coolie",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9d7bda02e62df24ca001aea3c300b25ba3ffbe48511180e9059dbc8e81b0da8c"
+    },
+    {
+      "word": "moldy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4174e4aeb4ba37bce04b41735ed0765e649102b3552e355d24016f9cefd0f8ed"
+    },
+    {
+      "word": "scrub brush",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f062e43f4d2800c84fb10ccd127164a51b3c02048054ad458b8ab65a3f7df4a0"
+    },
+    {
+      "word": "mercurially",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "218f99adc39caa17beaa426aee5f86d0fcdd9d9272edee49b7e027bf57a8fa79"
+    },
+    {
+      "word": "pretension",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3ee12dea4a342cb166c7ef8aad31daf98fc0ca976ab980d95e76ab454469fd7a"
+    },
+    {
+      "word": "macabre",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6272d67cbeca5f9c39dba6e1de5c9a2b6320ad042783b752c801fb71331fbfab"
+    },
+    {
+      "word": "wail",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b6a79bdb89dc7aec598cfa3053fd34a8cd32753cf0f07077c48d684a93f040d1"
+    },
+    {
+      "word": "foster",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a7cde5b03631c373d6320c0b409ca83e1c2c5665e7f5fac8e2e2227db819514a"
+    },
+    {
+      "word": "debonair",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2895e75361000e383354740b851c61fcface347af99cd7f62bfa64b5276ba90c"
+    },
+    {
+      "word": "mischievous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1191c246168969eabedc8fdd66dbd25dfc7c54098933551106b0c5bc1775ce9e"
+    },
+    {
+      "word": "uncannily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "022c9af09fbafad43da53b81510055c44f24db82bbdc4edd221ef1b45e75ab31"
+    },
+    {
+      "word": "disheartening",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5eff00b4fe48c0d9fed1601125927993dcd8e7a2a3a29b23d42ed1ad858df432"
+    },
+    {
+      "word": "avert",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bde27400a74b23e0909ea1b87af7b45fc6fb4835466ebf66a42a0ab8f0cf20c0"
+    },
+    {
+      "word": "disband",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a1b583808eb4eefe3c77edbd1c7d703e5b817c30d89aa66e643ecfeac898f3ae"
+    },
+    {
+      "word": "debilitate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2cf213ccfdac7d6eefbcf78f95bd44e754486ec6eacfb47971ae39ce55e0a76b"
+    },
+    {
+      "word": "gravitate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fdd41fb120ce1038782b0314d56a02efbc4456913c926c72636441ea92b90d5f"
+    },
+    {
+      "word": "famine",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "df028904d1bbcf1d688ea798feff267329c7f042a02f878054d0b17782d6afae"
+    },
+    {
+      "word": "forlornly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4aafe78598ed8d4c94247ecf3aa92f67853a34324d5487d10a4cd92a3e1b8602"
+    },
+    {
+      "word": "slanginess",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c7f4abfa2e7712b1e2b97ce93dd90d6480ec4033cb1eabfe386e93e40cef2a8"
+    },
+    {
+      "word": "patronizing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3383d52d12ec57c79199ee2633df5137b613a70b54ebebbcc62904319ac0f95c"
+    },
+    {
+      "word": "rendezvous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "883fc4946abfe6063dd6a642b245c8f178ac2bb6e9b9abee9a0c52263b589ea8"
+    },
+    {
+      "word": "oarsmen",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d7895debda4fd036b5f7e886dc47562c76d705824017d971f16b2d6b2b65fadd"
+    },
+    {
+      "word": "scrawny",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a7909dbe11a6c5201d845dc8e9de17bb123fb085efff031a6dbf91973fe50262"
+    },
+    {
+      "word": "veer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9db25406350668f43f81e3527f9f242395bcb6db8d9412e4ad6ac856fa8de8ca"
+    },
+    {
+      "word": "wade",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6f419eb7579816f11fe508b52a0608f3314d34d7ade6344df5ff19dc83a808eb"
+    },
+    {
+      "word": "tributary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7826b349a7751a22c1cfc6665e01f7a64e33ae417a44df833dad3efd038a6e00"
+    },
+    {
+      "word": "hyperbolically",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8ed8224dd8a72e45cca1cb16d73fd84330dbdba5c8d1014b44df862219a3be6a"
+    },
+    {
+      "word": "strain",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "90116049bdf59d0553f027e70e0fb5c0dd3c52a468908e62b43000d2226dda43"
+    },
+    {
+      "word": "plaster",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "27b6132dd9f0aed2185dc0c9cdac8491742ad0c173dcc4ee1c466a7f89da248b"
+    },
+    {
+      "word": "poignant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dc05e78cfb8864d0326c0950eae313e1bc8cbf0dcd56cebe195483afd27a3c5e"
+    },
+    {
+      "word": "swoop",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "509219e3d3b31581bd875ddbea63b54f196dbfcfc2618cb33fb054b240da78e0"
+    },
+    {
+      "word": "emaciate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "47159bded543d6f1296aa98dd31800c1e692989e284740b159dc2137f8284616"
+    },
+    {
+      "word": "harrowing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0ed76653eb809ab3daf09dc027b48699cad7b1bfe715405d1d3f30cd6e3b7c0d"
+    },
+    {
+      "word": "unscathed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a767501dbfa2bd22850a3063fffc073049f9782ab8850406b0722965fdb42e08"
+    },
+    {
+      "word": "respite",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f4239fce3498e7d2b9aa1cdeeaa1788749e32485ed85f4bd851bc0221a168de8"
+    },
+    {
+      "word": "pounding",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "869f4d2c0b39e580bf61dbf8103aeaaff92c01041ed5e5e8de44d31c050c4da5"
+    },
+    {
+      "word": "shiver",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "12c5e7bf397d837d47529566ffa62d5e222087cc90c60565d7efd9fe35a6b92c"
+    },
+    {
+      "word": "wearily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5752589a6bab1f39815468ea1a6a7dec03a00454cc2c4dcaf7a047436e663f2e"
+    },
+    {
+      "word": "hastily",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "58fe03986ec3544e0c8aa6b74a4b7aec6adf57380d8b85dd4db3b24575736db4"
+    },
+    {
+      "word": "heap",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5bf5282d7c8850edb174dc959bb7b4b5d3f63c7385d3b78d75ca077668f1d07f"
+    },
+    {
+      "word": "crusty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3144f21bd24f9b585add592416b2d4c730fdc025d8a50e7d5be754949670a9ec"
+    },
+    {
+      "word": "rashly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "08a94e350f2e4afdafd85feb877d2f4da5c98fc28ad01cbb581a48b6c8f17c2c"
+    },
+    {
+      "word": "meager",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "40730fa2a369e7e3943287c1930496016b19182a06e29ba35ecf890d9d482810"
+    },
+    {
+      "word": "interment",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bc1cfb6704ebd36291221fee8851db585cbbe0362660ff4c5eaa6629099c7cc2"
+    },
+    {
+      "word": "internment",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d44ae947078acc2bfa13e34e156aa453bbd09b926553fbd0b9ec8fff19d5387"
+    },
+    {
+      "word": "barb",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f6485d03a401e28eec6603e697c8cdeab0683e962f6662f824aa67d67e0adf82"
+    },
+    {
+      "word": "straw",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5480eb02fb85a9e9d361662ec518985cfdfd94695c618463f2c91b69241d920a"
+    },
+    {
+      "word": "brackish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4b5353eec02d947752e333eeea06c58d420adac01df58d353c3902d2ac2004df"
+    },
+    {
+      "word": "besmirch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5aae7709ffee68d6c070402add690f1e92dfabfb069be0f716ed8f23e256e443"
+    },
+    {
+      "word": "defiance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2f51950c75147331c3268125abea398a70c9a1c239d6233ed38b90c144d9eeef"
+    },
+    {
+      "word": "orphanage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8115ef825b98c4b1b34771ff74ee8f1a7749bd2fa71f9b948a248e99b763734d"
+    },
+    {
+      "word": "in lieu",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ebf08b8385819039eac7425d905ae209962edcb93cdd7b283e0da89493c191d"
+    },
+    {
+      "word": "accreditation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1ab799835843bd1463d27b4ee71e55dbe39e5ee6f996122aae5e6b51616ca780"
+    },
+    {
+      "word": "sever",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "02190b9f28e59c0f6907f8af3545688c71022f28d4ed5a49b63020f18852b9ca"
+    },
+    {
+      "word": "reservist",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e6ba3296d413898f172cc8c336410c240f18b541b3e6db763a7e9d84fd02d78f"
+    },
+    {
+      "word": "hull",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1f6f26f4edf8c3e296ad4356f73e1eaf51ed306414e2dd2b1b854b9286155750"
+    },
+    {
+      "word": "sieve",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0a977949c7d1140fca819e064f7a8d7bdad5b7cee34ad5ff9a5477bcecd9242d"
+    },
+    {
+      "word": "drolly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f5b0a40d1355d2aff514d5672eb188183b388fefceb49ea6769ef59a88ab685e"
+    },
+    {
+      "word": "hayseed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8af0efcbc367232fac606a9ce29643ff8f8b0dbcba903311d7a7ad0678a34e98"
+    },
+    {
+      "word": "rink",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "36c77321724799c2f3094df348705005807d017b0a7f6c0747250d3d2cba8d15"
+    },
+    {
+      "word": "casserole",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2e54ecfd07fd6febbe96c843bb08649348da0d3f58b24c0aa67441e83c2e2f93"
+    },
+    {
+      "word": "awe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c9004adc03c04999eb85ccbd5a5a7bb630a3c40f98c746de19219b116566929a"
+    },
+    {
+      "word": "regale",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "56c0868342fc90106747b2e781498ee8d18728ba36fad86e11489ac5baf438c1"
+    },
+    {
+      "word": "strobe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9479b9c6657577c5cef487122dbeef0dd083c4ec32b17146aaa18e40e6f2c80c"
+    },
+    {
+      "word": "philandering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "521a7fb28d7aa4b363615268fb58084ca8c624f3c3ae2466e332aa94af0d93a2"
+    },
+    {
+      "word": "socialites",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8363c6bb8fc2b4c198dbfc0cb49aad028b9e7638733a40637c947937f12f43a4"
+    },
+    {
+      "word": "quirk",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1e88daacd49528145efa65954bf76c512e6cb3db11124b482c47f68f4125f6e8"
+    },
+    {
+      "word": "lasso",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a43eb4400c06d2bc57cd05eabce9bf62e08442c6bae376af26d15ede0f28b917"
+    },
+    {
+      "word": "quintessentially",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a728777b8c1a5c4ac111b309573685f8e032c5708f99505aba9a8e52d1358ae3"
+    },
+    {
+      "word": "stern",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9ca77a0f44fd7a351bd6978c1aa0185274451609a5b90eeaeeb296f3c8fd0d2d"
+    },
+    {
+      "word": "elope",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "21b3830f7f16f4d3e0dafbf8ac53b5805473d05975e7b9379b74ab6b1ac1e3de"
+    },
+    {
+      "word": "exasperate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4800ebf7f0d5393f1a654e38ecc3ea5dfab58cb105fb7a01238fb2d05c366136"
+    },
+    {
+      "word": "doddering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "54701d3bb783ca4210ad1d9679a029f7eb94c1589769f888487d046f404246e2"
+    },
+    {
+      "word": "amorous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ccad3c27fc65f2e6848a27dcb37741b12d2034d39c215e49d39237d24c5c6abe"
+    },
+    {
+      "word": "rebuffed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e3dc28fee27530cbc0b036b005ea3912ac5b5bc9bdc42978e92f0ec49f35351b"
+    },
+    {
+      "word": "pout",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ea230c4eaecfd797fed10a4087d9c021fcfbd97aca0068dc2b14526e50da6e15"
+    },
+    {
+      "word": "consummate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d80a98903e7ac7632b54d2580dda3ece0ebe98d3567155ef71f5c9fbaa15e866"
+    },
+    {
+      "word": "turmoil",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "094a6afcfcbba670c0ac5a167414dd88863519c7725f3aa48d4a193f20762ce1"
+    },
+    {
+      "word": "zestful",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a53a817887a57b537d50fc15dade6ae05d0979f052a8d1f06ffbd306443456fc"
+    },
+    {
+      "word": "insatiably",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ca45df46098e53c71fd1f9917bc0e60e8ffef358ba116fcffc27a92bec8db41f"
+    },
+    {
+      "word": "gregarious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "586913dbaaec8123779399969926f2c207ed8a600674040d0b971d6d58565fcb"
+    },
+    {
+      "word": "rollicking",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7ae818fb414716988f3bbddec3e4f3cd03b5fcb063e1c5e1955f2083bacaa2e3"
+    },
+    {
+      "word": "spree",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fcd0d416308de9e05dde36e37c9e16f30696048e932d3ae2990cc52967a8770d"
+    },
+    {
+      "word": "frolic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "af1a0809ee5d276d31f69464f718d0c2b8cdda5a8f521a8fc9320533c3ca85a3"
+    },
+    {
+      "word": "wheedle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "852c3db1b553ad034a4515bdd4d4f04ded373f2e09f15b552d87959bf0523221"
+    },
+    {
+      "word": "induce",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d871acf377810755e2ab2c4c332d4f77075ccc8ed1c721a1bc05f31dd6d7a4d3"
+    },
+    {
+      "word": "abet",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f3cd31d78a39c99c2af977796b0758c56817e34ef551485ab01d54f9d0e9c41f"
+    },
+    {
+      "word": "tipple",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eb78e18c0c11aa6277f8cbdfcf15e329cf56fa31b30f38e7dad268008f21d8e1"
+    },
+    {
+      "word": "prance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c9a48576e5dba7854c2a31cd1f60918ca91b4b015c26195a25af07787a365ede"
+    },
+    {
+      "word": "berating",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fe54373964db5a0bb74cb89750d3056b443a0857b4e3a80dd000866f9331ddb8"
+    },
+    {
+      "word": "hacienda",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2f8700b6a344f788da4fcaec2418c49aaed6d450119f79b3e4d6271e05719eda"
+    },
+    {
+      "word": "ardor",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c2982dae459933d3a0135282ed015cc2a0cacb0ab8b3dffc096b29a2bdabc8ce"
+    },
+    {
+      "word": "conjectural",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "677b70a84a99c5d4bc14c6bc98fae59cd32bfbb6a454356229346638d100fd09"
+    },
+    {
+      "word": "decree",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7ed5448e67c62b19b8e7256a6c39f6429a1ff72fa706ff4aa7e193cb8d42b8fa"
+    },
+    {
+      "word": "tableau",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e7d06dab01045d0ee52b7aa01e5b66ca2c4ad3581fbbbbc3454a419b501add3e"
+    },
+    {
+      "word": "convene",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3006e445661b373e6236367a96f38f158da14c67ea35381e9c079b47cd501a50"
+    },
+    {
+      "word": "revolt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ec687eba3b453c38e3645718e56a7cb0c1c97030ac286c832cda9421625720d0"
+    },
+    {
+      "word": "plunge",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "69aac976d98fc331f2d84c2bf8fae4d698e5044edecf26a7c23dba01a65327b0"
+    },
+    {
+      "word": "stench",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d9e78c8607316f4fa106029e5339ecf7e0e2ee2f1ac3c0c9b67997f2a0beebcb"
+    },
+    {
+      "word": "wispy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "000cc95a90efe6f15d3adb8be1790b8413e15024e0ab747c4f68c75b89458f69"
+    },
+    {
+      "word": "shriveling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "70ea5b5bbd40cd79474383cc9aac40e435b8415c4b80b9613cd8fdc7c89f3855"
+    },
+    {
+      "word": "writhe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6d93ae55054627be8f469a8a5a69a472b243c2cb6670d008e4211b4389f0a670"
+    },
+    {
+      "word": "contingent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8297fa2b6ed2b851dd1bd9adc8b3a597d56040f4893d5c4d4e3212e15bc7ac49"
+    },
+    {
+      "word": "hitch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "20b1bde2e1475ce1c18d35b99a2d59ad49fe6f01f433c081824b5871b38020ed"
+    },
+    {
+      "word": "intermittent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "834ec719a3c84a1ea6ab7aeff823087a7f711847983650acbb3eb4c8d3f75f01"
+    },
+    {
+      "word": "relentless",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a455b6c8d38c21495e308041285cbce5fc1af1093d1ae7d9a2ae15977ddc5125"
+    },
+    {
+      "word": "pheasant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9335b7062d1762037a7e200c78ea0a973b101c26a283c7d625406cc6353b441b"
+    },
+    {
+      "word": "decadence",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d1287617694b643b0787132e3a53019b72f1699f7b9470aea962bf5e4ad0e4d9"
+    },
+    {
+      "word": "imperative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aeaf459250cf1cd277105a111705405e8a121d91f26f5cd514eaef5baaefcfea"
+    },
+    {
+      "word": "convoy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cbcf359943f39dea75b1ccdbb9bdae01204f03484191e259c9d4a8335da98a55"
+    },
+    {
+      "word": "tenuous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d8f58d1eae9475528bc94fefdaa4cc5531b8f945cba80e3f9679300b77ddbdc2"
+    },
+    {
+      "word": "deference",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4bf978655999682e4a0d658f9338423b918931241b4e763621a7aa37af78e951"
+    },
+    {
+      "word": "promptly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fc883c7183fe8c3d9afc7199646618b8961900abd58d07b20fd5412e13566250"
+    },
+    {
+      "word": "taper",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "44bef5638d79819ca841865fba9831369cfffd96d7971d7021a4d6e5d774dfca"
+    },
+    {
+      "word": "vicar",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e246ae0f337c8443133cb05ce0d0c4b355b02b2e2ce237b305945b954491f29b"
+    },
+    {
+      "word": "stalwart",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2a86712af52539c144c3d58f4fed3f4896c8c8328d2cb9d7334bbf2344eaa25b"
+    },
+    {
+      "word": "fortitude",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "764bc240a95e954322a11277f1d9906ee010a313818334e0705eae0c49901c40"
+    },
+    {
+      "word": "strapping",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3bf969c800f5d75208f37f1d2bc6551b452b1e763a64f5b608e27dd87985470c"
+    },
+    {
+      "word": "swanky",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "193e878b440843220ab1ad23212199c9380ad78aff804ffa634256d3f2ecda27"
+    },
+    {
+      "word": "utterly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0bcb6940d8d3ede2b1109643a0848a6c14f95e1d8aa7049f84423222d47a6c40"
+    },
+    {
+      "word": "expedient",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c5f12deea9019281558ce66653b2fd29551959910a9a1e3eb296f1bb0fe2e4d2"
+    },
+    {
+      "word": "laden",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f2863224a70b2bbd1d551312b1c63c8b130276faef7e7de0a3bdc3653f3e4f02"
+    },
+    {
+      "word": "subsist",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ab4cd92d0229bec61249286c54f30e320d910914a3ef787d8bd7cc124410efbe"
+    },
+    {
+      "word": "knack",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cd2ba645922aa7e2f38e3033a871094fa32a85d08d10db75259dc93dcf914db7"
+    },
+    {
+      "word": "cellars",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c4b6e066957125320e39ebbe9f725bbef23b385aab5feb2f92d523a0346c63c2"
+    },
+    {
+      "word": "conviviality",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a4b6ab889711d4ff0716c46d81823148509ef930bd2e3ad0f4aa270aaf049324"
+    },
+    {
+      "word": "sublet",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cb7088c85d605050646970d6403276256ed8083a279be9204daf723a990f0180"
+    },
+    {
+      "word": "tart",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9282d6af5cc3419948cb39533c257abe17518266f93eebf796ed31340052d199"
+    },
+    {
+      "word": "clung",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "386c3515cf54bed0a8723033ad84397d35df08789c81a87daf965cf6c4afd053"
+    },
+    {
+      "word": "warden",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1d28f388587dc7628e4488b33ef992e2e55e568020b43d7c54e4ae82217bd47c"
+    },
+    {
+      "word": "magnate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b12c551977d2a46d9e6cf46bb98f1d67c770c6ad82e5bbcd0d3f1658756be64d"
+    },
+    {
+      "word": "dispel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7b2bf97c2d75552d08fd5fc2b49f7cdbfc715ad92248b7041032fa2ce6e9c179"
+    },
+    {
+      "word": "vacate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "77b898483e43490dae0124af1377d0ef5422d4dcb6ffc412274f35f90ae21b9b"
+    },
+    {
+      "word": "undertakers",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0862bdcbf165a530e0b950f358700578a43cfdea7f68198cf29e6b58aa8bd1a6"
+    },
+    {
+      "word": "skylight",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "669f8fa61b00df9831b125937099c1574b509c216a1e785a29a693d4068d1191"
+    },
+    {
+      "word": "gratis",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "13dd22379f3b9e0520d16a3c2cdcbda8dc7f8b5b267db09155c013d5feeabde0"
+    },
+    {
+      "word": "notwithstanding",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a7488daeaab9ff4aac2466fcc94ceca497f85a4c986d89bb31beb714de22e687"
+    },
+    {
+      "word": "emboss",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5e8650f51231da901d8846623bfa21994ad329ffbb78b6b485356f543cc881dc"
+    },
+    {
+      "word": "commodore",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0a0aa8a34ed5b9efcae0473fe5f44994e4a1d358773762635b8f21918943a799"
+    },
+    {
+      "word": "garrulous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "865b0cb9ecc005a23d42e75cef0da7bb9a3c2f6a2b8496ec2f0ef172646d466f"
+    },
+    {
+      "word": "hilt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a57ae106a21769287de6ef16e98a15f0c854c64f3f69ea635b968b3e38112a3f"
+    },
+    {
+      "word": "anecdote",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2bb83d4a1d189bfc09a2c9a238be4fb5be3d5cc3bece6bd674387ba894d90498"
+    },
+    {
+      "word": "nudge",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "20c652b49b014546e3d8f010c10ff06b3d8f657ae3cec362e18a08351865bbdf"
+    },
+    {
+      "word": "chuckle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fce48ff0e9b7a5e6d7eb0a44e863eac73f4de2dd4052c2fbf360607c052909eb"
+    },
+    {
+      "word": "gown",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "039cf7a52622815f9fe61377180df374b2b2c32b2e48d199be20dbc60a150221"
+    },
+    {
+      "word": "anteroom",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fa6c50ab1d856cb2def3386775bb1406d27d66f74ed74e66000228c891cf98a1"
+    },
+    {
+      "word": "bout",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5b1412d8a33272eef074a0b9af9fccb29f9f910de159c10b51d650f714069f8f"
+    },
+    {
+      "word": "turret",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9e8a947f5771accd103abc58e5212dc194addf7621f0ebd4cd97292130c90103"
+    },
+    {
+      "word": "amiss",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6c3bc94137019d02391161183936f3857a447729fe4d8f7903bfbe33f5d83946"
+    },
+    {
+      "word": "oversight",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dedf53598d97d2a536e08e18fa17c753b0d17d0846105fec9fe196b5cdd3f496"
+    },
+    {
+      "word": "court martial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d6cfdad113e5c3ba3ed8d5007925444fad03276ea287a343725fea7715bb7c4f"
+    },
+    {
+      "word": "spur",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dcc0e95318237e4ea2e0fe601a93365116aca9bc563d5f20958e8a35332e4f4f"
+    },
+    {
+      "word": "tycoonish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "814e292afc20b9b7d79cba57cab898b3ae542a04e3c82896ec0d8d85e9100a25"
+    },
+    {
+      "word": "exquisitely",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9ccd4f8fed7447786851c6f3d3b9236709a7f48025ae0a3e487ac25bdcbf0bb6"
+    },
+    {
+      "word": "slender",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7c1c19ad6a2a62215786b27a7f693e4087ca32db70eec4cefb7f0738ab85ff16"
+    },
+    {
+      "word": "ravishing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "736245b50c2adbc5c09902c027cb62e58716ab3a08b94724c94aa144ab17ec22"
+    },
+    {
+      "word": "alluring",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cb4224c9ddbf65c829fd5ae5f36687f78cdc464fb596a7b70e566ccfba4f651d"
+    },
+    {
+      "word": "demeanor",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "01cf5e82e22483e26a884544b7bb106e782df056d44a97c72f00256629c00bd5"
+    },
+    {
+      "word": "frivolous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d300753c94646041fcb3a49decce6c669da3fda30469cab6b7ec67ec0b7f0bc8"
+    },
+    {
+      "word": "bedroll",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "722fb6307ba28fe50b3ce9dff16b724f03479c959bca355cd305afc5efa438e2"
+    },
+    {
+      "word": "ingenuity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f42af06aca18fb2183c5a7a326eb3fd1f119bd3148d97a0f818f7b42baabdd03"
+    },
+    {
+      "word": "wangle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "afb9cd5564901bcbde5303a63fa10d5c7ea0e73275a8e1e4ba3995b792045450"
+    },
+    {
+      "word": "forthrightness",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "043c389457988bbafc64a8acc62c9bc91cfcab28c1b6218ebcf83998782834a6"
+    },
+    {
+      "word": "insouciance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a90205f39e5213a6c5c7acc46a16a066742e330025e145cd95d363cb92012474"
+    },
+    {
+      "word": "wryly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fbf4bd539d125d6a2f11d8e225dade37d70de0e55ce6546013d79baf1e2a4672"
+    },
+    {
+      "word": "cactus",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c46eb9893251a14ccf34a6813182411d939bac74b3bae2715bbe35485dbabed0"
+    },
+    {
+      "word": "pompous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "675940a87355547beb7c0c12686808f97a3649637c28f73925af1aa5762f376e"
+    },
+    {
+      "word": "egotistical",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1570857b42f9490727219462f28f9b810dc706dd2ea0d185270d0391fd189753"
+    },
+    {
+      "word": "effrontery",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0e2b3c9c0b379e8ef633bcf6f3d50e07b8c363bed0d2f0ab0ae02102c3729b3c"
+    },
+    {
+      "word": "inflict",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4a80cbb50f4958a836f7fa75627098e527dde4865f1262370a0d77f0480abefe"
+    },
+    {
+      "word": "grueling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d68a756ec95ebf25a2e65ac6661a7a111c1a6de1493ecac445552cd84e69b6bb"
+    },
+    {
+      "word": "spectacular",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3e008ef00734e45ced6bccc2670955e11fd122fc27de3a1ce9552fa30d09466e"
+    },
+    {
+      "word": "slate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7bf96a1ad65f459137717f61931980eec8de291ab9fbb62c81ee36e8e95e3ef4"
+    },
+    {
+      "word": "feisty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9efdd178fd63309e0497eb6ec04d8fcdd8c9327a63413d49c14a31f626bc8bc9"
+    },
+    {
+      "word": "cockpit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "75baa081cbb7fb846b0a1e13d8c4953efafaa77da81e4b2e51141b31d2b529f2"
+    },
+    {
+      "word": "fuselage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "509363669c8cc14678e871aab59a763ee08f8f7ddb55955944e3f18e3b6e366b"
+    },
+    {
+      "word": "fasces",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "347dc4bb644895a2fb397e7227f5eacc009df968bdd475a0a35b8301047f5a6b"
+    },
+    {
+      "word": "munition",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5958a736a7fbebba77e2336475cddb28262a8e5e5c2df2d835246299d63280e1"
+    },
+    {
+      "word": "graze",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5bd5233bdb797486acb5febe9d7267057af835b4e35f2cc13c74dd9d0bdc0386"
+    },
+    {
+      "word": "lurch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "45ec0ab963377158ec506f96e27646fe9d48ee3d5561c6767b0f043e03ef3082"
+    },
+    {
+      "word": "gauze",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "007f2c416e043060ae2d4a02bc025b4326c208ec7829f22f8f25f0fec377ef96"
+    },
+    {
+      "word": "sullen",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "483f4aad70ea8381f44bf9fb931eba8b89ccd77df28417838ec0f05dbafbd8fa"
+    },
+    {
+      "word": "delirious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c360551527a1ce5a102fb0d1f497ee3dd4989915ea053cb9daf720e3599ef9e0"
+    },
+    {
+      "word": "armada",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1d6b050cc1be21ae4356f1087146255d3261c322d409ff7d2c25ae1997ecb6c5"
+    },
+    {
+      "word": "apprehensive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "218025d230c693e2f5cf2dfe31021715dcb09980296d2cbbc79c6c134c3356b7"
+    },
+    {
+      "word": "for if",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "35436c0035769ff1d572d139a0111bd92118b5516e7e8e66a5d58dc9b4b7b3a3"
+    },
+    {
+      "word": "retrace",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3042e6438369c8a8aae4740e41f1d4f93bb49175219095839494d2364b9382dc"
+    },
+    {
+      "word": "shudder",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5185972340765b74f7a8898688e62c05446cefac0dc7d4326f5cac60257598fa"
+    },
+    {
+      "word": "shroud",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "94dfa4b1eb255f885120ad170bee8f0c9195e3badcc9dcbc6679609b02c6199c"
+    },
+    {
+      "word": "reconnaissance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7ab56f76e68d29d8d0f81033492c97c3a1c939694ba996bb40b43798420b93e5"
+    },
+    {
+      "word": "disgorge",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4e6edfc15a4e2c1f003662dc3c8df4f86ad0f31e476da47c7827157efeb10543"
+    },
+    {
+      "word": "scoop",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4b8d39820be21ed4436bc85fd18135192f8e1be5689b384ba659021603067e3a"
+    },
+    {
+      "word": "dreary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d4cc066cb1b9019f619ca9677f36467ca5bf388cc74f79194dbe62b0e8d7cb0e"
+    },
+    {
+      "word": "mourn",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "85c48cfa002899c5edd288f2fafbefef2cdafcb3e9cd554b2a0b033a17b6d4ac"
+    },
+    {
+      "word": "crest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5db4bc8994b20772c4c9f29b4b5b4eb601d1605ecd7bb4584bfb4a5c9a0bc3a9"
+    },
+    {
+      "word": "methodically",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c1d37b35561e0c10e0dc942caaff9ce32e73a7c762d1bccb35e383e2cfe8b8c4"
+    },
+    {
+      "word": "protrude",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d0c68f2b5c37d02b1a4b3a5c6d762df51d1f98d99ef8260089220528cf894225"
+    },
+    {
+      "word": "foulard",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "59e47d9d6d64e74e43d06d17323582658606d7904bca340cf32924cad532a46e"
+    },
+    {
+      "word": "genial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1f0fd20def9b717044ba6f983773098bceb82ff34d8d1054bbd5711d168a2f1f"
+    },
+    {
+      "word": "sparse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a386191e39da048220c62bc2092abae526e70d7a0aeac4019c36414a9786950e"
+    },
+    {
+      "word": "contend",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ce02c7e6c886923f80be7bacb76bf150b1a35b7dad6cfb07e03ab7218d2c40f4"
+    },
+    {
+      "word": "sodden",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9b942b451d241cd8776339c377747e6a342e9d039785e51f7b1ee3cbd85b9697"
+    },
+    {
+      "word": "mortar",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "780e8cfd2c9d9999973cacefe99495169e982557f87bc4e99bf70219021ea563"
+    },
+    {
+      "word": "shrapnel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dd60636fb3a9e832329a49b591e5ed6c5d4088339e8d1eef6754fb827186dd8c"
+    },
+    {
+      "word": "strenuous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4d8811cbd3acbe675843024786e669bb3c8bd76581d049066099635b5499deb8"
+    },
+    {
+      "word": "evocative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f0f065be47d28cf0fe6a5fbff0fc94b7166381e6ddc8c773114c919097f78ab9"
+    },
+    {
+      "word": "disciple",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "acf897c0c7b708d31babbbc1385c08ec8f24d793f397a28e75cacd756c7b885b"
+    },
+    {
+      "word": "nightmarish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "696a8d851d6bb0f43e4b2417a8133421e622bc2496c75b422c7b69dd42ff3bd8"
+    },
+    {
+      "word": "commando",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "585889a427bc1e6aeff048d0030ff7f0f3527990fe352e1eae129bd2ed84f14e"
+    },
+    {
+      "word": "disdainfully",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f36ec15d5c355f978aaac3863bbb2146a07bc0689b7e502bd3f6985005cd9985"
+    },
+    {
+      "word": "satire",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "54cb515a76f6576ce03dfccfabb513234af8ae5404062d3706dd524e6170135a"
+    },
+    {
+      "word": "lavish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a2e9ae10a79b51ab2ff967c4edcb7d90d2d651fac22d6ab8539bb82347152611"
+    },
+    {
+      "word": "carnival",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9a03ea05de28bff317b9aa2d635fd2956bfbf18b358611e74b6cc1629e2d24fb"
+    },
+    {
+      "word": "swirl",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "48003b5f7a9716a79380453c2e3c29d44c8f7d8218e3882d4ccf9cdfb5b78fe6"
+    },
+    {
+      "word": "accompaniment",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5187a6b86183f2df8ffd7d6cff13e9cf2cb58a7a0be7c614c499e4c94abee16a"
+    },
+    {
+      "word": "excursion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7bb5f8bae44eb722f9187548fa42c1089688ceb5a991575e75f4d246c9445ab1"
+    },
+    {
+      "word": "atrophied",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "186c5d4fa0f4ae28a97376680cb8ad40b6041d70c42f48c21aca7ff6775cf895"
+    },
+    {
+      "word": "loath",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0c5646e261e7b9f20f555fbfcee0e924a75719a94d4d13207234b97224de399d"
+    },
+    {
+      "word": "penthouse",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "afd28d975c51e9bfc588d22eabeb423714d2ce447cd785d73f79b0f03065c84c"
+    },
+    {
+      "word": "appendectomy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b277311af37b505da384165c0a037a885f95f851b9bb282f1056229964e5618f"
+    },
+    {
+      "word": "confide",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f1908fb0973f6f0dce4bb989a76646b74b88c954ef359f127801422f6c3a3c93"
+    },
+    {
+      "word": "convivial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "caa280ed18a82e4212510962c667ac09488e7a6265d4761064570a60b9f5ebfc"
+    },
+    {
+      "word": "lacerated",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bd1fbc2378d878a3f79c6fcdf8ae991bdc7e6c0784b5aa5a8477d9dc55a983ca"
+    },
+    {
+      "word": "scalp",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "302ba4378b45b10bf38551ba7fbe3e8ae7b5a0340fe35dbc2797a5d2236c73ac"
+    },
+    {
+      "word": "turban",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "afe8d9a6b9461f0b5d2709e24fbe710e7cd9ac1ede0d3daad92da51b958cb65f"
+    },
+    {
+      "word": "posterior",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3e68a8a9688000abc4a775403e8e837994e51e1cde158d4f8d66e587aec8f6c2"
+    },
+    {
+      "word": "berserk",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "23c7a5eddcee1806eab0a40ff16777edb126e0ce65e9295beee95844da3ba2ac"
+    },
+    {
+      "word": "gymnasium",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b7b4f89a11d1e014c9ae57b1cd9621544ae73a6f999b59f4a70b6268ca2ba52b"
+    },
+    {
+      "word": "hedgerow",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7ac7f7bc4ce67a2d885803bc38e98836c16f8483fb9d3041f904bd96ffbfc609"
+    },
+    {
+      "word": "miniature",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0ca800e279d6fec94f4f683320cd75a713d19b2779b8971e5ad1ecc65e001a49"
+    },
+    {
+      "word": "dictum",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cce0aff53fab07d1136a40114467e21661e671064819215831bbb08aaa69664e"
+    },
+    {
+      "word": "drench",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2cf02ce9c1044e2499ab6f20869a78d5c210c3185eab3a3cdab23816bf0e0406"
+    },
+    {
+      "word": "bristling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "60c8e8151b70b01ecc53607f5ee8d2ebd5cefa4396fd1974391a353fb07d21f8"
+    },
+    {
+      "word": "pillbox",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4b39029c2d57dbe4b0674a8b92e5db466c63c4e23dc96b34a051efc94de22fb3"
+    },
+    {
+      "word": "braintrust",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e8f66ec4d46cab3f431c93b120304df5b9091aeccd04a3a36c446800024306c0"
+    },
+    {
+      "word": "deem",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7e7b28dd488a758d560a9c86a2fa3b3f016d8dda9e477a0db27666be3b94a812"
+    },
+    {
+      "word": "slant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6eab1a8bc7fb90576f70d7b61d237e87c534c0181aef74728ffa5b2d91aab614"
+    },
+    {
+      "word": "nonchalance",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1fb8dbd13e6a8b62165299765164efa15f4c9ad166f32309fe787cc5fb5e01b3"
+    },
+    {
+      "word": "convulsive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "acad75e41ac97dde479cd01dfe1fac184408671c0ea884a37870132281ec5c8b"
+    },
+    {
+      "word": "superstructure",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "03943cb617adc76f7ab1dab3ac839a8c4d69cce44d202336ac24d5298825c8f5"
+    },
+    {
+      "word": "bow door",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e1859a7f664e12d26fdc6789d5554a6b673dc87f0b74791709f3db413b2e928e"
+    },
+    {
+      "word": "blurt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a124404388024f9ee68d45ba515c2272124827a3141b3b5d5071d13e1f3d985e"
+    },
+    {
+      "word": "pervade",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "834d2343661810474ee624b3638f29327da23917c51d74d7c01f79ad08482b04"
+    },
+    {
+      "word": "reverberation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a1e0f769c998151ff99d64383b79f07586f249ef333f15db3ee5bc140050255d"
+    },
+    {
+      "word": "aide",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b527b5a99cf2984677b6212c3f156d09ae68f2d11ded7fd1eb0312dd8c45e663"
+    },
+    {
+      "word": "lanced",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b53a97ab1d268fd3e23c354988dd5068db23f8d6b592a61b47f19e12ab588785"
+    },
+    {
+      "word": "with bearing of",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e5e8dae4f8a699e91ea1c1becbfd8bd4edfb61fdfeb841dd364ad13756edf993"
+    },
+    {
+      "word": "cot",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4ee8471d7fa38533e488f549f38af54ad0f697ef0ab9d0df440894f6c7593bf5"
+    },
+    {
+      "word": "hamper",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2d52c5ef37d5206990274af12141bd5ba15660dae988ca3055a4b77d918154c6"
+    },
+    {
+      "word": "amounted to",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e51fee40a811e93fa89a4e6c326313f0bd44c3f24352af6297a0fe312e82d33e"
+    },
+    {
+      "word": "slog",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "19ac1aad37052ec58896fab8e501078e7275c3a2b0d935d8f37c89354c4add9d"
+    },
+    {
+      "word": "nonchalantly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aef9c7fb37c3a1bc579193e02b378981eb27f37b45aeceb23c0747b0e947c0cf"
+    },
+    {
+      "word": "disillusioned",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d6d5126ad133b78fcaa6229ed3cfeb563cff0b9282c3f552f419027511aff201"
+    },
+    {
+      "word": "helter-skelter",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5647a57aeee461cd9ba4e63618def7d576a641922042205fffe314cf8ed0fa56"
+    },
+    {
+      "word": "apocryphal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f5b24317647ed311d3d9aa0144cd375e346f329f9aa437b971e149e1f25e0ea5"
+    },
+    {
+      "word": "forays",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ec5c863ea70724668598dabb502a04b6a09e3000152d0395d300e85d88662a9c"
+    },
+    {
+      "word": "testament",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "505f4190c68c5f0d271a4181a9a2e653fc20301cfcc14fd20fa9b4bc3b0b9fda"
+    },
+    {
+      "word": "atrocity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fba7f3e2d462e98c940d75f3d1ea7eaf3a3b70a3027285bbcdabefba21792e3b"
+    },
+    {
+      "word": "extricate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f63d109bebfe03bc4d62dbe1c621b198d1fa07401843d841dacc7990d0363349"
+    },
+    {
+      "word": "monastery",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "823c1474b3461cfff8f59431cf54fa166e519821b63c07208572dbabd197747d"
+    },
+    {
+      "word": "corkscrew",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2af8a71d42798385acba061938a5111d3be3d920529be7fb681cd8fab8ff846c"
+    },
+    {
+      "word": "citadel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3e1ced883a88c43f3001c2e462579fe4f15cef9d2b911d2b89e015ec5f5f1b06"
+    },
+    {
+      "word": "jeering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b29c2b30a45557873fbfb5c85790b5e1b8cad2c7adca2c8c8163ad7f08e922af"
+    },
+    {
+      "word": "requiem",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2513532295ab23b5b145e8e45ce8b533d8219995f137f7db29a1e2fcdacc06a4"
+    },
+    {
+      "word": "entangle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fa04bf745035e992767e651cec02adfbfd658618ed15e78f4db609da3a93432e"
+    },
+    {
+      "word": "clad",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d31ad1d526ef69dabd960769d6802f9f4ace923bc4edafe11291b7bb37fa276a"
+    },
+    {
+      "word": "exhilaration",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "94b353d57355dc942b2829567fce0044e05cc52e7343c9416acbc73d959a0daa"
+    },
+    {
+      "word": "diehard",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b00295a417842a586dd3ff31be985db7b4542f31edd764e5021ae323abc5d63e"
+    },
+    {
+      "word": "scruffy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cc4274d5210a4e4ea082a3e14617e8d407d4c795443f3769efc4ab6300b8c44e"
+    },
+    {
+      "word": "parlor",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ff234e8ea389d0d5163a2e7f94d2d5f9cf88eb9d77e5e2167d377617dbe261c8"
+    },
+    {
+      "word": "intoxicated",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bffad06802678b31c4ddbb51d4cb1d2623fb81272f7b85a2760170e59b0201e8"
+    },
+    {
+      "word": "jaunt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2e71a8942b011ea5b24901a56743f95c3516154e275ed1b5c8cdfb26bae0b8e6"
+    },
+    {
+      "word": "vehemently",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b8322caf4a3ab1e1de184272b10d84e0f616c0e3ac8809ad5173b13fb680dd9b"
+    },
+    {
+      "word": "squat",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aac7e9374a14f6fc27e6ce4de4f183fdbe718bac19bb8ae48f230c1f55512211"
+    },
+    {
+      "word": "obscenity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7d539cc60fa0d4f91a60080d330d1410c6f738898b3bc77cdd2f9603c676cad0"
+    },
+    {
+      "word": "slur",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "06d499fd9608892f631c0c9446a168812a501998d0e0be5d210c09f6ae9527ff"
+    },
+    {
+      "word": "indignant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1f4f15a7c43451366d6c9b246533b5218ca1b713c4cb194d1801b2d1509999a8"
+    },
+    {
+      "word": "gait",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b96d7414e7f910a8fe3b6abb97f0d90c4157bb481047fa6b35394bce7dd9cf4e"
+    },
+    {
+      "word": "squabbles",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8896e73eb667e0f25a4bc81f0be85cbc4a284a817a85896f69adf90a291efc7e"
+    },
+    {
+      "word": "pontoon",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "421cc3d06cf36a9e66562dd04c21f3f619b4658ec5eb9973e3b00158b59c27d6"
+    },
+    {
+      "word": "cellar",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "46f6a1c85078df7035a178beaf709eb1254ec6aa55d8ca2b8c27c4b7828b3bd0"
+    },
+    {
+      "word": "bulge",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8235c342cae329e12deb94153de13e40f8c668c07d4abbcd811f680e652d577c"
+    },
+    {
+      "word": "bouquet",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "aa0df6795765309fba231154b8995291b45fb7ed94bcf971f3c8c1d308dac673"
+    },
+    {
+      "word": "sprang",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d3abc871f7ac3f0592a15867317bcb1c3455c3efa7adf539f93f9190ae97fce"
+    },
+    {
+      "word": "matricide",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a179c32a27723b7c1f72458db3f7869bb2f91eac9b337c6a71d7ae6b44862ce6"
+    },
+    {
+      "word": "lumber",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "35b23125297c47c8efcaf7ac4f36e00a0bc9282b7edb5d92811f0d49ece46252"
+    },
+    {
+      "word": "incongruous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "61df8434739993dd3529c5ce9a721eb948973953c48c1fcb8ae66b23d4a2a975"
+    },
+    {
+      "word": "puny",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "42dbb5d26a0da3e7a56be9635c5346f29628410a0db504a30bed7becf37abc43"
+    },
+    {
+      "word": "ringmaster",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "624b629c24f330c2eed9751de483b660c0c95045a7016a2cf614af68f3079b88"
+    },
+    {
+      "word": "jittery",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "91fa73232ec8b69346a8bcda16d853f8c53948ac4c2ec1e70b6b115781e72c39"
+    },
+    {
+      "word": "wilted",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "79a595899319dc719290e48daac50b456ec73c9b4ec693a9cc0baac080f35d6d"
+    },
+    {
+      "word": "grippe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c7d6c04ea86237346669b765892d1b5d3364405076a82cc0681d5fa9362c695e"
+    },
+    {
+      "word": "sinusitis",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ac1ab0b2bf27be8212f9ce3f71879b4ca3a5fcde26654519d7af6aab9dde9b1a"
+    },
+    {
+      "word": "inexplicable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "655a62a540644689b84b47d85df2de4372a86cc56bc3dfc5af88007d9b1975f4"
+    },
+    {
+      "word": "jibe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e419316c8ac152461f2eab92be5749aedaa80f1fb431716e30b63f265ebcba78"
+    },
+    {
+      "word": "nape",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f413c80515e9abacd8d1e3cd9e3cc60c09c08b8f33a79136d10cacd1da409a80"
+    },
+    {
+      "word": "fasten",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1171a01d1fa4cb97f787ad74a55b95bb6402bd7e9bea307cf60186d72181b0d8"
+    },
+    {
+      "word": "chutes",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5d8be1c6f942f12f73873df76704a4c5d25fe508d341df75a277a5e3d4b46742"
+    },
+    {
+      "word": "draped",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9b286c2d88874904fd489afe843f5f10c6a90ee8c7a3f56ca3ab7c69da0e36cb"
+    },
+    {
+      "word": "weary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e8d75d35d0b4520205cb8ce2819bc2991fb3e1611f013c74f1c758e86e0849cb"
+    },
+    {
+      "word": "puddle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8ceb5459c05a8bcbbfd40b264279d1b5ec8c188d25d7ace5acf9b962ce1f87dc"
+    },
+    {
+      "word": "mammoth",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e5376f0f93124d4d86a5819bb3b7cf6583f2390a9d9745e81f03add48a2ad55c"
+    },
+    {
+      "word": "photogenic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "881ca9513924e14d2f1f14861900845bf4448f11349c078d6c18c5191c9baf4e"
+    },
+    {
+      "word": "perpetual",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7726d04fc10ad376bcd27411a04a0f868b2f8c837646f1730f51db9116e35d3a"
+    },
+    {
+      "word": "tantalizing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7d18e92be3d96abb585dcd9bff525b8650b5c19e8ca19811b85ebdb8829edea0"
+    },
+    {
+      "word": "inertia",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "87bfd4209d8581cff7af5cf2c993832efedf7b3944fe0c765356df5144a10009"
+    },
+    {
+      "word": "blithely",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6eacbf4d6458d9c76c7842cc51711b58873c6497f48fe3c3729db10ebc159ed2"
+    },
+    {
+      "word": "conceive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bf9fae3f099cbc6709643ae2e9b87c68e468f1a2c2b1ad72c9748f42cd5a1b1c"
+    },
+    {
+      "word": "merry",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2b7d4cc9ede052889d83b284596a2d140283869541002920c3613bc72ce96f53"
+    },
+    {
+      "word": "improbability",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "67a974a7577c7f1e146d89bd10f4403f13c06ddcb55d90beab28ea32a7b5667e"
+    },
+    {
+      "word": "gullible",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e4b7602b428bb914f7db28049b9799fd966fd0d95f99ac4b197ca3d8e23a4bd2"
+    },
+    {
+      "word": "wary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "29ef2db4e55e0b06d7f06956cf4dd7ca32b87c1f6025439600ef53cd192ba9ee"
+    },
+    {
+      "word": "synagogue",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9989f70944242a2276a0c3f399820ffbe15f0d36537cfda3b8013490a76ea3ef"
+    },
+    {
+      "word": "mischief",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "19fcb03a5d2553eb723587ccc294513a90a9e32556b9963c284e730f113a0351"
+    },
+    {
+      "word": "ample",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "153031e5f44fee11d01a40dc53af586d37576fa1d5ce9d742169a25ba1d610da"
+    },
+    {
+      "word": "ubiquitous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0cc822032916d4c2a281ccae5a2f24e096eb857b1710e7477be009d8b5de4bf5"
+    },
+    {
+      "word": "columnist",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "72643a769abe79a3f6f4a174c78b350b53aabaccb7915e076966a51f9ca3c175"
+    },
+    {
+      "word": "tryst",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9b1d4e497812a82dc070470b6f5a925c22f3ea2f5bc3edf8cb9a61a5984fcb33"
+    },
+    {
+      "word": "chummy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "35a13edb538fb2c00c14ea0952bd17e85bc14240adfab7381bb246f504dd902e"
+    },
+    {
+      "word": "uproar",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ea55ed788d4f1a983cb2df3797dbfaf5d9c9473d5b75d7103395e99e83b703b"
+    },
+    {
+      "word": "illicit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e2d6336af3ea397dabf2dbf936b5c79cb94c88003bac3e32a8891df0c167f5e0"
+    },
+    {
+      "word": "prudish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "58f1d2445d916356ffe4cce56cc004af299b41f0090e08ecae48817f80351883"
+    },
+    {
+      "word": "engrossing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d3fac5abfa88bab84b36ac8bcac68f02ac30000af3509a0193648078ee5b146b"
+    },
+    {
+      "word": "manuscript",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9c8d9910478965b7d758029f96acc8cc8d71673973eecb335c0ff1033bff31eb"
+    },
+    {
+      "word": "verge",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "208c2bd2df66f55668ca7c1f1fcb0e74081cb181c3b048011c1cc7d06ede6b6e"
+    },
+    {
+      "word": "undauntable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f9666c59cceb3003d1b29a680cd990eeba23b43c0995c46421aa62822a6050e4"
+    },
+    {
+      "word": "sway",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "697d23f25cf6f8449058d1163445ad1f02c67fb997cee3a4b1f611c69463440a"
+    },
+    {
+      "word": "withhold",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6ec315a396f3c4cd8a2b099716ebcff7fdf41ccb950394c835cd2b9ac56bf3ac"
+    },
+    {
+      "word": "connotation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a6a2339318f402bf78a5e39ea34df284918ae17fda32b351e807845771c7c0d5"
+    },
+    {
+      "word": "hobble",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "62b1613d1b9b5055f89fcbbd489eea85dfb8d33137a7978300747ddccb9808ad"
+    },
+    {
+      "word": "inauspicious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f54945edfb7a316f2342086d5c7ef37457c625ab9065776739437de6d500142a"
+    },
+    {
+      "word": "plowshare",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8e8f02dc41af9ed8c14396fe905bf4e5a2f7b7093119960203db3099405b68f9"
+    },
+    {
+      "word": "agony",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f08df22db0a454aca56ebac6326bade67c0d29d451047fe1e608117977f5c8a1"
+    },
+    {
+      "word": "clucking",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2fc6454859ed6736a50f033d7f78d4ea1e007fcbcf6335012ba62aefce4e2af7"
+    },
+    {
+      "word": "scarcely",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a74fe4c1b8c2c3c2194cdcac9dc6f7aa6d69526dd633b4e3e45c2fa69229b7f7"
+    },
+    {
+      "word": "gratifying",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "856df51e138861bc7812633fb267e124420b9a0e425eca8e348b43cd56bf25fa"
+    },
+    {
+      "word": "meritorious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3e93f16ee9189c216dee1c6d67ec191e2b9c4a83b22f77c61b5bd7b96662189e"
+    },
+    {
+      "word": "syndicate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6a2c6a5673974cda7b5a9c139e7d03536db20235d391031b8d6cae7f1b6dfcfc"
+    },
+    {
+      "word": "dossier",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d89a042943026e151e7def88584ad3451272e21dd3a092e7bdd98d3857678a96"
+    },
+    {
+      "word": "yearning",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "dd9679d2876642ec933f03dc0855b9ab845ee90b7ce6fd0ce31893b84d699156"
+    },
+    {
+      "word": "mediocrity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f4f76611fce49e888de219e75696af6f13f39389f4f02bcb08a0bd54aac9cb33"
+    },
+    {
+      "word": "mannequin",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bba0807372a4f6055480bd42940e25228d3b776b71844afc4a2eb737ba7cba0e"
+    },
+    {
+      "word": "pidgin",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ac7382d4157008f098ccaca8118df2d7ddf9f9760053b7ff23b8c71a65dfa212"
+    },
+    {
+      "word": "egalitarian",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eb023708e17bdafb2672b1692ad25f9297b365339898faf40ba07afbe4d0e060"
+    },
+    {
+      "word": "militia",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a0edbb6302fd032e2497099be4b0560534ac3c266056786f1fc1a9aea0849b71"
+    },
+    {
+      "word": "parching",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d46caf7dff88713f73a514b2548cad053a0808677c769cb77af63f848dc0f921"
+    },
+    {
+      "word": "rout",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "87dc665df297000a340b6add4eab3cf0a197fd53dfe671a8ec9c5a07ed7c6574"
+    },
+    {
+      "word": "intermittently",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "efdb0cac4a3853d2c15b0fa11c79062f542c3575b27f6ee2c439c39f89e582fd"
+    },
+    {
+      "word": "avail",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5a0a15fb3d96aaee8976abb061fe6b03810c044dae522167c47c79ce15c714d6"
+    },
+    {
+      "word": "disarmingly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "438ee5ff031b9ebb090fb9d4bb8cae55620cc31b405415ebf8b405d4c51bd501"
+    },
+    {
+      "word": "jolt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8f09a7ddee5292df5e48d45e1fa0334fbfab84b10efd666df31ef1d425974ada"
+    },
+    {
+      "word": "maimed",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8df95ab4b3a0cf707bd2da4bbf9cfc11904ddf9456decee92b0c75dc6b42654e"
+    },
+    {
+      "word": "sentries",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c38fb65ac69a0522912734a76fb1490c476bab70d2bbde3b91f5aef71401c0c"
+    },
+    {
+      "word": "dervish",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9f8e8055217bf89ff671896b3d24162a23019b5eaa091dc9bf4b3399f6effc25"
+    },
+    {
+      "word": "posterity",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ce9430fa3d7ee2f3e34fa8c33ad539179a515a699901be65387f5d6023a21526"
+    },
+    {
+      "word": "hulk",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e4945b2d7737a4125dc7c7e1e070bfa89dad886687d9c76ae95b81af4cd75267"
+    },
+    {
+      "word": "personage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8b09178a6faad8e569206549376f5d3bf8413b17853619d649461f328addcbdc"
+    },
+    {
+      "word": "frenzies",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7b7d44f7b2f671ea3c4c12a33a71d58a39053b85a49fe3b26bc6c80702c33b03"
+    },
+    {
+      "word": "disposition",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1c59599e09d706378bc69745385f21473763a0b77008364009ac78b9172f74d5"
+    },
+    {
+      "word": "pock",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a8ba216030483848e5e02015d3c22ae03e60b8d726a7e292fb6b93c9ef498c55"
+    },
+    {
+      "word": "displace",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8822c8d8fc672dab2f3040acc8027df8dbc190ad545ffff608cd5d067bd19aa0"
+    },
+    {
+      "word": "temperament",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5609b6ff083230c955bd79edc8d706a9e43a08573a8f4307c4fe9fb77c06579c"
+    },
+    {
+      "word": "fiascos",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "deb7b36cbba94cfc277dead7ae6a174a968eba596e6dd9f6b2edbe0b748a70a2"
+    },
+    {
+      "word": "prowl",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4d92e5b964de8f1f1cf87f781a8c2ae774956ae92e089c3e24387a1f6b80e892"
+    },
+    {
+      "word": "careening",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d899eb867024753d9a5ddd0988f03b14736558159a4c65b8c469b2e2e40634a0"
+    },
+    {
+      "word": "unnerve",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "099f7eb87d961073e47bd5216624d842d916e39647ef7bd4401b8238987b2a6c"
+    },
+    {
+      "word": "unintelligible",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cd64d7802e1485ec82751e1c468a023a8e91efdce14ac6e6cec5337c5edf571c"
+    },
+    {
+      "word": "abruptly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5aacd3d42e6121168dea1ba0e5cbdbfd4b74d52bfbc936280c166312d97c70a4"
+    },
+    {
+      "word": "dissipate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "66710ea116499e223d02fa14e56874b4054d9e062aead6b599c9895a02532327"
+    },
+    {
+      "word": "cramped",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ad07d28e0aef824ff6374536b995a8d4af59652589bdcfb408680025273720c"
+    },
+    {
+      "word": "ostentatiously",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e42374bc1193304148a2bfb586519285a7adfaf90e5bd9d26a08d00ec1908560"
+    },
+    {
+      "word": "laconic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fddc75b2c68bed27aa82aaa0e8b171d9651234f4f96a3be8af611551f961fb56"
+    },
+    {
+      "word": "alimony",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "49d7caf5b4d818094041ea14919726b5c05d3b1bc2b7c367bae3e07edefe0396"
+    },
+    {
+      "word": "auspices",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9068a1ccd4511a3213b02109fbdc5dc99b48a2abd1bb7615bb146c8647df9511"
+    },
+    {
+      "word": "corollary",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ec99671e71777f8118fb115309f40c9a6c26c7a768a8e5527dbe2f849c4997f8"
+    },
+    {
+      "word": "squint",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fbaa158e8e3690a9ed5a16d5096249910cd5272a7d4ce98fa96a3f9cb7b24bbb"
+    },
+    {
+      "word": "hinging",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e004d628b106340de0b59a949aaba223b0ff6cd5acd5614522608b7f5506d3cb"
+    },
+    {
+      "word": "outright",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "53a263357be65fd91040e91e2752b9a2b942bb4dd2fcf81dba9b6ac23210b359"
+    },
+    {
+      "word": "anarchism",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "69453357fe9f05d0744959d6d0ec3815d666f6c823e911756c1cf749dca71281"
+    },
+    {
+      "word": "wad",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d8c20908ccf4a7a7ff2b33e55410f86313fd6a7f6d45b550299755d9f18a0e0e"
+    },
+    {
+      "word": "sterling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "93efc6d1ca14447a9ff7fe44e7d7d17bcc2c958c91bfded38c92383dc03b7b26"
+    },
+    {
+      "word": "doldrums",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "64e50efd947469378a7b1386680221cec99c6daa40276ebf3a42b9acedf59813"
+    },
+    {
+      "word": "pronouncement",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "690269dbaa5f1b034882b1ad9fa24800fd5fbf8acbd3ed8e1b53a8bfcba57967"
+    },
+    {
+      "word": "unpretentious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "692e965180939947567b9d7c4742790f21c294591e0818a99b8f5db07fcd6d28"
+    },
+    {
+      "word": "villa",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "34f9767f65799013d0931ae7911f7069cec1167a0800158787e6675142745046"
+    },
+    {
+      "word": "ephemeral",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a3980d5856b1ea2bf056a6fe8170c99597c7eb0275ca4d1403bd18ddccbd6416"
+    },
+    {
+      "word": "convent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5bc1533f71d51cec3cdf61891fc587d1bf24e41c95265568c272a09f1d994ab1"
+    },
+    {
+      "word": "bedridden",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "51863e680246f750ba5f21639b176e11cd8da745e8765d128e8eb7e9f7c379db"
+    },
+    {
+      "word": "cash in",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2fc3b745857d5ae48f05491fe96b1283da97d2447bf0fb23f647b219cee7703a"
+    },
+    {
+      "word": "proffering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1ca09da88691e3054f5405808f6624ba716b2a5e45ce164a3292291b83dc3ac2"
+    },
+    {
+      "word": "snob-appeal",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bb9ddca47b93185a460e8800c2b3b636ca91e6a66e5f6bacf94556ea10e60e0c"
+    },
+    {
+      "word": "veneer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d5bdd0edb6d58b8fa43af59a4f7aaf549f2bb8c5f900c7d4f0b0d593477863ac"
+    },
+    {
+      "word": "prose",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1a314d10526de7de40add4b6e1e7a10bce34dd6c13df0e65a68d8aa2bd2343e5"
+    },
+    {
+      "word": "comically",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9e8f104480ac9963c7364b0fa10fbf783e61607a5ca503070370179d6e4b9017"
+    },
+    {
+      "word": "contort",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c5191a6500d5f58f0160f86f449baf6ec2b3cddcd1a9dd9b403e6b2cb4eabccf"
+    },
+    {
+      "word": "soppy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "9f12e085615831c2c91613b562c1c9281c732dfea9b6d12e0100da9071cee437"
+    },
+    {
+      "word": "directive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bdd8008d64bb9ea4df506a23a9423eb450005cc17b465323fe03375e46ad0f02"
+    },
+    {
+      "word": "folly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "213b98683d5ec3fdba1ee8cf3d8a76e0910c0264e3faa1f435638824c7617035"
+    },
+    {
+      "word": "countess",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fa3ab646f6a8e7cbc9be8e1d99580c18bf250043e1a7c119d6d6e58ee44d62c8"
+    },
+    {
+      "word": "outwardly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "304f46dfe510ea73708e3f393b6e647fe96676b7fad75302f012ef21ccc3044d"
+    },
+    {
+      "word": "consort",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "391bc681bc108877cdf275dadc9e9b453e03e446fec1ed14b0bdcacb6d6a37e9"
+    },
+    {
+      "word": "jockey",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f0325e8e4ff3a249b94ca35e439019cedb1d96596daa9176c1b2e006958e7174"
+    },
+    {
+      "word": "whim",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2370e4d56e51f4e1b7fce92248131713ef289dbe055a91988a538361e4bc19e5"
+    },
+    {
+      "word": "oblige",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ba86c35736e0fd17cfe0dd7a94275ba7e07347bcd08b5b955954167c9fd5644e"
+    },
+    {
+      "word": "cufflink",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "353fd8f6f5d1ecce6bcd4915de083ea04a024c581e63ddc49a74d8a63a47cc04"
+    },
+    {
+      "word": "unwitting",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8848ac1fadcf60edc3e37d1338e5a37b09253deb5646e546e09ccfd1c0c24949"
+    },
+    {
+      "word": "effervescence",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "78580b440b042f94628f063511090ebb3a2f596c378f7b7e750329269982b983"
+    },
+    {
+      "word": "zest",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0310a1fd462a6301c1183c7cd9c23d158e5d6b25df5b90cbba0aab9461b5b7e4"
+    },
+    {
+      "word": "droll",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ee8f1de97ddc981b87d2efbefe40d0ea5f64f5c1894c12b9e1dd84147e9fe6df"
+    },
+    {
+      "word": "uproarious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c53eb357a59f131165d0658ac3f47656b1889593e7172a0eac0f107be83579de"
+    },
+    {
+      "word": "aloof",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a61f903255122e6c346d8b3a9eebd2df26dc59550a494614011db685afb7a19f"
+    },
+    {
+      "word": "purring",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1d1329ba2fc33a3b61a14216f5aa8a987a2271e1514107f0c310df5a19fa294f"
+    },
+    {
+      "word": "discern",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2cfa25c09ec4d702f33667cc6a45f713a94eaa178808603301c5ed4ff18f7d14"
+    },
+    {
+      "word": "stagger",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c8ff3c364d6e5e827fc71e933182f64f1110e7839819047009ae94cbffbc3077"
+    },
+    {
+      "word": "peer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b164876c65e2e01727ce1fee891f8d9a3a6b07765731a62d97b8b985455b8f78"
+    },
+    {
+      "word": "despairing",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c30ab3d1e36a4705b230e26790f8ca487abf97576eb47f635412505bacbfac3d"
+    },
+    {
+      "word": "undebonair",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3d47604f66e21d0b0dc84972a77f5b5e22703e38b861f85a9b5d97c70306923f"
+    },
+    {
+      "word": "glittering",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c50d107f7d1a60f71058278e54f89e8266ea223c22fb8d7cd376e1ae55c7aa4b"
+    },
+    {
+      "word": "ulcer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "38b5b53a67036717b0c00b7c19cf347e5ca848269db127ed3631c29c5c6b9a2f"
+    },
+    {
+      "word": "jaundiced",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c1f252f3faf395db03583a91b6ebd664d83e11a50641d56cf4d0ae6762873bd4"
+    },
+    {
+      "word": "extravagant",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "baa55810f61112fb7aafca8e371e43ef6d643c35adb9efcf605c16597c083a5a"
+    },
+    {
+      "word": "affidavit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "07d170e00d666b174dc70beb62e32058ed035d8031e7b0b4c856a0f43b4357bd"
+    },
+    {
+      "word": "protracted",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fe29d627cc74549625027648f7e213d3cd1370bb1856bc4d564fbee10af5b5be"
+    },
+    {
+      "word": "prompt",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a254966e296a112a3bc2aad0b8ef7d0e9945f886ba44d8bd88f8bee32b174a66"
+    },
+    {
+      "word": "high-handedly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "04a3dd466f0c933b7ec6365a7e33fe4fc6a456723c1c04a7bf9c41de5d062ce7"
+    },
+    {
+      "word": "obliterate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "670712d70ff04dfc99dbb7eed812f01917524c8f5f19f8730c54decb0539a596"
+    },
+    {
+      "word": "intensification",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "547cc8c90ecf56d7d59ad1c1c19be15d8d9ede288b4bfb9779d0c22672f33581"
+    },
+    {
+      "word": "subversive",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "716d45b13e1c77b08014ee76b2cdf589d5b2d1275b8c1aa422ce92afabad081b"
+    },
+    {
+      "word": "hysteria",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "411e480714663fb0b05c21529d12faabf8342d71cc3e3ac04cfa636b36eb8e0c"
+    },
+    {
+      "word": "exert",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "09a7238e56de5acdf1d48c2356fea05361fa72d8f91ae9b849b3ccb13b808c57"
+    },
+    {
+      "word": "impeachable",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "80acfa5cd7a6ff5cf13b4a178da7039d7163fcf0357a9dec6f565ac6c56f337f"
+    },
+    {
+      "word": "jovial",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ab4d3bdae633aa39460891ab5928a6d7d336608ba07cafb50d08b7a91b76953a"
+    },
+    {
+      "word": "catalyst",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e04d8877031f51ed60339472830b29c9cd826bc4171e76c1ae1ab55244adfa92"
+    },
+    {
+      "word": "motley",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "a1f806a927aabf7ecdf78977b7c5f5752ad2145635aca1e25ec3b56302976ac4"
+    },
+    {
+      "word": "sciatic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3f7a4ad43227c49b4a9e0175a832078851aad72e5fdc830226eb5ac800a4ba26"
+    },
+    {
+      "word": "sciatica",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "848af7aa1e6e026f1f97a061bd90bb7cbff73ad4e74c6b2d004f36dc657b9ce8"
+    },
+    {
+      "word": "coronation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0d00270efda76631dfaf6eee5af03773924ef72242d42d6d746ec0ed80358c06"
+    },
+    {
+      "word": "orthopedic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6747b4ec30dc06c9a68a3f538d2feaea9d0c416713eed099cef216a3000b399c"
+    },
+    {
+      "word": "codeine",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6087a636e13aea88912e430d75eb7e9f728797276e02c3271e2fc5be60e4eb77"
+    },
+    {
+      "word": "complexion",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "801e1559b67c123d01579e0ae916ac2076679abb0cbee050831c3129c4a46452"
+    },
+    {
+      "word": "pasty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e209e4e9cf7ee5f5e21224d9caf41b92f84e7422566020bc88616960dfaecc3c"
+    },
+    {
+      "word": "recuperative",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "db4cabac079bc313d7b7cffd7bdb37f428ff731fefe217dd4cc0d57266a03eed"
+    },
+    {
+      "word": "intercede",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7c36136b7d3f64de3286c73ce81c6934e7c3161e77ec440bc43bd82c4b2b073b"
+    },
+    {
+      "word": "stipulation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "416b8d6854117196d72d06c86811cdf74b46ddfea1fc37a94d170d8231cfa7f3"
+    },
+    {
+      "word": "jagged",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ab7379d00e284e036d265aac2b0649141f0688c50c64885614c184957355c08a"
+    },
+    {
+      "word": "precipice",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "97e6a8c6f50323fc08008381a2cc25b82cb5fca95856ee1014f1c626f146a8ac"
+    },
+    {
+      "word": "postscript",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d276e1f6553ddc2382e2e137f76b96a8556fab2b1eaa6bfcbe7f4a003e03d2d9"
+    },
+    {
+      "word": "jubilantly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2bebeab15300c3d349773db72c924f42b4626cfa6bfe90a84eaec16a00893da8"
+    },
+    {
+      "word": "omnipresent",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c9d5508de5a1d7aa825f72431fdd25d576f1b0eb90c45f8da9f140ee4fa06adc"
+    },
+    {
+      "word": "crystalline",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "06ee8782c80b4d4b6f0b5875e4fc63ff3de4bc2fde465b3eab98c67ed9f7126a"
+    },
+    {
+      "word": "demagogic",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b420c3a545bb94a024d12e6aa36d44861424e7ecf7bce09ad21e6fd23a9973f5"
+    },
+    {
+      "word": "demagogue",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c5b07aa8d703df0804f93b938d7b4658619ff1587b78bef7b7d6854273af5ae7"
+    },
+    {
+      "word": "splay",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "91c42862b0bbb3573f2e24b3d1e6d4d41f283981e86f651fa5571b6922e07f49"
+    },
+    {
+      "word": "amid",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ca3eac8db798899b891e760f22bd56d6e89dfd80edb23101fb96ec5163d1d4f0"
+    },
+    {
+      "word": "choppy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7abce01a57adb22aebbc9e6f875d1f060b862aba6efb6f667276a1838ac81b87"
+    },
+    {
+      "word": "rattling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f46446b04d1db14dd08acc6201d6702759be3fd0fc892a8d8deea10f31b36cf0"
+    },
+    {
+      "word": "tarmac",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "efc6d5492bce557ab9041e7da1450003ffdb7540db6086d08b428e089bdd22bf"
+    },
+    {
+      "word": "retrofit",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "41fca8cad2c23120d5de6b6d77c1a2288b40fa63dbdaec8b7ab9892dc347109d"
+    },
+    {
+      "word": "streaked",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "26c3997f9f1c6d6b82f54907046792597a9ec46f8889d7d8cbbd18e72fac1b59"
+    },
+    {
+      "word": "thatch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "01d254bf8aaa334e295c7a82733db7289131b9ceb38cba7a74ab016aa44b785f"
+    },
+    {
+      "word": "entourage",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "13071e6efe9fe8dd330339628544ff368bfce88406877593f7f218911962e4a2"
+    },
+    {
+      "word": "dwelling",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b82e3ee5ae2c1668459ae7283d9792e80560a1f57936d30b39f61173fa0c3f13"
+    },
+    {
+      "word": "hunch",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fbcf29ab2e49d279e7037e08638113f4a737ab74802846eadfc173afcbb3f407"
+    },
+    {
+      "word": "creel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "08519f843fd53d134171c236b9d89181e6806b6b7ac5a168749af00f5d72b2b4"
+    },
+    {
+      "word": "croft",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "08e612874243a76985b0f8b8c76c882408302448cfc937295edb47c17c9b5aef"
+    },
+    {
+      "word": "cobble",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1ecb983af7f4e14260118e4f144414d6897593ec6b84078cce9dcfdb08fc8a29"
+    },
+    {
+      "word": "cobble together",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "10c1206ddc53640223ff003474dc6a9d26567d4d8374d4d1fb889d2cdf72077e"
+    },
+    {
+      "word": "peat",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "502ae11a145cc0c4c9e1467f1039117d55630948b4eea7762f7be1c2e1d5d07f"
+    },
+    {
+      "word": "befall",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "8cd223a186872083a5abb4426f105452fd09f7e2aa1873d1300db1a8946b4c61"
+    },
+    {
+      "word": "herring",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e7a0228f1a34994b282c23832d7ea8d6e4266bc3368c70a52f1a45d111afc32b"
+    },
+    {
+      "word": "canonical",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "67f5d613b39989df6a778ed7d0fccc28740dc9ec9c7cb5c89683f22a7d23a22a"
+    },
+    {
+      "word": "gunk",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "09f96ab29a573146eb9efd0c88d7e85b8b966d01cb9a23ef588875251b95b590"
+    },
+    {
+      "word": "headscarf",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "4dca7e4d87cfc55b0d475310e009723cc9fc673935efffd29c24be472a505e98"
+    },
+    {
+      "word": "soggy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e1aeec0d69c6a863f7bc87f75aba64aed04ca17a2401798b0030cbbb76ffe560"
+    },
+    {
+      "word": "striplight",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "7a48b402d559accec7931007bb2aaf94e4e0fba40f67cf298c3decc251368629"
+    },
+    {
+      "word": "rake",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d152c151540d8b01e046e768b560321988734e3a56bb66cd9c1d656a1de5b330"
+    },
+    {
+      "word": "fuzzy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "5ebaa78987c554e008f03e6695b39e3b8c11f6d547ab1be370247bfa69afa816"
+    },
+    {
+      "word": "burly",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "584932797bbc272a92921049fdcbe7a399c336edb7db5f9954dc77789efcce61"
+    },
+    {
+      "word": "monocle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f07e3cafc8f93ad5fdc09d00b27b598a5f6afd12c35f3976f266ade153a26840"
+    },
+    {
+      "word": "wardrobe",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fc3134480b58935dcdc998c48a912f65bfffcfcf7c1d2dbda805602ce176420a"
+    },
+    {
+      "word": "sole",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "794ef6a090a53b263e5e016c529d37c90c74479debfcef5e02d1c410b6183a12"
+    },
+    {
+      "word": "anesthesia",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "06dc65cd6c00b888cb760dc67eb539137edfaa063632a17aa8016b3fe24c763b"
+    },
+    {
+      "word": "whiff",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "ee6ed93c92917486cff9322c2e17a665f1b7671eb1d13cc2f5659dfd396c6473"
+    },
+    {
+      "word": "drowsy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e6924553c98b9cdd0b20fb09bad8a6c82c438cc45486103618f6b0c15a725887"
+    },
+    {
+      "word": "reek",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b404e05847a6551d05c36f38c0923d71dd39b9313604e82b189776537e92b435"
+    },
+    {
+      "word": "plausible",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "326820b7601c0ae865e96d80cf72d55c1ebb55f26bdd9fda89630d3dbdf28461"
+    },
+    {
+      "word": "clingy",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "c85d5ba8814127384967d44aaa29715761c18026992e35c1b7018f9f101a93d4"
+    },
+    {
+      "word": "goo",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "85f04d05d353586adcb729b1394a7b7ac61e5faa38585528fe6a33553631b198"
+    },
+    {
+      "word": "shard",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3948f39d9817b9612ea1005ef44807d1c87f501a386a34b7f383de44fbdd1104"
+    },
+    {
+      "word": "glare",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "f0c4aa7c3bf9f2d2d82de19c9e363fa76f0f907baeb4fdff8ebb5c48342bf43b"
+    },
+    {
+      "word": "haze",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "74182f7690163eee0e27d05749985735ba9f0bd83b4969ff96fae4bb8aca39de"
+    },
+    {
+      "word": "psyche",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "57c79cec26ee34a14b1aeb16405bcc616c1267633cdbdad55dd0eb46a86a3510"
+    },
+    {
+      "word": "acute",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "81709dbffc3127fb10d60b46bb94a1736fb94c851679c92d3901f986ff8ea06d"
+    },
+    {
+      "word": "nifty",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "bb9a7b46c66ca560d8564bbf70f4237092a832e3c1f7844b00991673f8403523"
+    },
+    {
+      "word": "incite",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6c200f1e9f274f7025c26791c952156b6ef4b11ec8c17c2a647cdeccad7bed5c"
+    },
+    {
+      "word": "engram",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e1a078fb480f6f19f434d6c1419005e60d01bd812b7267b79a64b90f843bec30"
+    },
+    {
+      "word": "meddle",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "6ff6e72e101d8947e99561e97af3d8ab5aa1d6cab8c3b7f2ff3679cc898cfdef"
+    },
+    {
+      "word": "stoke",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "31a4edf9f5af187511b2dd3c3550f4294234d5aa516ea1e8939d5df0f6afdb92"
+    },
+    {
+      "word": "rescind",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "815658a714b6fcf4f10f24d6273554b3b14c65d31859684d3dbceaf7e54e6f9a"
+    },
+    {
+      "word": "shrivel",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "50037989cf50850006940dfb8886bd1ff1e001e3851aea67f47adb7c036995cc"
+    },
+    {
+      "word": "easement",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3c1cf4550ca4a896db343874e0be641f02937d5901ba4cdfe7703c131a3f7353"
+    },
+    {
+      "word": "dart",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "cd2ac383baa001c1f0ac1a99b37edec71ac0dfb23b091546b3a9b99a1b07500d"
+    },
+    {
+      "word": "instigate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "d1fc9ae5ad3e2341711b91036a2e6ca9d8d32e40689ff544299fb113a3707fb3"
+    },
+    {
+      "word": "callus",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "3fb3df0846febdfab15272276ef60903e031ca5b9defd630135145de7fc220ea"
+    },
+    {
+      "word": "clemency",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "e829b5f72fa5b298b999e30a7c2b298494f41c46293d4495d8c7f0b4863f3fa7"
+    },
+    {
+      "word": "mutilation",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "fc40cee34a7fd80f2280073b6da5c0ea480b4b026b06210a878b7b2773a1da87"
+    },
+    {
+      "word": "betroth",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1ba489cc1ab73d23c6d281224cfe2c62da7a87fbec1716c00e6b2728a4107bdf"
+    },
+    {
+      "word": "castrate",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "935036c6a8193e914c756c95804736d67003e7e458f8d9304534a887cb82b0ea"
+    },
+    {
+      "word": "riveting",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "eda110d980d6cc9c934166f23f8ccc919bf2b31a0d82752aeec0a2858cca9163"
+    },
+    {
+      "word": "rivet",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "632e859d8c30b65f71797967e0ef3229a7720009968c627c90f64b7ac6a0456c"
+    },
+    {
+      "word": "ominous",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1f8eee02701c5cd5512b7b8226dc00022c389776f5728b6bc4a16f5b9a2ae65b"
+    },
+    {
+      "word": "derelict",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "013def2a3bec7ce420855974973ca5559b0672d7d6222ed0b91d723ea2e13fa0"
+    },
+    {
+      "word": "dereliction",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "0cde367d7e80f3f90042a87383093a0a624906d91a2880565fb3cf48195b0a50"
+    },
+    {
+      "word": "conjecture",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "b0ebac23ac55cc620a5c21411b7de690c261ae20f6a70c1df5b60236a01836cc"
+    },
+    {
+      "word": "zinger",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "39b12c102ad6d5d3a7a106da76c6ae7a3a81908bc3e82f29eed378f9c39a69d6"
+    },
+    {
+      "word": "dubious",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "2b9b9f9cc03947688c851b7db521b3561f2d8a83f95cef89fe9dd274ae60f9a5"
+    },
+    {
+      "word": "cede",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1adfd1e27a6a77611c6b4bd0328ab8aeded3d48106d0b79bfcbf9950a9307eb3"
+    },
+    {
+      "word": "beleaguer",
+      "lookup": true,
+      "review_definition": true,
+      "collected": true,
+      "meaning_sha256": "1fec2fcd7e67a7f41f55b9ac4b6a2e453afd84d01dcd897c9389a410eef4b548"
+    }
+  ],
+  "mode": "applied",
+  "verified_utc": "2026-11-02T10:38:13.584948+00:00",
+  "source_sha256": "d1576cf8711a4b371fa6a7395a0c8e1a8f0839a7290593e1556b15681bae7d9c"
+}

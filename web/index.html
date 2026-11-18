@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="leaf-token" content="__CSRF_TOKEN__">
+  <meta name="color-scheme" content="light dark">
+  <title>Leaf · 阅读词典</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css?v=__VERSION__">
+  <script src="/requests.js?v=__VERSION__" defer></script>
+  <script src="/study.js?v=__VERSION__" defer></script>
+  <script src="/speech.js?v=__VERSION__" defer></script>
+  <script src="/app.js?v=__VERSION__" defer></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <div class="shell">
+    <aside class="sidebar glass" aria-label="导航">
+      <a class="brand" href="#lookup" data-view="lookup" aria-label="Leaf 阅读词典">
+        <span class="brand-mark" data-icon="leaf"></span><span class="brand-name">Leaf</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item" data-view="lookup"><span data-icon="search"></span><span class="nav-label">查词</span><kbd class="nav-key">/</kbd></button>
+        <button class="nav-item" data-view="review"><span data-icon="cards"></span><span class="nav-label">复习</span><span class="badge" id="nav-due" hidden>0</span></button>
+        <button class="nav-item" data-view="library"><span data-icon="book"></span><span class="nav-label">生词本</span><span class="count" id="nav-total">0</span></button>
+        <button class="nav-item" data-view="settings"><span data-icon="settings"></span><span class="nav-label">设置</span></button>
+      </nav>
+      <div class="sidebar-today" id="sidebar-today" aria-live="polite">
+        <div class="ring" id="today-ring" role="img" aria-label="今日复习进度"><svg viewBox="0 0 36 36"><circle class="ring-track" cx="18" cy="18" r="15.5"/><circle class="ring-value" id="ring-value" cx="18" cy="18" r="15.5"/></svg><span id="ring-text">0</span></div>
+        <div><strong id="today-summary">今天</strong><span id="today-detail" class="muted">正在加载</span></div>
+      </div>
+      <div class="sidebar-foot muted"><span class="dot"></span>完全离线 · v__VERSION__</div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <!-- Lookup -->
+      <section id="view-lookup" class="view" aria-labelledby="lookup-title">
+        <h1 id="lookup-title" class="sr-only">查词</h1>
+        <form id="search-form" class="search glass strong" autocomplete="off" role="search">
+          <div class="search-row">
+            <span class="search-icon" data-icon="search"></span>
+            <label class="sr-only" for="query">英文单词或短语</label>
+            <input id="query" spellcheck="false" placeholder="查一个词，或粘贴一句原文" maxlength="6000"
+              role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+            <button type="button" id="clear-query" class="icon-button" aria-label="清空" hidden data-icon="close"></button>
+            <button type="submit" class="button primary" id="search-button">查词</button>
+          </div>
+          <ul id="suggestions" class="suggestions" role="listbox" aria-label="建议" hidden></ul>
+          <div class="context-row">
+            <button type="button" id="context-toggle" class="chip-button" aria-expanded="false" aria-controls="context-panel"><span data-icon="quote"></span>阅读原句<span id="context-state" class="muted"></span></button>
+            <span class="muted small hint-text">查词不会自动收录</span>
+          </div>
+          <div id="context-panel" class="context-panel" hidden>
+            <label for="context" class="field-label">原句 <span class="muted">粘贴后点句中的词即可查</span></label>
+            <textarea id="context" rows="2" maxlength="6000" placeholder="例如：Her choices are informed by years of experience."></textarea>
+            <div id="context-words" class="context-words" aria-label="点选原句中的词"></div>
+            <label for="source" class="field-label">出处 <span class="muted">选填</span></label>
+            <input id="source" class="field" placeholder="书名、文章或章节" maxlength="200">
+          </div>
+        </form>
+        <div id="search-result" aria-live="polite"></div>
+        <div id="home">
+          <div class="home-grid">
+            <article class="glass today-card">
+              <div class="eyebrow">今日学习</div>
+              <div class="today-big"><span id="home-due">0</span><span>个词等你复习</span></div>
+              <p class="muted small" id="home-breakdown"></p>
+              <button class="button primary" data-view="review">开始复习 <kbd>R</kbd></button>
+            </article>
+            <article class="glass stat-card">
+              <div class="eyebrow">近 7 天</div>
+              <div id="week-chart" class="week-chart" role="group" aria-label="近 7 天每天复习的不同单词数"></div>
+              <p class="muted small" id="week-note">每天复习过的不同单词数</p>
+            </article>
+          </div>
+          <div class="section-head"><h2>最近收录</h2><button class="link-button" data-view="library">全部生词 →</button></div>
+          <div id="recent-list" class="recent-list"></div>
+        </div>
+      </section>
+
+      <!-- Review -->
+      <section id="view-review" class="view" hidden aria-labelledby="review-title">
+        <header class="view-head">
+          <div><h1 id="review-title">复习</h1><p class="muted" id="review-sub">先回忆，再看答案</p></div>
+          <div class="queue-pills" id="queue-pills"></div>
+        </header>
+        <div class="progress" role="progressbar" aria-label="今日进度" aria-valuemin="0" aria-valuemax="100" id="review-progress"><span id="review-progress-bar"></span></div>
+        <div id="review-content" aria-live="polite"></div>
+      </section>
+
+      <!-- Library -->
+      <section id="view-library" class="view" hidden aria-labelledby="library-title">
+        <header class="view-head">
+          <div><h1 id="library-title">生词本</h1><p class="muted" id="library-summary" role="status"></p></div>
+          <select id="library-sort" class="select" aria-label="排序"><option value="recent">最近收录</option><option value="due">下次复习</option><option value="alpha">按字母</option></select>
+        </header>
+        <div class="library-tools">
+          <label class="mini-search glass"><span data-icon="search"></span><input id="library-search" placeholder="搜索单词、释义或出处" aria-label="搜索生词"></label>
+          <div class="segmented" id="library-filter" role="tablist" aria-label="筛选">
+            <button role="tab" data-filter="all" aria-selected="true">全部</button>
+            <button role="tab" data-filter="due">待复习</button>
+            <button role="tab" data-filter="new">新词</button>
+            <button role="tab" data-filter="learning">学习中</button>
+            <button role="tab" data-filter="mastered">已掌握</button>
+            <button role="tab" data-filter="struggling">常忘</button>
+            <button role="tab" data-filter="paused">已暂停</button>
+          </div>
+        </div>
+        <div id="library-list" class="library-list"></div>
+      </section>
+
+      <!-- Settings -->
+      <section id="view-settings" class="view" hidden aria-labelledby="settings-title">
+        <header class="view-head"><div><h1 id="settings-title">设置</h1><p class="muted">所有数据只保存在这台电脑上</p></div></header>
+        <div class="settings-grid">
+          <article class="glass panel">
+            <h2>复习</h2>
+            <div class="setting">
+              <div><strong>每天新词</strong><p class="muted small">每天开始学的新词上限。到期的复习不设上限，所以不会悄悄积压。建议 10–20 个。</p></div>
+              <div class="stepper"><button class="icon-button" data-step="-5" aria-label="减少">−</button><input id="setting-new" type="number" min="0" max="100" step="1" aria-label="每天新词数"><button class="icon-button" data-step="5" aria-label="增加">＋</button></div>
+            </div>
+            <div class="setting">
+              <div><strong>目标记住率</strong><p class="muted small" id="retention-note">到期时还能想起的概率。越高复习越频繁。</p></div>
+              <div class="segmented compact" id="setting-retention" role="radiogroup" aria-label="目标记住率">
+                <button role="radio" data-retention="0.85">85%</button><button role="radio" data-retention="0.9">90%</button><button role="radio" data-retention="0.95">95%</button>
+              </div>
+            </div>
+            <div class="setting">
+              <div><strong>拼写填空</strong><p class="muted small">熟悉的词会改成“看句子和中文，写出这个词”，练会用，不只是认得。</p></div>
+              <label class="switch"><input type="checkbox" id="setting-typing"><span></span><span class="sr-only">拼写填空</span></label>
+            </div>
+          </article>
+          <article class="glass panel">
+            <h2>外观与读音</h2>
+            <div class="setting">
+              <div><strong>外观</strong></div>
+              <div class="segmented compact" id="setting-theme" role="radiogroup" aria-label="外观">
+                <button role="radio" data-theme-choice="auto">自动</button><button role="radio" data-theme-choice="light">浅色</button><button role="radio" data-theme-choice="dark">深色</button>
+              </div>
+            </div>
+            <div class="setting">
+              <div><strong>英语口音</strong><p class="muted small" id="speech-status">正在检查本机英语声音…</p></div>
+              <select id="speech-accent" class="select" aria-label="英语口音"><option value="en-US">美式英语</option></select>
+            </div>
+          </article>
+          <article class="glass panel">
+            <h2>复习是怎样安排的</h2>
+            <ul class="science">
+              <li><strong>先想再看。</strong>主动回忆比反复阅读记得牢得多（检索练习效应，Roediger &amp; Karpicke 2006）。</li>
+              <li><strong>间隔重复。</strong>FSRS-6 为每个词估算遗忘曲线，在快要忘记时安排复习（Ye 等，2022；间隔效应，Cepeda 等 2006）。</li>
+              <li><strong>从认得到会用。</strong>新词先练“看词想意思”；记牢后交替练“看句子写出词”，产出型回忆更能迁移到使用（Nation 2013；Laufer &amp; Goldstein 2004）。</li>
+              <li><strong>换着语境练。</strong>填空句子在你的原句、你的造句和词典例句之间轮换，帮助形成可迁移的理解。</li>
+              <li><strong>自己造句。</strong>写出自己的句子是生成式学习，造的句子也会用于以后的填空。</li>
+              <li><strong>诚实评分。</strong>看了答案才想起来，请选“忘了”，否则会高估记忆，间隔会拉得太长。</li>
+            </ul>
+          </article>
+          <article class="glass panel">
+            <h2>数据</h2>
+            <div id="app-info" class="info-list"></div>
+            <div class="button-row">
+              <a class="button secondary" href="/api/export" download>导出备份</a>
+              <button class="button secondary" id="import-button">导入备份</button>
+              <input type="file" id="import-file" accept=".json,application/json" hidden>
+            </div>
+            <div class="button-row"><button class="button ghost danger" id="quit-button">退出 Leaf</button></div>
+            <p class="muted small">关闭窗口后服务仍在后台运行，下次打开更快。退出会停止本地服务。</p>
+          </article>
+          <article class="glass panel">
+            <h2>快捷键</h2>
+            <dl class="keys">
+              <dt><kbd>/</kbd></dt><dd>查词</dd>
+              <dt><kbd>S</kbd></dt><dd>把当前词加入生词本</dd>
+              <dt><kbd>R</kbd></dt><dd>开始复习</dd>
+              <dt><kbd>空格</kbd></dt><dd>复习时翻开答案</dd>
+              <dt><kbd>1</kbd>–<kbd>4</kbd></dt><dd>评分：忘了 / 费力 / 记得 / 轻松</dd>
+              <dt><kbd>↵</kbd></dt><dd>填空时检查；之后采用建议评分</dd>
+              <dt><kbd>P</kbd></dt><dd>朗读当前词</dd>
+              <dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>撤销刚才的评分</dd>
+              <dt><kbd>Esc</kbd></dt><dd>关闭弹窗、停止读音</dd>
+            </dl>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="tabbar glass strong" aria-label="底部导航">
+    <button data-view="lookup"><span data-icon="search"></span>查词</button>
+    <button data-view="review"><span data-icon="cards"></span>复习<span class="badge" id="tab-due" hidden></span></button>
+    <button data-view="library"><span data-icon="book"></span>生词本</button>
+    <button data-view="settings"><span data-icon="settings"></span>设置</button>
+  </nav>
+
+  <div id="toast" class="toast glass strong" role="status" hidden><span id="toast-text"></span><button id="toast-action" class="link-button" hidden></button></div>
+
+  <dialog id="card-sheet" class="sheet glass strong" aria-labelledby="sheet-word">
+    <div class="sheet-head"><div id="sheet-title"></div><button class="icon-button" data-close="card-sheet" aria-label="关闭" data-icon="close"></button></div>
+    <div id="sheet-body" class="sheet-body"></div>
+  </dialog>
+
+  <dialog id="definition-dialog" class="dialog glass strong" aria-labelledby="definition-title">
+    <form id="definition-form">
+      <h2 id="definition-title">用自己的话写释义</h2>
+      <div id="definition-word" class="definition-word"></div>
+      <p class="muted small">保存后，查词、生词本和复习都会优先显示你的释义。用自己的话解释，本身就是很好的记忆方法。</p>
+      <label for="definition-text" class="sr-only">我的释义</label>
+      <textarea id="definition-text" rows="5" maxlength="3000" required placeholder="写下你觉得清楚、好理解的解释…" aria-describedby="definition-count"></textarea>
+      <div class="dialog-meta"><span id="definition-count" class="muted small">0 / 3,000</span></div>
+      <p id="definition-error" class="error-text" role="alert" hidden></p>
+      <details id="definition-reference" class="fold"><summary>查看词典原释义</summary><p id="definition-original"></p></details>
+      <div class="dialog-foot"><button type="button" id="definition-restore" class="link-button" hidden>恢复词典释义</button><span class="spacer"></span><button type="button" id="definition-cancel" class="button secondary">取消</button><button type="submit" id="definition-save" class="button primary">保存</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="confirm-dialog" class="dialog glass strong small-dialog"><form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-message" class="muted"></p><div class="dialog-foot"><span class="spacer"></span><button value="cancel" class="button secondary">取消</button><button value="ok" class="button primary" id="confirm-ok">确认</button></div></form></dialog>
+</body>
+</html>

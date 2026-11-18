@@ -1,0 +1,1291 @@
+{
+  "counts": {
+    "entries": 84212,
+    "no_latin_headword": 256,
+    "senses": 241427,
+    "priority_common": 66106,
+    "priority_core": 102902,
+    "priority_rare": 72419,
+    "rule_contradiction_candidate": 1210,
+    "legacy_priority": 1623,
+    "legacy_text_priority": 286,
+    "missing_example": 490
+  },
+  "examples": {
+    "rule_contradiction_candidate": [
+      {
+        "word": "-ard",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这个后缀把前面的特征变成给人的标签，表示“处于这种状态的人”或“经常有这种习惯的人”，而且通常暗含说话者的不满、轻视或嘲笑。",
+        "usage": "使用时采用“词根 + -ard”的构词形式，不能单独把 -ard 放在句中；例如 drunkard 指经常喝醉或酗酒的人。由它构成的词通常不是中性称呼，描述具体人物时要注意语气，避免把带贬义的词当作普通职业或身份名称。",
+        "labels": [
+          "morpheme"
+        ]
+      },
+      {
+        "word": "-arian",
+        "pos": "suffix",
+        "sense": "s3",
+        "priority": "common",
+        "text": "当词根指一个地方时，这个后缀可以表示来自该地或居住在该地的人，也就是“这个地方的人”。这类词通常是已经固定下来的地域名称。",
+        "usage": "常见结构是“地名 + -arian”，完整词通常作名词或形容词，表示某地的人或与该地有关的事物。地域词的形成并不完全规则，不能看到任何地名就自行加上“-arian”。遇到这类词时，还要留意它是否同时可以作形容词。",
+        "labels": [
+          "morpheme",
+          "uncommon"
+        ]
+      },
+      {
+        "word": "-dom",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示词根所指的状态、处境、身份或性质，把一个抽象特征变成可以谈论的“状态范围”。例如 boredom 是“无聊的状态”，freedom 是“自由的状态”。",
+        "usage": "通常用于“形容词或身份词根 + -dom”构成抽象名词。许多此类词已经固定化，不能随意把 -dom 接到任何词后；正式写作和日常表达中都很常见，但具体词的自然程度需要单独学习。",
+        "labels": [
+          "morpheme"
+        ]
+      },
+      {
+        "word": "-gene",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这个后缀附在词根后，表示相关事物是以某种方式形成的，或者能够产生某种结果、物质或现象。它像一个贴在构词末尾的标签，告诉你要关注“从哪里形成”或“能产生什么”。",
+        "usage": "构词模板：词根 + -gene，例如表示“在外部形成”的词可以用相应词根加上 -gene 构成。含有这个后缀的词多属于科学或医学术语，通常不能根据后缀单独确定完整词义。中文学习者容易只把它理解成“基因”，但这里首先是表示“形成、产生”的构词成分。",
+        "labels": [
+          "morpheme"
+        ]
+      },
+      {
+        "word": "-rel",
+        "pos": "suffix",
+        "sense": "s2",
+        "priority": "core",
+        "text": "接在词根后，也可以表示某个事物较小、较年轻或处于幼年阶段；例如 cockerel 指尚未成年的小公鸡。",
+        "usage": "常见模式是“带 -rel 的完整词 + 表示某种小型或幼年事物”，具体含义要看整个词，不能只凭后缀机械推断。这个用法通常不是贬义，但相关词往往是固定词汇，不能把 -rel 自由加到任意名词后。使用时还要留意完整词的词典定义，因为“小”与“幼年”并不总是完全相同。",
+        "labels": [
+          "diminutive",
+          "morpheme",
+          "suffix"
+        ]
+      },
+      {
+        "word": "-trophy",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示生物获取和利用养分的方式或过程，也就是“靠什么得到滋养”。在相关术语中，它把注意力放在营养来源或供养过程上。",
+        "usage": "通常出现在表示营养方式的复合术语中，前面的词根说明营养来自哪里或通过什么方式获得。它属于生物学术语成分，不能直接放在普通句子里表示“吃东西”或“营养”。中文学习者容易只把它理解成一般的“食物”，但这里更强调生物学上的供养机制。",
+        "labels": [
+          "morpheme"
+        ]
+      },
+      {
+        "word": "'ear",
+        "pos": "verb",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示“听见、听到”，但重点不在意义变化，而在于用“'ear”写出省略词首 /h/ 的发音。它通常用来让读者感到说话人带有某种口音或方言色彩。",
+        "usage": "“'ear + 人或事物”表示听见某人或某声音，“'ear + 从句”表示听到一段话或一个消息。这个写法带有明显的非标准、方言或口语表现色彩，不能当作普通动词的正式拼写。它的语法基本跟 hear 一样，但学习者最容易把它误认成名词 ear。",
+        "labels": [
+          "alt-of",
+          "pronunciation-spelling"
+        ]
+      },
+      {
+        "word": "'hood",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "它把彼此支持、像兄弟一样亲近的关系压缩成一个简短的说法，也可以借此指这种关系形成的圈子。",
+        "usage": "常见结构是“有/建立/保持 + 'hood”，或用“在 + 'hood + 中”谈论这个亲密圈子。它带有明显的非正式、口语化色彩，不能自然地用于正式报告或严肃法律文本。中文学习者容易只把它当作某个具体组织的名称，但它也可以泛指一种关系和归属感。",
+        "labels": []
+      },
+      {
+        "word": "0-dark-hundred",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指天已经黑了以后、具体时间不明确的某个时刻，通常让人联想到深夜或凌晨的行动。重点不在精确报时，而在说明事情发生得很晚、四周一片漆黑。",
+        "usage": "常用模式是“在 0-dark-hundred + 动作”，例如表示在这个时刻出发、巡逻或执行任务。它主要见于军事背景、冒险叙述或带玩笑意味的非正式表达中，不能当作精确的钟点。中文学习者容易把它误解为固定的“零点整”，但实际时间可以并不确定。",
+        "labels": [
+          "US",
+          "slang",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "2 peter",
+        "pos": "name",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指《圣经·新约》中彼得写的第二封书信，即新约目录中的第二十二卷书；这里的“第二”是同一作者的第二封信，不是两个人名为彼得。",
+        "usage": "常用句型是“《彼得后书》+章节”或“在《彼得后书》中+讨论内容”。它主要出现在《圣经》、基督教出版物和宗教讨论中，属于专名，不能像普通书信名词一样随意加数量词。谈论整卷书时用“《彼得后书》”，谈论其中内容时可说“《彼得后书》中的教导”。",
+        "labels": []
+      },
+      {
+        "word": "40s",
+        "pos": "noun",
+        "sense": "s2",
+        "priority": "common",
+        "text": "指温度处在40至49度之间；究竟是摄氏度还是华氏度，要看上下文或当地习惯。",
+        "usage": "常见结构是“temperatures in the 40s”或“the temperature is in the 40s”。通常需要结合温标判断，不能仅凭这个词确定是摄氏还是华氏。谈天气时，中文学习者容易把它误当成“40度整”，但这里说的是一个温度区间。",
+        "labels": [
+          "uncountable"
+        ]
+      },
+      {
+        "word": "66th",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示一系列中的第六十六个位置，相当于完整形式“sixty-sixth”。它把数字“66”变成顺序概念，例如第六十六届、第六十六层或第六十六名。",
+        "usage": "常用结构是“the 66th + 名词”，例如表示第六十六届活动或第六十六层楼；在排名中也可说“the 66th place”。它通常作前置定语，不能直接当普通数量词使用。中文里容易把它误解成“六十六个”，但它实际强调的是“第几个”。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "70th",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示顺序中的第七十位，核心概念就是给“70”贴上一个位置标签。例如，第七十届会议就是排在前面六十九届之后的那一届。",
+        "usage": "常用结构是“the 70th + 名词”，如表示第七十届、第七十名或七十周年。作序数词时通常要用 the；表示“七十个”时不能用 70th，而应使用 seventy。写日期时，序数形式也可表示某月的七十日，但实际日历中并不存在这样的日期。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "78th",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示某人或某事在按顺序排列的对象中排在第七十八位；它只是 seventy-eighth 的缩写写法。",
+        "usage": "常用模式是“the 78th + 名词”，如“第七十八届会议”或“第七十八任总统”；在句中通常不能单独替代普通数字。标题、列表和日期中可以使用这种数字缩写，正式文章中则可根据文体改用完整拼写 seventy-eighth。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "a fair bit",
+        "pos": "adv",
+        "sense": "s1",
+        "priority": "core",
+        "text": "它表示“达到一定程度”，可以是“有点儿、某种程度上”，也可以是“相当多、相当明显”。到底偏向哪一边，要看后面的内容和上下文：谈时间、钱或工作量时，常常接近“相当多”；修饰形容词时，常接近“颇为”。",
+        "usage": "常用模式是“a fair bit of + 名词”表示“相当多的……”，或“动词 + a fair bit”表示“做了不少……”；放在形容词前时则表示“颇为……”。它是英国非正式用语，不能用比较级形式，也不适合需要精确数量的正式说明中。中文里的“有一点”有时程度很弱，但这个短语在不少语境中实际表示的程度并不小。",
+        "labels": [
+          "UK",
+          "informal",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "a few",
+        "pos": "det",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指数量不多、但确实有几个的可数事物。它像桌上摆着的一小撮东西，重点是“有一些”，而不是“几乎没有”。",
+        "usage": "常用模式是 a few + 复数可数名词，如 a few books。它不能单独放在不可数名词前，也不表示一个精确的固定数字；根据语境可以是两三个，也可以是更多但仍不算多。中文里不要机械地把它一律译成“很少”，因为它往往比 few 更接近“有几个”。",
+        "labels": []
+      },
+      {
+        "word": "abel",
+        "pos": "name",
+        "sense": "s3",
+        "priority": "common",
+        "text": "Abel还可以是由祖先名字演变而来的姓氏，原本可理解为“某人的儿子”这一类父名来源。作为姓氏时，它不表示这个人就是《圣经》中的亚伯。",
+        "usage": "常见于“the Abel family”“Mr. Abel”或姓名末尾的姓氏位置。判断它是名字还是姓氏，要看它在全名中的位置以及上下文，不能只凭拼写判断。正式称呼中可用姓氏单独称呼人，但不要把姓氏义自动解释成宗教人物。",
+        "labels": []
+      },
+      {
+        "word": "abide",
+        "pos": "verb",
+        "sense": "s4",
+        "priority": "core",
+        "text": "在 abide by 中，原来的“站住、不退”变成“站在规则一边并按它行动”，所以表示接受并遵守规则、法律、决定或约定。",
+        "usage": "固定结构是 abide by + 规则、法律、决定、条款或约定，不能省略 by。它常用于正式、书面或制度语境；日常表达也可以用 follow、obey 或 stick to。不要说 abide the rules 来表达现代英语中的“遵守规则”。",
+        "labels": []
+      },
+      {
+        "word": "about to",
+        "pos": "phrase",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示某个动作已经到了临界点，马上就会发生，通常比一般将来时更有“眼看就要……”的感觉。",
+        "usage": "常用结构是“主语 + be about to + 动词原形”，也可以在前面加 just 表示“正要……”。后面不能接 to 以外的另一层不定式标记，也不能说成过去式动词；过去时系动词可以表示当时正要发生。它强调临近发生，不适合单独表示很久以后的计划。",
+        "labels": [
+          "idiomatic",
+          "verb",
+          "with-infinitive"
+        ]
+      },
+      {
+        "word": "above-cited",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指某个来源、段落或观点已经在文章前面的部分被引用过，后文再次提及时用来提醒读者回看前文。它强调的是“引用发生在前面”，不是“上方物理位置”或“更高等级”。",
+        "usage": "常用模式是 above-cited + 名词，例如 above-cited source。它多见于学术、法律或其他正式书面语中，不能自然地理解成一般的“上面说的所有内容”。中文使用者容易把 above 只理解为空间上的“在上方”，但这里指文本顺序上的前文。",
+        "labels": [
+          "not-comparable"
+        ]
+      }
+    ],
+    "legacy_priority": [
+      {
+        "word": "-eth",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "在古旧英语中，-eth 接在动词后面，表示现在时第三人称单数，相当于现代英语常见的 -s；因此 goeth 大致就是“他或它去”。如今它主要让句子听起来像古书、圣经或仿古台词。",
+        "usage": "基本模式是“动词词干 + -eth”，如 goeth、giveth、taketh。它带有明显的古旧或宗教化色彩，不能在普通现代英语中随意代替 goes、gives、takes。读到它时，先把它识别为第三人称单数形式，不要误判成过去时或复数形式。",
+        "labels": [
+          "archaic",
+          "morpheme"
+        ]
+      },
+      {
+        "word": "-grave",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "在复合称号中，-grave 表示掌管某一地区的统治者或行政长官；前面的成分通常说明他管辖的地方或身份。它体现的是“地域或身份 + 官职”的结构，而不是一个独立的现代词。",
+        "usage": "通常出现在完整称号中，例如“地域成分 + -grave”的模式。用法带有历史色彩，常见于介绍封建制度、历史人物或旧行政区划的文章。不要把它单独放在句中，也不要把所有含有它的词都理解成现代地方官职。",
+        "labels": [
+          "historical",
+          "morpheme"
+        ]
+      },
+      {
+        "word": "'flu",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指流感，也就是“flu”所表示的疾病；区别只在于“'flu”是较旧的缩略拼写，不是另一种疾病。",
+        "usage": "常用句型是“have the 'flu”或“get the 'flu”，表示患流感；也可以说“recover from the 'flu”。它是不可数名词，通常说“the 'flu”，不要按普通可数名词说成“a 'flu”；在现代日常英语中优先使用“flu”。",
+        "labels": [
+          "UK",
+          "alt-of",
+          "dated",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "'nation",
+        "pos": "intj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这是把“damnation”截短后的委婉感叹，用来表达遇到麻烦时的恼怒、懊恼或失望，语气大致相当于“该死”或“真糟”。它不是在谈论国家，也不是普通名词。",
+        "usage": "常用作独立感叹语，或置于句首后接对事情的抱怨，例如“'Nation, we missed the train!”。这个词现在十分古旧，常见于旧式小说或刻意仿古的说话方式；现代学习者在普通会话中应以更常见的感叹语替代。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "archaic",
+          "clipping"
+        ]
+      },
+      {
+        "word": "'t",
+        "pos": "pron",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这里的 't 是 it 被快速压缩后的写法，意思仍然是“它”或“这件事”。这种用法带有明显的古旧色彩，今天主要作为文学或历史语言来理解。",
+        "usage": "常见于动词后或固定句式中，例如“不能错过它”一类的结构。它不是现代英语中自然的日常缩写，学习时应把它还原为 it，而不要在普通写作中照搬。注意不要把它误读成现代常见的 it’s。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "archaic",
+          "contraction",
+          "pronunciation-spelling"
+        ]
+      },
+      {
+        "word": "1-1-8",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "字面上指一名后卫、一名中场和八名前锋组成的历史足球阵型。由于这种安排几乎把所有人都推向进攻，现代人也用它讽刺一支球队防守空虚、只顾进球。",
+        "usage": "常用作 play 1-1-8 或 play in a 1-1-8 formation 的宾语或补语。说现代球队采用这种打法时，通常是夸张的批评，不要把它当作普通的战术名称；它一般按不可数名词使用。",
+        "labels": [
+          "derogatory",
+          "historical",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "abed",
+        "pos": "adv",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指人在床上，尤其强调躺在床上休息、睡觉或因病卧床不起。它把“床”作为人所处的位置，是这个词最核心的画面。",
+        "usage": "常用句型是“be abed”或“remain abed”，也可见于“go abed”。这种用法古旧或文学化，现代英语中不要把它误当成自然的日常表达；在普通交流里，通常会改用更常见的“在床上”表达。",
+        "labels": [
+          "archaic",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "abode",
+        "pos": "noun",
+        "sense": "s2",
+        "priority": "common",
+        "text": "指一个人在某地停留或居住的这段时间，重点不在房子本身，而在“待在那里”的经历。这个意义与“安顿在某处”的核心画面相连，但现代使用频率低于住所义。",
+        "usage": "常见模式是“during one's abode in 某地”或“throughout one's abode”，表示“在某地停留期间”。这个用法正式且偏旧，在法律、历史或书面叙述中较容易见到。中文学习者不要把它误解成单纯的“住所”；若强调房屋本身，应理解为下一个住所义。",
+        "labels": [
+          "dated"
+        ]
+      },
+      {
+        "word": "abolition",
+        "pos": "noun",
+        "sense": "s3",
+        "priority": "core",
+        "text": "在历史、政治和社会改革语境中，abolition 常不再泛指任何废除，而是特指结束奴隶贸易或奴隶制。这个意义仍然很重要，因此在相关文本中常需要优先想到它。",
+        "usage": "常见结构是“the abolition of slavery”或“the abolition of the slave trade”。在这种历史语境中，首字母大写的 Abolition 有时可指废奴运动或废奴事业。不要把它理解为单纯改善奴隶待遇，而是结束这一制度本身。",
+        "labels": [
+          "UK",
+          "US",
+          "capitalized",
+          "historical",
+          "often"
+        ]
+      },
+      {
+        "word": "abolitionist",
+        "pos": "adj",
+        "sense": "s2",
+        "priority": "common",
+        "text": "在历史语境中，通常指主张废除奴隶制的；这里被要求拆掉的“墙”就是奴隶制度。",
+        "usage": "常见搭配是“abolitionist movement”或“abolitionist campaign”，上下文往往涉及奴隶制和相关历史人物。这个用法带有明显的历史色彩，翻译时不要机械地理解为任何现代制度废除运动。若文章没有说明对象，先查看上下文是否在讨论废奴历史。",
+        "labels": [
+          "historical"
+        ]
+      },
+      {
+        "word": "abolitionist",
+        "pos": "noun",
+        "sense": "s2",
+        "priority": "common",
+        "text": "在历史语境中，特指主张废除奴隶制并推动这一目标的人。",
+        "usage": "常见模式是“an abolitionist”或“abolitionists who + 动词”，历史叙述中通常与奴隶制、奴隶贸易和废奴运动一起出现。这个用法多指特定历史时期的人，不宜不加说明地套用于所有现代反对不公的人。注意它强调废除奴隶制这一目标，而不只是同情受奴役者。",
+        "labels": [
+          "US",
+          "especially",
+          "historical"
+        ]
+      },
+      {
+        "word": "act",
+        "pos": "verb",
+        "sense": "s2",
+        "priority": "core",
+        "text": "把某项事情、任务或计划付诸行动并完成；这里突出“做出来”，而不只是决定去做。",
+        "usage": "常见结构是 act on a plan、act on advice，或在较正式的语境中用 act upon something。现代英语里单独用 act 直接带普通宾语较少，日常表达通常会选择 do、carry out 等更具体的动词。",
+        "labels": [
+          "obsolete",
+          "transitive"
+        ]
+      },
+      {
+        "word": "advantage",
+        "pos": "noun",
+        "sense": "s2",
+        "priority": "common",
+        "text": "强调一方在竞争、谈判或行动中占上风，拥有比另一方更强的控制力或胜算。",
+        "usage": "常见结构是“have an advantage over + 对象”或“get an advantage over + 对象”。也可用“take advantage of + 人或事物”，但这个结构通常表示利用某人或某种情况，不一定含有公平竞争的意思。",
+        "labels": [
+          "countable",
+          "obsolete",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "afro-american",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指与具有非洲血统的美国人、他们的群体或文化有关。它把“非洲血统”和“美国身份”放在一起说明。",
+        "usage": "常见结构是“Afro-American + 名词”，例如指某种历史、艺术或文化现象。该词带有过时色彩，现代英语中通常使用 African American；不要仅因它字面上容易理解，就在当代语境中随意替代后者。",
+        "labels": [
+          "dated",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "afro-american",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指拥有非洲血统、同时是美国人的人；它是形容词所表达的“非洲血统 + 美国身份”这一概念的名词化用法。",
+        "usage": "可用“an Afro-American”指一个人，用“Afro-Americans”指多人或群体。由于该用法带有过时色彩，现代英语中通常改说 African American person 或 African American people；不要把它误解成泛指所有非洲人。",
+        "labels": [
+          "dated"
+        ]
+      },
+      {
+        "word": "afro-argentine",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指与具有非洲血统的阿根廷人有关的事物，例如他们的历史、文化、社群或机构。",
+        "usage": "常用模式是“Afro-Argentine + 名词”，用来说明后面的名词属于或涉及这一群体。它不是表示一般“非洲风格”的形容词，也不能随意替换成泛指非洲人的词。多见于历史、人口和社会文化讨论中。",
+        "labels": [
+          "historical",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "afro-argentine",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指一名具有非洲血统、同时属于阿根廷人的人；复数形式指这一群体。",
+        "usage": "指单个人时通常在前面加不定冠词，复数则使用“Afro-Argentines”。该名词多用于历史、人口或身份讨论，语气本身是描述性的。不要把它理解为所有在阿根廷生活的非洲人。",
+        "labels": [
+          "historical"
+        ]
+      },
+      {
+        "word": "after",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "common",
+        "text": "指在较早经历之后发生或获得的，强调它属于后来的阶段或后续经历。",
+        "usage": "常用作名词前的定语，如“after experience”。这个用法在现代日常英语中较少见，学习时不要把它和更常见的介词 after 混为一谈。",
+        "labels": [
+          "dated"
+        ]
+      },
+      {
+        "word": "again-",
+        "pos": "prefix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这个前缀把“回转”的概念放在词前：动作可以重新发生，也可以朝相反方向、退回原处，或表示回返。它是历史用法，现代英语一般不会自由使用它来造新词。",
+        "usage": "常见结构是“again- + 词根”，但这种构词主要见于古英语、中古英语或历史词汇。它不是现代英语里可随意使用的普通前缀，也不能简单把任何词前加上again-来表示“再”。学习现代英语时，通常应直接使用表示“再次”或“返回”的独立词，而把again-当作阅读词源材料时的识别线索。",
+        "labels": [
+          "idiomatic",
+          "morpheme",
+          "obsolete"
+        ]
+      },
+      {
+        "word": "aim",
+        "pos": "name",
+        "sense": "s3",
+        "priority": "common",
+        "text": "指美国在线公司的即时通信服务，主要出现在互联网历史或旧软件语境中。",
+        "usage": "常用于“使用AIM”“通过AIM聊天”等语境，通常指过去流行的服务。不要把它和普通词aim混读或混用；是否指该服务要看大写形式和上下文。",
+        "labels": [
+          "Internet",
+          "abbreviation",
+          "alt-of",
+          "historical",
+          "initialism"
+        ]
+      }
+    ],
+    "legacy_text_priority": [
+      {
+        "word": "-eth",
+        "pos": "suffix",
+        "sense": "s1",
+        "priority": "core",
+        "text": "在古旧英语中，-eth 接在动词后面，表示现在时第三人称单数，相当于现代英语常见的 -s；因此 goeth 大致就是“他或它去”。如今它主要让句子听起来像古书、圣经或仿古台词。",
+        "usage": "基本模式是“动词词干 + -eth”，如 goeth、giveth、taketh。它带有明显的古旧或宗教化色彩，不能在普通现代英语中随意代替 goes、gives、takes。读到它时，先把它识别为第三人称单数形式，不要误判成过去时或复数形式。",
+        "labels": [
+          "archaic",
+          "morpheme"
+        ]
+      },
+      {
+        "word": "'plane",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指能载人飞行的飞机，只是 plane 的过时拼写；开头的撇号不改变基本意义。",
+        "usage": "常见结构是“the 'plane + 飞行或到达类动词”，也可以说“by 'plane”表示乘飞机。该写法带有明显的旧式色彩，现代日常英语中应使用 plane。学习时不要把撇号漏看后误以为这是另一个词。",
+        "labels": []
+      },
+      {
+        "word": "'t",
+        "pos": "pron",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这里的 't 是 it 被快速压缩后的写法，意思仍然是“它”或“这件事”。这种用法带有明显的古旧色彩，今天主要作为文学或历史语言来理解。",
+        "usage": "常见于动词后或固定句式中，例如“不能错过它”一类的结构。它不是现代英语中自然的日常缩写，学习时应把它还原为 it，而不要在普通写作中照搬。注意不要把它误读成现代常见的 it’s。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "archaic",
+          "contraction",
+          "pronunciation-spelling"
+        ]
+      },
+      {
+        "word": "a",
+        "pos": "prep",
+        "sense": "s1",
+        "priority": "core",
+        "text": "在古旧结构中，“A”可以把动作和分离、分成几部分联系起来，记作“一个标记”进入不同部分的关系。现代英语通常改用其他介词表达。",
+        "usage": "常见于“撕成若干部分”这类古旧结构，后面可接表示部分或结果的名词。现代英语一般不用“A”表达这种关系，而会使用更明确的介词；不要把它当作普通的现代介词随意套用。",
+        "labels": []
+      },
+      {
+        "word": "a-t",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指一种罕见的遗传性疾病，主要与运动协调受损和毛细血管扩张有关。A-T 是该疾病英文名称的首字母缩写。",
+        "usage": "常见句型是“患有 A-T”“A-T 患者”或“研究 A-T”。它属于医学专业用语，面向一般读者时最好在首次出现时写出疾病全称并补充缩写；由于它指疾病这一概念，通常不说“一个 A-T”。",
+        "labels": [
+          "uncountable"
+        ]
+      },
+      {
+        "word": "aah",
+        "pos": "intj",
+        "sense": "s3",
+        "priority": "common",
+        "text": "听到别人遭遇不幸或感到难过时，用 aah 表示心疼、惋惜或同情。",
+        "usage": "常用句型是 aah，后面接对方遭遇或表达安慰的话。语气应柔和，不要用夸张的喊叫声，否则可能听起来像惊讶而不是同情；它多见于口语对白。",
+        "labels": []
+      },
+      {
+        "word": "abandoned",
+        "pos": "adj",
+        "sense": "s2",
+        "priority": "core",
+        "text": "指原来的主人、居民或照料者已经离开，不再使用或维护某物。废弃的房屋、工厂和车辆常因无人照料而显得破败，但“被放弃”才是核心。",
+        "usage": "常用结构是“an abandoned + 建筑或地点”，也可说“be left abandoned”。它强调没人继续使用或照料，不等于单纯“旧”或“空着”；新闻、故事和日常描述中都很常见。",
+        "labels": []
+      },
+      {
+        "word": "aboriginal",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "指澳大利亚或其他地方的原住民；但单独把一个人称为 an aboriginal 可能被认为过时或冒犯，现代英语更常说 Aboriginal person 或 Aboriginal people。",
+        "usage": "指人时优先使用“an Aboriginal person”或“Aboriginal people”，不要把 aboriginal 当作普通、无标记的人群名词。单独名词形式主要会在旧书、历史引文或讨论用词本身的文章中出现。涉及具体群体时，应采用他们认可的名称，而不能只凭字面判断合适性。",
+        "labels": []
+      },
+      {
+        "word": "age",
+        "pos": "verb",
+        "sense": "s2",
+        "priority": "common",
+        "text": "常用于说一个预测、观点或作品随着后来发生的事情而显得仍然准确，或显得不再可靠、已经过时。",
+        "usage": "最常见结构是“age well”或“age badly”，尤其用于过去的预测、评论和决定。通常用过去分词或完成时谈结果，如“has aged well”。不要把它只理解为人的身体变老。",
+        "labels": [
+          "intransitive",
+          "usually"
+        ]
+      },
+      {
+        "word": "albatross",
+        "pos": "noun",
+        "sense": "s3",
+        "priority": "common",
+        "text": "在高尔夫中，指某一洞的成绩比该洞标准杆少三杆；例如标准杆五杆的洞打两杆完成，就得到这种成绩。这是一种非常出色且罕见的成绩，因此借用了信天翁的名称。",
+        "usage": "常用“score an albatross”或“make an albatross”表示打出这种成绩，也可说“an albatross on the fifth hole”。它是高尔夫专门术语，不能泛指任何特别好的成绩；三杆低于标准杆在标准杆三杆的洞上不适用，因为那需要一杆完成，另有专门称呼。",
+        "labels": []
+      },
+      {
+        "word": "all to",
+        "pos": "adv",
+        "sense": "s1",
+        "priority": "core",
+        "text": "表示某事达到完全、彻底的程度，也就是把程度推到了尽头。这个用法古旧，主要在旧式或仿古文本中出现。",
+        "usage": "通常放在形容词或分词前，构成“all to + 形容词或分词”的程度表达。它属于古旧书面用法，现代英语中使用会显得不自然。不要把它当作普通现代副词来套用；遇到表达“太、过于”的语境，还要检查是否实际应为 all too。",
+        "labels": [
+          "archaic"
+        ]
+      },
+      {
+        "word": "all to one",
+        "pos": "adv",
+        "sense": "s1",
+        "priority": "core",
+        "text": "它把各个部分想象成“全都归到一个整体里”，表示某事完全如此，或若干事物合计起来就是全部。这个副词短语如今已经过时，主要在旧文本中出现。",
+        "usage": "通常放在谓语或分词附近，修饰整个动作或状态，而不是单独指某一个对象。它属于过时的副词用法，现代英语中不宜主动使用来表示“完全”或“总共”。阅读时可根据上下文把它理解为“全部地”或“完全地”，不要按现代口语表达来仿造句子。",
+        "labels": [
+          "not-comparable",
+          "obsolete"
+        ]
+      },
+      {
+        "word": "anomalous",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指某个结果、现象或行为偏离通常情况，和已有的模式、预期或规则对不上。重点不是单纯罕见，而是它与应有的规律不一致。",
+        "usage": "常用结构是“anomalous + result/data/behavior”等，也可说“an anomalous result”。它多用于客观描述异常，通常不直接表示严重或有害；不要把它误当成只修饰人的负面性格词。",
+        "labels": []
+      },
+      {
+        "word": "antique",
+        "pos": "adj",
+        "sense": "s2",
+        "priority": "core",
+        "text": "指属于过去时代、已经不再现代或显得过时的事物、制度和风格。相比“古代的”，这个义项可以指较近的过去，也常带有“老式”的感觉。",
+        "usage": "常用模式是 antique + 名词，如 antique customs 或 antique machinery。它可用于正式描述，也可带轻微的批评意味；不要把它和只表示“二手”或“用过”的 old 混同。",
+        "labels": []
+      },
+      {
+        "word": "antique",
+        "pos": "adj",
+        "sense": "s3",
+        "priority": "common",
+        "text": "在印刷和出版中，指一种具有古旧风格的字体样式。这里说的是字形风格，不是文字内容本身来自古代。",
+        "usage": "通常作定语，放在 type、font 或 lettering 等词前，如 antique type。这个义项属于排版语境；谈一般字体时，不能仅凭字形较粗或较旧就随意使用 antique。",
+        "labels": []
+      },
+      {
+        "word": "antique",
+        "pos": "noun",
+        "sense": "s3",
+        "priority": "common",
+        "text": "作比喻并带轻微贬义时，指思想、习惯或做法过时的人或事物。它借用了古董“年代久远”的形象，但重点变成“不合时宜”。",
+        "usage": "常用模式是 call someone an antique 或 an antique idea。这个用法带有批评色彩，通常不宜用于正式称呼他人；指物品时也要注意语气可能是嘲讽而非收藏赞美。",
+        "labels": [
+          "derogatory",
+          "figuratively",
+          "mildly"
+        ]
+      },
+      {
+        "word": "arch.",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "这是“archaic”的缩写，用来标记某个词、词义或表达已经过时，主要见于词典和语言学说明中；它延续了“arch.”指向较早时代的核心画面。",
+        "usage": "常见格式是“arch. + 词语”或“arch. term”，表示后面的词是古语词或古义。它多作词典标签，不是自然会话中用来描述事物的普通形容词。不要把它理解成单纯的“古老、历史悠久”，它通常特别指语言形式已经过时。",
+        "labels": [
+          "abbreviation",
+          "alt-of"
+        ]
+      },
+      {
+        "word": "archaic",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指具有古代特色、显得老派或已经过时的事物。它可以描述语言，也可以描述服饰、艺术风格或观念，核心都是“像从很久以前保存下来的旧外衣”。",
+        "usage": "常用结构是“archaic + 名词”，尤其搭配表示语言、风格、词语或表达的名词。它既可表示真实的古旧，也可表示作品为了营造古代气氛而采用的仿古形式。不要把它当作普通的“旧”；如果只是年代久但仍然现代、常用，通常不宜使用 archaic。",
+        "labels": []
+      },
+      {
+        "word": "asiatic",
+        "pos": "adj",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指与亚洲有关；在较旧的用法中，尤其可能指埃及以东、包括中东在内的西亚地区。现代语境下，这个词常显得过时，具体地域最好结合上下文判断。",
+        "usage": "通常放在名词前作定语，如“the Asiatic region”或“the Asiatic side”。它常出现在历史、殖民时代或旧式地理文字中，现代写作一般会选更明确的地域名称。不要把它当成始终等同于现代中性的“亚洲的”，因为它可能暗示旧的地域划分。",
+        "labels": [
+          "dated"
+        ]
+      },
+      {
+        "word": "asiatic",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指亚洲人，但这是过时、现在有时被认为冒犯的称呼；现代英语中不要把它当作普通礼貌的身份称谓。",
+        "usage": "常见结构是“an Asiatic”或复数“Asiatics”，但这些形式主要属于旧式英语。现代交流中应根据具体地区或个人偏好使用更中性的称呼，只有在历史叙述、旧引文或讨论这个词时才保留它。",
+        "labels": [
+          "dated",
+          "offensive",
+          "sometimes"
+        ]
+      }
+    ],
+    "missing_example": [
+      {
+        "word": "a bit",
+        "pos": "pron",
+        "sense": "s2",
+        "priority": "common",
+        "text": "在英国英语的口语中，a bit 有时故意把“大量”说得像“小量”，形成轻描淡写或幽默的效果；需要结合实际后果判断真实数量。",
+        "usage": "常在回答“How much”一类问题时单独使用，也可以由上下文补出所指的事物。这个意义主要依靠英国英语的语气和语境，学习者不应在需要清楚数量的场合使用它。",
+        "labels": [
+          "UK",
+          "especially"
+        ]
+      },
+      {
+        "word": "a-dna",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "core",
+        "text": "指 DNA 呈现出的某种整体空间样式：双股向右缠绕，螺旋较宽、较扁。这里强调的是 DNA 的构型，而不是某一条具体的螺旋。",
+        "usage": "表示这种构型时，通常直接说“呈 A-DNA 构型”或“A-DNA 构型的 DNA”。它一般作不可数名词，不能在这个意义下随意说“一个 A-DNA”来表示一种构型。该用法主要见于分子生物学和结构生物学语境。",
+        "labels": [
+          "uncountable"
+        ]
+      },
+      {
+        "word": "aas",
+        "pos": "name",
+        "sense": "s4",
+        "priority": "common",
+        "text": "指美国天文学会，是由专业天文学家组成的学会。",
+        "usage": "",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "initialism"
+        ]
+      },
+      {
+        "word": "aas",
+        "pos": "name",
+        "sense": "s5",
+        "priority": "common",
+        "text": "指澳大利亚科学院，一个推动科学发展的科学组织。",
+        "usage": "",
+        "labels": [
+          "Australia",
+          "abbreviation",
+          "alt-of",
+          "initialism"
+        ]
+      },
+      {
+        "word": "aas",
+        "pos": "name",
+        "sense": "s7",
+        "priority": "common",
+        "text": "指英国的空中救护服务慈善机构。",
+        "usage": "",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "initialism"
+        ]
+      },
+      {
+        "word": "aas",
+        "pos": "noun",
+        "sense": "s3",
+        "priority": "common",
+        "text": "指能促进合成代谢并具有雄激素作用的一类类固醇。",
+        "usage": "",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "countable",
+          "initialism",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "aas",
+        "pos": "noun",
+        "sense": "s4",
+        "priority": "common",
+        "text": "指涉及主动脉的急性综合征这一医学概念。",
+        "usage": "",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "countable",
+          "initialism",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "abc",
+        "pos": "adj",
+        "sense": "s3",
+        "priority": "common",
+        "text": "医学研究中指“活化B细胞样”，用于描述某些细胞或相关特征。",
+        "usage": "通常放在医学名词前作定语，常见于病理学、肿瘤学或科研文本。面向普通读者时最好同时写出全称或补充解释，避免把缩略语当作一般形容词使用。",
+        "labels": [
+          "abbreviation",
+          "alt-of",
+          "initialism",
+          "not-comparable"
+        ]
+      },
+      {
+        "word": "abdul",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "作普通名词时，Abdul 指一名穆斯林；这是从常见的穆斯林男性名字泛化出来的用法，但并不表示所有穆斯林都叫这个名字。",
+        "usage": "常见句型是“an Abdul”或“several Abduls”，但这种说法容易把人按名字或群体标签归类。它多见于特定英语语境，学习者在日常交流中不宜把它当作中性的“穆斯林”替代词。",
+        "labels": []
+      },
+      {
+        "word": "abnormal",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "指一个被视为不正常、偏离标准的人或事物，是把“离开正常轨道”这一形容词概念当作名词使用。",
+        "usage": "常见结构是“an abnormal”或“the abnormal”，多用于把正常与异常作分类比较的正式语境。它不是日常称呼人的礼貌说法，尤其不宜用来给有心理或身体状况的人贴标签。需要表达具体情况时，优先使用描述性的名词。",
+        "labels": []
+      },
+      {
+        "word": "accentuate",
+        "pos": "verb",
+        "sense": "s3",
+        "priority": "common",
+        "text": "在书写形式上给字母或单词加上表示重音的符号，让读者看出应如何读。这仍然是“加醒目标记”，只是标记出现在文字上。",
+        "usage": "常用“accentuate + 字母、元音或单词”的结构，说明在书面形式上加重音符号。这个用法多见于语言学习、词典和排版说明；不要把它和普通的下划线、加粗或标点混为一谈。",
+        "labels": [
+          "transitive"
+        ]
+      },
+      {
+        "word": "active",
+        "pos": "adj",
+        "sense": "s12",
+        "priority": "common",
+        "text": "在工程和物理语境中，指能够主动提供能量、产生信号或改变系统状态，而不是只接受或传递作用。",
+        "usage": "常见结构是 active component、active device 和 active circuit，通常与 passive 对比。技术文本中应根据对象译为“有源的”或“主动的”，不能只译成日常意义的“活跃的”。它常暗示该部件需要或能够参与能量、信号的产生或控制。",
+        "labels": []
+      },
+      {
+        "word": "addictive",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "指会造成成瘾的药物或其他物质，是形容词“使人上瘾的”转作名词后的用法。",
+        "usage": "常见模式是“an addictive”或“addictives”，但这种说法不如 addictive drug、addictive substance 常见。它多用于专业、警示或概括性的语境。学习者在普通对话中最好优先使用具体名词，避免让句子显得生硬。",
+        "labels": []
+      },
+      {
+        "word": "addictive",
+        "pos": "noun",
+        "sense": "s2",
+        "priority": "common",
+        "text": "泛指任何会让人反复接触、难以停下来的东西，可以是游戏、节目、活动，也可以是其他习惯；它延续了“被拉回来”的核心画面。",
+        "usage": "常用模式是“an addictive + 事物”或直接用复数泛指一类事物。这个用法多为非正式或评论性表达，常带有“太好玩了”的语气。不要默认它指药物；看到游戏、节目等上下文时，通常应理解为“令人欲罢不能的东西”。",
+        "labels": []
+      },
+      {
+        "word": "adrift",
+        "pos": "adv",
+        "sense": "s1",
+        "priority": "core",
+        "text": "说明某物正在失去控制地漂流，风和水流决定它的方向，延续了“脱离航线、无人控制”的核心画面。",
+        "usage": "常放在表示移动或漂浮的动词后，构成“任由风浪漂流”的状态描写。它强调无控制和无固定方向，不能简单替换所有表示“漂浮”的副词；多见于书面叙述。",
+        "labels": []
+      },
+      {
+        "word": "affidavit",
+        "pos": "verb",
+        "sense": "s1",
+        "priority": "common",
+        "text": "作动词时，affidavit 表示把自己的陈述写入并签署宣誓书，以此完成正式的宣誓作证；核心仍是“用那张签名并宣誓的纸来作证”。",
+        "usage": "常见句型为 affidavit oneself，表示“以宣誓书形式陈述自己的情况”。这是非常正式且不常用的法律动词，实际阅读中更常见的是 sign an affidavit 或 submit an affidavit；不要把它和普通的 swear 混用。",
+        "labels": []
+      },
+      {
+        "word": "afghan",
+        "pos": "noun",
+        "sense": "s6",
+        "priority": "common",
+        "text": "这是小写名词 afghan（针织或钩针编织的毯子）的首字母大写形式，意义仍然是毯子。",
+        "usage": "通常在句首或标题中才写成大写 Afghan，普通句中一般写小写 afghan；常见结构是“make an afghan”或“wrap up in an afghan”。不要因为大写就把它误判为阿富汗人。",
+        "labels": [
+          "alt-of"
+        ]
+      },
+      {
+        "word": "allowance",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "表示对某件事的许可或承认，相当于正式地说“允许这样做”；这个用法比动词allow本身少见，常见于较旧或正式的文字。",
+        "usage": "常见于“give allowance to + 人/事情”或“with someone’s allowance”等较旧结构。现代日常英语通常直接用permission或approval来表达这个意思，因此读到allowance时不要自动把它理解成零花钱。它多用于正式、历史或文学语境，不能自然地替代动词allow。",
+        "labels": [
+          "countable",
+          "uncountable"
+        ]
+      },
+      {
+        "word": "alpha",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "Alpha 是 alpha 的大写形式，可能出现在句首、专名或特定名称中，本身不一定产生新的词义。",
+        "usage": "",
+        "labels": [
+          "alt-of"
+        ]
+      },
+      {
+        "word": "area of influence",
+        "pos": "noun",
+        "sense": "s1",
+        "priority": "common",
+        "text": "按字面理解，它可以指某人、组织或事物能够产生影响的范围，重点是“影响力延伸到哪里”。具体含义要由上下文决定，可能是地图上的区域，也可能是较宽泛的作用范围。",
+        "usage": "常用句型为“the area of influence of + 某人或组织”或“within the area of influence”。这一用法偏正式，通常用于分析、报告或说明具体范围；普通口语中更自然的说法往往是“影响范围”。不要把它自动理解为法律管辖区，因为影响并不一定等于正式控制。",
+        "labels": []
+      }
+    ]
+  },
+  "missing_common_sample": [
+    {
+      "word": "n't",
+      "rank": 29,
+      "translation": "adv. 不"
+    },
+    {
+      "word": "although",
+      "rank": 378,
+      "translation": "conj. 虽然, 尽管"
+    },
+    {
+      "word": "mhm",
+      "rank": 1293,
+      "translation": " （表示同意或在听对方说话）哦, 嗯"
+    },
+    {
+      "word": "unless",
+      "rank": 1332,
+      "translation": "conj. 除非\nprep. 除...之外"
+    },
+    {
+      "word": "okay",
+      "rank": 1642,
+      "translation": "a. 好, 可以, 行, 对, 好吗, 很好\nadv. 好, 可以, 行, 对, 好吗, 很好\nn. 同意, 签认, 批准, 认可\nvt. 同意, 签认, 批准, 认可"
+    },
+    {
+      "word": "anymore",
+      "rank": 1693,
+      "translation": "adv. 再也不, 不再"
+    },
+    {
+      "word": "iii",
+      "rank": 1845,
+      "translation": "num. 罗马数字3"
+    },
+    {
+      "word": "qv",
+      "rank": 2735,
+      "translation": "abbr. quivering 颤抖; quod vide (Latin=which see) （拉丁语）参见…; quality verification 质量确认; quantum vis (Latin=as much as you wish) （拉丁语）随意量"
+    },
+    {
+      "word": "entitle",
+      "rank": 3465,
+      "translation": "vt. 给...权利, 取名为, 给予名称, 叫做\n[法] 给...权利, 使有资格, 称呼"
+    },
+    {
+      "word": "afterward",
+      "rank": 4195,
+      "translation": "adv. 然后, 后来"
+    },
+    {
+      "word": "utilize",
+      "rank": 4264,
+      "translation": "vt. 利用"
+    },
+    {
+      "word": "catalog",
+      "rank": 4443,
+      "translation": "n. 目录, 大学概况手册\nvt. 编目录\n[计] 目录; 编目"
+    },
+    {
+      "word": "Kinnock",
+      "rank": 4452,
+      "translation": "n. (Kinnock)人名；(英)金诺克"
+    },
+    {
+      "word": "characterise",
+      "rank": 4638,
+      "translation": "vt. 表示...的特性, 成为/是...的特性, 刻划/描述...的性格\nvi. 在文艺作品中塑造人物, 描绘性格"
+    },
+    {
+      "word": "ici",
+      "rank": 4659,
+      "translation": "abbr. 英国化学工业公司（Imperial Chemical Industries Ltd.）"
+    },
+    {
+      "word": "EEC",
+      "rank": 4899,
+      "translation": "欧洲经济共同体"
+    },
+    {
+      "word": "summarise",
+      "rank": 5184,
+      "translation": "vt. 概括, 总结, 摘要, 概述"
+    },
+    {
+      "word": "startle",
+      "rank": 5455,
+      "translation": "n. 惊愕, 惊恐\nvt. 吃惊, 使惊愕\nvi. 惊起"
+    },
+    {
+      "word": "Von",
+      "rank": 5785,
+      "translation": "[计] 冯·诺伊曼"
+    },
+    {
+      "word": "fascinate",
+      "rank": 5834,
+      "translation": "vt. 令人入神, 使着迷\nvi. 入迷"
+    },
+    {
+      "word": "Gaulle",
+      "rank": 5910,
+      "translation": "高尔（人名）"
+    },
+    {
+      "word": "Hartlepool",
+      "rank": 5918,
+      "translation": "哈特尔普尔[英国英格兰东北部港市]"
+    },
+    {
+      "word": "postwar",
+      "rank": 5928,
+      "translation": "a. 战后的"
+    },
+    {
+      "word": "ruine",
+      "rank": 5934,
+      "translation": " [医]路因碱"
+    },
+    {
+      "word": "darke",
+      "rank": 5982,
+      "translation": " [人名] [英格兰人姓氏] 达克 Dark的变体"
+    },
+    {
+      "word": "footstep",
+      "rank": 6017,
+      "translation": "n. 脚步, 脚步声, 足迹"
+    },
+    {
+      "word": "albeit",
+      "rank": 6086,
+      "translation": "conj. 尽管, 虽然"
+    },
+    {
+      "word": "watercolor",
+      "rank": 6101,
+      "translation": "n. 水彩颜料, 水彩画"
+    },
+    {
+      "word": "socioeconomic",
+      "rank": 6127,
+      "translation": "a. 社会经济学的"
+    },
+    {
+      "word": "odour",
+      "rank": 6254,
+      "translation": "n. 气味, 臭气, 香气, 味道, 迹象, 名誉, 声誉\n[医] 气味"
+    },
+    {
+      "word": "Heseltine",
+      "rank": 6302,
+      "translation": "n. (Heseltine)人名；(英)赫塞尔廷"
+    },
+    {
+      "word": "RISC",
+      "rank": 6329,
+      "translation": "[计] 精简指令集计算机"
+    },
+    {
+      "word": "Athelstan",
+      "rank": 6330,
+      "translation": "n. 阿瑟尔斯坦（人名）"
+    },
+    {
+      "word": "subscale",
+      "rank": 6351,
+      "translation": "内部[扩散]氧化物"
+    },
+    {
+      "word": "situate",
+      "rank": 6400,
+      "translation": "vt. 使位于, 使处于"
+    },
+    {
+      "word": "devastate",
+      "rank": 6414,
+      "translation": "vt. 毁坏\n[法] 使荒废, 毁灭, 掠夺"
+    },
+    {
+      "word": "policymaker",
+      "rank": 6562,
+      "translation": "n. 政策制定者；决策人"
+    },
+    {
+      "word": "Sainsbury",
+      "rank": 6688,
+      "translation": "塞恩斯伯里(姓氏)"
+    },
+    {
+      "word": "calory",
+      "rank": 6806,
+      "translation": "[医] 卡[路里](热量单位)"
+    },
+    {
+      "word": "Minton",
+      "rank": 6829,
+      "translation": "n. 明顿（英国著名的卫浴品牌）"
+    },
+    {
+      "word": "Novell",
+      "rank": 6831,
+      "translation": "n. 美国网络产品公司名称"
+    },
+    {
+      "word": "microsystem",
+      "rank": 6832,
+      "translation": "[计] 微系统"
+    },
+    {
+      "word": "oesophageal",
+      "rank": 6834,
+      "translation": "a. 食道\n[医] 食管的"
+    },
+    {
+      "word": "coun",
+      "rank": 6836,
+      "translation": "abbr. councillor 顾问; 参赞; counsel 商议; 律师"
+    },
+    {
+      "word": "Crohn",
+      "rank": 6837,
+      "translation": "n. 克罗恩病；克隆病"
+    },
+    {
+      "word": "Theda",
+      "rank": 6838,
+      "translation": "西达（人名）"
+    },
+    {
+      "word": "GUIL",
+      "rank": 6840,
+      "translation": "n. (Guil)人名；(西、法)吉尔"
+    },
+    {
+      "word": "HMO",
+      "rank": 6870,
+      "translation": "[化] 休克尔分子轨道法"
+    },
+    {
+      "word": "destine",
+      "rank": 6906,
+      "translation": "vt. 注定, 预定"
+    },
+    {
+      "word": "realisation",
+      "rank": 7016,
+      "translation": "n. 实现, 完成（等于realization）"
+    },
+    {
+      "word": "saut",
+      "rank": 7116,
+      "translation": "<法>n.(芭蕾舞用语)跳[字面意义：leap]"
+    },
+    {
+      "word": "paralyze",
+      "rank": 7146,
+      "translation": "vt. 使瘫痪, 使麻痹\n[医] 使麻痹, 使瘫痪"
+    },
+    {
+      "word": "cozy",
+      "rank": 7168,
+      "translation": "a. 舒适的, 安逸的, 惬意的\nn. (茶壶等的)保暖罩, 舒适的座位\nvt. 以假话使安心"
+    },
+    {
+      "word": "viii",
+      "rank": 7247,
+      "translation": "num. 罗马数字8"
+    },
+    {
+      "word": "fingertip",
+      "rank": 7248,
+      "translation": "n. 指尖, 指套"
+    },
+    {
+      "word": "reorganisation",
+      "rank": 7348,
+      "translation": "n. 重组（等于reorganization）"
+    },
+    {
+      "word": "pollutant",
+      "rank": 7350,
+      "translation": "n. 污染物质\n[法] 污染物"
+    },
+    {
+      "word": "Mansell",
+      "rank": 7473,
+      "translation": "n. (Mansell)人名；(英)曼塞尔；(法)芒塞尔"
+    },
+    {
+      "word": "Sotheby",
+      "rank": 7474,
+      "translation": "n. 苏富比；索斯比（拍卖公司名, 等于Sotheby's）"
+    },
+    {
+      "word": "Gooch",
+      "rank": 7493,
+      "translation": "古氏"
+    },
+    {
+      "word": "Wirral",
+      "rank": 7494,
+      "translation": "n. 威勒尔半岛"
+    },
+    {
+      "word": "ICL",
+      "rank": 7499,
+      "translation": "[计] 国际计算机-, 有限公司"
+    },
+    {
+      "word": "CNAA",
+      "rank": 7506,
+      "translation": "abbr. （英）全国学术奖理事会（Council for National Academic Awards）"
+    },
+    {
+      "word": "Pascoe",
+      "rank": 7511,
+      "translation": "n. (Pascoe)人名；(西)帕斯科埃；(英)帕斯科"
+    },
+    {
+      "word": "MIPS",
+      "rank": 7514,
+      "translation": "[计] 每秒百万条指令数"
+    },
+    {
+      "word": "wh",
+      "rank": 7515,
+      "translation": "abbr. 瓦特小时（Watt Hours）；白宫（White House）；白色（white）"
+    },
+    {
+      "word": "sparc",
+      "rank": 7517,
+      "translation": "abbr. SUN公司的工作站系统"
+    },
+    {
+      "word": "accustom",
+      "rank": 7584,
+      "translation": "vt. 使习惯于"
+    },
+    {
+      "word": "underlie",
+      "rank": 7604,
+      "translation": "vt. 位于...之下, 成为...的基础"
+    },
+    {
+      "word": "phd",
+      "rank": 7607,
+      "translation": "abbr. 哲学博士学位（Doctor of Philosophy）"
+    }
+  ],
+  "missing_top10000_count": 175
+}

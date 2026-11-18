@@ -1,0 +1,1072 @@
+{"word": "-eth", "key": ["suffix", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "morpheme"]}
+{"word": "'flu", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "alt-of", "dated", "uncountable"]}
+{"word": "'nation", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["abbreviation", "alt-of", "archaic", "clipping"]}
+{"word": "'t", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["abbreviation", "alt-of", "archaic", "contraction", "pronunciation-spelling"]}
+{"word": "abed", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "abode", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "act", "key": ["noun", "et1", "s1"], "change": "exam_name_separated_from_ordinary_word"}
+{"word": "act", "key": ["noun", "et1", "s2"], "change": "exam_name_separated_from_ordinary_word"}
+{"word": "act", "key": ["noun", "et1", "s3"], "change": "exam_name_separated_from_ordinary_word"}
+{"word": "act", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "act", "change": "reviewed_overview", "before": "act 作名词时主要指行为、行动或所做的事，也可指戏剧的一幕；作动词时表示做、执行、表演或表现。大写的 ACT 还可指美国大学入学考试；作为副词时是 actually 的缩略形式。", "after": "act 作名词，常指一个行为，或戏剧中的“一幕”。作动词，常指采取行动、表现出某种行为，以及演戏、扮演角色。", "references": ["https://www.collinsdictionary.com/dictionary/english/act"]}
+{"word": "advantage", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "afro-american", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "afro-american", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "after", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "after", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "在……之后", "definition": "引出较早发生的事，说明主句中的事情随后发生。", "priority": "core", "examples": [{"text": "We talked after everyone had left.", "translation": "大家都离开后，我们聊了聊。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/after"]}
+{"word": "after", "change": "reviewed_overview", "before": "after 的核心意思是“在某个时间、位置或对象之后”，可引申为跟随、追求、仿照以及次于某人的顺序关系。", "after": "after 常表示时间、顺序上的“在……之后”，也可表示跟在某人或某物后面。", "references": ["https://www.collinsdictionary.com/dictionary/english/after"]}
+{"word": "again-", "key": ["prefix", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["idiomatic", "morpheme", "obsolete"]}
+{"word": "air off", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive", "slang"]}
+{"word": "air-girl", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "air-girl", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "ale", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "alight", "key": ["adj", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["also", "archaic", "figuratively", "not-comparable", "transitive"]}
+{"word": "alight", "key": ["adj", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "archaic", "figuratively", "not-comparable", "transitive"]}
+{"word": "alight", "key": ["adj", "et2", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["also", "archaic", "figuratively", "not-comparable", "transitive"]}
+{"word": "alight", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "archaic", "figuratively", "transitive"]}
+{"word": "alight", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "archaic", "figuratively", "transitive"]}
+{"word": "all correct", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "obsolete"]}
+{"word": "all correct", "key": ["phrase", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "obsolete"]}
+{"word": "all correct", "key": ["phrase", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "obsolete"]}
+{"word": "all my eye", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "all things come to those who wait", "key": ["proverb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "all to", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "all to one", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["not-comparable", "obsolete"]}
+{"word": "america at home", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ireland", "dated", "informal", "uncountable"]}
+{"word": "amorous", "key": ["adj", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "and", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "和；并且", "definition": "连接并列的人、事物或说法，表示把它们放在一起；连接动作时，也可能表示事情先后发生。", "priority": "core", "examples": [{"text": "She opened the book and began to read.", "translation": "她打开书，开始阅读。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/and"]}
+{"word": "and", "change": "reviewed_overview", "before": "这个词在本词条中主要表示节拍中的“后半拍”、方程或逻辑中的“与”运算，以及少数方言和航空缩写用法。", "after": "and 作连词时，连接并列的人、事物或说法，表示把它们放在一起；连接动作时，也可能表示事情先后发生。", "references": ["https://www.collinsdictionary.com/dictionary/english/and"]}
+{"word": "and no mistake", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "and that's flat", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "anon", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "apothecary", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "dated"]}
+{"word": "apothecary", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "historical"]}
+{"word": "appellation", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "as", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "当……时；因为；正如", "definition": "可引出同时发生的事、原因，或“照某种方式”进行的事。具体关系需要结合上下句判断。", "priority": "core", "examples": [{"text": "As I was leaving, the phone rang.", "translation": "我正要离开时，电话响了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/as"]}
+{"word": "as", "change": "reviewed_overview", "before": "英语中的多功能小词和缩写词，主要表示比较、身份或形式，也可指若干专门名称、单位和术语。", "after": "as 常表示“作为”，也可连接句子，表示“当……时、因为、正如”。as ... as 用来作同等程度的比较；具体含义要看搭配。", "references": ["https://www.collinsdictionary.com/dictionary/english/as"]}
+{"word": "asiatic", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "asiatic", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "offensive", "sometimes"]}
+{"word": "asterisk", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "asterisk", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "figuratively"]}
+{"word": "asterisk", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "figuratively"]}
+{"word": "asylum", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "atop", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "literary", "not-comparable"]}
+{"word": "attend", "key": ["verb", "et1", "s7"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "intransitive"]}
+{"word": "auld", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ireland", "Northern-England", "Scotland", "archaic"]}
+{"word": "av.", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["abbreviation", "alt-of", "dated"]}
+{"word": "aya", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["New-England", "archaic", "dialectal", "not-comparable"]}
+{"word": "baby-killer", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "slang"]}
+{"word": "back time", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "back time", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "bacon-fed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "idiomatic", "not-comparable", "possibly", "slang"]}
+{"word": "bad iron", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "uncountable"]}
+{"word": "bad to beat", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable", "slang"]}
+{"word": "bag down", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "transitive"]}
+{"word": "bag down", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "intransitive"]}
+{"word": "ball it off", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "ball off", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "bang", "key": ["noun", "et1", "s4"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "archaic"]}
+{"word": "bank", "key": ["noun", "et1", "s1"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "I went to the bank to open a savings account.", "translation": "我去银行开了一个储蓄账户。"}, {"text": "The bank approved her loan application.", "translation": "银行批准了她的贷款申请。"}], "labels": ["countable"], "learner_explanation": "bank最常见的意思是银行：人们可以在那里存钱、借钱，并办理转账、付款等金融事务。记忆时可以把柜台想成“有边有台的一块隆起”，资金和服务都集中在这张“台”后面。", "priority": "core", "sense_id": "s1", "short_gloss": "银行", "topics": [], "usage_note": "常用结构是open an account at a bank、borrow money from a bank和go to the bank；表示泛指时用a bank，表示双方都知道的那家银行时用the bank。它指机构，不要误当成账户或银行网点。"}, "after": {"definition": "指办理存款、贷款、转账等金融业务的银行机构，也可在具体语境中指人们去办理业务的银行场所。", "usage": "常见搭配有 open an account at a bank、go to the bank。这里的 bank 可以指银行机构，也可以指具体网点。", "verified_usage": true}, "references": ["https://www.collinsdictionary.com/dictionary/english/bank", "https://en.wiktionary.org/wiki/bank"]}
+{"word": "bank", "key": ["noun", "et2", "s1"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "We had a picnic on the bank of the river.", "translation": "我们在河岸边野餐。"}, {"text": "The children were playing near the lake bank.", "translation": "孩子们在湖岸附近玩耍。"}], "labels": [], "learner_explanation": "bank可以指河流、湖泊或其他水道边缘的陆地，也就是水边那条“有边有台的隆起”。", "priority": "core", "sense_id": "s1", "short_gloss": "河岸；湖岸", "topics": ["geography", "hydrology", "natural-sciences"], "usage_note": "常用on the bank of the river、along the river bank和the north bank等结构；表示哪一侧时通常在bank前加方向词。不要把river bank误解成“河边的银行”。"}, "after": {"definition": "河流、湖泊或其他水道边缘的陆地，也就是水岸。", "usage": "常见搭配有 on the bank of the river、along the river bank。", "verified_usage": true}, "references": ["https://www.collinsdictionary.com/dictionary/english/bank", "https://en.wiktionary.org/wiki/bank"]}
+{"word": "bank", "change": "reviewed_overview", "before": "主要指银行或银行业务，也可指河流、湖泊等水体的岸边；作动词时可表示办理银行业务，或使飞机向一侧倾斜转弯。", "after": "bank 最常见的意思是“银行”和“河岸、湖岸”。作动词时，可指把钱存入银行、在某家银行办理业务，也可形容飞机侧倾转弯。银行与河岸应按不同用法分别理解。", "references": ["https://www.collinsdictionary.com/dictionary/english/bank", "https://en.wiktionary.org/wiki/bank"]}
+{"word": "base", "key": ["adj", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "base-ball", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated", "uncountable"]}
+{"word": "bastard", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "be a one", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "be-", "key": ["prefix", "et1", "s8"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["idiomatic", "morpheme", "rare"]}
+{"word": "be-in", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "beastly", "key": ["adj", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "beau", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "dated"]}
+{"word": "beautiful people", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["capitalized", "dated", "idiomatic", "plural", "plural-only", "sometimes"]}
+{"word": "because", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "因为", "definition": "引出原因，说明一件事为什么发生或一个判断为什么成立。", "priority": "core", "examples": [{"text": "We stayed inside because it was raining.", "translation": "因为在下雨，我们待在室内。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/because"]}
+{"word": "because", "change": "reviewed_overview", "before": "表示原因或理由的词：通常指“因为……”，也可以单独用来故意不说明理由；网络口语中还可直接接名词，表示“因为……的缘故”。", "after": "because 作连词时，引出原因，说明一件事为什么发生或一个判断为什么成立。", "references": ["https://www.collinsdictionary.com/dictionary/english/because"]}
+{"word": "bed room", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "archaic"]}
+{"word": "bed-sitting room", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "beech-de-mer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "archaic"]}
+{"word": "beetle-crusher", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Australia", "British", "dated", "slang"]}
+{"word": "beetle-crusher", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "British", "dated", "derogatory", "slang"]}
+{"word": "before", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "在……之前", "definition": "引出一件比主句中的事情更晚发生的事，也就是主句的动作发生在它之前。", "priority": "core", "examples": [{"text": "Check the address before you leave.", "translation": "出发前检查一下地址。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/before"]}
+{"word": "before", "change": "reviewed_overview", "before": "before 的核心概念是“在某个参照点的前面”：可以指时间更早、空间在前，也可以引申为面对、等待处理、顺序靠前或优先考虑。", "after": "before 表示时间上的“在……之前”，可接时间、动作或完整的句子；有时也表示位置或顺序上的“在……前面”。", "references": ["https://www.collinsdictionary.com/dictionary/english/before"]}
+{"word": "befriend", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "best girl", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "bi-text", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "bigotry", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "billy-oh", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang", "uncountable"]}
+{"word": "biscuit", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Australia", "Canada", "Ireland", "New-Zealand", "UK", "countable", "rare", "sometimes", "uncountable"]}
+{"word": "biscuit", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "countable", "rare", "uncountable"]}
+{"word": "black man", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable", "usually"]}
+{"word": "black rent", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "black-coated", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "not-comparable"]}
+{"word": "blue check mark", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated", "derogatory", "sometimes"]}
+{"word": "blue-light special", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "body of me", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "bomb", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "often"]}
+{"word": "bombay", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "boob", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "dated", "derogatory", "informal"]}
+{"word": "book credit", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "book of words", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated", "informal"]}
+{"word": "book post", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "book-mindedness", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "boot", "key": ["noun", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "boot", "key": ["verb", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic"]}
+{"word": "booth", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "bosom", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "bottom the house", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "bottom-post", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated"]}
+{"word": "bottom-post", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated", "intransitive", "transitive"]}
+{"word": "bottom-poster", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Internet", "dated"]}
+{"word": "brick", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "slang", "uncountable"]}
+{"word": "bride-ale", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Northern-England", "archaic"]}
+{"word": "bubble", "key": ["verb", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "rare", "transitive"]}
+{"word": "bugger", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "burning-glass", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "burst-up", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "but", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "但是；而是", "definition": "连接形成对照或转折的说法。not ... but ... 则表示“不是……而是……”。", "priority": "core", "examples": [{"text": "The room is small but comfortable.", "translation": "房间虽小，却很舒适。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/but"]}
+{"word": "but", "change": "reviewed_overview", "before": "but 主要表示“除外、仅仅”，也可作名词表示反对意见或保留条件；此外还是一个姓氏。", "after": "but 作连词时，连接形成对照或转折的说法。not ... but ... 则表示“不是……而是……”。", "references": ["https://www.collinsdictionary.com/dictionary/english/but"]}
+{"word": "butter-ham", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "cake-eater", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "endearing", "slang", "usually"]}
+{"word": "caledonia", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "call it half a day", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "camera phone", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "can but hope", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "no-past-participle", "no-present-participle"]}
+{"word": "card", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "care a button", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "cartman", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "cast", "key": ["noun", "et1", "s15"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "obsolete"]}
+{"word": "cast up", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "cat-call", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "cat-call", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "catch", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "cater-cousin", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "cathay", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "caucus", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic"]}
+{"word": "caucus", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic"]}
+{"word": "caucus", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic"]}
+{"word": "caucus", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic"]}
+{"word": "caucus", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic", "broadly", "informal", "intransitive"]}
+{"word": "caucus", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "Israel", "Pakistan", "South-Africa", "US", "Zimbabwe", "archaic", "transitive"]}
+{"word": "cayman", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic"]}
+{"word": "cc-by", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "obsolete"]}
+{"word": "cd", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "metonymically", "uncountable"]}
+{"word": "ceylon", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "historical"]}
+{"word": "ch'i", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "historical"]}
+{"word": "change of life", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "euphemistic", "idiomatic", "uncountable"]}
+{"word": "character", "key": ["noun", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated"]}
+{"word": "cheese it", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated", "slang"]}
+{"word": "chewing-gum", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "countable", "dated", "uncountable"]}
+{"word": "chi-ike", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete"]}
+{"word": "chicken-breasted", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "chin", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive", "slang"]}
+{"word": "chin", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang", "transitive"]}
+{"word": "chin-chin", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "chinese home run", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "derogatory", "slang"]}
+{"word": "chip", "key": ["noun", "et1", "s8"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "Ireland", "New-Zealand", "UK", "archaic", "plural-normally"]}
+{"word": "chit", "key": ["noun", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "choke-dog", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "obsolete", "slang", "uncountable"]}
+{"word": "chuck", "key": ["verb", "et4", "s6"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal", "transitive"]}
+{"word": "chum", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "chum", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "climax", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "close", "key": ["adj", "et2", "s8"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "cloth-ears", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "derogatory", "informal"]}
+{"word": "clout", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "cold coffee", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "archaic", "slang", "uncountable"]}
+{"word": "combs", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "combustible", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "figuratively"]}
+{"word": "come", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "come", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "come high", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "come it strong", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "come to time", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "coming into the world", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "common market", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "historical"]}
+{"word": "common run", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "companion", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "congress", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "consent", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "intransitive", "obsolete", "uncountable"]}
+{"word": "continent", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["broadly", "obsolete"]}
+{"word": "corn-cracker", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "archaic", "derogatory", "mildly"]}
+{"word": "corn-cracker", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "archaic"]}
+{"word": "couple", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "court holy water", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "uncountable"]}
+{"word": "cover-slut", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "cover-slut", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["broadly", "figuratively", "obsolete"]}
+{"word": "coy", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "crack", "key": ["noun", "et1", "s15"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "countable", "dated", "uncountable"]}
+{"word": "crack", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "cram", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "slang", "uncountable"]}
+{"word": "crank", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated", "informal"]}
+{"word": "credo", "change": "reviewed_overview", "before": "credo 是对个人或群体信念的概括性表达，也可特指基督教礼仪中的信经或为信经谱写的乐曲。", "after": "credo 是个人或群体坚持并用来指导行为的信念、原则或信条，常用于谈人生观或政治理念。宗教中的信经及其音乐用法另列。", "references": ["https://www.collinsdictionary.com/dictionary/english/credo"]}
+{"word": "crib", "key": ["verb", "et1", "s6"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "transitive"]}
+{"word": "cross", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "cross-channel", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Ireland", "dated", "not-comparable"]}
+{"word": "cur", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "humorous"]}
+{"word": "cur", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "humorous"]}
+{"word": "curses", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "humorous"]}
+{"word": "cut stick", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "cut under", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "cyberspace", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["broadly", "countable", "dated", "uncountable"]}
+{"word": "daddy-o", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "dag", "key": ["noun", "et4", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "New-Zealand", "obsolete", "slang"]}
+{"word": "data-base", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "date up", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "slang", "transitive"]}
+{"word": "deal", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "dear sir", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "death star", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "colloquial", "dated", "slang"]}
+{"word": "death-hunter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete", "slang"]}
+{"word": "decayed", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "designed", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "devil", "key": ["name", "et2", "s1"], "change": "exact_duplicate_merged", "kept": "s1"}
+{"word": "devilish", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "dick", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "slang"]}
+{"word": "digging", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "countable", "dated", "uncountable"]}
+{"word": "digital cash", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "digits", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "plural", "plural-only", "slang"]}
+{"word": "disappoint", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "disengaged", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "divergence", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "diverting", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "do", "key": ["verb", "et1", "s6"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "do a land-office business", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "do a never", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "slang"]}
+{"word": "do bird", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "do it up brown", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "do someone brown", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "documentation", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "in-plural", "rare", "uncountable"]}
+{"word": "documentation", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "in-plural", "rare", "uncountable"]}
+{"word": "documentation", "key": ["noun", "et1", "s4"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "in-plural", "rare", "uncountable"]}
+{"word": "done brown", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "dope-ring", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "dot-and-go-one", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "archaic", "not-comparable", "slang"]}
+{"word": "doth", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "form-of", "indicative", "present", "singular", "third-person"]}
+{"word": "doughty", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "literary"]}
+{"word": "downright", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "figuratively", "not-comparable"]}
+{"word": "drawers", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal", "plural", "plural-only", "regional"]}
+{"word": "dressing-table", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "drink off", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "drink out", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "obsolete", "transitive"]}
+{"word": "drive someone to the wall", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "duds", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "US", "dated", "informal", "plural", "plural-only"]}
+{"word": "dumb", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "dumb", "key": ["adj", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "usually"]}
+{"word": "dumb well", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "dumbledore", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "dated", "dialectal"]}
+{"word": "dummy", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "e ticket", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "idiomatic", "uncountable"]}
+{"word": "early door", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "earth oil", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["India", "dated", "uncountable"]}
+{"word": "economic science", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "egg", "key": ["noun", "et1", "s8"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "figuratively", "informal", "uncountable"]}
+{"word": "eskimo", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "offensive", "sometimes"]}
+{"word": "essay", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "eunuch", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "eunuch", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "figuratively", "transitive"]}
+{"word": "european war", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "obsolete"]}
+{"word": "even", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "evenings", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal", "not-comparable"]}
+{"word": "excelsior", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "extinct", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "fag", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ireland", "UK", "archaic", "colloquial"]}
+{"word": "fag", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "colloquial", "transitive"]}
+{"word": "fag", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "colloquial", "intransitive"]}
+{"word": "fair", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "literary"]}
+{"word": "fair", "key": ["verb", "et1", "s9"], "change": "exact_duplicate_merged", "kept": "s7"}
+{"word": "fair sex", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "offensive", "sometimes"]}
+{"word": "fall", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "archaic", "countable", "uncountable"]}
+{"word": "fall", "key": ["verb", "et1", "s9"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "fall to", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "fall to", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "family roof", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "historical"]}
+{"word": "fancy", "key": ["verb", "et2", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "far east", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "far out", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "fashion", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "fat", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "transitive"]}
+{"word": "fellow", "key": ["noun", "et1", "s17"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "fellow", "key": ["verb", "et2", "s4"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["also", "obsolete", "reflexive", "transitive"]}
+{"word": "fend", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["rare"]}
+{"word": "field", "key": ["noun", "et1", "s9"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "The instrument measures changes in the magnetic field.", "translation": "这台仪器测量磁场的变化。"}], "labels": [], "learner_explanation": "在物理等学科中，field 是某种力、影响或数值能够作用或被描述的一片范围，例如磁场或引力场；这是把“空间范围”抽象化了。", "priority": "common", "sense_id": "s9", "short_gloss": "场；作用范围", "topics": ["natural-sciences", "physical-sciences", "physics"], "usage_note": "通常构成复合词，如 “magnetic field”“gravitational field” 或 “electric field”，也常说 “in a field”。它是专业术语，翻译时要结合具体学科确定“场”或“领域”，不能简单按普通“场地”处理。"}, "after": {"usage": "magnetic field、electric field 分别是磁场、电场。这里的物理“场”与研究或工作的“领域”是不同用法。", "verified_usage": true}, "references": ["https://www.collinsdictionary.com/dictionary/english/field"]}
+{"word": "field", "key": ["noun", "et1", "s11"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "The video contains two fields for each complete frame.", "translation": "这段视频的每一帧完整画面包含两个扫描场。"}], "labels": [], "learner_explanation": "在动画、电视和电子技术中，field 可指画面或信号中的一个扫描场；这是把完整图像划分成的一个技术部分。", "priority": "common", "sense_id": "s11", "short_gloss": "画面帧；场", "topics": ["broadcasting", "business", "electrical-engineering", "electricity", "electromagnetism", "electronics", "energy", "engineering", "film", "media", "natural-sciences", "physical-sciences", "physics", "television"], "usage_note": "通常出现在隔行扫描、电视信号或动画制作等专业上下文中，常与 frame 等术语对比。翻译时要采用该行业的固定术语，不要按体育“场地”理解；一般学习者只需在专业阅读中识别它。"}, "after": {"gloss": "电视扫描场", "definition": "在隔行扫描的电视技术中，指构成一帧图像的一个扫描场；它不是完整的一帧图像。"}, "references": ["https://www.collinsdictionary.com/dictionary/english/field"]}
+{"word": "field", "change": "missing_sense_added", "after": {"pos": "noun", "gloss": "领域；专业范围", "definition": "某种工作、研究或活动所属的范围。例如 the field of medicine 指医学领域，an expert in her field 指她所在领域的专家。", "priority": "core", "examples": [{"text": "He works in the field of education.", "translation": "他从事教育领域的工作。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-domain", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/field"]}
+{"word": "field", "change": "missing_sense_added", "after": {"pos": "adj", "gloss": "实地的；在现场进行的", "definition": "形容研究或工作是在真实现场开展，而不是只在办公室、实验室或理论中进行。", "priority": "core", "examples": [{"text": "The students are doing field research.", "translation": "学生们正在进行实地研究。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-fieldwork", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/field"]}
+{"word": "field", "change": "reviewed_overview", "before": "field 是英语中一个很常用的词，核心意思是“开阔的一片地方”，可指田野、比赛场地或某个专业领域；作动词时常表示在比赛中接球、派出队员，或接住并处理问题。它也可作姓氏和地名的一部分。", "after": "field 常指种植或放牧的一块土地、体育比赛的场地，以及某种工作或研究的领域。作动词时，field questions 表示回答、应对问题；还可表示接球或派出队员。", "references": ["https://www.collinsdictionary.com/dictionary/english/field"]}
+{"word": "figure", "key": ["verb", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "file 13", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "slang", "uncountable"]}
+{"word": "first lady of the land", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "obsolete"]}
+{"word": "fix to", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "flame", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Internet", "countable", "dated", "uncountable"]}
+{"word": "flash", "key": ["noun", "et1", "s18"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "fleet", "key": ["verb", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "floppy", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "fly", "key": ["noun", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "follow-me-lad", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "follow-me-lad", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "for", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "因为；由于", "definition": "作连词时，在一个说法后补充原因或解释，常见于书面叙述；与介词 for 的“给、为了”等用法不同。", "priority": "core", "examples": [{"text": "We stopped, for it was getting late.", "translation": "我们停下了，因为时间已经很晚了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/for"]}
+{"word": "for", "change": "reviewed_overview", "before": "主要作介词，表示指向对象、受益对象、目的或原因，也常用于引出不定式；在表示时间、交换、支持等关系时还有许多常见用法。另可作为少数首字母缩略词使用，但不属于日常核心用法。", "after": "for 常表示“给、为了”，也可表示一段时间或支持某人某事。作连词时，它可以补充原因，意思接近“因为”。", "references": ["https://www.collinsdictionary.com/dictionary/english/for"]}
+{"word": "form", "key": ["noun", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["UK", "countable", "dated", "uncountable"]}
+{"word": "formosa", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "formosa", "key": ["name", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "forth", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "formal", "not-comparable"]}
+{"word": "forth", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "formal", "not-comparable"]}
+{"word": "fortnight", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Commonwealth", "Ireland", "UK", "dated"]}
+{"word": "four-ale", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "four-shooter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "fraught", "key": ["adj", "et2", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["also", "figuratively", "obsolete"]}
+{"word": "fraught", "key": ["adj", "et2", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["also", "figuratively", "obsolete", "specifically"]}
+{"word": "fray", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "intransitive", "obsolete"]}
+{"word": "fray", "key": ["noun", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "obsolete"]}
+{"word": "fray", "key": ["noun", "et3", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "figuratively", "obsolete"]}
+{"word": "free china", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "free list", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "free, white, and twenty-one", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "archaic", "not-comparable"]}
+{"word": "french", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang", "uncountable"]}
+{"word": "french leave", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "informal", "uncountable"]}
+{"word": "french leave", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "euphemistic", "idiomatic", "informal", "specifically", "uncountable"]}
+{"word": "french letter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Commonwealth", "Ireland", "UK", "dated", "euphemistic"]}
+{"word": "front", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "fruit-time", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "literary", "obsolete", "uncountable", "usually"]}
+{"word": "funny paper", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "possibly"]}
+{"word": "funny paper", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "possibly", "uncountable"]}
+{"word": "furlong", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "g-d", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "gage", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "gain", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "gallant", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "gallipoli", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "garage", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Commonwealth", "countable", "dated", "uncountable"]}
+{"word": "gas", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "slang", "uncountable"]}
+{"word": "gay", "key": ["adj", "et2", "s10"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "gay", "key": ["adj", "et2", "s12"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "gay freedom day", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "gay old time", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "gee", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "geezer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Commonwealth", "Ireland", "UK", "dated", "informal"]}
+{"word": "get a sad on", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "slang"]}
+{"word": "get outside of", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "transitive"]}
+{"word": "get outside of", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "transitive"]}
+{"word": "get someone in a line", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "slang"]}
+{"word": "get the lead out", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "get-penny", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "gill", "key": ["noun", "et2", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated"]}
+{"word": "give battle", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "give someone the air", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "give someone the business", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "give someone the business", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "give the time of day", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "literally"]}
+{"word": "globe", "key": ["noun", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "South-Africa", "dated"]}
+{"word": "gnarly", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "gnarly", "key": ["adj", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "slang"]}
+{"word": "go over to the majority", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "euphemistic", "idiomatic"]}
+{"word": "go through fire and water", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "go to the country", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "go west", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "figuratively"]}
+{"word": "god-send", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "good day", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "good day", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "good god", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "good-by", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "good-by", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "good-humour", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "archaic", "uncountable"]}
+{"word": "grade school", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "Philippines", "US", "rare"]}
+{"word": "grass-cock", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "great scott", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "green old age", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "groovy", "key": ["adj", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "gump", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "gut-pudding", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "hacker", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "hacker", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["broadly", "dated"]}
+{"word": "hale", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hallo", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "halt", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "halt", "key": ["noun", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "halt", "key": ["noun", "et4", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "Ireland", "obsolete"]}
+{"word": "halt", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "halt", "key": ["verb", "et2", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "halt", "key": ["verb", "et2", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "hand", "key": ["verb", "et2", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "hand-me-on", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated", "not-comparable"]}
+{"word": "hand-me-on", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "hang it", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "euphemistic"]}
+{"word": "hang one on", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "hang one on", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "hap", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "uncountable"]}
+{"word": "hap", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable"]}
+{"word": "hap", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "intransitive", "literary"]}
+{"word": "hard", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "hard by", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "hard by", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hard lines", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "hard lines", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang", "uncountable"]}
+{"word": "hard-to-get", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal", "not-comparable"]}
+{"word": "hark", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "imperative", "often"]}
+{"word": "harvester", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "hast", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "form-of", "indicative", "present", "second-person", "singular"]}
+{"word": "have a care", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "imperative"]}
+{"word": "have a poor time of it", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "informal"]}
+{"word": "have someone to rights", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "informal"]}
+{"word": "have the law of", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "idiomatic"]}
+{"word": "heart", "key": ["noun", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "heart-service", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "uncountable"]}
+{"word": "heaven", "key": ["name", "et2", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "heaven", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "plural-normally", "poetic", "uncountable"]}
+{"word": "heavy man", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "slang"]}
+{"word": "hello girl", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "hep", "key": ["adj", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "hep", "key": ["adj", "et3", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "hep", "key": ["verb", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "slang"]}
+{"word": "hereafter", "key": ["adv", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "hi-spy-hi", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "uncountable"]}
+{"word": "high", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "high germany", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "high germany", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "high-nosed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hindustan", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "his", "key": ["det", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "sometimes"]}
+{"word": "hist", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hist", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hit off", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "hither", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "literary", "not-comparable"]}
+{"word": "hitherto", "key": ["adv", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "literary", "not-comparable"]}
+{"word": "ho-hum", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "dated"]}
+{"word": "ho-hum", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "dated"]}
+{"word": "hold in", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "home computer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "homo", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "US", "countable", "dated", "uncountable"]}
+{"word": "hooker", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "hop-o'-my-thumb", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "horse power", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "alternative", "archaic"]}
+{"word": "horse-watcher", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hot water bag", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hot wave", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "hotspur", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "house of office", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["euphemistic", "obsolete"]}
+{"word": "how do you do", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "husband up", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "i never did", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "i say", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated"]}
+{"word": "i say", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated"]}
+{"word": "i wish i may be shot", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "colloquial"]}
+{"word": "i'll be shot", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "if", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "如果；是否", "definition": "引出条件时表示“如果”；跟在 ask、know、wonder 等词后，也可引出“是否”这个问题。", "priority": "core", "examples": [{"text": "I wonder if she is coming.", "translation": "我想知道她会不会来。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/if"]}
+{"word": "if", "change": "reviewed_overview", "before": "if 作名词时，核心是一个尚未确定的条件或可能性；大写的 IF 还可作为多个专业术语的首字母缩略语，具体含义要靠语境判断。", "after": "if 作连词时，引出条件时表示“如果”；跟在 ask、know、wonder 等词后，也可引出“是否”这个问题。", "references": ["https://www.collinsdictionary.com/dictionary/english/if"]}
+{"word": "if you please", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "formal"]}
+{"word": "ill turn", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "ill turn", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "impossible story", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "in despite of", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "nonstandard"]}
+{"word": "in funds", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated", "not-comparable"]}
+{"word": "inasmuch", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "indian sign", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "mildly", "offensive"]}
+{"word": "indication", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "rare", "uncountable"]}
+{"word": "indo-germanic", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Indo-European-studies", "dated", "not-comparable"]}
+{"word": "indo-germanic", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Indo-European-studies", "dated"]}
+{"word": "indochina", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "inform", "change": "reviewed_overview", "before": "inform 主要作动词，表示把信息传达给某人，也可表示某种思想深刻影响或塑造事物；作形容词时是古旧用法，表示没有固定形状的、畸形的。", "after": "inform 常表示“告知、使了解”，也可以表示思想、经验或价值观对某事的内容和特点产生影响，即“影响、塑造”。be informed by 常可理解为“受……影响、以……为依据”。", "references": ["https://www.collinsdictionary.com/dictionary/english/inform"]}
+{"word": "informed", "change": "reviewed_overview", "before": "informed 主要表示“了解情况、掌握知识的”，也可表示“建立在充分了解之上的”；另有已废弃的“赋予形态”和“无形、未成形”义。", "after": "informed 作形容词，表示掌握了相关情况，或某个决定建立在充分了解之上。它也可能是 inform 的过去分词；be informed by 可表示“受……影响、以……为依据”。", "references": ["https://www.collinsdictionary.com/dictionary/english/informed"]}
+{"word": "ironing-board", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "irons", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "plural", "plural-only"]}
+{"word": "it", "key": ["det", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "it was like this", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "it was this way", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "jack-a-dandy", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "jack-at-all-trades", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "jap.", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "jap.", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "jerry", "key": ["adj", "et4", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "jest", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "jock", "key": ["noun", "et2", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "in-compounds", "slang"]}
+{"word": "john company", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "colloquial"]}
+{"word": "join out", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "join out", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "jolly", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "jolly", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "dated"]}
+{"word": "jos.", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["abbreviation", "alt-of", "dated"]}
+{"word": "jugular", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["broadly", "in-plural", "rare"]}
+{"word": "keep", "key": ["verb", "et1", "s16"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "keep company", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "euphemistic", "idiomatic", "intransitive", "transitive"]}
+{"word": "keep someone posted up", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "keep term", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "keep term", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "kelly", "key": ["noun", "et3", "s1"], "change": "exact_duplicate_merged", "kept": "s1"}
+{"word": "key-word", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "killing", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "kip-shop", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "kite", "key": ["verb", "et1", "s6"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["ambitransitive", "rare"]}
+{"word": "knock", "key": ["verb", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["ambitransitive", "dated"]}
+{"word": "kodak", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "kodak", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "kodak", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "kodak", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "ku-klux", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "lack", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "lager-beer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "lam", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive", "slang"]}
+{"word": "lame", "key": ["adj", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["broadly", "dated"]}
+{"word": "land of opportunity", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "informal"]}
+{"word": "latterly", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "laureate", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "lavatory", "key": ["noun", "et1", "s8"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "law", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "laws-a-mercy", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Appalachia", "Southern-US", "dated", "possibly"]}
+{"word": "lay-out", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "leave", "key": ["noun", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "let drive", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["idiomatic", "obsolete"]}
+{"word": "let george do it", "key": ["proverb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "let go by the run", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "let go by the run", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "let's know", "key": ["phrase", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "rare"]}
+{"word": "levin", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "poetic", "uncountable"]}
+{"word": "lie by", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "life-lease", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "light bill", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated"]}
+{"word": "light out", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive", "slang"]}
+{"word": "light show", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "light-heeled", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "london particular", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "countable", "dated", "uncountable"]}
+{"word": "london particular", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "countable", "dated", "uncountable"]}
+{"word": "long-locked", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "literary"]}
+{"word": "low germany", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "lower orders", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "derogatory"]}
+{"word": "lsd", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "Ireland", "abbreviation", "alt-of", "dated", "initialism", "uncountable"]}
+{"word": "lumber", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "uncountable", "usually"]}
+{"word": "luncheon", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "lust", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "m'", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "clitic", "form-of"]}
+{"word": "machine", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "made in japan", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "idiomatic", "not-comparable"]}
+{"word": "majority", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "make as if", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "make away", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "make away", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "make garden", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "US", "dated", "idiomatic"]}
+{"word": "make shift", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "make someone hard to catch", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "malkin", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "regional"]}
+{"word": "man", "key": ["verb", "et2", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "possibly", "reflexive"]}
+{"word": "man alive", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "man of letters", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "manic-depressive", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "manic-depressive", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "mar-sport", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "marred", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "maths", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Canada", "Commonwealth", "abbreviation", "alt-of", "clipping", "rare", "uncountable"]}
+{"word": "maw", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "maxim", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "mean white", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "ethnic", "obsolete", "slur"]}
+{"word": "men", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["collective", "dated", "plural", "plural-only"]}
+{"word": "merge-purge", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "micro-floppy", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "middle ocean", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "midst", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["rare"]}
+{"word": "mind how you go", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "mind your eye", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "minerals", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "euphemistic", "plural", "plural-only", "slang"]}
+{"word": "mistake", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "mixed-blood", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "molly-handed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Australia", "archaic", "slang"]}
+{"word": "money and fair words", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "monochrome", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "monsieur", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "moot", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["rare"]}
+{"word": "morrow", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "morrow", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic"]}
+{"word": "most an end", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["idiomatic", "not-comparable", "obsolete"]}
+{"word": "mother", "key": ["name", "et4", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "motor", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "motor-ambulance", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "movie film", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "humorous"]}
+{"word": "moving picture", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "moya", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "mum", "key": ["adj", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "colloquial", "not-comparable"]}
+{"word": "murder, inc.", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "must needs", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "no-past-participle", "no-present-participle"]}
+{"word": "my my", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "my word", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Australia", "Canada", "New-Zealand", "UK", "US", "dated", "idiomatic"]}
+{"word": "my word", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "Canada", "New-Zealand", "UK", "US", "dated", "idiomatic"]}
+{"word": "napoli", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "alternative", "countable", "rare", "uncountable"]}
+{"word": "nativity", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "naught", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "neck or nothing", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "needs", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "negro", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable", "offensive"]}
+{"word": "negro", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable", "offensive"]}
+{"word": "negro", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "offensive"]}
+{"word": "negro", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "dated", "offensive", "usually"]}
+{"word": "never trust me", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete", "slang"]}
+{"word": "new media", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "new york breakfast", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "humorous"]}
+{"word": "nifty", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "nifty", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "nigh", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "night-rail", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "nit-keeper", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Australia", "dated"]}
+{"word": "no body", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "obsolete"]}
+{"word": "no fear", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated"]}
+{"word": "no matter", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated"]}
+{"word": "no more", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "non-u", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "colloquial", "dated", "not-comparable"]}
+{"word": "non-u-ness", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncommon", "uncountable"]}
+{"word": "noodle", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "nor", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "也不", "definition": "连接两个否定说法，常见于 neither ... nor ...，表示“既不……也不……”。", "priority": "core", "examples": [{"text": "Neither Tom nor Anna was there.", "translation": "汤姆和安娜都不在那里。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/nor"]}
+{"word": "nor", "change": "reviewed_overview", "before": "NOR主要是数字逻辑中的“非或”运算符，也可作为生物学术语“核仁组织区”的缩写。", "after": "nor 作连词时，连接两个否定说法，常见于 neither ... nor ...，表示“既不……也不……”。", "references": ["https://www.collinsdictionary.com/dictionary/english/nor"]}
+{"word": "not a hang", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "not-comparable"]}
+{"word": "not worth hell room", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "idiomatic", "not-comparable", "slang"]}
+{"word": "nothing doing", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["India", "dated", "idiomatic"]}
+{"word": "o-level", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "ocean sea", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "of", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dialectal", "obsolete"]}
+{"word": "of a piece with", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncommon"]}
+{"word": "of an", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "of an", "key": ["phrase", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "oh, well", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "old boy", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "old fellow", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "old fruit", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated", "slang", "sometimes", "term-of-address"]}
+{"word": "old top", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "once", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "一旦；当……之后", "definition": "引出一个条件或时间点，表示那件事发生后，后面的情况就会随之成立。", "priority": "core", "examples": [{"text": "Once you start, it gets easier.", "translation": "一旦开始，就会容易些。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/once"]}
+{"word": "once", "change": "reviewed_overview", "before": "once 主要表示“曾经一次”或“从前”，也可用于数学中的“一倍”；作名词时还可指韩国女团 TWICE 的粉丝。", "after": "once 常表示“一次”或“曾经”；连接句子时，可表示“一旦……、当……之后”。", "references": ["https://www.collinsdictionary.com/dictionary/english/once"]}
+{"word": "once and again", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "once for all", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated", "not-comparable"]}
+{"word": "or", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "或者；否则", "definition": "连接可供选择的事物或说法；在命令、建议之后，也可引出不这样做会产生的结果。", "priority": "core", "examples": [{"text": "Hurry, or we will be late.", "translation": "快点，否则我们会迟到。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/or"]}
+{"word": "or", "change": "reviewed_overview", "before": "一个有多条来源的英语词形：主要见于纹章学中的“金色”、古英语中的“在此之前”，以及各种专名和缩写。", "after": "or 作连词时，连接可供选择的事物或说法；在命令、建议之后，也可引出不这样做会产生的结果。", "references": ["https://www.collinsdictionary.com/dictionary/english/or"]}
+{"word": "ought", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["auxiliary", "dated", "formal"]}
+{"word": "ought", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["auxiliary", "dated", "formal"]}
+{"word": "ought", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["auxiliary", "dated", "formal"]}
+{"word": "ought", "key": ["verb", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["auxiliary", "dated", "formal"]}
+{"word": "out and out", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "out-and-outer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "over the river", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "overdrive", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "p3", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "page", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "obsolete", "transitive"]}
+{"word": "page", "key": ["verb", "et2", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "pall", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "pap", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "paper the house", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "parish-pump", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "derogatory", "figuratively", "not-comparable", "often"]}
+{"word": "parkway", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "part", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "party", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "broadly"]}
+{"word": "party", "key": ["noun", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Internet", "archaic", "broadly"]}
+{"word": "party", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "broadly", "dated"]}
+{"word": "pass current", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "pax", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "pax", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "dated"]}
+{"word": "peking", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "peking", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "dated", "metonymically"]}
+{"word": "persia", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "historical"]}
+{"word": "persian", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated"]}
+{"word": "personal computer", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "pervert", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "pet", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "physical culture", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "picture paper", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "picture show", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "pig-sticking", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["India", "colloquial", "countable", "dated", "uncountable"]}
+{"word": "pigeon-breasted", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "pigeon-hearted", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "pip", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "pip-pip", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "play upon words", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "plume", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "literary", "poetic"]}
+{"word": "polytechnic", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "poor show", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["British", "dated", "informal"]}
+{"word": "portion off", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "post card", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "powder-bag", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "power five", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "power in the land", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "pray", "key": ["adv", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "formal", "not-comparable"]}
+{"word": "prentice", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "pretty", "key": ["adj", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "preventive", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "preventive", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "prick", "key": ["noun", "et1", "s12"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete"]}
+{"word": "prick", "key": ["verb", "et2", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "profit", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "literary", "uncountable"]}
+{"word": "proto-photon", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["rare"]}
+{"word": "providence", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "ps", "key": ["noun", "et1", "s11"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["abbreviation", "alt-of", "countable", "dated", "initialism", "uncountable"]}
+{"word": "ps", "key": ["noun", "et3", "s2"], "change": "exact_duplicate_merged", "kept": "s11"}
+{"word": "pt", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["India", "abbreviation", "alt-of", "dated", "initialism", "uncountable"]}
+{"word": "public enemy number one", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "uncountable"]}
+{"word": "pudding-headed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "pug", "key": ["verb", "et5", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["rare", "transitive"]}
+{"word": "pumpkin-headed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "slang"]}
+{"word": "pure-impure", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable", "uncommon"]}
+{"word": "put on the dog", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "idiomatic"]}
+{"word": "put the dead wood on", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "slang", "transitive"]}
+{"word": "put the last hand to", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "pw", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["abbreviation", "alt-of", "countable", "dated", "initialism", "uncountable"]}
+{"word": "quarter of", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "que", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "rare", "uncountable"]}
+{"word": "queer", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "queer", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "dated", "informal"]}
+{"word": "queer", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "race music", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "rad", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["abbreviation", "alt-of", "clipping", "dated", "slang"]}
+{"word": "rapping", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "rapture", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "rapture", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "recluse", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "recluse", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "recount", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "red chinese", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "red chinese", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "red indian", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "offensive"]}
+{"word": "red russia", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory"]}
+{"word": "red russia", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "derogatory"]}
+{"word": "red-gum", "key": ["noun", "et1", "s4"], "change": "exact_duplicate_merged", "kept": "s3"}
+{"word": "reform school", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "repose", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "archaic", "figuratively", "transitive"]}
+{"word": "repose", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "reflexive", "transitive"]}
+{"word": "repose", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "figuratively", "obsolete", "transitive"]}
+{"word": "repose", "key": ["verb", "et1", "s12"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["also", "archaic", "figuratively", "intransitive"]}
+{"word": "republican", "key": ["adj", "et2", "s3"], "change": "exact_duplicate_merged", "kept": "s3"}
+{"word": "research", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated"]}
+{"word": "retarded", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "offensive", "sometimes"]}
+{"word": "retract", "key": ["verb", "et3", "s3"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "ringo", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["rare"]}
+{"word": "road agent", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "archaic"]}
+{"word": "rock oil", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "rock-dumb", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["derogatory", "rare", "slang"]}
+{"word": "room", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "roper", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "rose sunday", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "rum", "key": ["adj", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "rum", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "slang", "uncountable"]}
+{"word": "rum", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "colloquial", "dated"]}
+{"word": "run", "key": ["verb", "et1", "s1"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "Run, or we’ll miss the bus!", "translation": "快跑，不然我们要赶不上公共汽车了！"}, {"text": "The children ran across the playground.", "translation": "孩子们跑过了操场。"}], "labels": ["intransitive"], "learner_explanation": "指人或动物快速向前移动，就是通常所说的奔跑；可以把“run”想成身体持续向前移动。", "priority": "core", "sense_id": "s1", "short_gloss": "奔跑", "topics": [], "usage_note": "常用结构是“run + 方向”或单独使用，如表示赶路、追赶时直接说“run”。它通常是不及物动词，不能在这个意义下直接接表示路程的名词；表示跑过一段距离时可说“run a mile”。"}, "after": {"usage": "可以单独说 run，也可以接方向或路程，例如 run home、run to the station、run a mile。表示跑过一段距离时，后面可以直接接距离。", "verified_usage": true}, "references": ["https://www.collinsdictionary.com/dictionary/english/run", "https://www.oxfordlearnersdictionaries.com/definition/english/mile"]}
+{"word": "run", "change": "reviewed_overview", "before": "“run”最基本的意思是快速移动或奔跑，也可指奔跑这一动作；由“持续移动或运转”可引申为液体流动、机器或活动运行，以及经营、管理某事物。它还有竞选、逃跑、延续、花费等多种常见用法。", "after": "run 最基本的意思是“跑”；也常指水等流动、机器或系统运转，以及经营、管理某项业务。不同搭配决定具体意思，例如 run a shop 是经营商店。", "references": ["https://www.collinsdictionary.com/dictionary/english/run", "https://www.oxfordlearnersdictionaries.com/definition/english/mile"]}
+{"word": "running hand", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "russ", "key": ["adj", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "russ", "key": ["name", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "russian", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "saloon", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "dated"]}
+{"word": "salt", "key": ["noun", "et1", "s7"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "uncountable"]}
+{"word": "salt away", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "san", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "sanguine", "key": ["adj", "et1", "s5"], "change": "reviewed_sense_patch", "before": {"examples": [{"text": "The team is sanguine about its chances of meeting the deadline.", "translation": "团队对按时完成任务很有信心。"}, {"text": "Investors remain sanguine despite the recent setback.", "translation": "尽管最近遇到了挫折，投资者仍然保持乐观。"}], "labels": [], "learner_explanation": "指相信事情会朝最好的方向发展，并且对成功抱有相当把握；这是现代最值得优先掌握的用法。", "priority": "core", "sense_id": "s5", "short_gloss": "乐观而有把握的", "topics": [], "usage_note": "最典型的结构是“be sanguine about + 名词或动名词”，也可直接放在名词前。它比一般的“乐观”更正式，常用于谈计划、谈判、经济或项目结果。不要把它理解成毫无根据的盲目乐观，语境通常暗示说话者有一定信心。"}, "after": {"usage": "常见搭配是 be sanguine about，表示对某事持乐观态度、有信心。这个词本身不保证这种乐观有充分根据，是否过于乐观仍须看上下文。", "verified_usage": true}, "references": ["https://www.collinsdictionary.com/dictionary/english/sanguine"]}
+{"word": "sanguine", "change": "reviewed_overview", "before": "sanguine 主要作形容词，指像血一样的红色，也可引申为热情、乐观而对结果充满信心；作名词和动词的用法很少见。", "after": "sanguine 常表示对未来或结果乐观、有信心，语气偏正式。读到 be sanguine about 时，可先理解为“对……抱有乐观预期”；血红色等用法另列。", "references": ["https://www.collinsdictionary.com/dictionary/english/sanguine"]}
+{"word": "sauce", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "slang", "uncountable"]}
+{"word": "save-all", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "scotch", "key": ["adj", "et3", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "scotch", "key": ["name", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "scotch", "key": ["name", "et3", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "scotch", "key": ["name", "et3", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "screw", "key": ["verb", "et1", "s9"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "imperative", "intransitive", "often", "slang"]}
+{"word": "sea-based", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "sea-bottle", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "sea-cow", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "alternative", "dated"]}
+{"word": "see a man", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "see a man about a dog", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "self-government", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "self-parking", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "sell the family silver", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "sequel", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "serve the turn", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "set fire by", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "obsolete", "transitive"]}
+{"word": "seven-shooter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "sewing-machine", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "shalt", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "form-of", "indicative", "present", "second-person", "singular"]}
+{"word": "shank", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ulster", "archaic"]}
+{"word": "sharp", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "plural-normally"]}
+{"word": "she", "key": ["pron", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "endearing", "feminine", "nominative", "personal", "singular", "sometimes", "third-person"]}
+{"word": "she", "key": ["pron", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "endearing", "feminine", "nominative", "personal", "poetic", "singular", "third-person"]}
+{"word": "sheep-faced", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "shell-shocked", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "shoddy", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "shoddy", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "shut of", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "sick-wagon", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "side out", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "side-post", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated"]}
+{"word": "side-post", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated", "intransitive"]}
+{"word": "silk-stocking", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "derogatory", "not-comparable"]}
+{"word": "simon", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "dated", "slang"]}
+{"word": "simplex", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "since", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "自从；因为", "definition": "引出起点时表示从过去某时一直到后来；说明理由时表示“既然、因为”。", "priority": "core", "examples": [{"text": "Since you are here, we can begin.", "translation": "既然你来了，我们就可以开始了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/since"]}
+{"word": "since", "change": "reviewed_overview", "before": "表示从过去某个时间起一直延续到现在，或在过去某时之后发生的情况；既可作副词，也可作介词。", "after": "since 可表示从过去某时起一直持续，也可说明理由，表示“既然、因为”。要根据它引出的是时间还是原因来理解。", "references": ["https://www.collinsdictionary.com/dictionary/english/since"]}
+{"word": "single", "key": ["verb", "et1", "s5"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "intransitive"]}
+{"word": "sissy", "key": ["noun", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "six-gun", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "six-shooter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "skunk", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "derogatory", "slang"]}
+{"word": "skunk", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["US", "dated", "derogatory", "slang"]}
+{"word": "sky girl", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "offensive"]}
+{"word": "slacks", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "plural", "plural-only"]}
+{"word": "slashing", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "sliding-rule", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "slight", "key": ["adj", "et1", "s8"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "slug", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "small hand", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "smoking-room", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "snap", "key": ["noun", "et1", "s20"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "slang", "uncountable"]}
+{"word": "so", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "所以；因此", "definition": "连接原因和结果，表示前面的情况导致后面的事。so that 常用来引出目的或结果。", "priority": "core", "examples": [{"text": "It was getting dark, so we went home.", "translation": "天快黑了，所以我们回家了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/so"]}
+{"word": "so", "change": "reviewed_overview", "before": "“so”是英语中非常常用的词，可作副词表示“如此、那么、也”，也可代替前面提到的内容；此外还可作形容词、感叹词，并有若干缩写、专名和专门名词用法。", "after": "so 作副词常表示“这样、如此、这么”；连接两个说法时常表示“所以、因此”。so that 则常引出目的或结果。", "references": ["https://www.collinsdictionary.com/dictionary/english/so"]}
+{"word": "social evil", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "euphemistic"]}
+{"word": "sold again and got the money", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete", "slang"]}
+{"word": "sonny", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "sonny", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["colloquial", "dated", "derogatory"]}
+{"word": "sou", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "sou", "key": ["noun", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "spam", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "countable", "rare", "uncountable"]}
+{"word": "spanish green", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "spectacles", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "plural", "plural-only"]}
+{"word": "spend-all", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "spinning-wheel", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "spleen", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "split on a rock", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "idiomatic"]}
+{"word": "spoons", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable", "slang"]}
+{"word": "sportsman", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "spree", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "spring", "key": ["verb", "et1", "s17"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete"]}
+{"word": "sputnik", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "square-pushing", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "square-toed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "humorous"]}
+{"word": "stand someone in hand", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "stand under", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "stardust", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal", "literally", "uncountable", "usually"]}
+{"word": "starting hole", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "states of the church", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "historical", "plural-normally"]}
+{"word": "steed", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "step it", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "slang"]}
+{"word": "stick one on", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "sticking-place", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "still as a stock", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "stir", "key": ["verb", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "stock horse", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "stone oil", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "stool", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "dated", "uncountable"]}
+{"word": "stop out", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "street queen", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "street talk", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "uncountable"]}
+{"word": "strike a light", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "strike hands", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "strike work", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["India", "dated"]}
+{"word": "strong nuclear force", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "studied", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "sublime", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "sublime", "key": ["noun", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "countable", "uncountable"]}
+{"word": "subtle", "change": "reviewed_overview", "before": "subtle 主要表示“细微而不明显、精巧而难以察觉”，也可指不直白却很有心思；作动词时表示把某物处理得更含蓄或不显眼。", "after": "subtle 形容差别、变化或感觉细微、不容易察觉；也形容表达含蓄、手法精巧而不显眼。重点通常是“不明显，需要仔细体会”，不能一律译成“微妙”。", "references": ["https://www.collinsdictionary.com/dictionary/english/subtle"]}
+{"word": "sugar report", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "sugar-plum", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "suit-case", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "archaic"]}
+{"word": "sun-tight", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "sunday driver", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "super-duper", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "surface car", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "sushi", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "rare", "usually"]}
+{"word": "swell", "key": ["adj", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable", "usually"]}
+{"word": "swell", "key": ["adj", "et3", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "US", "dated", "not-comparable", "slang", "usually"]}
+{"word": "swimming-pool", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "swish", "key": ["verb", "et1", "s3"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "slang", "transitive"]}
+{"word": "ta-li", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "take", "key": ["verb", "et1", "s16"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "take a wife", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "take cold", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "take french leave", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "informal", "intransitive"]}
+{"word": "take french leave", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "euphemistic", "idiomatic", "informal", "intransitive", "specifically"]}
+{"word": "take post", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "figuratively", "intransitive"]}
+{"word": "take post", "key": ["verb", "et1", "s4"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "figuratively", "intransitive"]}
+{"word": "take sick", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "take the back track", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "take up the running", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "talkie", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "historical", "informal"]}
+{"word": "talking book", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "talking picture", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "tam-tam", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "tang", "key": ["name", "et9", "s1"], "change": "exact_duplicate_merged", "kept": "s1"}
+{"word": "tavern", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "tea dance", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "teen-age", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated", "not-comparable"]}
+{"word": "teen-aged", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["alt-of", "dated", "not-comparable"]}
+{"word": "ten-cent", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "not-comparable", "usually"]}
+{"word": "ten-cent", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "not-comparable", "usually"]}
+{"word": "ten-strike", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "tender", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "tennis", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "uncountable", "usually"]}
+{"word": "term-trotter", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["derogatory", "obsolete"]}
+{"word": "teutonic", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "offensive"]}
+{"word": "than", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "比", "definition": "引出比较的另一方，通常与 bigger、more、less 等比较表达连用。", "priority": "core", "examples": [{"text": "She reads faster than I do.", "translation": "她读得比我快。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/than"]}
+{"word": "than", "change": "reviewed_overview", "before": "than主要用于比较，连接比较级与被比较的对象；另有表示“当时、然后”的罕见旧式用法，以及作为姓氏和地名的专名用法。", "after": "than 作连词时，引出比较的另一方，通常与 bigger、more、less 等比较表达连用。", "references": ["https://www.collinsdictionary.com/dictionary/english/than"]}
+{"word": "that", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "引出一个事实或说法", "definition": "可把一个完整说法接到 think、say 等词后，通常不必单独译出。引出定语从句时，还可指代前面的事物或人。", "priority": "core", "examples": [{"text": "I think that you are right.", "translation": "我认为你是对的。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/that"]}
+{"word": "that", "change": "reviewed_overview", "before": "that 的核心作用是“指向已确定、较远或前面提到的对象”，也可把这种指向延伸为限定程度，以及连接关系从句。", "after": "that 可以表示“那个”，也可引出前面的人或物的补充说明；跟在 think、say 等词后时，它连接一个完整说法，通常不必单独译出。", "references": ["https://www.collinsdictionary.com/dictionary/english/that"]}
+{"word": "that's the tip", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete", "slang"]}
+{"word": "the dear knows", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ireland", "dated"]}
+{"word": "the dear knows", "key": ["phrase", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Ireland", "dated"]}
+{"word": "thee", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "literary", "objective", "second-person", "singular"]}
+{"word": "there's a good time coming", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Scotland", "dated"]}
+{"word": "thereto", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "not-comparable", "poetic"]}
+{"word": "thine", "key": ["det", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Early", "Modern", "archaic"]}
+{"word": "thine", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Early", "Modern", "archaic"]}
+{"word": "thing", "key": ["noun", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "thinking machine", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "though", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "虽然；尽管", "definition": "承认一个事实，再说与它形成对照的情况。放在句末作副词时，也常表示“不过、可是”。", "priority": "core", "examples": [{"text": "Though he was tired, he kept reading.", "translation": "虽然累了，他还是继续读书。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/though"]}
+{"word": "though", "change": "reviewed_overview", "before": "though 主要表示“虽然如此、不过”，也可放在句末加强语气；另有非标准拼写，误写作 thought。", "after": "though 常表示“虽然、尽管”；放在句末时，作副词可表示“不过、可是”，用来补充转折。", "references": ["https://www.collinsdictionary.com/dictionary/english/though"]}
+{"word": "three score and ten", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "three-bottle man", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "three-dog night", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "thy", "key": ["det", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Early", "Modern", "archaic", "dialectal", "form-of", "literary", "possessive"]}
+{"word": "thyself", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "dialectal", "literary"]}
+{"word": "tie a can to it", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "dated", "imperative", "slang"]}
+{"word": "tie one on", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated", "idiomatic"]}
+{"word": "timber-toe", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "timber-toe", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "slang"]}
+{"word": "time bill", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "time out of mind", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "idiomatic"]}
+{"word": "time was", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "time-bettering", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "time-line", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "time-payment", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "time-payment", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "time-taker", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "times without number", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "tithe", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic"]}
+{"word": "to-morrow", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "countable", "dated", "uncountable"]}
+{"word": "tongue", "key": ["noun", "et1", "s6"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["countable", "obsolete", "uncountable"]}
+{"word": "tongue", "key": ["verb", "et1", "s6"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "tongue", "key": ["verb", "et1", "s7"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "tongue-work", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "uncountable"]}
+{"word": "too too", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["colloquial", "dated"]}
+{"word": "top of the morning", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Ireland", "New-England", "archaic", "humorous", "idiomatic", "sometimes"]}
+{"word": "top-post", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated"]}
+{"word": "top-post", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Internet", "dated", "intransitive", "transitive"]}
+{"word": "top-poster", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Internet", "dated"]}
+{"word": "topping", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["UK", "dated", "informal"]}
+{"word": "tops", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable", "slang"]}
+{"word": "tor", "key": ["name", "et4", "s1"], "change": "exact_duplicate_merged", "kept": "s1"}
+{"word": "trans-shipping", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "transistor", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "transsexual", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "transsexual", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "treat of", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "troll-my-dames", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "uncountable"]}
+{"word": "turn about", "key": ["verb", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "intransitive"]}
+{"word": "turnip-headed", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "slang"]}
+{"word": "twain", "key": ["num", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "two thousand and late", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "derogatory", "slang"]}
+{"word": "two-forty", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["US", "obsolete", "slang", "uncountable"]}
+{"word": "type-in", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "u", "key": ["adj", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["British", "abbreviation", "alt-of", "comparable", "dated", "not-comparable", "usually"]}
+{"word": "u-ness", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncommon", "uncountable"]}
+{"word": "ubiquitous", "change": "reviewed_overview", "before": "ubiquitous 是形容某人、某物仿佛同时存在于各处，或广泛到处可见的词，常译为“无处不在的”或“无所不在的”。", "after": "ubiquitous 表示某种事物到处可见、广泛存在，语气通常比 common 更强；不一定要求它真的出现在每一个地方。", "references": ["https://www.collinsdictionary.com/dictionary/english/ubiquitous"]}
+{"word": "ug", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Northern-England", "Scotland", "countable", "obsolete", "uncountable"]}
+{"word": "ug", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Northern-England", "Scotland", "countable", "obsolete", "uncountable"]}
+{"word": "ug", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["Northern-England", "Scotland", "obsolete"]}
+{"word": "ug", "key": ["verb", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Northern-England", "Scotland", "obsolete"]}
+{"word": "ultimatum", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "undress", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "reflexive"]}
+{"word": "until", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "直到……才；一直到", "definition": "表示某个时间是动作或状态持续的终点。not ... until ... 常表示直到那个时候某事才发生。", "priority": "core", "examples": [{"text": "We waited until the rain stopped.", "translation": "我们一直等到雨停了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/until"]}
+{"word": "until", "change": "reviewed_overview", "before": "表示某个时间点、地点或状态的终点，意思是“直到……为止”；也可表示事情在某时之前尚未发生，到了该时刻才发生。", "after": "until 作连词时，表示某个时间是动作或状态持续的终点。not ... until ... 常表示直到那个时候某事才发生。", "references": ["https://www.collinsdictionary.com/dictionary/english/until"]}
+{"word": "unto", "key": ["prep", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "unto", "key": ["prep", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "poetic"]}
+{"word": "upon my soul", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "upon my word", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "upon my word", "key": ["intj", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "upon the whole", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated", "not-comparable"]}
+{"word": "v8", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "metonymically"]}
+{"word": "vagrant", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "vail", "key": ["verb", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "transitive"]}
+{"word": "vail", "key": ["verb", "et2", "s5"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["intransitive", "obsolete"]}
+{"word": "valentino", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "van-dragging", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["obsolete", "uncountable"]}
+{"word": "verily", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "verily", "key": ["adv", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "vice", "key": ["prep", "et3", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "walk out with", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "walk with", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "transitive"]}
+{"word": "war to end all wars", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "watch meeting", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "well met", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "not-comparable"]}
+{"word": "well met", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "well-favoured", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "well-will", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable"]}
+{"word": "western", "key": ["noun", "et2", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "wet-un", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "obsolete", "slang"]}
+{"word": "whack", "key": ["noun", "et1", "s5"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "what goes on", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "dated"]}
+{"word": "what not", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "idiomatic", "uncountable"]}
+{"word": "what-d'ye-call-'em", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "what-d'ye-call-it", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "what-what", "key": ["intj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["UK", "dated"]}
+{"word": "what's the matter", "key": ["phrase", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "whatsoever", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic", "literary"]}
+{"word": "when", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "当……时", "definition": "引出一个时间或情形，说明另一件事是在那时发生的。", "priority": "core", "examples": [{"text": "Call me when you arrive.", "translation": "你到了之后给我打电话。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/when"]}
+{"word": "when", "change": "reviewed_overview", "before": "when 的核心意思是“什么时候、在什么时候”，既可以提问时间，也可以连接表示时间的从句，还可以指某个具体时刻或情境。", "after": "when 询问时间时表示“什么时候”；连接句子时，常表示“当……时”。", "references": ["https://www.collinsdictionary.com/dictionary/english/when"]}
+{"word": "whence", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "formal", "literary", "not-comparable"]}
+{"word": "whenever", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "每当；无论何时", "definition": "表示每次某种情况出现，或不管在什么时间，后面的说法都成立。", "priority": "core", "examples": [{"text": "Visit whenever you like.", "translation": "你想什么时候来就什么时候来。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/whenever"]}
+{"word": "whenever", "change": "reviewed_overview", "before": "whenever 主要表示“任何时候、随时”，也可用于强调地询问“究竟什么时候”。", "after": "whenever 作连词时，表示每次某种情况出现，或不管在什么时间，后面的说法都成立。", "references": ["https://www.collinsdictionary.com/dictionary/english/whenever"]}
+{"word": "whereas", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "而；然而", "definition": "把两种不同或相反的情况并列起来，突出对照，常见于书面表达。", "priority": "core", "examples": [{"text": "She likes tea, whereas I prefer coffee.", "translation": "她喜欢茶，而我更喜欢咖啡。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/whereas"]}
+{"word": "whereas", "change": "reviewed_overview", "before": "一个主要见于历史英语或法律文书的词：早期可表示“在……之处”，在法律文书中还可指引出相关说明的条款或句子。", "after": "whereas 作连词时，把两种不同或相反的情况并列起来，突出对照，常见于书面表达。", "references": ["https://www.collinsdictionary.com/dictionary/english/whereas"]}
+{"word": "wherefore", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "conjunctive", "interrogative", "not-comparable"]}
+{"word": "wherever", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "无论在哪里；到任何……地方", "definition": "表示不管地点在哪里，或可以选择任何符合条件的地方。", "priority": "core", "examples": [{"text": "Sit wherever you like.", "translation": "你想坐哪里就坐哪里。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/wherever"]}
+{"word": "wherever", "change": "reviewed_overview", "before": "表示“无论在哪里、在任何地方”，也可用于加强语气地追问“究竟在哪里”。", "after": "wherever 作连词时，表示不管地点在哪里，或可以选择任何符合条件的地方。", "references": ["https://www.collinsdictionary.com/dictionary/english/wherever"]}
+{"word": "whether", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "是否", "definition": "引出存在两种或多种可能的情况，常见于 whether ... or ...，表示“是否……”或“不管是……还是……”。", "priority": "core", "examples": [{"text": "I do not know whether to stay or leave.", "translation": "我不知道该留下还是离开。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/whether"]}
+{"word": "whether", "change": "reviewed_overview", "before": "whether 的本条词义是古旧用法，表示“两者中的哪一个”，可作限定词或代词。现代英语中更常见的 whether 用法不属于本条数据。", "after": "whether 作连词时，引出存在两种或多种可能的情况，常见于 whether ... or ...，表示“是否……”或“不管是……还是……”。", "references": ["https://www.collinsdictionary.com/dictionary/english/whether"]}
+{"word": "whiff", "key": ["noun", "et1", "s13"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["archaic"]}
+{"word": "while", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "在……期间；而；虽然", "definition": "可连接同时进行的事情，也可比较两种不同情况；有时表示让步，即“虽然”。", "priority": "core", "examples": [{"text": "I read while she cooked.", "translation": "她做饭时，我在看书。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/while"]}
+{"word": "while", "change": "reviewed_overview", "before": "while 的核心意思是“一段时间”，还可构成表示“消磨时间”的动词短语；它也有地区性或古旧用法，并可作为姓氏或 wile 的非标准拼写出现。", "after": "while 常表示一件事发生的期间，也可把两种情况放在一起作对照，表示“而”。作名词时，a while 表示“一段时间”。", "references": ["https://www.collinsdictionary.com/dictionary/english/while"]}
+{"word": "white russia", "key": ["name", "et1", "s2"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic"]}
+{"word": "wildcat", "key": ["adj", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated", "derogatory", "not-comparable", "usually"]}
+{"word": "woman of letters", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "feminine", "form-of"]}
+{"word": "wont", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "humorous", "uncountable", "usually"]}
+{"word": "wood oil", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "uncountable", "usually"]}
+{"word": "world war", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "world-read", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "world's record", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "wright", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated"]}
+{"word": "wtf", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["abbreviation", "alt-of", "dated", "initialism"]}
+{"word": "xerox", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["India", "Philippines", "US", "colloquial", "dated", "informal"]}
+{"word": "xerox", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["Canada", "US", "colloquial", "dated", "informal"]}
+{"word": "xerox", "key": ["verb", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["India", "Philippines", "US", "colloquial", "dated", "informal"]}
+{"word": "yea", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "not-comparable"]}
+{"word": "yea", "key": ["noun", "et1", "s1"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "yellow boy", "key": ["noun", "et2", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["archaic", "countable", "historical", "slang"]}
+{"word": "yet", "change": "missing_conjunction_pos_added", "after": {"pos": "conj", "gloss": "然而；可是", "definition": "作连词时连接带有转折的两个说法，后面的事常与前面的情况不太相称或出乎意料。", "priority": "core", "examples": [{"text": "It was difficult, yet she did not give up.", "translation": "事情很难，可她没有放弃。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-conjunction", "etymology": "editorial", "section": "main"}, "references": ["https://www.collinsdictionary.com/dictionary/english/yet"]}
+{"word": "yet", "change": "reviewed_overview", "before": "副词，主要表示“到目前为止仍然”或“还没有”，也可表示“以后仍会”以及“甚至”；另有少数方言和过时用法。", "after": "yet 作副词常与否定或疑问表达连用，表示到现在或所说的时间“还、尚未”；作连词表示“然而、可是”。", "references": ["https://www.collinsdictionary.com/dictionary/english/yet"]}
+{"word": "yon", "key": ["adv", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "dialectal", "not-comparable"]}
+{"word": "yon", "key": ["det", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "dialectal"]}
+{"word": "yon", "key": ["pron", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "dialectal"]}
+{"word": "yorke", "key": ["name", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["alt-of", "countable", "obsolete", "uncountable"]}
+{"word": "young man", "key": ["noun", "et1", "s2"], "change": "legacy_priority", "before": "common", "after": "rare", "basis": ["dated"]}
+{"word": "your good name", "key": ["phrase", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["South-Asia", "UK", "also", "archaic"]}
+{"word": "zero-cool", "key": ["adj", "et1", "s1"], "change": "legacy_priority", "before": "core", "after": "rare", "basis": ["dated", "informal"]}
+{"word": "although", "change": "reviewed_entry_added", "after": {"word": "although", "headword": "although", "phonetics": [], "entry_id": "leaf:although", "overview": "although 表示“虽然、尽管”：先承认一个事实，再说明另一件仍然成立、可能出乎意料的事。", "senses": [{"pos": "conj", "gloss": "虽然；尽管", "definition": "引出一个与主句形成转折的事实。比如“虽然下雨，我们还是出去了”，下雨并没有阻止后面的事。", "priority": "core", "examples": [{"text": "Although it was raining, we went for a walk.", "translation": "虽然在下雨，我们还是出去散步了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/although"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/although"]}
+{"word": "unless", "change": "reviewed_entry_added", "after": {"word": "unless", "headword": "unless", "phonetics": [], "entry_id": "leaf:unless", "overview": "unless 表示“除非……，否则……”：某件事通常会发生，只有后面那个条件成立时才例外。", "senses": [{"pos": "conj", "gloss": "除非；如果不", "definition": "引出使前面或后面的说法出现例外的条件。I will go unless it rains 就是“如果不下雨，我就去”。", "priority": "core", "examples": [{"text": "We will leave at eight unless you call.", "translation": "除非你打电话来，否则我们八点出发。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/unless"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/unless"]}
+{"word": "albeit", "change": "reviewed_entry_added", "after": {"word": "albeit", "headword": "albeit", "phonetics": [], "entry_id": "leaf:albeit", "overview": "albeit 表示“尽管、虽然”，常在一句话中补充一个让步或限制，语气偏书面。", "senses": [{"pos": "conj", "gloss": "尽管；虽然", "definition": "先说某事成立，再补充它有一个不完全理想的方面；常接简短的形容词、副词或短语。", "priority": "core", "examples": [{"text": "The plan worked, albeit slowly.", "translation": "这个方案奏效了，尽管进展缓慢。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/albeit"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/albeit"]}
+{"word": "anymore", "change": "reviewed_entry_added", "after": {"word": "anymore", "headword": "anymore", "phonetics": [], "entry_id": "leaf:anymore", "overview": "anymore 常与否定表达连用，表示过去会发生的事现在“不再”发生；英式英语通常写作 any more。", "senses": [{"pos": "adv", "gloss": "不再", "definition": "表示从前存在的行为或情况已经停止，常见于 not ... anymore。", "priority": "core", "examples": [{"text": "I do not live there anymore.", "translation": "我已经不住在那里了。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/anymore"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/anymore"]}
+{"word": "n't", "change": "reviewed_entry_added", "after": {"word": "n't", "headword": "n't", "phonetics": [], "entry_id": "leaf:n't", "overview": "n't 是 not 在 don't、isn't、can't 等否定缩略形式中的写法，表示“不、没有”。", "senses": [{"pos": "adv", "gloss": "不；没有", "definition": "它用于助动词或情态动词的否定缩略形式，例如 do not 可缩写为 don’t。", "priority": "core", "examples": [{"text": "I don't know.", "translation": "我不知道。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://en.wiktionary.org/wiki/n%27t"], "corrected": true, "word_family": ""}, "references": ["https://en.wiktionary.org/wiki/n%27t"]}
+{"word": "startle", "change": "reviewed_entry_added", "after": {"word": "startle", "headword": "startle", "phonetics": [], "entry_id": "leaf:startle", "overview": "startle 指某个突然、意外的声音或事情使人“吓一跳、吃一惊”，侧重瞬间的反应。", "senses": [{"pos": "verb", "gloss": "使吓一跳", "definition": "让人因意外的动静突然吃惊，往往还带一点惊吓。", "priority": "core", "examples": [{"text": "The sudden noise startled me.", "translation": "突然的响声吓了我一跳。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/startle"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/startle"]}
+{"word": "fascinate", "change": "reviewed_entry_added", "after": {"word": "fascinate", "headword": "fascinate", "phonetics": [], "entry_id": "leaf:fascinate", "overview": "fascinate 指某人或某事极有吸引力，使人很感兴趣、看得或想得入迷。", "senses": [{"pos": "verb", "gloss": "使着迷", "definition": "引起并牢牢吸引一个人的兴趣，让他很想继续看、听或了解。", "priority": "core", "examples": [{"text": "Stories about space fascinate her.", "translation": "关于太空的故事让她着迷。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/fascinate"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/fascinate"]}
+{"word": "entitle", "change": "reviewed_entry_added", "after": {"word": "entitle", "headword": "entitle", "phonetics": [], "entry_id": "leaf:entitle", "overview": "entitle 常见的意思有两个：使人有权获得某物或做某事；给书、文章等起标题。", "senses": [{"pos": "verb", "gloss": "使有权；使有资格", "definition": "某种身份、规定或条件使一个人有权得到某物，或有资格做某事。", "priority": "core", "examples": [{"text": "This ticket entitles you to a free drink.", "translation": "凭这张票，你可以免费领取一杯饮料。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}, {"pos": "verb", "gloss": "给……命名；给……题名", "definition": "给书、文章、电影等作品起一个名称，常见于 be entitled 后接标题。", "priority": "core", "examples": [{"text": "The article is entitled A New Beginning.", "translation": "这篇文章的标题是《新的开始》。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-1", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/entitle"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/entitle"]}
+{"word": "footstep", "change": "reviewed_entry_added", "after": {"word": "footstep", "headword": "footstep", "phonetics": [], "entry_id": "leaf:footstep", "overview": "footstep 指走路时迈出的一步，也常指脚步落地的声音；footsteps 经常用复数。", "senses": [{"pos": "noun", "gloss": "脚步；脚步声", "definition": "走路迈出的一步，或走路时发出的声音。", "priority": "core", "examples": [{"text": "I heard footsteps behind me.", "translation": "我听见身后有脚步声。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/footstep"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/footstep"]}
+{"word": "fingertip", "change": "reviewed_entry_added", "after": {"word": "fingertip", "headword": "fingertip", "phonetics": [], "entry_id": "leaf:fingertip", "overview": "fingertip 是手指最末端的部分，也就是指尖。", "senses": [{"pos": "noun", "gloss": "指尖", "definition": "手指末端用于触摸东西的部位。", "priority": "core", "examples": [{"text": "She touched the glass with her fingertips.", "translation": "她用指尖碰了碰玻璃。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/fingertip"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/fingertip"]}
+{"word": "policymaker", "change": "reviewed_entry_added", "after": {"word": "policymaker", "headword": "policymaker", "phonetics": [], "entry_id": "leaf:policymaker", "overview": "policymaker 指参与制定政策、决定机构或政府采取什么做法的人。", "senses": [{"pos": "noun", "gloss": "政策制定者", "definition": "负责制定政策或决定行动方向的人，常指政府、组织中的决策人员。", "priority": "core", "examples": [{"text": "Policymakers are discussing the proposal.", "translation": "政策制定者们正在讨论这项提议。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/policymaker"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/policymaker"]}
+{"word": "pollutant", "change": "reviewed_entry_added", "after": {"word": "pollutant", "headword": "pollutant", "phonetics": [], "entry_id": "leaf:pollutant", "overview": "pollutant 指进入空气、水或土壤后造成污染的物质。", "senses": [{"pos": "noun", "gloss": "污染物", "definition": "使环境变脏、有害或不适宜生存的物质。", "priority": "core", "examples": [{"text": "The filter removes pollutants from the water.", "translation": "这个过滤器能去除水中的污染物。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/pollutant"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/pollutant"]}
+{"word": "underlie", "change": "reviewed_entry_added", "after": {"word": "underlie", "headword": "underlie", "phonetics": [], "entry_id": "leaf:underlie", "overview": "underlie 指处在某物下面，也常用来表示“构成某事的基础”或“是背后的原因”。", "senses": [{"pos": "verb", "gloss": "构成基础；是背后的原因", "definition": "某个事实、想法或原因支撑着表面看到的现象，帮助解释它为什么会发生。", "priority": "core", "examples": [{"text": "Several assumptions underlie this argument.", "translation": "这个论点建立在几个假设之上。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}, {"pos": "verb", "gloss": "位于……下面", "definition": "处于某物的下方，常用来描述岩层、地面等的上下位置。", "priority": "core", "examples": [{"text": "Clay underlies the sandy soil.", "translation": "沙质土壤下面是黏土。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-1", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/underlie"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/underlie"]}
+{"word": "devastate", "change": "reviewed_entry_added", "after": {"word": "devastate", "headword": "devastate", "phonetics": [], "entry_id": "leaf:devastate", "overview": "devastate 指严重破坏一个地方，也可指让一个人受到极大的打击、难过得难以承受。", "senses": [{"pos": "verb", "gloss": "严重破坏", "definition": "对一个地方或事物造成范围很大、后果严重的破坏。", "priority": "core", "examples": [{"text": "The flood devastated the town.", "translation": "洪水严重破坏了这座城镇。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}, {"pos": "verb", "gloss": "使受到沉重打击", "definition": "使人极其悲伤、震惊或失落。", "priority": "core", "examples": [{"text": "The news devastated her.", "translation": "这个消息给了她沉重的打击。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-1", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/devastate"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/devastate"]}
+{"word": "accustom", "change": "reviewed_entry_added", "after": {"word": "accustom", "headword": "accustom", "phonetics": [], "entry_id": "leaf:accustom", "overview": "accustom 指使人逐渐习惯一种新的环境或做法，常见于 accustom yourself to。", "senses": [{"pos": "verb", "gloss": "使习惯于", "definition": "通过经历或练习，让原本陌生、不适应的事情变得熟悉。", "priority": "core", "examples": [{"text": "It took time to accustom myself to the noise.", "translation": "我花了一段时间才习惯这里的噪声。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/accustom"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/accustom"]}
+{"word": "situate", "change": "reviewed_entry_added", "after": {"word": "situate", "headword": "situate", "phonetics": [], "entry_id": "leaf:situate", "overview": "situate 表示把某物放在特定位置，也可表示把某个观点或事件放到背景中理解；常见形式是 situated。", "senses": [{"pos": "verb", "gloss": "使位于；把……置于", "definition": "把事物安排在某个位置，或说明它所处的位置。", "priority": "core", "examples": [{"text": "The hotel is situated near the station.", "translation": "这家酒店位于车站附近。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/situate"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/situate"]}
+{"word": "paralyze", "change": "reviewed_entry_added", "after": {"word": "paralyze", "headword": "paralyze", "phonetics": [], "entry_id": "leaf:paralyze", "overview": "paralyze 指使身体或某个部位瘫痪、无法活动；也可比喻使人或事物因恐惧、混乱等无法行动或运转。", "senses": [{"pos": "verb", "gloss": "使瘫痪；使无法行动", "definition": "使身体失去活动能力，或让某人、某个系统受到严重阻碍而停滞。", "priority": "core", "examples": [{"text": "Fear paralyzed him.", "translation": "恐惧让他动弹不得。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/paralyze"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/paralyze"]}
+{"word": "provided", "change": "reviewed_entry_added", "after": {"word": "provided", "headword": "provided", "phonetics": [], "entry_id": "leaf:provided", "overview": "provided 作连词时，provided 或 provided that 引出必须满足的条件；在该条件下，另一件事才被允许或可能发生。", "senses": [{"pos": "conj", "gloss": "只要；条件是", "definition": "provided 或 provided that 引出必须满足的条件；在该条件下，另一件事才被允许或可能发生。", "priority": "core", "examples": [{"text": "You can borrow it provided that you return it tomorrow.", "translation": "只要你明天归还，就可以借走。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "etymology": "editorial", "section": "main"}], "references": ["https://www.collinsdictionary.com/dictionary/english/provided"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/provided"]}
+{"word": "lest", "change": "reviewed_entry_added", "after": {"word": "lest", "headword": "lest", "phonetics": [], "entry_id": "leaf:lest", "overview": "lest 作连词时，引出想要避免的结果，语气正式或偏文学，常用于解释为什么要小心做某事。", "senses": [{"pos": "conj", "gloss": "以免；唯恐", "definition": "引出想要避免的结果，语气正式或偏文学，常用于解释为什么要小心做某事。", "priority": "core", "examples": [{"text": "He spoke quietly lest he wake the child.", "translation": "他说话很轻，以免吵醒孩子。"}], "usage": "", "verified_usage": false, "labels": [], "topics": [], "proper": false, "sid": "editorial-0", "etymology": "editorial", "section": "main"}], "references": ["https://www.collinsdictionary.com/dictionary/english/lest"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/lest"]}
+{"word": "demagogic", "change": "reviewed_entry_added", "after": {"word": "demagogic", "headword": "demagogic", "phonetics": [], "entry_id": "leaf:demagogic", "overview": "为了争取支持而刻意迎合、煽动大众情绪的，尤其指用这种方式代替讲事实、讲道理。常用来批评政治人物的言论或手法。", "senses": [{"pos": "adj", "gloss": "煽动民众情绪争取支持的", "definition": "为了争取支持而刻意迎合、煽动大众情绪的，尤其指用这种方式代替讲事实、讲道理。常用来批评政治人物的言论或手法。", "priority": "core", "examples": [{"text": "The speech was demagogic: it stirred up anger but offered no real solutions.", "translation": "这场演说靠煽动民众情绪争取支持：它激起了愤怒，却没有提出真正的解决办法。"}], "usage": "", "verified_usage": false, "labels": ["disapproving"], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/us/dictionary/english/demagogic"], "corrected": true, "word_family": "它来自 demagogue，指靠煽动、迎合民众情绪来争取支持的政客；demagogic 是对应的形容词。"}, "references": ["https://www.collinsdictionary.com/us/dictionary/english/demagogic"]}
+{"word": "demagogical", "change": "reviewed_entry_added", "after": {"word": "demagogical", "headword": "demagogical", "phonetics": [], "entry_id": "leaf:demagogical", "overview": "为了争取支持而刻意迎合、煽动大众情绪的，尤其指用这种方式代替讲事实、讲道理。常用来批评政治人物的言论或手法。", "senses": [{"pos": "adj", "gloss": "煽动民众情绪争取支持的", "definition": "为了争取支持而刻意迎合、煽动大众情绪的，尤其指用这种方式代替讲事实、讲道理。常用来批评政治人物的言论或手法。", "priority": "core", "examples": [{"text": "The speech was demagogic: it stirred up anger but offered no real solutions.", "translation": "这场演说靠煽动民众情绪争取支持：它激起了愤怒，却没有提出真正的解决办法。"}], "usage": "", "verified_usage": false, "labels": ["disapproving"], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/us/dictionary/english/demagogic"], "corrected": true, "word_family": "它来自 demagogue，指靠煽动、迎合民众情绪来争取支持的政客；demagogic 是对应的形容词。"}, "references": ["https://www.collinsdictionary.com/us/dictionary/english/demagogic"]}
+{"word": "demagogue", "change": "reviewed_entry_added", "after": {"word": "demagogue", "headword": "demagogue", "phonetics": [], "entry_id": "leaf:demagogue", "overview": "靠迎合、煽动大众的情绪或偏见来争取支持的政治人物，而不是靠讲道理说服人。", "senses": [{"pos": "noun", "gloss": "煽动民众的政客", "definition": "靠迎合、煽动大众的情绪或偏见来争取支持的政治人物，而不是靠讲道理说服人。", "priority": "core", "examples": [], "usage": "", "verified_usage": false, "labels": ["disapproving"], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/demagogue"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/demagogue"]}
+{"word": "demagogy", "change": "reviewed_entry_added", "after": {"word": "demagogy", "headword": "demagogy", "phonetics": [], "entry_id": "leaf:demagogy", "overview": "为了争取政治支持而迎合、煽动民众情绪的做法，侧重激起情绪，而不是提出合理的论据。", "senses": [{"pos": "noun", "gloss": "煽动民众的做法", "definition": "为了争取政治支持而迎合、煽动民众情绪的做法，侧重激起情绪，而不是提出合理的论据。", "priority": "core", "examples": [], "usage": "", "verified_usage": false, "labels": ["disapproving"], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/demagogy"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/demagogy"]}
+{"word": "demagoguery", "change": "reviewed_entry_added", "after": {"word": "demagoguery", "headword": "demagoguery", "phonetics": [], "entry_id": "leaf:demagoguery", "overview": "为了争取政治支持而迎合、煽动民众情绪的做法，侧重激起情绪，而不是提出合理的论据。", "senses": [{"pos": "noun", "gloss": "煽动民众的做法", "definition": "为了争取政治支持而迎合、煽动民众情绪的做法，侧重激起情绪，而不是提出合理的论据。", "priority": "core", "examples": [], "usage": "", "verified_usage": false, "labels": ["disapproving"], "topics": [], "proper": false, "sid": "editorial-0", "section": "main", "etymology": "editorial"}], "references": ["https://www.collinsdictionary.com/dictionary/english/demagogy"], "corrected": true, "word_family": ""}, "references": ["https://www.collinsdictionary.com/dictionary/english/demagogy"]}
+{"word": "okay", "change": "spelling_alias_added", "after": "ok"}
+{"word": "afterward", "change": "spelling_alias_added", "after": "afterwards"}
+{"word": "utilize", "change": "spelling_alias_added", "after": "utilise"}
+{"word": "catalog", "change": "spelling_alias_added", "after": "catalogue"}
+{"word": "characterise", "change": "spelling_alias_added", "after": "characterize"}
+{"word": "summarise", "change": "spelling_alias_added", "after": "summarize"}
+{"word": "postwar", "change": "spelling_alias_added", "after": "post-war"}
+{"word": "watercolor", "change": "spelling_alias_added", "after": "watercolour"}
+{"word": "odour", "change": "spelling_alias_added", "after": "odor"}
+{"word": "cozy", "change": "spelling_alias_added", "after": "cosy"}
+{"word": "realisation", "change": "spelling_alias_added", "after": "realization"}
+{"word": "reorganisation", "change": "spelling_alias_added", "after": "reorganization"}
+{"word": "paralyse", "change": "spelling_alias_added", "after": "paralyze"}

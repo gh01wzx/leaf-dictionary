@@ -1,0 +1,751 @@
+{
+  "edition": "Leaf corrected learner data 1",
+  "scope": "Every source entry and sense structurally scanned; semantic review is limited to explicit patches.",
+  "source_archive_sha256": "69af69cdc685b5dce465613d1cc8fffb598eb46714f57cf73bd6606c2ceb7e43",
+  "source_content_sha256": "95026a4b78aa83f1f32481e8ff30ea3f7d942b648b3d6e66ef64ca3a194cb66e",
+  "counts": {
+    "source_senses": 241427,
+    "unreviewed_usage_notes_not_published": 226739,
+    "source_entries": 84212,
+    "rule_review_candidates": 1210,
+    "legacy_priority_repairs": 958,
+    "source_main_senses_without_examples": 490,
+    "reviewed_overviews": 34,
+    "conjunction_senses_restored": 26,
+    "reviewed_sense_patches": 6,
+    "exact_duplicate_senses_merged": 8,
+    "reviewed_senses_added": 2,
+    "reviewed_entries_added": 24,
+    "spelling_aliases_added": 13,
+    "compiled_entries": 84236,
+    "missing_in_base_top10000_after_repairs": 144,
+    "form_records": 96235
+  },
+  "remaining_common_coverage_gaps": [
+    {
+      "word": "mhm",
+      "rank": 1293,
+      "translation": " （表示同意或在听对方说话）哦, 嗯"
+    },
+    {
+      "word": "iii",
+      "rank": 1845,
+      "translation": "num. 罗马数字3"
+    },
+    {
+      "word": "qv",
+      "rank": 2735,
+      "translation": "abbr. quivering 颤抖; quod vide (Latin=which see) （拉丁语）参见…; quality verification 质量确认; quantum vis (Latin=as much as you wish) （拉丁语）随意量"
+    },
+    {
+      "word": "Kinnock",
+      "rank": 4452,
+      "translation": "n. (Kinnock)人名；(英)金诺克"
+    },
+    {
+      "word": "ici",
+      "rank": 4659,
+      "translation": "abbr. 英国化学工业公司（Imperial Chemical Industries Ltd.）"
+    },
+    {
+      "word": "EEC",
+      "rank": 4899,
+      "translation": "欧洲经济共同体"
+    },
+    {
+      "word": "Von",
+      "rank": 5785,
+      "translation": "[计] 冯·诺伊曼"
+    },
+    {
+      "word": "Gaulle",
+      "rank": 5910,
+      "translation": "高尔（人名）"
+    },
+    {
+      "word": "Hartlepool",
+      "rank": 5918,
+      "translation": "哈特尔普尔[英国英格兰东北部港市]"
+    },
+    {
+      "word": "ruine",
+      "rank": 5934,
+      "translation": " [医]路因碱"
+    },
+    {
+      "word": "darke",
+      "rank": 5982,
+      "translation": " [人名] [英格兰人姓氏] 达克 Dark的变体"
+    },
+    {
+      "word": "socioeconomic",
+      "rank": 6127,
+      "translation": "a. 社会经济学的"
+    },
+    {
+      "word": "Heseltine",
+      "rank": 6302,
+      "translation": "n. (Heseltine)人名；(英)赫塞尔廷"
+    },
+    {
+      "word": "RISC",
+      "rank": 6329,
+      "translation": "[计] 精简指令集计算机"
+    },
+    {
+      "word": "Athelstan",
+      "rank": 6330,
+      "translation": "n. 阿瑟尔斯坦（人名）"
+    },
+    {
+      "word": "subscale",
+      "rank": 6351,
+      "translation": "内部[扩散]氧化物"
+    },
+    {
+      "word": "Sainsbury",
+      "rank": 6688,
+      "translation": "塞恩斯伯里(姓氏)"
+    },
+    {
+      "word": "calory",
+      "rank": 6806,
+      "translation": "[医] 卡[路里](热量单位)"
+    },
+    {
+      "word": "Minton",
+      "rank": 6829,
+      "translation": "n. 明顿（英国著名的卫浴品牌）"
+    },
+    {
+      "word": "Novell",
+      "rank": 6831,
+      "translation": "n. 美国网络产品公司名称"
+    },
+    {
+      "word": "microsystem",
+      "rank": 6832,
+      "translation": "[计] 微系统"
+    },
+    {
+      "word": "oesophageal",
+      "rank": 6834,
+      "translation": "a. 食道\n[医] 食管的"
+    },
+    {
+      "word": "coun",
+      "rank": 6836,
+      "translation": "abbr. councillor 顾问; 参赞; counsel 商议; 律师"
+    },
+    {
+      "word": "Crohn",
+      "rank": 6837,
+      "translation": "n. 克罗恩病；克隆病"
+    },
+    {
+      "word": "Theda",
+      "rank": 6838,
+      "translation": "西达（人名）"
+    },
+    {
+      "word": "GUIL",
+      "rank": 6840,
+      "translation": "n. (Guil)人名；(西、法)吉尔"
+    },
+    {
+      "word": "HMO",
+      "rank": 6870,
+      "translation": "[化] 休克尔分子轨道法"
+    },
+    {
+      "word": "destine",
+      "rank": 6906,
+      "translation": "vt. 注定, 预定"
+    },
+    {
+      "word": "saut",
+      "rank": 7116,
+      "translation": "<法>n.(芭蕾舞用语)跳[字面意义：leap]"
+    },
+    {
+      "word": "viii",
+      "rank": 7247,
+      "translation": "num. 罗马数字8"
+    },
+    {
+      "word": "Mansell",
+      "rank": 7473,
+      "translation": "n. (Mansell)人名；(英)曼塞尔；(法)芒塞尔"
+    },
+    {
+      "word": "Sotheby",
+      "rank": 7474,
+      "translation": "n. 苏富比；索斯比（拍卖公司名, 等于Sotheby's）"
+    },
+    {
+      "word": "Gooch",
+      "rank": 7493,
+      "translation": "古氏"
+    },
+    {
+      "word": "Wirral",
+      "rank": 7494,
+      "translation": "n. 威勒尔半岛"
+    },
+    {
+      "word": "ICL",
+      "rank": 7499,
+      "translation": "[计] 国际计算机-, 有限公司"
+    },
+    {
+      "word": "CNAA",
+      "rank": 7506,
+      "translation": "abbr. （英）全国学术奖理事会（Council for National Academic Awards）"
+    },
+    {
+      "word": "Pascoe",
+      "rank": 7511,
+      "translation": "n. (Pascoe)人名；(西)帕斯科埃；(英)帕斯科"
+    },
+    {
+      "word": "MIPS",
+      "rank": 7514,
+      "translation": "[计] 每秒百万条指令数"
+    },
+    {
+      "word": "wh",
+      "rank": 7515,
+      "translation": "abbr. 瓦特小时（Watt Hours）；白宫（White House）；白色（white）"
+    },
+    {
+      "word": "sparc",
+      "rank": 7517,
+      "translation": "abbr. SUN公司的工作站系统"
+    },
+    {
+      "word": "phd",
+      "rank": 7607,
+      "translation": "abbr. 哲学博士学位（Doctor of Philosophy）"
+    },
+    {
+      "word": "automaker",
+      "rank": 7630,
+      "translation": "n. <美>汽车制造商"
+    },
+    {
+      "word": "payoff",
+      "rank": 7645,
+      "translation": "n. 发工资, 分赃, 贿赂, 盈利, 报酬, 报应, 结果, 高潮, 决定因素\na. 决定性的, 产生结果的, 支付的"
+    },
+    {
+      "word": "recede",
+      "rank": 7675,
+      "translation": "vi. 向后退, 退却, 收回, 降低, 减弱\n[医] 退缩"
+    },
+    {
+      "word": "fingernail",
+      "rank": 7769,
+      "translation": "n. 手指甲"
+    },
+    {
+      "word": "exemplify",
+      "rank": 7776,
+      "translation": "vt. 例证, 例示\n[法] 制作经公章证明的誊本, 例证"
+    },
+    {
+      "word": "plow",
+      "rank": 8039,
+      "translation": "n. 犁\nv. 犁, 耕"
+    },
+    {
+      "word": "instalment",
+      "rank": 8067,
+      "translation": "n. 就职, 装设, 分期付款"
+    },
+    {
+      "word": "arrears",
+      "rank": 8104,
+      "translation": "n. 逾期债款, 欠帐\n[经] 延迟, 积欠, 尾数"
+    },
+    {
+      "word": "mustache",
+      "rank": 8105,
+      "translation": "n. 髭, 胡子"
+    },
+    {
+      "word": "shortcoming",
+      "rank": 8140,
+      "translation": "n. 缺点, 短处"
+    },
+    {
+      "word": "Kurd",
+      "rank": 8147,
+      "translation": "n. 库尔德人"
+    },
+    {
+      "word": "computerised",
+      "rank": 8210,
+      "translation": " [计][修]计算机化"
+    },
+    {
+      "word": "alga",
+      "rank": 8285,
+      "translation": "n. 藻类, 海藻\n[机] 藻"
+    },
+    {
+      "word": "savor",
+      "rank": 8306,
+      "translation": "n. 滋味, 气味, 食欲\nvi. 有...的滋味\nvt. 加调味品于, 使有风味, 尝到"
+    },
+    {
+      "word": "Ashdown",
+      "rank": 8327,
+      "translation": "n. (Ashdown)人名；(英)阿什当"
+    },
+    {
+      "word": "Banbury",
+      "rank": 8330,
+      "translation": "[机] 班伯里混炼机, 密闭式混炼器"
+    },
+    {
+      "word": "Mitterrand",
+      "rank": 8346,
+      "translation": "[经] 密特朗"
+    },
+    {
+      "word": "ibid",
+      "rank": 8352,
+      "translation": "adv. 如上, 同前"
+    },
+    {
+      "word": "GATT",
+      "rank": 8359,
+      "translation": "关贸总协定\n[经] 关税贸易总协定"
+    },
+    {
+      "word": "Mellor",
+      "rank": 8368,
+      "translation": "梅勒（人名）"
+    },
+    {
+      "word": "Teesside",
+      "rank": 8370,
+      "translation": "蒂赛德（地区）（地名）（英国）"
+    },
+    {
+      "word": "RUC",
+      "rank": 8374,
+      "translation": "abbr. （英）北爱尔兰皇家骑警队（Royal Ulster Constabulary）"
+    },
+    {
+      "word": "Corneliu",
+      "rank": 8375,
+      "translation": "n. (Corneliu)人名；(罗)科尔内留"
+    },
+    {
+      "word": "Modigliani",
+      "rank": 8382,
+      "translation": "n. (Modigliani)人名；(意、英)莫迪利亚尼\n莫迪利亚尼"
+    },
+    {
+      "word": "mungo",
+      "rank": 8388,
+      "translation": "n. 短弹毛"
+    },
+    {
+      "word": "NME",
+      "rank": 8390,
+      "translation": "abbr. 国立军事研究院（National Military Establishment）"
+    },
+    {
+      "word": "Leonora",
+      "rank": 8391,
+      "translation": "n. 利奥诺拉(Eleanor的异体)(f.)"
+    },
+    {
+      "word": "Wycliffe",
+      "rank": 8392,
+      "translation": "n. 威克利夫（姓氏）"
+    },
+    {
+      "word": "offseason",
+      "rank": 8398,
+      "translation": "n. 淡季"
+    },
+    {
+      "word": "cDNA",
+      "rank": 8399,
+      "translation": "[化] 互补DNA"
+    },
+    {
+      "word": "Solaris",
+      "rank": 8400,
+      "translation": "[计] Solaris操作系统"
+    },
+    {
+      "word": "gastrin",
+      "rank": 8402,
+      "translation": "[化] 胃泌素\n[医] 促胃液素, 胃分泌素"
+    },
+    {
+      "word": "WACC",
+      "rank": 8403,
+      "translation": "abbr. 加权平均资金成本（Weighted Average Cost of Capital）"
+    },
+    {
+      "word": "thicken",
+      "rank": 8485,
+      "translation": "vi. 变浓, 变厚, 变得模糊, 变为复杂\nvt. 使变厚, 加强, 使模糊"
+    },
+    {
+      "word": "enrol",
+      "rank": 8506,
+      "translation": "vt. 登记, 使加入\nvi. 参军, 注册"
+    },
+    {
+      "word": "refrigerate",
+      "rank": 8533,
+      "translation": "vt. 使冷却, 使清凉, 冷藏\n[机] 冷冻"
+    },
+    {
+      "word": "overhear",
+      "rank": 8536,
+      "translation": "vt. 无意中听到, 偷听"
+    },
+    {
+      "word": "allude",
+      "rank": 8601,
+      "translation": "vi. 暗指, 提及"
+    },
+    {
+      "word": "emanate",
+      "rank": 8681,
+      "translation": "vi. 散发, 发出, 发源"
+    },
+    {
+      "word": "lense",
+      "rank": 8753,
+      "translation": "n. (Lense)人名；(德)伦泽"
+    },
+    {
+      "word": "beckon",
+      "rank": 8776,
+      "translation": "v. 招手示意, 召唤, 吸引\nn. 表召唤的点头(或手势)"
+    },
+    {
+      "word": "wince",
+      "rank": 8792,
+      "translation": "n. 畏缩, 退避\nvi. 畏缩, 退缩, 退避"
+    },
+    {
+      "word": "hypothesize",
+      "rank": 8799,
+      "translation": "vt. 假设, 假定"
+    },
+    {
+      "word": "cliche",
+      "rank": 8808,
+      "translation": "n. 陈腔滥调, 凸印版\na. 陈腐的"
+    },
+    {
+      "word": "clench",
+      "rank": 8816,
+      "translation": "n. 牢牢抓住, 钉紧, 敲弯钉尖\nvt. 紧握, 牢牢地抓住, 确定, 敲弯\nvi. 握紧, 钉牢"
+    },
+    {
+      "word": "centimetre",
+      "rank": 8893,
+      "translation": "n. 厘米, 公分"
+    },
+    {
+      "word": "entree",
+      "rank": 8922,
+      "translation": "n. 入场许可, 主菜"
+    },
+    {
+      "word": "orchestrate",
+      "rank": 8946,
+      "translation": "v. 编管弦乐曲"
+    },
+    {
+      "word": "fertiliser",
+      "rank": 9068,
+      "translation": "[化] 肥料"
+    },
+    {
+      "word": "glamor",
+      "rank": 9073,
+      "translation": "n. 魅力, 迷人的美, 魔法\nvt. 迷惑"
+    },
+    {
+      "word": "liken",
+      "rank": 9141,
+      "translation": "vt. 比喻, 比拟"
+    },
+    {
+      "word": "Tesco",
+      "rank": 9142,
+      "translation": "n. 特斯科（财富500强公司之一）"
+    },
+    {
+      "word": "punctuate",
+      "rank": 9198,
+      "translation": "vt.vi. 给文章加标点, 加标点符号\nvt. 强调, 加强, (常用被动)不时打断\nn. 标点, 标点法, 标点符号"
+    },
+    {
+      "word": "inscribe",
+      "rank": 9201,
+      "translation": "vt. 登记, 铭记于, 题写, 雕刻\n[电] 书写"
+    },
+    {
+      "word": "engender",
+      "rank": 9295,
+      "translation": "vt. 产生, 引起\nvi. 发生, 形成"
+    },
+    {
+      "word": "DTI",
+      "rank": 9328,
+      "translation": "abbr. 贸易工业部（Department of Trade and Industry）"
+    },
+    {
+      "word": "scurry",
+      "rank": 9351,
+      "translation": "vi. 急赶, 急跑, 急转\nn. 急赶, 急跑, 急转, 阵雪, 阵雨"
+    },
+    {
+      "word": "rouble",
+      "rank": 9362,
+      "translation": "n. 卢布"
+    },
+    {
+      "word": "Reuter",
+      "rank": 9402,
+      "translation": "n. 路透社, 路透通讯社"
+    },
+    {
+      "word": "Aquitaine",
+      "rank": 9403,
+      "translation": "n. 阿基坦（法国西南部盆地）"
+    },
+    {
+      "word": "Edouard",
+      "rank": 9405,
+      "translation": "n. (Edouard)人名；(俄)爱德华"
+    },
+    {
+      "word": "Klerk",
+      "rank": 9409,
+      "translation": "n. (Klerk)人名；(南非)克勒克"
+    },
+    {
+      "word": "hl",
+      "rank": 9411,
+      "translation": "[医] 百升"
+    },
+    {
+      "word": "WEA",
+      "rank": 9414,
+      "translation": "abbr. （英国）工人教育协会（Worker's Educational Association）"
+    },
+    {
+      "word": "summat",
+      "rank": 9415,
+      "translation": "pron. <英><方>某事, 某物, 某东西"
+    },
+    {
+      "word": "oesophagus",
+      "rank": 9420,
+      "translation": "n. 食道\n[医] 食管"
+    },
+    {
+      "word": "Insp",
+      "rank": 9427,
+      "translation": "abbr. 情报、消息、来源、分布的期刊（Information News Sources Profiles）；智能网服务供应商（Intelligent Network Service Provider）"
+    },
+    {
+      "word": "AEA",
+      "rank": 9428,
+      "translation": "abbr. 原子能法（Atomic Energy Authority）；演员协会（Actors ' Equity Association）；美国经济协会（American Economic Association）；成人教育协会（Adult Education Association）；美国教育协会（American Education Association）"
+    },
+    {
+      "word": "urgh",
+      "rank": 9435,
+      "translation": " = ugh"
+    },
+    {
+      "word": "sco",
+      "rank": 9436,
+      "translation": "abbr. 位置时间计数器（Set Time Counter）；[计]一个常用的Unix操作系统"
+    },
+    {
+      "word": "multiparty",
+      "rank": 9441,
+      "translation": "a. 多党的,包括多党的,包含多党党员的, 导致多党并存的选举(或政治)制度的"
+    },
+    {
+      "word": "NetWare",
+      "rank": 9442,
+      "translation": "[计] NetWare网络操作系统"
+    },
+    {
+      "word": "eqn",
+      "rank": 9445,
+      "translation": "abbr. equation 方程式; 等式; 反应式; equine 马的"
+    },
+    {
+      "word": "Ronni",
+      "rank": 9447,
+      "translation": "n. (Ronni)人名；(西、芬)龙尼"
+    },
+    {
+      "word": "USL",
+      "rank": 9450,
+      "translation": "abbr. 用户专门语言（UNIX）"
+    },
+    {
+      "word": "Burun",
+      "rank": 9451,
+      "translation": "n. (Burun)人名；(土)布伦"
+    },
+    {
+      "word": "Molla",
+      "rank": 9453,
+      "translation": "n. (Molla)人名；(法、俄、意)莫拉；(西)莫利亚"
+    },
+    {
+      "word": "transcribe",
+      "rank": 9467,
+      "translation": "vt. 抄写, 译, 意译, 录制, 改编\n[计] 转录"
+    },
+    {
+      "word": "overshadow",
+      "rank": 9531,
+      "translation": "vt. 遮阴, 使阴暗, 使失色, 使相形见绌, 使蒙上阴影"
+    },
+    {
+      "word": "somber",
+      "rank": 9562,
+      "translation": "a. 昏暗的, 阴天的, 严峻的, 忧郁的"
+    },
+    {
+      "word": "engulf",
+      "rank": 9563,
+      "translation": "vt. 卷入, 吸进, 吞没, 使全神贯注"
+    },
+    {
+      "word": "unsettle",
+      "rank": 9564,
+      "translation": "vt. 使移动, 搅乱, 使动摇, 使不安宁\nvi. 动荡不定, 离开固定位置"
+    },
+    {
+      "word": "colonist",
+      "rank": 9569,
+      "translation": "n. 殖民地居民, 移民"
+    },
+    {
+      "word": "horrify",
+      "rank": 9604,
+      "translation": "vt. 使恐惧, 使震惊"
+    },
+    {
+      "word": "fume",
+      "rank": 9606,
+      "translation": "n. 臭气, 烟, 激怒\nvt. 熏\nvi. 冒烟"
+    },
+    {
+      "word": "permeate",
+      "rank": 9622,
+      "translation": "vt. 弥漫, 渗透, 充满, 影响, 感染\nvi. 透入, 散布"
+    },
+    {
+      "word": "acquaint",
+      "rank": 9630,
+      "translation": "vt. 使认识, 介绍"
+    },
+    {
+      "word": "afflict",
+      "rank": 9633,
+      "translation": "vt. 使苦恼, 折磨"
+    },
+    {
+      "word": "pollster",
+      "rank": 9635,
+      "translation": "n. 民意调查人, 民意测验经办人"
+    },
+    {
+      "word": "vigor",
+      "rank": 9655,
+      "translation": "n. 精力, 活力"
+    },
+    {
+      "word": "relegate",
+      "rank": 9699,
+      "translation": "vt. 驱逐, 使降低地位, 把...归类, 把...委托给\n[法] 流放, 判流放刑, 驱逐"
+    },
+    {
+      "word": "interpretive",
+      "rank": 9714,
+      "translation": "[计] 解释的, 翻译的"
+    },
+    {
+      "word": "stiffen",
+      "rank": 9758,
+      "translation": "vt. 使变硬, 使僵硬, 使顽强, 使严厉\nvi. 变粘, 变硬, 变强烈"
+    },
+    {
+      "word": "publicize",
+      "rank": 9776,
+      "translation": "vt. 宣传"
+    },
+    {
+      "word": "rigour",
+      "rank": 9776,
+      "translation": "n. 严格, 严厉, 苛刻, 严酷, 严密, 精确"
+    },
+    {
+      "word": "millimetre",
+      "rank": 9848,
+      "translation": "n. 毫米\n[机] 公厘"
+    },
+    {
+      "word": "scribble",
+      "rank": 9854,
+      "translation": "n. 潦草的写法, 潦草写成的东西, 拙劣的作品\nv. 潦草地书写, 乱写, 滥写"
+    },
+    {
+      "word": "molest",
+      "rank": 9857,
+      "translation": "vt. 妨碍, 干扰, 调戏\n[法] 调戏, 作弄, 恶意干涉"
+    },
+    {
+      "word": "contaminant",
+      "rank": 9858,
+      "translation": "n. 污染物, 沾染物\n[计] 污染物"
+    },
+    {
+      "word": "utilization",
+      "rank": 9879,
+      "translation": "n. 利用\n[医] 利用"
+    },
+    {
+      "word": "Londoner",
+      "rank": 9885,
+      "translation": "n. 伦敦人"
+    },
+    {
+      "word": "nontraditional",
+      "rank": 9900,
+      "translation": "a. 不符合传统的, 非传统的"
+    },
+    {
+      "word": "endow",
+      "rank": 9907,
+      "translation": "vt. 捐赠, 捐助, 赋予\n[法] 赠送财产给, 分给寡妇一份遗产, 授与"
+    }
+  ],
+  "limitations": [
+    "No whole-corpus semantic accuracy claim.",
+    "Generated usage rules withheld unless reviewed.",
+    "Missing/unsupported learner entries fall back to ECDICT Chinese, visibly labelled."
+  ]
+}

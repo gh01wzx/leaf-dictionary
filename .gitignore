@@ -1,0 +1,25 @@
+# Build outputs and packaging toolchain
+build/
+dist/
+*.spec
+Leaf.exe
+
+# Vendored packages: keep only what Leaf needs at runtime (FSRS scheduler)
+vendor/*
+!vendor/fsrs/
+!vendor/fsrs-6.3.1.dist-info/
+!vendor/typing_extensions.py
+!vendor/typing_extensions-4.16.0.dist-info/
+
+# Personal learning data stays on this computer
+user_data/
+reviews/words-import-2026-11-02/after-import-backup.json
+reviews/words-import-2026-11-02/rehearsal/
+leaf-error.log
+
+# Local tooling and caches
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

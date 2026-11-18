@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.sqlite3 binary
+*.gz binary
+*.exe binary
+*.png binary
