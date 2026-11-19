@@ -118,6 +118,15 @@ class LearningTests(unittest.TestCase):
             app.import_backup(payload)
         self.assertEqual(app.stats()['total'],0)
 
+    def test_second_server_cannot_share_the_port(self):
+        # Otherwise every relaunch on Windows leaves an idle duplicate server behind.
+        first = app.Server(('127.0.0.1', 0), app.Handler)
+        try:
+            with self.assertRaises(OSError):
+                app.Server(('127.0.0.1', first.server_port), app.Handler).server_close()
+        finally:
+            first.server_close()
+
     def test_http_limits_csrf_and_full_flow(self):
         server = app.Server(('127.0.0.1',0), app.Handler)
         thread = threading.Thread(target=server.serve_forever, daemon=True)

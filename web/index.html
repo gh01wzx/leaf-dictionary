@@ -66,15 +66,16 @@
           <div class="home-grid">
             <article class="glass today-card">
               <div class="card-top"><div class="eyebrow">今日目标</div><span class="pill" id="goal-state" hidden></span></div>
-              <div class="today-big"><span id="goal-done">0</span><span class="goal-of">/ <span id="goal-target">30</span> 个词</span></div>
+              <div class="today-big"><span id="goal-done">0</span><span class="goal-of">/ <span id="goal-target">30</span> 个已记住</span></div>
               <div class="goal-bar" id="home-goal-bar" role="progressbar" aria-label="今日目标进度" aria-valuemin="0"><span class="goal-fill"></span><span class="goal-min" title="最低目标"></span></div>
+              <p class="goal-mix" id="goal-mix"></p>
               <p class="goal-text" id="goal-text"></p>
               <div class="today-actions"><button class="button primary" data-view="review">开始复习 <kbd>R</kbd></button><span class="muted small" id="home-breakdown"></span></div>
             </article>
             <article class="glass stat-card">
               <div class="eyebrow">近 7 天</div>
               <div id="week-chart" class="week-chart" role="group" aria-label="近 7 天每天复习的不同单词数"></div>
-              <p class="muted small" id="week-note">每天复习的不同单词数 · 虚线是每日目标</p>
+              <p class="muted small" id="week-note">每天记住的单词数 · 虚线是每日目标</p>
             </article>
           </div>
           <div class="section-head"><h2>最近收录</h2><button class="link-button" data-view="library">全部生词 →</button></div>
@@ -120,11 +121,11 @@
           <article class="glass panel">
             <h2>复习</h2>
             <div class="setting">
-              <div><strong>每日目标</strong><p class="muted small">每天想复习多少个不同的词。首页、侧栏和复习页都会显示“已复习 / 目标”；同一个词一天复习多次只算一个。</p></div>
+              <div><strong>每日目标</strong><p class="muted small">每天想<strong>记住</strong>多少个词。只有答“费力想起”或“记得”的词才计入；答“不记得”的词要等你之后想起来才算。同一个词一天只算一次。</p></div>
               <div class="stepper"><button class="icon-button" data-adjust="daily_goal" data-by="-5" aria-label="减少每日目标">−</button><input id="setting-goal" data-setting="daily_goal" type="number" min="1" max="500" step="1" aria-label="每日目标"><button class="icon-button" data-adjust="daily_goal" data-by="5" aria-label="增加每日目标">＋</button></div>
             </div>
             <div class="setting">
-              <div><strong>最低目标</strong><p class="muted small">状态不好的日子，做到这个数就算没有中断。连续天数按它计算。</p></div>
+              <div><strong>最低目标</strong><p class="muted small">状态不好的日子，记住这么多个就算没有中断。连续天数按它计算。</p></div>
               <div class="stepper"><button class="icon-button" data-adjust="daily_minimum" data-by="-1" aria-label="减少最低目标">−</button><input id="setting-minimum" data-setting="daily_minimum" type="number" min="1" max="500" step="1" aria-label="最低目标"><button class="icon-button" data-adjust="daily_minimum" data-by="1" aria-label="增加最低目标">＋</button></div>
             </div>
             <div class="setting">
@@ -163,7 +164,7 @@
               <li><strong>从认得到会用。</strong>新词先练“看词想意思”；记牢后交替练“看句子写出词”，产出型回忆更能迁移到使用（Nation 2013；Laufer &amp; Goldstein 2004）。</li>
               <li><strong>换着语境练。</strong>填空句子在你的原句、你的造句和词典例句之间轮换，帮助形成可迁移的理解。</li>
               <li><strong>自己造句。</strong>写出自己的句子是生成式学习，造的句子也会用于以后的填空。</li>
-              <li><strong>诚实评分。</strong>看了答案才想起来，请选“忘了”，否则会高估记忆，间隔会拉得太长。</li>
+              <li><strong>三档诚实评分。</strong>不记得 / 费力想起 / 记得。看了答案才想起来，请选“不记得”，否则会高估记忆，间隔会拉得太长。只有想起来的词才计入每日目标。</li>
             </ul>
           </article>
           <article class="glass panel">
@@ -184,7 +185,7 @@
               <dt><kbd>S</kbd></dt><dd>把当前词加入生词本</dd>
               <dt><kbd>R</kbd></dt><dd>开始复习</dd>
               <dt><kbd>空格</kbd></dt><dd>复习时翻开答案</dd>
-              <dt><kbd>1</kbd>–<kbd>4</kbd></dt><dd>评分：忘了 / 费力 / 记得 / 轻松</dd>
+              <dt><kbd>1</kbd>–<kbd>3</kbd></dt><dd>评分：不记得 / 费力想起 / 记得</dd>
               <dt><kbd>↵</kbd></dt><dd>填空时检查；之后采用建议评分</dd>
               <dt><kbd>P</kbd></dt><dd>朗读当前词</dd>
               <dt><kbd>Ctrl</kbd>+<kbd>Z</kbd></dt><dd>撤销刚才的评分</dd>

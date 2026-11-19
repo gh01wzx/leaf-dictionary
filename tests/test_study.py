@@ -201,6 +201,33 @@ class StudyTests(helpers.TempData, unittest.TestCase):
         self.assertTrue(goal['met_minimum'] and goal['met_goal'])
         self.assertEqual(goal['remaining'], 0)
 
+    def test_goal_counts_only_words_remembered(self):
+        card_id = helpers.collect('bank')['id']
+        helpers.collect('field')
+        first = app.review_next(focus=card_id)['card']
+        app.rate({'id':card_id, 'rating':1, 'version':first['card_json']})
+        goal = app.stats()['goal']
+        self.assertEqual((goal['done'], goal['reviewed'], goal['forgot']), (0, 1, 1), '不记得 does not count')
+        again = app.review_next(focus=card_id)['card']
+        app.rate({'id':card_id, 'rating':2, 'version':again['card_json']})
+        goal = app.stats()['goal']
+        self.assertEqual((goal['done'], goal['hard'], goal['forgot']), (1, 1, 0), 'recalled later the same day counts')
+        other = app.review_next(last=card_id)['card']
+        app.rate({'id':other['id'], 'rating':3, 'version':other['card_json']})
+        stats = app.stats()
+        self.assertEqual((stats['goal']['done'], stats['goal']['good']), (2, 1))
+        self.assertEqual(stats['week'][stats['today']], 2)
+        self.assertEqual(stats['week_reviewed'][stats['today']], 2)
+
+    def test_only_three_answers_are_accepted_and_old_easy_counts_as_remembered(self):
+        card = helpers.collect('bank')
+        for bad in (4, 0, '3', True):
+            with self.assertRaises(ValueError):
+                app.rate({'id':card['id'], 'rating':bad, 'version':card['card_json']})
+        with app.connect() as db:
+            db.execute('INSERT INTO reviews(card_id,rating,created,log_json) VALUES(?,?,?,?)', (card['id'], 4, app.now().isoformat(), '{}'))
+        self.assertEqual(app.stats()['goal']['done'], 1)
+
     def test_goal_settings_keep_minimum_at_or_below_goal(self):
         self.assertEqual((app.get_settings()['daily_goal'], app.get_settings()['daily_minimum']), (30, 8))
         with self.assertRaises(ValueError):

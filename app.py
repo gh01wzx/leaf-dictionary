@@ -23,6 +23,8 @@ import json
 from pathlib import Path
 import re
 import secrets
+import socket
+import socketserver
 import sqlite3
 import subprocess
 import sys
@@ -62,6 +64,11 @@ DEFAULT_SETTINGS = {'new_per_day':10, 'retention':0.9, 'typing':True, 'daily_goa
 GOAL_LIMIT = 500
 RETENTION_CHOICES = (0.85, 0.9, 0.95)
 MASTERED_DAYS = 21          # stability at which a word is counted as mastered
+# Three answers: 1 不记得, 2 费力想起, 3 记得 (FSRS Again / Hard / Good). FSRS's
+# fourth grade, Easy, is not offered: it is the least reliable self-judgement and
+# leaving it out keeps answers quick. Older Easy reviews still count as 记得.
+RATINGS = {1:'不记得', 2:'费力想起', 3:'记得'}
+REMEMBERED_RATING = 2       # 费力想起 and 记得 are successful recalls
 LEECH_FAILURES = 5          # repeated forgetting suggests rewriting the definition
 OWN_SENTENCE = '我的造句'
 
@@ -704,7 +711,10 @@ class ReviewConflict(ValueError):
 
 
 def rate(data):
-    card_id, rating = int(data['id']), Rating(int(data['rating']))
+    card_id = int(data['id'])
+    if not isinstance(data.get('rating'), int) or isinstance(data.get('rating'), bool) or data['rating'] not in RATINGS:
+        raise ValueError('请选择：不记得、费力想起或记得。')
+    rating = Rating(data['rating'])
     mode = data.get('mode') if data.get('mode') in ('recognize', 'cloze') else 'recognize'
     duration = data.get('duration_ms')
     duration = max(0, min(int(duration), 3_600_000)) if isinstance(duration, (int, float)) and not isinstance(duration, bool) else None
@@ -763,32 +773,41 @@ def add_sentence(data):
 
 # -------------------------------------------------------------- statistics
 
+def daily_outcomes(rows):
+    """Per study day: each word's latest rating that day, and the number of attempts.
+
+    A word counts as remembered on a day when its last answer that day was a
+    successful recall (费力想起 or 记得). Forgetting it later the same day takes it
+    back out; recalling it after relearning puts it back in.
+    """
+    latest, attempts = {}, {}
+    for card_id, created, rating in rows:
+        day = str(study_day(datetime.fromisoformat(created)))
+        latest.setdefault(day, {})[card_id] = rating
+        attempts[day] = attempts.get(day, 0) + 1
+    return latest, attempts
+
+
+def remembered(ratings):
+    return sum(1 for rating in ratings.values() if rating >= REMEMBERED_RATING)
+
+
 def stats():
     current = now()
     stamp = current.isoformat()
     today = study_day(current)
-    days = [today - timedelta(days=i) for i in reversed(range(7))]
-    words_by_day = {str(day):set() for day in days}
-    attempts_by_day = dict.fromkeys(words_by_day, 0)
+    days = [str(today - timedelta(days=i)) for i in reversed(range(7))]
     with connect() as db:
         db.execute('BEGIN')
         counts = queue_counts(db, current)
+        settings = get_settings(db)
         totals = db.execute(f'''SELECT COUNT(*) AS total, SUM(paused=0) AS active,
             SUM(paused=0 AND {STATE_SQL}=2 AND {STABILITY_SQL}>=?) AS mastered FROM cards c''', (MASTERED_DAYS,)).fetchone()
-        # One spare day covers timestamps stored with a non-UTC offset.
-        for row in db.execute('SELECT card_id,created FROM reviews WHERE created>=?', ((day_start(days[0]) - timedelta(days=1)).isoformat(),)):
-            reviewed_at = datetime.fromisoformat(row['created'])
-            if reviewed_at > current:
-                continue
-            day = str(study_day(reviewed_at))
-            if day in words_by_day:
-                words_by_day[day].add(row['card_id'])
-                attempts_by_day[day] += 1
-        settings = get_settings(db)
-        words_per_day = {}
-        for card_id, created in db.execute('SELECT card_id,created FROM reviews WHERE created>=?',
-                ((current - timedelta(days=400)).isoformat(),)):
-            words_per_day.setdefault(str(study_day(datetime.fromisoformat(created))), set()).add(card_id)
+        # Filter by real time in Python: imported timestamps may carry a non-UTC offset,
+        # which would make a plain string comparison misplace them.
+        history = [row for row in db.execute('SELECT card_id,created,rating FROM reviews WHERE created>=? ORDER BY created,id',
+            ((current - timedelta(days=401)).isoformat(),)) if datetime.fromisoformat(row[1]) <= current]
+        history.sort(key=lambda row: datetime.fromisoformat(row[1]))
         mature = [r[0] for r in db.execute('''SELECT rating FROM reviews WHERE created>=? AND prev_card_json IS NOT NULL
             AND json_extract(prev_card_json,'$.state')=2''', ((current - timedelta(days=30)).isoformat(),))]
         forecast_rows = [r[0] for r in db.execute(f'''SELECT c.due FROM cards c WHERE c.paused=0 AND {SEEN_SQL}
@@ -796,10 +815,14 @@ def stats():
         recent = [dict(r) for r in db.execute('''SELECT c.id,c.word,COALESCE(d.meaning,c.meaning) AS meaning,
             c.context,c.source,c.lookups,c.updated FROM cards c LEFT JOIN definition_overrides d ON d.word=c.word
             ORDER BY c.created DESC,c.id DESC LIMIT 6''')]
-    # A day counts toward the streak once the minimum is reached. Today only
-    # joins the streak after its minimum is met, so an unfinished day never breaks it.
+    latest, attempts = daily_outcomes(history)
+    week = {day:remembered(latest.get(day, {})) for day in days}
+    week_reviewed = {day:len(latest.get(day, {})) for day in days}
+    week_attempts = {day:attempts.get(day, 0) for day in days}
+    # A day counts toward the streak once enough words were remembered. Today
+    # only joins after its minimum is met, so an unfinished day never breaks it.
     minimum, target = settings['daily_minimum'], settings['daily_goal']
-    kept = {day for day, words in words_per_day.items() if len(words) >= minimum}
+    kept = {day for day, ratings in latest.items() if remembered(ratings) >= minimum}
     streak, cursor = 0, today if str(today) in kept else today - timedelta(days=1)
     while str(cursor) in kept:
         streak += 1
@@ -809,18 +832,22 @@ def stats():
         day = str(study_day(datetime.fromisoformat(due)))
         if day in forecast:
             forecast[day] += 1
-    week = {day:len(words) for day, words in words_by_day.items()}
-    done = week[str(today)]
-    goal = {'target':target, 'minimum':minimum, 'done':done,
+    todays = latest.get(str(today), {})
+    done = remembered(todays)
+    breakdown = {'forgot':sum(r == 1 for r in todays.values()), 'hard':sum(r == 2 for r in todays.values()),
+        'good':sum(r >= 3 for r in todays.values())}
+    goal = {'target':target, 'minimum':minimum, 'done':done, 'reviewed':len(todays), **breakdown,
         'met_minimum':done >= minimum, 'met_goal':done >= target,
         'remaining':max(0, target - done), 'to_minimum':max(0, minimum - done),
-        # Words still reachable today: what is due now plus new words not yet added.
-        'reachable':done + counts['due'], 'new_available':max(0, counts['new_total'] - counts['new_left'])}
+        # Remembered words still reachable today: forgotten words come back after
+        # a short relearning step, plus everything due now.
+        'reachable':done + breakdown['forgot'] + counts['due'],
+        'new_available':max(0, counts['new_total'] - counts['new_left'])}
     return {'goal':goal, 'total':totals['total'], 'active':totals['active'] or 0, 'mastered':totals['mastered'] or 0,
-        'due':counts['due'], 'queue':counts, 'reviewed_today':week[str(today)],
-        'review_attempts_today':attempts_by_day[str(today)], 'week':week, 'week_attempts':attempts_by_day,
-        'today':str(today), 'as_of':stamp, 'recent':recent, 'next_due':counts['next_due'],
-        'streak':streak, 'forecast':forecast,
+        'due':counts['due'], 'queue':counts, 'reviewed_today':len(todays), 'remembered_today':done,
+        'review_attempts_today':week_attempts[str(today)], 'week':week, 'week_reviewed':week_reviewed,
+        'week_attempts':week_attempts, 'today':str(today), 'as_of':stamp, 'recent':recent,
+        'next_due':counts['next_due'], 'streak':streak, 'forecast':forecast,
         'retention':{'reviews':len(mature), 'rate':round(sum(r > 1 for r in mature) / len(mature), 3) if mature else None}}
 
 
@@ -1075,6 +1102,17 @@ class Handler(BaseHTTPRequestHandler):
 
 class Server(ThreadingHTTPServer):
     daemon_threads = True
+    # HTTPServer enables SO_REUSEADDR, which on Windows lets a second Leaf bind
+    # the same port instead of failing, leaving idle duplicate servers behind.
+    # Claim the port exclusively so a second launch hands over to the first.
+    allow_reuse_address = False
+
+    def server_bind(self):
+        if hasattr(socket, 'SO_EXCLUSIVEADDRUSE'):
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        # Skip HTTPServer's reverse DNS lookup (socket.getfqdn), which can stall startup.
+        socketserver.TCPServer.server_bind(self)
+        self.server_name, self.server_port = self.server_address[:2]
 
 
 def open_app(url):

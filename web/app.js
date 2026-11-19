@@ -38,7 +38,9 @@ const suggestRequest = new LeafRequests.LatestRequest();
 const libraryRequest = new LeafRequests.LatestRequest();
 const reviewRequest = new LeafRequests.LatestRequest();
 const libraryPageSize = 40;
-const RATINGS = [[1,'忘了','没想起来'],[2,'费力','想了很久或有提示'],[3,'记得','顺利想起'],[4,'轻松','立刻想起']];
+// Three answers. Only 费力想起 and 记得 count as remembered toward the daily goal.
+const RATINGS = [[1,'不记得','想不起来，或看了答案才想起'],[2,'费力想起','想了一会儿，或靠提示才想起'],[3,'记得','很快就想起意思']];
+const RATING_NAMES = {1:'不记得', 2:'费力想起', 3:'记得', 4:'记得'};  // 4: Easy from older versions
 const STATE_LABEL = {new:'新词', learning:'学习中', relearning:'重新学习', review:'复习中'};
 
 let currentView = 'lookup', currentResult = null, statsData = null, settings = null;
@@ -93,12 +95,13 @@ applyTheme(themeChoice);
 function goalSummary(data) {
   const g = data.goal;
   if (!data.total) return {state:'', label:'', text:'查词后加入生词本，就能开始复习。'};
-  if (g.met_goal) return {state:'goal', label:'目标完成', text:`今天的目标完成了${g.done > g.target ? `，还多复习了 ${g.done - g.target} 个` : ''}。`};
+  const pending = g.forgot ? ` ${g.forgot} 个没记住的词稍后会再出现，想起来了就会计入。` : '';
+  if (g.met_goal) return {state:'goal', label:'目标完成', text:`今天记住了 ${g.done} 个词，目标完成${g.done > g.target ? `，还多记住了 ${g.done - g.target} 个` : ''}。${pending}`};
   const shortage = g.reachable < g.target
     ? (g.new_available ? ' 今天到期的词不够，复习完后可以加学新词补足。' : ' 今天能复习的词不够这么多，全部复习完就好。') : '';
-  if (g.met_minimum) return {state:'min', label:'已达最低', text:`最低目标完成了，再复习 ${g.remaining} 个就能完成今天的目标。${shortage}`};
-  if (!g.done) return {state:'none', label:'未开始', text:`今天还没开始，先完成最低的 ${g.minimum} 个就不算中断。${shortage}`};
-  return {state:'none', label:'进行中', text:`还差 ${g.to_minimum} 个达到最低目标（${g.minimum} 个）。${shortage}`};
+  if (g.met_minimum) return {state:'min', label:'已达最低', text:`最低目标完成了，再记住 ${g.remaining} 个就能完成今天的目标。${pending}${shortage}`};
+  if (!g.reviewed) return {state:'none', label:'未开始', text:`今天还没开始，先记住 ${g.minimum} 个就不算中断。${shortage}`};
+  return {state:'none', label:'进行中', text:`已记住 ${g.done} 个，还差 ${g.to_minimum} 个达到最低目标（${g.minimum} 个）。${pending}${shortage}`};
 }
 function paintGoalBar(bar, g) {
   if (!bar) return;
@@ -109,7 +112,7 @@ function paintGoalBar(bar, g) {
   tick.hidden = g.minimum >= g.target;
   bar.setAttribute('aria-valuemax', String(g.target));
   bar.setAttribute('aria-valuenow', String(g.done));
-  bar.setAttribute('aria-valuetext', `已复习 ${g.done} 个，目标 ${g.target} 个，最低 ${g.minimum} 个`);
+  bar.setAttribute('aria-valuetext', `已记住 ${g.done} 个，目标 ${g.target} 个，最低 ${g.minimum} 个`);
 }
 // Returns a short message when this update crosses the minimum or the goal.
 function renderStats(data) {
@@ -122,9 +125,9 @@ function renderStats(data) {
   // Sidebar: progress toward today's goal.
   $('#ring-value').style.strokeDashoffset = String(97.4 * (1 - Math.min(1, g.done / g.target)));
   $('#today-ring').className = 'ring ' + level;
-  $('#today-ring').setAttribute('aria-label', `今日已复习 ${g.done} 个，目标 ${g.target} 个`);
+  $('#today-ring').setAttribute('aria-label', `今日已记住 ${g.done} 个，目标 ${g.target} 个`);
   $('#ring-text').textContent = g.done;
-  $('#today-summary').textContent = `${g.done} / ${g.target} 个词`;
+  $('#today-summary').textContent = `记住 ${g.done} / ${g.target}`;
   $('#today-detail').textContent = g.met_goal ? `目标完成${data.streak > 1 ? ` · 连续 ${data.streak} 天` : ''}`
     : g.met_minimum ? `已达最低 · 还差 ${g.remaining} 个` : `最低 ${g.minimum} 个 · 还差 ${g.to_minimum} 个`;
   // Home card.
@@ -135,10 +138,11 @@ function renderStats(data) {
   $('#goal-state').className = 'pill ' + (summary.state === 'goal' ? 'ok' : summary.state === 'min' ? 'accent' : '');
   $('#goal-text').textContent = summary.text + (data.streak > 1 ? ` 已连续 ${data.streak} 天达到最低目标。` : '');
   $('#home-breakdown').textContent = data.total ? (data.due ? `现在可复习 ${data.due} 个` : '现在没有到期的词') : '';
+  $('#goal-mix').innerHTML = g.reviewed ? `今天复习了 ${g.reviewed} 个：<span class="mix r3">记得 ${g.good}</span><span class="mix r2">费力想起 ${g.hard}</span><span class="mix r1">不记得 ${g.forgot}</span>` : '';
   paintGoalBar($('#home-goal-bar'), g);
   // Review header.
   paintGoalBar($('#review-goal-bar'), g);
-  $('#review-goal-label').innerHTML = `今日 <strong>${g.done}</strong> / ${g.target}${g.met_goal ? ' · 完成' : g.met_minimum ? ' · 已达最低' : ` · 最低 ${g.minimum}`}`;
+  $('#review-goal-label').innerHTML = `今日记住 <strong>${g.done}</strong> / ${g.target}${g.met_goal ? ' · 完成' : g.met_minimum ? ' · 已达最低' : ` · 最低 ${g.minimum}`}`;
   $('#queue-pills').innerHTML = data.total ? `<span class="pill">复习 ${q.review_due}</span><span class="pill">学习中 ${q.learning_due}</span><span class="pill accent">新词 ${q.new_left}</span>` : '';
   // Week chart with the goal drawn as a dashed line.
   const goalChanged = !previous?.goal || previous.goal.target !== g.target || previous.goal.minimum !== g.minimum;
@@ -148,7 +152,7 @@ function renderStats(data) {
     const line = Math.round(g.target / scale * 100);
     $('#week-chart').innerHTML = week.map(([day, n], i) => {
       const reached = n >= g.target ? 'goal' : n >= g.minimum ? 'min' : 'below';
-      const label = `${dateLabel(day + 'T12:00:00')}：${n} 个词，${data.week_attempts?.[day] ?? n} 次练习${reached === 'goal' ? '，完成目标' : reached === 'min' ? '，达到最低' : ''}`;
+      const label = `${dateLabel(day + 'T12:00:00')}：记住 ${n} 个，复习 ${data.week_reviewed?.[day] ?? n} 个词，${data.week_attempts?.[day] ?? n} 次练习${reached === 'goal' ? '，完成目标' : reached === 'min' ? '，达到最低' : ''}`;
       return `<button class="bar-col${i === 6 ? ' today' : ''}" data-chart-day="${day}" title="${label}" aria-label="${label}"><span class="bar-n">${n || ''}</span><span class="bar-track"><span class="bar ${reached}" data-h="${n ? Math.max(4, Math.round(n / scale * 100)) : 0}"></span><span class="goal-line" data-b="${line}"></span></span><span class="bar-d">${i === 6 ? '今天' : '日一二三四五六'[new Date(day + 'T12:00:00').getDay()]}</span></button>`;
     }).join('');
     applySizes($('#week-chart'));
@@ -158,8 +162,8 @@ function renderStats(data) {
       : '<div class="empty glass"><strong>生词本还是空的</strong><p class="muted">查一个词，点“加入生词本”，它就会出现在这里。</p></div>';
   }
   if (!previous?.goal || previous.today !== data.today) return '';
-  if (!previous.goal.met_goal && g.met_goal) return `今天的目标完成了（${g.done} 个）`;
-  if (!previous.goal.met_minimum && g.met_minimum) return `最低目标完成（${g.done} / ${g.target}）`;
+  if (!previous.goal.met_goal && g.met_goal) return `今天的目标完成了（记住 ${g.done} 个）`;
+  if (!previous.goal.met_minimum && g.met_minimum) return `最低目标完成（记住 ${g.done} / ${g.target}）`;
   return '';
 }
 function refreshStats({force = false} = {}) {
@@ -461,11 +465,12 @@ function renderReviewDone(stats, last) {
   const tomorrow = Object.values(stats.forecast || {})[0] || 0;
   const topUp = !g.met_goal && q.new_total > 0 ? Math.min(g.remaining, q.new_total) : 0;
   const title = g.met_goal ? '今天的目标完成了' : g.met_minimum ? '最低目标完成了' : '到期的词复习完了';
-  const gap = g.met_goal ? '' : g.met_minimum ? `离今天的目标还差 ${g.remaining} 个。` : `离最低目标还差 ${g.to_minimum} 个。`;
+  const gap = (g.met_goal ? '' : g.met_minimum ? `离今天的目标还差 ${g.remaining} 个。` : `离最低目标还差 ${g.to_minimum} 个。`)
+    + (g.forgot ? `今天有 ${g.forgot} 个词还没记住，之后复习时想起来就会计入。` : '');
   const streak = stats.streak > 1 ? `已连续 <strong>${stats.streak}</strong> 天达到最低目标。` : '';
   const retention = stats.retention?.reviews >= 20 ? `<p class="muted small">近 30 天复习记住率 ${(stats.retention.rate * 100).toFixed(0)}%（目标 ${Math.round((settings?.retention ?? 0.9) * 100)}%）</p>` : '';
   box.innerHTML = `<div class="done glass strong"><div class="done-icon ${g.met_minimum ? 'ok' : ''}">${icon(g.met_minimum ? 'check' : 'clock')}</div><h2>${title}</h2>
-    <div class="done-goal"><div class="today-big"><span>${g.done}</span><span class="goal-of">/ ${g.target} 个词</span></div><div class="goal-bar" id="done-goal-bar"><span class="goal-fill"></span><span class="goal-min"></span></div></div>
+    <div class="done-goal"><div class="today-big"><span>${g.done}</span><span class="goal-of">/ ${g.target} 个已记住</span></div><div class="goal-bar" id="done-goal-bar"><span class="goal-fill"></span><span class="goal-min"></span></div></div>
     ${gap || streak ? `<p>${gap}${streak}</p>` : ''}
     <p class="muted">${topUp ? `到期的词都复习完了，还有 ${q.new_total} 个新词在排队。` : ''}${tomorrow ? `明天约有 ${tomorrow} 个词到期。` : stats.next_due ? `下一个词 ${Study.intervalLabel(stats.next_due)}到期。` : ''}</p>${retention}
     <div class="button-row center">${topUp ? `<button class="button primary" data-extra-new="${topUp}">再学 ${topUp} 个新词，完成今天的目标</button><button class="button ghost" data-view="lookup">先去阅读</button>` : '<button class="button primary" data-view="lookup">继续阅读</button>'}</div></div>`;
@@ -507,7 +512,7 @@ function renderReviewCard(card) {
     </article>
     <div id="rating-dock" class="rating-dock glass strong" hidden>
       <div class="rating-buttons">${RATINGS.map(([n, label, help]) => `<button class="rate r${n}" data-rating="${n}"><kbd>${n}</kbd><strong>${label}</strong><small>${help}</small></button>`).join('')}</div>
-      <p class="muted small rating-tip">看了答案才想起来，请选“忘了”。评分只影响下次出现的时间。</p>
+      <p class="muted small rating-tip">看了答案才想起来，请选“不记得”。只有“费力想起”和“记得”计入今天记住的词。</p>
     </div>`;
   review.startedAt = Date.now();
   if (cloze && card.typing) setTimeout(() => $('#cloze-input')?.focus(), 30);
@@ -665,7 +670,7 @@ function renderSheet(detail, result) {
     p.stability ? `记忆稳定性 ${p.stability} 天` : '',
     `${dateLabel(card.created, {year:'numeric'})} 收录`,
   ].filter(Boolean);
-  const history = detail.history.length ? `<div class="history" aria-label="复习记录">${detail.history.slice(-30).map(h => `<span class="dot-r r${h.rating}" title="${dateLabel(h.created)} · ${RATINGS[h.rating - 1][1]}"></span>`).join('')}</div>` : '';
+  const history = detail.history.length ? `<div class="history" aria-label="复习记录">${detail.history.slice(-30).map(h => `<span class="dot-r r${Math.min(h.rating, 3)}" title="${dateLabel(h.created)} · ${RATING_NAMES[h.rating] || ''}"></span>`).join('')}</div>` : '';
   const contexts = detail.encounters.filter(e => e.context);
   $('#sheet-body').innerHTML = `<div class="facts">${facts.map(f => `<span>${escapeHTML(f)}</span>`).join('')}</div>${history}
     ${result.found ? explanationHTML(result.explanation, false, 'sheet', card.word) : `<p>${escapeHTML(card.meaning)}</p>`}
@@ -832,7 +837,7 @@ document.addEventListener('keydown', event => {
     if (document.activeElement?.id === 'cloze-input' && event.key === 'Enter') { event.preventDefault(); checkCloze(); return; }
     if (inField() || mod || event.altKey) return;
     if (event.code === 'Space' && document.activeElement?.tagName !== 'BUTTON') { event.preventDefault(); if (review.card.mode === 'cloze' && review.card.typing) $('#cloze-input')?.focus(); else revealAnswer(); return; }
-    if (['1', '2', '3', '4'].includes(event.key)) { submitRating(event.key); return; }
+    if (['1', '2', '3'].includes(event.key)) { submitRating(event.key); return; }
     if (event.key === 'Enter' && review.shown && review.suggested && document.activeElement?.tagName !== 'BUTTON') { event.preventDefault(); submitRating(review.suggested); return; }
     if (event.key.toLowerCase() === 'h') { useHint(); return; }
     if (event.key.toLowerCase() === 'p' && (review.card.mode !== 'cloze' || review.shown)) { $('#review-content [data-speak]')?.click(); return; }
