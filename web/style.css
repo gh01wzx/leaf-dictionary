@@ -299,13 +299,14 @@ blockquote cite { display: block; margin-top: 4px; font: 12px var(--font); color
 .today-big { display: flex; align-items: baseline; gap: 8px; margin: 8px 0 2px; }
 .today-big span:first-child { font: 650 44px/1 var(--font-display); letter-spacing: -.03em; }
 .today-big span:last-child { color: var(--text-2); }
-.today-card .button { margin-top: 16px; }
 .week-chart { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 112px; margin: 12px 0 6px; }
 .bar-col { display: grid; grid-template-rows: 16px 1fr 18px; gap: 4px; border: 0; background: none; padding: 0; color: var(--text-3); font-size: 11px; }
 .bar-n { font: 600 11px/16px var(--font-en); color: var(--text-2); }
 .bar-track { position: relative; display: block; border-radius: 7px; background: var(--fill); overflow: hidden; }
-.bar { position: absolute; left: 0; right: 0; bottom: 0; height: var(--h, 0%); border-radius: 7px; background: color-mix(in srgb, var(--accent) 55%, transparent); transition: height .5s var(--ease); }
-.bar-col.today .bar { background: var(--accent); }
+.bar { position: absolute; left: 0; right: 0; bottom: 0; height: var(--h, 0%); border-radius: 7px; background: var(--fill-strong); transition: height .5s var(--ease); }
+.bar.min { background: color-mix(in srgb, var(--accent) 45%, transparent); }
+.bar.goal { background: var(--accent); }
+.goal-line { position: absolute; left: -3px; right: -3px; height: 0; border-top: 1.5px dashed color-mix(in srgb, var(--text-3) 70%, transparent); pointer-events: none; }
 .bar-col.today .bar-d { color: var(--accent); font-weight: 600; }
 .section-head { display: flex; justify-content: space-between; align-items: center; margin: 28px 6px 12px; }
 .section-head h2 { font-size: 18px; }
@@ -317,8 +318,6 @@ blockquote cite { display: block; margin-top: 4px; font: 12px var(--font); color
 
 /* ---------------------------------------------------------------- review */
 .queue-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-.progress { height: 6px; border-radius: 99px; background: var(--fill); overflow: hidden; margin: 0 4px 18px; }
-.progress span { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 70%, #fff), var(--accent)); transition: width .5s var(--ease); }
 .review-card { padding: 22px 30px 28px; min-height: 300px; animation: rise .25s var(--ease); }
 .review-top { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
 .mode-tag { font-size: 12px; font-weight: 650; padding: 4px 10px; border-radius: 99px; color: var(--accent); background: var(--accent-soft); }
@@ -480,3 +479,29 @@ dialog[open] { animation: pop .22s var(--ease); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ---------------------------------------------------------------- daily goal */
+:root { --goal-below: #e08a1e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --goal-below: #f0a63a; } }
+:root[data-theme="dark"] { --goal-below: #f0a63a; }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.goal-of { color: var(--text-2); font-size: 16px; }
+.goal-of span { font: inherit; letter-spacing: 0; }
+.goal-bar { position: relative; height: 10px; border-radius: 99px; background: var(--fill-strong); margin: 12px 0 10px; }
+.goal-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 99px; transition: width .5s var(--ease), background .3s; }
+.goal-fill.below { background: var(--goal-below); }
+.goal-fill.min { background: color-mix(in srgb, var(--accent) 70%, #9be3b9); }
+.goal-fill.goal { background: var(--accent); }
+.goal-min { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; border-radius: 2px; background: var(--text-2); opacity: .55; }
+.goal-text { color: var(--text-2); font-size: 14px; line-height: 1.55; min-height: 2.6em; }
+.today-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.goal-strip { display: flex; align-items: center; gap: 14px; margin: 0 4px 18px; }
+.goal-strip .goal-bar { flex: 1; margin: 0; height: 8px; }
+.goal-label { font-size: 13px; color: var(--text-2); white-space: nowrap; }
+.goal-label strong { font: 650 15px var(--font-en); color: var(--text); }
+.ring.below .ring-value { stroke: var(--goal-below); }
+.ring.min .ring-value { stroke: color-mix(in srgb, var(--accent) 70%, #9be3b9); }
+.ring.goal .ring-value { stroke: var(--accent); }
+.done-goal { width: min(360px, 100%); margin: 4px 0; }
+.done-goal .today-big { justify-content: center; }
+.toast.celebrate { color: var(--accent); font-weight: 600; }

@@ -29,7 +29,7 @@
         <button class="nav-item" data-view="settings"><span data-icon="settings"></span><span class="nav-label">设置</span></button>
       </nav>
       <div class="sidebar-today" id="sidebar-today" aria-live="polite">
-        <div class="ring" id="today-ring" role="img" aria-label="今日复习进度"><svg viewBox="0 0 36 36"><circle class="ring-track" cx="18" cy="18" r="15.5"/><circle class="ring-value" id="ring-value" cx="18" cy="18" r="15.5"/></svg><span id="ring-text">0</span></div>
+        <div class="ring" id="today-ring" role="img" aria-label="今日目标进度"><svg viewBox="0 0 36 36"><circle class="ring-track" cx="18" cy="18" r="15.5"/><circle class="ring-value" id="ring-value" cx="18" cy="18" r="15.5"/></svg><span id="ring-text">0</span></div>
         <div><strong id="today-summary">今天</strong><span id="today-detail" class="muted">正在加载</span></div>
       </div>
       <div class="sidebar-foot muted"><span class="dot"></span>完全离线 · v__VERSION__</div>
@@ -65,15 +65,16 @@
         <div id="home">
           <div class="home-grid">
             <article class="glass today-card">
-              <div class="eyebrow">今日学习</div>
-              <div class="today-big"><span id="home-due">0</span><span>个词等你复习</span></div>
-              <p class="muted small" id="home-breakdown"></p>
-              <button class="button primary" data-view="review">开始复习 <kbd>R</kbd></button>
+              <div class="card-top"><div class="eyebrow">今日目标</div><span class="pill" id="goal-state" hidden></span></div>
+              <div class="today-big"><span id="goal-done">0</span><span class="goal-of">/ <span id="goal-target">30</span> 个词</span></div>
+              <div class="goal-bar" id="home-goal-bar" role="progressbar" aria-label="今日目标进度" aria-valuemin="0"><span class="goal-fill"></span><span class="goal-min" title="最低目标"></span></div>
+              <p class="goal-text" id="goal-text"></p>
+              <div class="today-actions"><button class="button primary" data-view="review">开始复习 <kbd>R</kbd></button><span class="muted small" id="home-breakdown"></span></div>
             </article>
             <article class="glass stat-card">
               <div class="eyebrow">近 7 天</div>
               <div id="week-chart" class="week-chart" role="group" aria-label="近 7 天每天复习的不同单词数"></div>
-              <p class="muted small" id="week-note">每天复习过的不同单词数</p>
+              <p class="muted small" id="week-note">每天复习的不同单词数 · 虚线是每日目标</p>
             </article>
           </div>
           <div class="section-head"><h2>最近收录</h2><button class="link-button" data-view="library">全部生词 →</button></div>
@@ -87,7 +88,7 @@
           <div><h1 id="review-title">复习</h1><p class="muted" id="review-sub">先回忆，再看答案</p></div>
           <div class="queue-pills" id="queue-pills"></div>
         </header>
-        <div class="progress" role="progressbar" aria-label="今日进度" aria-valuemin="0" aria-valuemax="100" id="review-progress"><span id="review-progress-bar"></span></div>
+        <div class="goal-strip"><div class="goal-bar" id="review-goal-bar" role="progressbar" aria-label="今日目标进度" aria-valuemin="0"><span class="goal-fill"></span><span class="goal-min" title="最低目标"></span></div><span class="goal-label" id="review-goal-label"></span></div>
         <div id="review-content" aria-live="polite"></div>
       </section>
 
@@ -119,8 +120,16 @@
           <article class="glass panel">
             <h2>复习</h2>
             <div class="setting">
-              <div><strong>每天新词</strong><p class="muted small">每天开始学的新词上限。到期的复习不设上限，所以不会悄悄积压。建议 10–20 个。</p></div>
-              <div class="stepper"><button class="icon-button" data-step="-5" aria-label="减少">−</button><input id="setting-new" type="number" min="0" max="100" step="1" aria-label="每天新词数"><button class="icon-button" data-step="5" aria-label="增加">＋</button></div>
+              <div><strong>每日目标</strong><p class="muted small">每天想复习多少个不同的词。首页、侧栏和复习页都会显示“已复习 / 目标”；同一个词一天复习多次只算一个。</p></div>
+              <div class="stepper"><button class="icon-button" data-adjust="daily_goal" data-by="-5" aria-label="减少每日目标">−</button><input id="setting-goal" data-setting="daily_goal" type="number" min="1" max="500" step="1" aria-label="每日目标"><button class="icon-button" data-adjust="daily_goal" data-by="5" aria-label="增加每日目标">＋</button></div>
+            </div>
+            <div class="setting">
+              <div><strong>最低目标</strong><p class="muted small">状态不好的日子，做到这个数就算没有中断。连续天数按它计算。</p></div>
+              <div class="stepper"><button class="icon-button" data-adjust="daily_minimum" data-by="-1" aria-label="减少最低目标">−</button><input id="setting-minimum" data-setting="daily_minimum" type="number" min="1" max="500" step="1" aria-label="最低目标"><button class="icon-button" data-adjust="daily_minimum" data-by="1" aria-label="增加最低目标">＋</button></div>
+            </div>
+            <div class="setting">
+              <div><strong>每天新词</strong><p class="muted small">每天开始学的新词上限。到期的复习不设上限，所以不会悄悄积压。建议 10–20 个；到期的词不够完成目标时，复习完成页可以一键加学新词。</p></div>
+              <div class="stepper"><button class="icon-button" data-adjust="new_per_day" data-by="-5" aria-label="减少每天新词">−</button><input id="setting-new" data-setting="new_per_day" type="number" min="0" max="100" step="1" aria-label="每天新词数"><button class="icon-button" data-adjust="new_per_day" data-by="5" aria-label="增加每天新词">＋</button></div>
             </div>
             <div class="setting">
               <div><strong>目标记住率</strong><p class="muted small" id="retention-note">到期时还能想起的概率。越高复习越频繁。</p></div>

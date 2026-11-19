@@ -1,5 +1,6 @@
 """Review science: daily new-word cap, interleaving, receptive -> productive, undo, own sentences."""
 from datetime import timedelta
+from unittest.mock import patch
 import unittest
 
 from fsrs import Card, Rating, State
@@ -170,6 +171,73 @@ class StudyTests(helpers.TempData, unittest.TestCase):
             for _ in range(app.LEECH_FAILURES):
                 db.execute('INSERT INTO reviews(card_id,rating,created,log_json) VALUES(?,?,?,?)', (card_id, 1, app.now().isoformat(), '{}'))
         self.assertTrue(app.card_detail(card_id)['card']['progress']['leech'])
+
+    def review_words(self, count, days_ago=0):
+        """Record one review each for `count` distinct words on a past study day."""
+        when = app.day_start(app.study_day(app.now())) - timedelta(days=days_ago) + timedelta(hours=1)
+        with app.connect() as db:
+            ids = [r[0] for r in db.execute('SELECT id FROM cards ORDER BY id LIMIT ?', (count,))]
+            for card_id in ids:
+                db.execute('INSERT INTO reviews(card_id,rating,created,log_json) VALUES(?,?,?,?)', (card_id, 3, when.isoformat(), '{}'))
+
+    def test_daily_goal_progress_counts_distinct_words(self):
+        app.update_settings({'daily_goal':3, 'daily_minimum':2})
+        for word in ('bank', 'field', 'subtle', 'reluctant'):
+            helpers.collect(word)
+        goal = app.stats()['goal']
+        self.assertEqual((goal['done'], goal['target'], goal['minimum']), (0, 3, 2))
+        self.assertFalse(goal['met_minimum'])
+        self.assertEqual(goal['to_minimum'], 2)
+        card = app.review_next()['card']
+        app.rate({'id':card['id'], 'rating':1, 'version':card['card_json']})
+        again = app.review_next(focus=card['id'])['card']
+        app.rate({'id':again['id'], 'rating':3, 'version':again['card_json']})
+        goal = app.stats()['goal']
+        self.assertEqual(goal['done'], 1, 'the same word twice counts once')
+        for _ in range(2):
+            card = app.review_next(last=card['id'])['card']
+            app.rate({'id':card['id'], 'rating':3, 'version':card['card_json']})
+        goal = app.stats()['goal']
+        self.assertTrue(goal['met_minimum'] and goal['met_goal'])
+        self.assertEqual(goal['remaining'], 0)
+
+    def test_goal_settings_keep_minimum_at_or_below_goal(self):
+        self.assertEqual((app.get_settings()['daily_goal'], app.get_settings()['daily_minimum']), (30, 8))
+        with self.assertRaises(ValueError):
+            app.update_settings({'daily_minimum':31})
+        with self.assertRaises(ValueError):
+            app.update_settings({'daily_goal':5})
+        for bad in ({'daily_goal':0}, {'daily_goal':501}, {'daily_minimum':True}, {'daily_goal':'30'}):
+            with self.assertRaises(ValueError):
+                app.update_settings(bad)
+        self.assertEqual(app.update_settings({'daily_goal':5, 'daily_minimum':5})['daily_goal'], 5)
+
+    def test_top_up_adds_new_words_for_today_only(self):
+        app.update_settings({'new_per_day':1})
+        for word in ('bank', 'field', 'subtle', 'reluctant'):
+            helpers.collect(word)
+        self.assertEqual(app.stats()['queue']['new_left'], 1)
+        result = app.add_new_today({'count':2})
+        self.assertEqual(result['queue']['new_left'], 3)
+        self.assertEqual(result['queue']['extra_new'], 2)
+        with patch('app.now', return_value=app.now() + timedelta(days=1)):
+            self.assertEqual(app.stats()['queue']['extra_new'], 0)
+        for bad in (0, -1, True, '2'):
+            with self.assertRaises(ValueError):
+                app.add_new_today({'count':bad})
+
+    def test_streak_counts_days_that_reach_the_minimum(self):
+        app.update_settings({'daily_goal':4, 'daily_minimum':2})
+        for word in ('bank', 'field', 'subtle', 'reluctant'):
+            helpers.collect(word)
+        self.review_words(2, days_ago=1)
+        self.review_words(3, days_ago=2)
+        self.review_words(1, days_ago=3)   # below the minimum: breaks the chain
+        self.review_words(4, days_ago=4)
+        stats = app.stats()
+        self.assertEqual(stats['streak'], 2, 'today unfinished does not break the streak')
+        self.review_words(2, days_ago=0)
+        self.assertEqual(app.stats()['streak'], 3)
 
 
 def Scheduler_no_fuzz(retention):

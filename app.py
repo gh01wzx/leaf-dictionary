@@ -56,7 +56,10 @@ DICTIONARY_PATH = data_file('dictionary.sqlite3')
 DAY_START_HOUR = 4
 # Short learning steps may be taken a little early when nothing else is waiting.
 LEARN_AHEAD = timedelta(minutes=20)
-DEFAULT_SETTINGS = {'new_per_day':10, 'retention':0.9, 'typing':True}
+# daily_goal / daily_minimum: how many different words to review per study day
+# (a habit target and the smallest amount that still counts as a "kept" day).
+DEFAULT_SETTINGS = {'new_per_day':10, 'retention':0.9, 'typing':True, 'daily_goal':30, 'daily_minimum':8}
+GOAL_LIMIT = 500
 RETENTION_CHOICES = (0.85, 0.9, 0.95)
 MASTERED_DAYS = 21          # stability at which a word is counted as mastered
 LEECH_FAILURES = 5          # repeated forgetting suggests rewriting the definition
@@ -200,7 +203,16 @@ def update_settings(data):
         if not isinstance(data['typing'], bool):
             raise ValueError('拼写练习选项格式不正确。')
         changes['typing'] = data['typing']
+    for key, label in (('daily_goal', '每日目标'), ('daily_minimum', '最低目标')):
+        if key in data:
+            value = data[key]
+            if not isinstance(value, int) or isinstance(value, bool) or not 1 <= value <= GOAL_LIMIT:
+                raise ValueError(f'{label}请填写 1 到 {GOAL_LIMIT} 之间的整数。')
+            changes[key] = value
     with connect() as db:
+        merged = {**get_settings(db), **changes}
+        if merged['daily_minimum'] > merged['daily_goal']:
+            raise ValueError('最低目标不能高于每日目标。')
         db.executemany('INSERT INTO settings(key,value) VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value',
             [(key, json.dumps(value)) for key, value in changes.items()])
         return get_settings(db)
@@ -486,12 +498,35 @@ def queue_counts(db, current):
     new_today = db.execute('''SELECT COUNT(*) FROM (SELECT MIN(created) AS first FROM reviews
         GROUP BY card_id HAVING first>=?)''', (start,)).fetchone()[0]
     attempts_today = db.execute('SELECT COUNT(*) FROM reviews WHERE created>=?', (start,)).fetchone()[0]
-    new_left = min(row['new_total'] or 0, max(0, settings['new_per_day'] - new_today))
+    extra = extra_new_today(db, current)
+    new_left = min(row['new_total'] or 0, max(0, settings['new_per_day'] + extra - new_today))
     learning_due, review_due = row['learning_due'] or 0, row['review_due'] or 0
     return {'learning_due':learning_due, 'review_due':review_due, 'new_left':new_left,
-        'new_total':row['new_total'] or 0, 'new_today':new_today, 'new_per_day':settings['new_per_day'],
+        'new_total':row['new_total'] or 0, 'new_today':new_today, 'new_per_day':settings['new_per_day'], 'extra_new':extra,
         'attempts_today':attempts_today, 'due':learning_due + review_due + new_left,
         'next_learning':row['next_learning'], 'next_due':row['next_due']}
+
+
+def extra_new_today(db, current):
+    """New words added on top of the daily cap for the current study day only."""
+    row = db.execute("SELECT value FROM settings WHERE key='extra_new'").fetchone()
+    if not row:
+        return 0
+    value = json.loads(row['value'])
+    return value.get('count', 0) if value.get('day') == str(study_day(current)) else 0
+
+
+def add_new_today(data):
+    """Top up today's new words, e.g. to reach the daily goal when the due list is done."""
+    count = data.get('count')
+    if not isinstance(count, int) or isinstance(count, bool) or not 1 <= count <= GOAL_LIMIT:
+        raise ValueError('请填写要加学的新词数量。')
+    current = now()
+    with connect() as db:
+        total = count + extra_new_today(db, current)
+        db.execute("INSERT INTO settings(key,value) VALUES('extra_new',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value",
+            (json.dumps({'day':str(study_day(current)), 'count':total}),))
+    return stats()
 
 
 def pick_next(db, current, last=None, focus=None):
@@ -749,8 +784,11 @@ def stats():
             if day in words_by_day:
                 words_by_day[day].add(row['card_id'])
                 attempts_by_day[day] += 1
-        active_days = {str(study_day(datetime.fromisoformat(r[0]))) for r in db.execute(
-            'SELECT created FROM reviews WHERE created>=?', ((current - timedelta(days=400)).isoformat(),))}
+        settings = get_settings(db)
+        words_per_day = {}
+        for card_id, created in db.execute('SELECT card_id,created FROM reviews WHERE created>=?',
+                ((current - timedelta(days=400)).isoformat(),)):
+            words_per_day.setdefault(str(study_day(datetime.fromisoformat(created))), set()).add(card_id)
         mature = [r[0] for r in db.execute('''SELECT rating FROM reviews WHERE created>=? AND prev_card_json IS NOT NULL
             AND json_extract(prev_card_json,'$.state')=2''', ((current - timedelta(days=30)).isoformat(),))]
         forecast_rows = [r[0] for r in db.execute(f'''SELECT c.due FROM cards c WHERE c.paused=0 AND {SEEN_SQL}
@@ -758,8 +796,12 @@ def stats():
         recent = [dict(r) for r in db.execute('''SELECT c.id,c.word,COALESCE(d.meaning,c.meaning) AS meaning,
             c.context,c.source,c.lookups,c.updated FROM cards c LEFT JOIN definition_overrides d ON d.word=c.word
             ORDER BY c.created DESC,c.id DESC LIMIT 6''')]
-    streak, cursor = 0, today if str(today) in active_days else today - timedelta(days=1)
-    while str(cursor) in active_days:
+    # A day counts toward the streak once the minimum is reached. Today only
+    # joins the streak after its minimum is met, so an unfinished day never breaks it.
+    minimum, target = settings['daily_minimum'], settings['daily_goal']
+    kept = {day for day, words in words_per_day.items() if len(words) >= minimum}
+    streak, cursor = 0, today if str(today) in kept else today - timedelta(days=1)
+    while str(cursor) in kept:
         streak += 1
         cursor -= timedelta(days=1)
     forecast = {str(today + timedelta(days=i)):0 for i in range(1, 8)}
@@ -768,7 +810,13 @@ def stats():
         if day in forecast:
             forecast[day] += 1
     week = {day:len(words) for day, words in words_by_day.items()}
-    return {'total':totals['total'], 'active':totals['active'] or 0, 'mastered':totals['mastered'] or 0,
+    done = week[str(today)]
+    goal = {'target':target, 'minimum':minimum, 'done':done,
+        'met_minimum':done >= minimum, 'met_goal':done >= target,
+        'remaining':max(0, target - done), 'to_minimum':max(0, minimum - done),
+        # Words still reachable today: what is due now plus new words not yet added.
+        'reachable':done + counts['due'], 'new_available':max(0, counts['new_total'] - counts['new_left'])}
+    return {'goal':goal, 'total':totals['total'], 'active':totals['active'] or 0, 'mastered':totals['mastered'] or 0,
         'due':counts['due'], 'queue':counts, 'reviewed_today':week[str(today)],
         'review_attempts_today':attempts_by_day[str(today)], 'week':week, 'week_attempts':attempts_by_day,
         'today':str(today), 'as_of':stamp, 'recent':recent, 'next_due':counts['next_due'],
@@ -996,7 +1044,7 @@ class Handler(BaseHTTPRequestHandler):
             routes = {
                 '/api/explain':dictionary_explain, '/api/definition':edit_definition,
                 '/api/rate':rate, '/api/undo':undo_review, '/api/sentence':add_sentence,
-                '/api/settings':update_settings, '/api/import':import_backup,
+                '/api/settings':update_settings, '/api/import':import_backup, '/api/extra-new':add_new_today,
             }
             if path in routes:
                 return self.send(routes[path](data))

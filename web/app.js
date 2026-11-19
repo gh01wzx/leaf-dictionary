@@ -26,6 +26,7 @@ function icon(name) { return `<svg aria-hidden="true" viewBox="0 0 24 24" fill="
 function applySizes(root) {
   root.querySelectorAll('[data-h]').forEach(el => el.style.setProperty('--h', el.dataset.h + '%'));
   root.querySelectorAll('[data-w]').forEach(el => { el.style.width = el.dataset.w + '%'; });
+  root.querySelectorAll('[data-b]').forEach(el => { el.style.bottom = el.dataset.b + '%'; });
 }
 function decorate(root = document) { root.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = icon(el.dataset.icon); }); }
 
@@ -55,6 +56,7 @@ function toast(message, options = {}) {
   const el = $('#toast'), action = $('#toast-action');
   $('#toast-text').textContent = message;
   el.classList.toggle('error', Boolean(options.error));
+  el.classList.toggle('celebrate', Boolean(options.celebrate));
   action.hidden = !options.action;
   action.textContent = options.actionLabel || '撤销';
   action.onclick = options.action ? async () => { el.hidden = true; try { await options.action(); } catch (e) { toast(e.message, true); } } : null;
@@ -88,29 +90,66 @@ try { themeChoice = localStorage.getItem('leaf-theme') || 'auto'; } catch {}
 applyTheme(themeChoice);
 
 // ------------------------------------------------------------------ stats
+function goalSummary(data) {
+  const g = data.goal;
+  if (!data.total) return {state:'', label:'', text:'查词后加入生词本，就能开始复习。'};
+  if (g.met_goal) return {state:'goal', label:'目标完成', text:`今天的目标完成了${g.done > g.target ? `，还多复习了 ${g.done - g.target} 个` : ''}。`};
+  const shortage = g.reachable < g.target
+    ? (g.new_available ? ' 今天到期的词不够，复习完后可以加学新词补足。' : ' 今天能复习的词不够这么多，全部复习完就好。') : '';
+  if (g.met_minimum) return {state:'min', label:'已达最低', text:`最低目标完成了，再复习 ${g.remaining} 个就能完成今天的目标。${shortage}`};
+  if (!g.done) return {state:'none', label:'未开始', text:`今天还没开始，先完成最低的 ${g.minimum} 个就不算中断。${shortage}`};
+  return {state:'none', label:'进行中', text:`还差 ${g.to_minimum} 个达到最低目标（${g.minimum} 个）。${shortage}`};
+}
+function paintGoalBar(bar, g) {
+  if (!bar) return;
+  const fill = bar.querySelector('.goal-fill'), tick = bar.querySelector('.goal-min');
+  fill.style.width = Math.min(100, Math.round(g.done / g.target * 100)) + '%';
+  fill.className = 'goal-fill ' + (g.met_goal ? 'goal' : g.met_minimum ? 'min' : 'below');
+  tick.style.left = Math.min(100, g.minimum / g.target * 100) + '%';
+  tick.hidden = g.minimum >= g.target;
+  bar.setAttribute('aria-valuemax', String(g.target));
+  bar.setAttribute('aria-valuenow', String(g.done));
+  bar.setAttribute('aria-valuetext', `已复习 ${g.done} 个，目标 ${g.target} 个，最低 ${g.minimum} 个`);
+}
+// Returns a short message when this update crosses the minimum or the goal.
 function renderStats(data) {
-  if (statsData?.as_of && data.as_of && Date.parse(data.as_of) < Date.parse(statsData.as_of)) return;
+  if (statsData?.as_of && data.as_of && Date.parse(data.as_of) < Date.parse(statsData.as_of)) return '';
   const previous = statsData; statsData = data;
-  const q = data.queue;
+  const q = data.queue, g = data.goal, summary = goalSummary(data);
+  const level = g.met_goal ? 'goal' : g.met_minimum ? 'min' : 'below';
   for (const id of ['#nav-due', '#tab-due']) { const el = $(id); el.textContent = data.due; el.hidden = !data.due; }
   $('#nav-total').textContent = data.total;
-  const done = data.reviewed_today, goal = done + data.due;
-  const fraction = goal ? done / goal : 1;
-  $('#ring-value').style.strokeDashoffset = String(97.4 * (1 - fraction));
-  $('#ring-text').textContent = data.due;
-  $('#today-summary').textContent = data.due ? `还剩 ${data.due} 个` : (data.total ? '今天完成了' : '还没有生词');
-  $('#today-detail').textContent = `今天复习 ${done} 个词${data.streak > 1 ? ` · 连续 ${data.streak} 天` : ''}`;
-  $('#home-due').textContent = data.due;
-  $('#home-breakdown').textContent = data.total ? `复习 ${q.review_due} · 学习中 ${q.learning_due} · 新词 ${q.new_left}${q.new_total > q.new_left ? `（另有 ${q.new_total - q.new_left} 个排队）` : ''}` : '查词后加入生词本，就能开始复习。';
-  const progress = goal ? Math.round(fraction * 100) : 0;
-  $('#review-progress-bar').style.width = progress + '%';
-  $('#review-progress').setAttribute('aria-valuenow', String(progress));
+  // Sidebar: progress toward today's goal.
+  $('#ring-value').style.strokeDashoffset = String(97.4 * (1 - Math.min(1, g.done / g.target)));
+  $('#today-ring').className = 'ring ' + level;
+  $('#today-ring').setAttribute('aria-label', `今日已复习 ${g.done} 个，目标 ${g.target} 个`);
+  $('#ring-text').textContent = g.done;
+  $('#today-summary').textContent = `${g.done} / ${g.target} 个词`;
+  $('#today-detail').textContent = g.met_goal ? `目标完成${data.streak > 1 ? ` · 连续 ${data.streak} 天` : ''}`
+    : g.met_minimum ? `已达最低 · 还差 ${g.remaining} 个` : `最低 ${g.minimum} 个 · 还差 ${g.to_minimum} 个`;
+  // Home card.
+  $('#goal-done').textContent = g.done;
+  $('#goal-target').textContent = g.target;
+  $('#goal-state').textContent = summary.label;
+  $('#goal-state').hidden = !summary.label;
+  $('#goal-state').className = 'pill ' + (summary.state === 'goal' ? 'ok' : summary.state === 'min' ? 'accent' : '');
+  $('#goal-text').textContent = summary.text + (data.streak > 1 ? ` 已连续 ${data.streak} 天达到最低目标。` : '');
+  $('#home-breakdown').textContent = data.total ? (data.due ? `现在可复习 ${data.due} 个` : '现在没有到期的词') : '';
+  paintGoalBar($('#home-goal-bar'), g);
+  // Review header.
+  paintGoalBar($('#review-goal-bar'), g);
+  $('#review-goal-label').innerHTML = `今日 <strong>${g.done}</strong> / ${g.target}${g.met_goal ? ' · 完成' : g.met_minimum ? ' · 已达最低' : ` · 最低 ${g.minimum}`}`;
   $('#queue-pills').innerHTML = data.total ? `<span class="pill">复习 ${q.review_due}</span><span class="pill">学习中 ${q.learning_due}</span><span class="pill accent">新词 ${q.new_left}</span>` : '';
-  if (JSON.stringify(previous?.week) !== JSON.stringify(data.week)) {
-    const week = Object.entries(data.week), max = Math.max(1, ...week.map(([, n]) => n));
+  // Week chart with the goal drawn as a dashed line.
+  const goalChanged = !previous?.goal || previous.goal.target !== g.target || previous.goal.minimum !== g.minimum;
+  if (goalChanged || JSON.stringify(previous?.week) !== JSON.stringify(data.week)) {
+    // Headroom above the goal keeps the dashed line visible when a day lands exactly on it.
+    const week = Object.entries(data.week), scale = Math.max(g.target * 1.15, ...week.map(([, n]) => n));
+    const line = Math.round(g.target / scale * 100);
     $('#week-chart').innerHTML = week.map(([day, n], i) => {
-      const label = `${dateLabel(day + 'T12:00:00')}：${n} 个词，${data.week_attempts?.[day] ?? n} 次练习`;
-      return `<button class="bar-col${i === 6 ? ' today' : ''}" data-chart-day="${day}" title="${label}" aria-label="${label}"><span class="bar-n">${n || ''}</span><span class="bar-track"><span class="bar" data-h="${n ? Math.max(6, Math.round(n / max * 100)) : 0}"></span></span><span class="bar-d">${i === 6 ? '今天' : '日一二三四五六'[new Date(day + 'T12:00:00').getDay()]}</span></button>`;
+      const reached = n >= g.target ? 'goal' : n >= g.minimum ? 'min' : 'below';
+      const label = `${dateLabel(day + 'T12:00:00')}：${n} 个词，${data.week_attempts?.[day] ?? n} 次练习${reached === 'goal' ? '，完成目标' : reached === 'min' ? '，达到最低' : ''}`;
+      return `<button class="bar-col${i === 6 ? ' today' : ''}" data-chart-day="${day}" title="${label}" aria-label="${label}"><span class="bar-n">${n || ''}</span><span class="bar-track"><span class="bar ${reached}" data-h="${n ? Math.max(4, Math.round(n / scale * 100)) : 0}"></span><span class="goal-line" data-b="${line}"></span></span><span class="bar-d">${i === 6 ? '今天' : '日一二三四五六'[new Date(day + 'T12:00:00').getDay()]}</span></button>`;
     }).join('');
     applySizes($('#week-chart'));
   }
@@ -118,6 +157,10 @@ function renderStats(data) {
     $('#recent-list').innerHTML = data.recent.length ? data.recent.map(row => `<button class="recent glass" data-open-card="${row.id}"><strong>${escapeHTML(row.word)}</strong><span>${escapeHTML(row.meaning)}</span></button>`).join('')
       : '<div class="empty glass"><strong>生词本还是空的</strong><p class="muted">查一个词，点“加入生词本”，它就会出现在这里。</p></div>';
   }
+  if (!previous?.goal || previous.today !== data.today) return '';
+  if (!previous.goal.met_goal && g.met_goal) return `今天的目标完成了（${g.done} 个）`;
+  if (!previous.goal.met_minimum && g.met_minimum) return `最低目标完成（${g.done} / ${g.target}）`;
+  return '';
 }
 function refreshStats({force = false} = {}) {
   if (statsPending && !force) return statsPending;
@@ -410,17 +453,23 @@ function renderReviewDone(stats, last) {
   const soon = q.next_learning && Date.parse(q.next_learning) - Date.now() < 30 * 60000;
   if (soon) {
     const wait = Math.max(0, Date.parse(q.next_learning) - Date.now());
-    box.innerHTML = `<div class="done glass strong"><div class="done-icon">${icon('clock')}</div><h2>${Study.intervalLabel(q.next_learning)}再看一次</h2><p class="muted">刚学的词需要隔一小会儿再回忆，间隔本身就是记忆的一部分。到时间会自动出现。</p><div class="button-row center"><button class="button secondary" id="review-now">现在就看</button><button class="button ghost" data-view="lookup">先去阅读</button></div></div>`;
+    box.innerHTML = `<div class="done glass strong"><div class="done-icon">${icon('clock')}</div><h2>${Study.intervalLabel(q.next_learning)}再看一次</h2><p class="muted">刚学的词需要隔一小会儿再回忆，间隔本身就是记忆的一部分。到时间会自动出现。</p><div class="button-row center">${!stats.goal.met_goal && q.new_total > 0 ? `<button class="button primary" data-extra-new="${Math.min(stats.goal.remaining, q.new_total)}">先学 ${Math.min(stats.goal.remaining, q.new_total)} 个新词</button>` : ''}<button class="button secondary" id="review-now">现在就看</button><button class="button ghost" data-view="lookup">先去阅读</button></div></div>`;
     waitTimer = setTimeout(() => { if (currentView === 'review' && !review.card) loadReview(); }, Math.min(wait + 800, 30 * 60000));
     return;
   }
+  const g = stats.goal;
   const tomorrow = Object.values(stats.forecast || {})[0] || 0;
-  const capped = q.new_total > 0 && q.new_left === 0;
-  const retention = stats.retention?.reviews >= 20 ? `<p class="muted small">近 30 天复习记住率 ${(stats.retention.rate * 100).toFixed(0)}%（目标 ${(settings?.retention ?? 0.9) * 100}%）</p>` : '';
-  box.innerHTML = `<div class="done glass strong"><div class="done-icon ok">${icon('check')}</div><h2>今天的复习完成了</h2>
-    <p>今天复习了 <strong>${stats.reviewed_today}</strong> 个词${stats.streak > 1 ? `，已连续 <strong>${stats.streak}</strong> 天` : ''}。</p>
-    <p class="muted">${capped ? `今天的 ${q.new_per_day} 个新词已经学完，还有 ${q.new_total} 个新词排队。` : ''}${tomorrow ? `明天约有 ${tomorrow} 个词到期。` : stats.next_due ? `下一个词 ${Study.intervalLabel(stats.next_due)}到期。` : ''}</p>${retention}
-    <div class="button-row center"><button class="button primary" data-view="lookup">继续阅读</button>${capped ? '<button class="button ghost" data-view="settings">调整每日新词</button>' : ''}</div></div>`;
+  const topUp = !g.met_goal && q.new_total > 0 ? Math.min(g.remaining, q.new_total) : 0;
+  const title = g.met_goal ? '今天的目标完成了' : g.met_minimum ? '最低目标完成了' : '到期的词复习完了';
+  const gap = g.met_goal ? '' : g.met_minimum ? `离今天的目标还差 ${g.remaining} 个。` : `离最低目标还差 ${g.to_minimum} 个。`;
+  const streak = stats.streak > 1 ? `已连续 <strong>${stats.streak}</strong> 天达到最低目标。` : '';
+  const retention = stats.retention?.reviews >= 20 ? `<p class="muted small">近 30 天复习记住率 ${(stats.retention.rate * 100).toFixed(0)}%（目标 ${Math.round((settings?.retention ?? 0.9) * 100)}%）</p>` : '';
+  box.innerHTML = `<div class="done glass strong"><div class="done-icon ${g.met_minimum ? 'ok' : ''}">${icon(g.met_minimum ? 'check' : 'clock')}</div><h2>${title}</h2>
+    <div class="done-goal"><div class="today-big"><span>${g.done}</span><span class="goal-of">/ ${g.target} 个词</span></div><div class="goal-bar" id="done-goal-bar"><span class="goal-fill"></span><span class="goal-min"></span></div></div>
+    ${gap || streak ? `<p>${gap}${streak}</p>` : ''}
+    <p class="muted">${topUp ? `到期的词都复习完了，还有 ${q.new_total} 个新词在排队。` : ''}${tomorrow ? `明天约有 ${tomorrow} 个词到期。` : stats.next_due ? `下一个词 ${Study.intervalLabel(stats.next_due)}到期。` : ''}</p>${retention}
+    <div class="button-row center">${topUp ? `<button class="button primary" data-extra-new="${topUp}">再学 ${topUp} 个新词，完成今天的目标</button><button class="button ghost" data-view="lookup">先去阅读</button>` : '<button class="button primary" data-view="lookup">继续阅读</button>'}</div></div>`;
+  paintGoalBar($('#done-goal-bar'), g);
 }
 function reviewContextHTML(card) {
   const own = card.encounters?.find(e => e.context && e.source !== '我的造句') || (card.context ? {context:card.context, source:card.source} : null);
@@ -523,9 +572,10 @@ async function submitRating(rating) {
   $$('[data-rating]').forEach(el => { el.disabled = true; });
   try {
     const data = await api('rate', {id:card.id, rating:Number(rating), version:card.card_json, mode:card.mode, duration_ms:Date.now() - review.startedAt});
-    renderStats(data.stats);
+    const milestone = renderStats(data.stats);
     lastRated = {review_id:data.review_id, card_id:card.id, word:card.word};
-    toast(`${card.word} · ${Study.intervalLabel(data.due)}再复习`, {action:undoLastRating});
+    const next = `${card.word} · ${Study.intervalLabel(data.due)}再复习`;
+    toast(milestone ? `${milestone}　${next}` : next, {action:undoLastRating, duration:milestone ? 8000 : undefined, celebrate:Boolean(milestone)});
     if (currentView === 'review') { window.scrollTo({top:0, behavior:'instant'}); await loadReview({last:card.id}); }
   } catch (error) {
     if (error.name !== 'AbortError') toast(error.message, true);
@@ -638,6 +688,8 @@ async function loadSettings() {
 function renderSettings() {
   if (!settings) return;
   $('#setting-new').value = settings.new_per_day;
+  $('#setting-goal').value = settings.daily_goal;
+  $('#setting-minimum').value = settings.daily_minimum;
   $$('#setting-retention [data-retention]').forEach(b => b.setAttribute('aria-checked', String(Number(b.dataset.retention) === settings.retention)));
   $('#retention-note').textContent = {0.85:'复习最少，适合词很多的时候；忘得会多一些。', 0.9:'推荐。记忆效果和复习量比较平衡。', 0.95:'记得更牢，但复习量大约是 90% 时的两倍。'}[settings.retention] || '';
   $('#setting-typing').checked = settings.typing;
@@ -663,7 +715,8 @@ document.addEventListener('click', async event => {
     if (el.dataset.rating) return submitRating(el.dataset.rating);
     if (el.dataset.close) return $('#' + el.dataset.close).close();
     if (el.dataset.filter) { libraryFilter = el.dataset.filter; $$('#library-filter [data-filter]').forEach(b => b.setAttribute('aria-selected', String(b === el))); return loadLibrary(); }
-    if (el.dataset.step) { const v = Math.max(0, Math.min(100, (settings?.new_per_day ?? 10) + Number(el.dataset.step))); return changeSetting({new_per_day:v}); }
+    if (el.dataset.adjust) return changeSetting(adjustedSetting(el.dataset.adjust, (settings?.[el.dataset.adjust] ?? 0) + Number(el.dataset.by)));
+    if (el.dataset.extraNew) { el.disabled = true; renderStats(await api('extra-new', {count:Number(el.dataset.extraNew)})); return loadReview(); }
     if (el.dataset.retention) return changeSetting({retention:Number(el.dataset.retention)});
     if (el.dataset.themeChoice) { themeChoice = el.dataset.themeChoice; try { localStorage.setItem('leaf-theme', themeChoice); } catch {} return applyTheme(themeChoice); }
     if (el.dataset.chartDay && statsData) { const d = el.dataset.chartDay; $('#week-note').textContent = `${dateLabel(d + 'T12:00:00')}：${statsData.week[d]} 个不同的词，${statsData.week_attempts?.[d] ?? 0} 次练习`; return; }
@@ -743,7 +796,16 @@ document.addEventListener('submit', async event => {
 let libraryTimer;
 $('#library-search').addEventListener('input', () => { libraryRequest.cancel(); clearTimeout(libraryTimer); libraryTimer = setTimeout(() => { if (currentView === 'library') loadLibrary().catch(e => toast(e.message, true)); }, 160); });
 $('#library-sort').addEventListener('change', () => loadLibrary());
-$('#setting-new').addEventListener('change', event => changeSetting({new_per_day:Math.max(0, Math.min(100, parseInt(event.target.value, 10) || 0))}));
+// Keep the minimum at or below the goal, whichever one is changed.
+function adjustedSetting(key, value) {
+  const limits = {new_per_day:[0, 100], daily_goal:[1, 500], daily_minimum:[1, 500]};
+  const [low, high] = limits[key];
+  value = Math.max(low, Math.min(high, Math.round(Number(value) || 0)));
+  if (key === 'daily_goal' && value < (settings?.daily_minimum ?? 1)) return {daily_goal:value, daily_minimum:value};
+  if (key === 'daily_minimum' && value > (settings?.daily_goal ?? 500)) return {daily_minimum:value, daily_goal:value};
+  return {[key]:value};
+}
+$$('[data-setting]').forEach(input => input.addEventListener('change', event => changeSetting(adjustedSetting(event.target.dataset.setting, event.target.value))));
 $('#setting-typing').addEventListener('change', event => changeSetting({typing:event.target.checked}));
 $('#speech-accent').addEventListener('change', event => { stopSpeech(); speechAccent = event.target.value; try { localStorage.setItem('leaf-speech-accent', speechAccent); } catch {} });
 $('#import-file').addEventListener('change', async event => {
