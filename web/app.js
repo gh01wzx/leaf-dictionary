@@ -37,16 +37,18 @@ const lookupRequest = new LeafRequests.LatestRequest();
 const suggestRequest = new LeafRequests.LatestRequest();
 const libraryRequest = new LeafRequests.LatestRequest();
 const reviewRequest = new LeafRequests.LatestRequest();
+const sheetRequest = new LeafRequests.LatestRequest();
 const libraryPageSize = 40;
-// Three answers. Only 费力想起 and 记得 count as remembered toward the daily goal.
-const RATINGS = [[1,'不记得','想不起来，或看了答案才想起'],[2,'费力想起','想了一会儿，或靠提示才想起'],[3,'记得','很快就想起意思']];
+// Recall grades determine intervals. Daily progress counts each practised word once.
+const RATINGS = [[1,'不记得','想不起来，或看了答案才想起'],[2,'费力想起','想了一会儿才想起，没有看答案'],[3,'记得','很快就想起意思']];
 const RATING_NAMES = {1:'不记得', 2:'费力想起', 3:'记得', 4:'记得'};  // 4: Easy from older versions
 const STATE_LABEL = {new:'新词', learning:'学习中', relearning:'重新学习', review:'复习中'};
 
 let currentView = 'lookup', currentResult = null, statsData = null, settings = null;
 let review = {card:null, shown:false, busy:false, loading:false, startedAt:0, check:null, hintLevel:0, suggested:null};
-let lastRated = null, waitTimer = null;
-let libraryRows = [], libraryShown = 0, libraryFilter = 'all';
+let lastRated = null, waitTimer = null, undoBusy = false, extraBusy = false, extraRequest = null;
+let libraryFilter = 'all', libraryCursor = null, libraryBusy = false;
+const displayedWords = new Set();
 let sheetCard = null, sheetResult = null;
 let definitionEditor = null, definitionBusy = false, saveBusy = false;
 let suggestions = [], suggestionIndex = -1, suggestTimer = null, toastTimer = null, statsPending = null;
@@ -75,12 +77,11 @@ function confirmAction(title, message, ok = '确认') {
 function inField() { const el = document.activeElement; return el && (['INPUT','TEXTAREA','SELECT'].includes(el.tagName) || el.isContentEditable); }
 function anyDialogOpen() { return $$('dialog').some(d => d.open); }
 function highlightWord(text, word) {
-  const safe = escapeHTML(text);
-  if (!word) return safe;
-  const stem = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/e$/, '');
-  try { return safe.replace(new RegExp(`(?<![A-Za-z])(${stem}[a-z]*)`, 'gi'), '<mark>$1</mark>'); } catch { return safe; }
+  if (!word) return escapeHTML(text);
+  const literal = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/['’]/g, "['’]");
+  const wholeWord = new RegExp('(?<![\\p{L}\\p{M}])(' + literal + ')(?![\\p{L}\\p{M}])', 'giu');
+  return String(text).split(wholeWord).map((part, i) => i % 2 ? '<mark>' + escapeHTML(part) + '</mark>' : escapeHTML(part)).join('');
 }
-
 // ------------------------------------------------------------------ theme
 function applyTheme(choice) {
   if (choice === 'light' || choice === 'dark') document.documentElement.dataset.theme = choice;
@@ -94,14 +95,10 @@ applyTheme(themeChoice);
 // ------------------------------------------------------------------ stats
 function goalSummary(data) {
   const g = data.goal;
-  if (!data.total) return {state:'', label:'', text:'查词后加入生词本，就能开始复习。'};
-  const pending = g.forgot ? ` ${g.forgot} 个没记住的词稍后会再出现，想起来了就会计入。` : '';
-  if (g.met_goal) return {state:'goal', label:'目标完成', text:`今天记住了 ${g.done} 个词，目标完成${g.done > g.target ? `，还多记住了 ${g.done - g.target} 个` : ''}。${pending}`};
-  const shortage = g.reachable < g.target
-    ? (g.new_available ? ' 今天到期的词不够，复习完后可以加学新词补足。' : ' 今天能复习的词不够这么多，全部复习完就好。') : '';
-  if (g.met_minimum) return {state:'min', label:'已达最低', text:`最低目标完成了，再记住 ${g.remaining} 个就能完成今天的目标。${pending}${shortage}`};
-  if (!g.reviewed) return {state:'none', label:'未开始', text:`今天还没开始，先记住 ${g.minimum} 个就不算中断。${shortage}`};
-  return {state:'none', label:'进行中', text:`已记住 ${g.done} 个，还差 ${g.to_minimum} 个达到最低目标（${g.minimum} 个）。${pending}${shortage}`};
+  if (!data.total) return {state:'', label:'', text:'查词后加入生词本，就能开始学习。'};
+  if (g.met_goal) return {state:'goal', label:'目标完成', text:`今天已学 ${g.done} 个不同的词。目标已达成，还可以继续学。`};
+  if (g.met_minimum) return {state:'min', label:'已达最低', text:`今天已学 ${g.done} 个词，再学 ${g.remaining} 个达到每日目标。`};
+  return {state:'none', label:g.done ? '进行中' : '未开始', text:`先学 ${g.to_minimum} 个词，达到最低目标。同一个词重复练习只计一个。`};
 }
 function paintGoalBar(bar, g) {
   if (!bar) return;
@@ -111,8 +108,8 @@ function paintGoalBar(bar, g) {
   tick.style.left = Math.min(100, g.minimum / g.target * 100) + '%';
   tick.hidden = g.minimum >= g.target;
   bar.setAttribute('aria-valuemax', String(g.target));
-  bar.setAttribute('aria-valuenow', String(g.done));
-  bar.setAttribute('aria-valuetext', `已记住 ${g.done} 个，目标 ${g.target} 个，最低 ${g.minimum} 个`);
+  bar.setAttribute('aria-valuenow', String(Math.min(g.done, g.target)));
+  bar.setAttribute('aria-valuetext', `已学 ${g.done} 个不同的词，目标 ${g.target} 个，最低 ${g.minimum} 个`);
 }
 // Returns a short message when this update crosses the minimum or the goal.
 function renderStats(data) {
@@ -125,10 +122,10 @@ function renderStats(data) {
   // Sidebar: progress toward today's goal.
   $('#ring-value').style.strokeDashoffset = String(97.4 * (1 - Math.min(1, g.done / g.target)));
   $('#today-ring').className = 'ring ' + level;
-  $('#today-ring').setAttribute('aria-label', `今日已记住 ${g.done} 个，目标 ${g.target} 个`);
+  $('#today-ring').setAttribute('aria-label', `今日已学 ${g.done} 个不同的词，目标 ${g.target} 个`);
   $('#ring-text').textContent = g.done;
-  $('#today-summary').textContent = `记住 ${g.done} / ${g.target}`;
-  $('#today-detail').textContent = g.met_goal ? `目标完成${data.streak > 1 ? ` · 连续 ${data.streak} 天` : ''}`
+  $('#today-summary').textContent = `已学 ${g.done} / ${g.target}`;
+  $('#today-detail').textContent = g.met_goal ? (data.streak > 1 ? `连续 ${data.streak} 天达标` : '今日目标完成')
     : g.met_minimum ? `已达最低 · 还差 ${g.remaining} 个` : `最低 ${g.minimum} 个 · 还差 ${g.to_minimum} 个`;
   // Home card.
   $('#goal-done').textContent = g.done;
@@ -137,22 +134,24 @@ function renderStats(data) {
   $('#goal-state').hidden = !summary.label;
   $('#goal-state').className = 'pill ' + (summary.state === 'goal' ? 'ok' : summary.state === 'min' ? 'accent' : '');
   $('#goal-text').textContent = summary.text + (data.streak > 1 ? ` 已连续 ${data.streak} 天达到最低目标。` : '');
-  $('#home-breakdown').textContent = data.total ? (data.due ? `现在可复习 ${data.due} 个` : '现在没有到期的词') : '';
-  $('#goal-mix').innerHTML = g.reviewed ? `今天复习了 ${g.reviewed} 个：<span class="mix r3">记得 ${g.good}</span><span class="mix r2">费力想起 ${g.hard}</span><span class="mix r1">不记得 ${g.forgot}</span>` : '';
+  $('#home-breakdown').textContent = data.total ? (data.due ? `现在可学 ${data.due} 个` : q.new_total ? `还可加学 ${q.new_total} 个新词` : '当前没有到期的词') : '';
+  $('#goal-mix').innerHTML = g.reviewed ? `今天每个词的最近回答：<span class="mix r3">记得 ${g.good}</span><span class="mix r2">费力想起 ${g.hard}</span><span class="mix r1">不记得 ${g.forgot}</span>` : '';
   paintGoalBar($('#home-goal-bar'), g);
   // Review header.
   paintGoalBar($('#review-goal-bar'), g);
-  $('#review-goal-label').innerHTML = `今日记住 <strong>${g.done}</strong> / ${g.target}${g.met_goal ? ' · 完成' : g.met_minimum ? ' · 已达最低' : ` · 最低 ${g.minimum}`}`;
-  $('#queue-pills').innerHTML = data.total ? `<span class="pill">复习 ${q.review_due}</span><span class="pill">学习中 ${q.learning_due}</span><span class="pill accent">新词 ${q.new_left}</span>` : '';
+  $('#review-goal-label').innerHTML = `今日已学 <strong>${g.done}</strong> / ${g.target}${g.met_goal ? ' · 完成' : g.met_minimum ? ' · 已达最低' : ` · 最低 ${g.minimum}`}`;
+  $('#queue-pills').innerHTML = data.total ? `<span class="pill" title="已到时间的旧词，包括需要再练的词">待复习 ${q.review_ready}</span><span class="pill accent" title="今天安排的、尚未开始学的词">待学新词 ${q.new_left}</span>${q.later_today ? `<span class="pill" title="今天晚些时候才到期，不计入现在可学的数量">稍后回来 ${q.later_today}</span>` : ''}` : '';
+  $('#review-sub').textContent = data.due ? `现在可学 ${data.due} 个 · 先回忆，再看答案` : '先回忆，再看答案 · 达成目标后也可以继续';
+  renderReviewOverview(data);
   // Week chart with the goal drawn as a dashed line.
   const goalChanged = !previous?.goal || previous.goal.target !== g.target || previous.goal.minimum !== g.minimum;
-  if (goalChanged || JSON.stringify(previous?.week) !== JSON.stringify(data.week)) {
+  if (goalChanged || ['week', 'week_recalled', 'week_attempts'].some(key => JSON.stringify(previous?.[key]) !== JSON.stringify(data[key]))) {
     // Headroom above the goal keeps the dashed line visible when a day lands exactly on it.
     const week = Object.entries(data.week), scale = Math.max(g.target * 1.15, ...week.map(([, n]) => n));
     const line = Math.round(g.target / scale * 100);
     $('#week-chart').innerHTML = week.map(([day, n], i) => {
       const reached = n >= g.target ? 'goal' : n >= g.minimum ? 'min' : 'below';
-      const label = `${dateLabel(day + 'T12:00:00')}：记住 ${n} 个，复习 ${data.week_reviewed?.[day] ?? n} 个词，${data.week_attempts?.[day] ?? n} 次练习${reached === 'goal' ? '，完成目标' : reached === 'min' ? '，达到最低' : ''}`;
+      const label = `${dateLabel(day + 'T12:00:00')}：学过 ${n} 个不同的词，${data.week_attempts?.[day] ?? n} 次练习；最近回答中想起 ${data.week_recalled?.[day] ?? n} 个${reached === 'goal' ? '，完成目标' : reached === 'min' ? '，达到最低' : ''}`;
       return `<button class="bar-col${i === 6 ? ' today' : ''}" data-chart-day="${day}" title="${label}" aria-label="${label}"><span class="bar-n">${n || ''}</span><span class="bar-track"><span class="bar ${reached}" data-h="${n ? Math.max(4, Math.round(n / scale * 100)) : 0}"></span><span class="goal-line" data-b="${line}"></span></span><span class="bar-d">${i === 6 ? '今天' : '日一二三四五六'[new Date(day + 'T12:00:00').getDay()]}</span></button>`;
     }).join('');
     applySizes($('#week-chart'));
@@ -162,9 +161,24 @@ function renderStats(data) {
       : '<div class="empty glass"><strong>生词本还是空的</strong><p class="muted">查一个词，点“加入生词本”，它就会出现在这里。</p></div>';
   }
   if (!previous?.goal || previous.today !== data.today) return '';
-  if (!previous.goal.met_goal && g.met_goal) return `今天的目标完成了（记住 ${g.done} 个）`;
-  if (!previous.goal.met_minimum && g.met_minimum) return `最低目标完成（记住 ${g.done} / ${g.target}）`;
+  if (!previous.goal.met_goal && g.met_goal) return `今日目标完成，已学 ${g.done} 个词，还可以继续`;
+  if (!previous.goal.met_minimum && g.met_minimum) return `最低目标完成（已学 ${g.done} / ${g.target}）`;
   return '';
+}
+function renderReviewOverview(data) {
+  const g = data.goal;
+  $('#review-overview').hidden = !data.total;
+  $('#overview-summary').textContent = `今天 ${g.done} 个词 · ${data.review_attempts_today} 次练习`;
+  $('#review-today-stats').innerHTML = `<div><strong>${g.new_today}</strong><span>首次学习</span></div><div><strong>${g.old_today}</strong><span>复习旧词</span></div><div><strong>${data.review_attempts_today}</strong><span>总练习次数</span></div>`;
+  $('#review-count-note').textContent = `同一个词今天只计一个；新词反复练也仍算新词。最近回答：记得 ${g.good} · 费力想起 ${g.hard} · 不记得 ${g.forgot}。`;
+  const forecast = Object.entries(data.forecast), scale = Math.max(1, ...forecast.map(([, n]) => n));
+  $('#review-forecast').innerHTML = forecast.map(([day, n], i) => {
+    const label = `${dateLabel(day + 'T12:00:00')}：${n} 个词到期`;
+    return `<div class="forecast-day" aria-label="${label}" title="${label}"><strong>${n}</strong><div class="forecast-track"><span data-h="${n / scale * 100}"></span></div><span>${i === 0 ? '明天' : dateLabel(day + 'T12:00:00')}</span></div>`;
+  }).join('');
+  applySizes($('#review-forecast'));
+  const r = data.retention;
+  $('#recall-note').textContent = r.reviews ? `近 30 天延迟回忆成功率 ${Math.round(r.rate * 100)}%（${r.reviews} 次；仅统计间隔至少一天的看词回忆，同词同日取首次）。` : '积累间隔至少一天的看词回忆后，这里会显示回忆成功率。';
 }
 function refreshStats({force = false} = {}) {
   if (statsPending && !force) return statsPending;
@@ -175,11 +189,12 @@ function refreshStats({force = false} = {}) {
 
 // ------------------------------------------------------------------ navigation
 const VIEWS = ['lookup', 'review', 'library', 'settings'];
-async function navigate(view) {
+async function navigate(view, {focus = null} = {}) {
   if (!VIEWS.includes(view)) view = 'lookup';
   if (currentView !== view) stopSpeech();
-  libraryRequest.cancel(); reviewRequest.cancel(); review.loading = false;
-  clearTimeout(waitTimer);
+  libraryRequest.cancel(); libraryBusy = false; reviewRequest.cancel(); review.loading = false;
+  hideSuggestions();
+  clearTimeout(waitTimer); clearTimeout(libraryTimer);
   currentView = view;
   $$('.view').forEach(el => { el.hidden = el.id !== 'view-' + view; });
   $$('[data-view]').forEach(el => {
@@ -188,11 +203,18 @@ async function navigate(view) {
     el.classList.toggle('active', active);
     if (active) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current');
   });
-  if (location.hash !== '#' + view) history.replaceState(null, '', '#' + view);
+  if (location.hash !== '#' + view) {
+    if (location.hash && VIEWS.includes(location.hash.slice(1))) history.pushState(null, '', '#' + view);
+    else history.replaceState(null, '', '#' + view);
+  }
   window.scrollTo({top:0, behavior:'instant'});
   try {
-    const work = view === 'review' ? loadReview() : view === 'library' ? loadLibrary() : view === 'settings' ? loadSettings() : Promise.resolve();
-    await Promise.all([refreshStats(), work]);
+    if (view === 'review') await loadReview({focus});
+    else {
+      if (view === 'lookup') $('#query').focus({preventScroll:true});
+      const work = view === 'library' ? loadLibrary() : view === 'settings' ? loadSettings() : Promise.resolve();
+      await Promise.all([refreshStats(), work]);
+    }
   } catch (error) { if (error.name !== 'AbortError') toast(error.message, true); }
 }
 
@@ -213,11 +235,23 @@ function updateContextState() {
     : `<span>${escapeHTML(part.text)}</span>`).join('');
 }
 function placePassage(text) {
+  clearLookup();
   $('#context').value = text.trim().slice(0, 6000);
   $('#query').value = '';
   setContextOpen(true);
-  hideSuggestions();
+  $('#clear-query').hidden = true;
   toast('已放入原句，点句中的词来查');
+}
+function clearLookup() {
+  lookupRequest.cancel();
+  stopSpeech();
+  currentResult = null;
+  const panel = $('#search-result');
+  panel.replaceChildren();
+  panel.removeAttribute('aria-busy');
+  $('#clear-query').hidden = !$('#query').value;
+  hideSuggestions();
+  showHome(true);
 }
 function showHome(show) { $('#home').hidden = !show; }
 function hideSuggestions() {
@@ -236,7 +270,7 @@ function renderSuggestions() {
   if (suggestionIndex >= 0) $('#query').setAttribute('aria-activedescendant', 'sg-' + suggestionIndex);
 }
 function scheduleSuggestions() {
-  clearTimeout(suggestTimer);
+  hideSuggestions();
   const value = $('#query').value.trim();
   if (!value || Study.looksLikePassage(value)) { hideSuggestions(); return; }
   suggestTimer = setTimeout(async () => {
@@ -270,6 +304,7 @@ async function searchWord(word) {
     }
     currentResult = result;
     renderResult();
+    if (currentView === 'lookup' && !anyDialogOpen()) $('#search-result .headword')?.focus({preventScroll:true});
   } catch (error) {
     if (request.current() && error.name !== 'AbortError') panel.innerHTML = `<div class="notice glass"><strong>这次查询没有完成</strong><p class="muted">${escapeHTML(error.message)}</p><button class="button secondary" id="retry-query">重试</button></div>`;
   } finally { if (request.current()) panel.removeAttribute('aria-busy'); }
@@ -283,7 +318,7 @@ function saveButtonHTML(result) {
   return `<span class="pill ok">${icon('check')}已在生词本${saved.paused ? ' · 已暂停' : ''}</span>`;
 }
 function wordHeaderHTML(word, phonetic, meta) {
-  return `<div class="word-line"><h2 class="headword">${escapeHTML(word)}</h2>${pronunciationControls(word)}</div><div class="word-meta">${phonetic ? `<span class="phonetic">/${escapeHTML(phonetic)}/</span>` : ''}${meta}</div>`;
+  return `<div class="word-line"><h2 class="headword" tabindex="-1">${escapeHTML(word)}</h2>${pronunciationControls(word)}</div><div class="word-meta">${phonetic ? `<span class="phonetic">/${escapeHTML(phonetic)}/</span>` : ''}${meta}</div>`;
 }
 function renderResult() {
   const result = currentResult;
@@ -301,8 +336,8 @@ function renderResult() {
   bindFolds($('#search-result'));
 }
 async function saveCurrent() {
-  if (!currentResult || saveBusy || currentResult.can_save === false) return;
-  const result = currentResult, wasNew = !result.saved_card;
+  if (!currentResult || saveBusy || !$('#save-word') || currentResult.can_save === false) return;
+  const result = currentResult;
   saveBusy = true;
   const button = $('#save-word');
   if (button) { button.disabled = true; }
@@ -311,8 +346,9 @@ async function saveCurrent() {
     if (!data.saved_card) throw new Error('这个词暂时无法收录，请稍后重试。');
     if (currentResult === result) { currentResult = data; renderResult(); }
     refreshStats({force:true}).catch(() => {});
-    if (wasNew) toast(`已加入生词本，将在复习中出现`, {action:async () => {
-      await api('delete', {id:data.saved_card.id});
+    if (data.newly_collected) toast('已加入生词本，将在复习中出现', {action:async () => {
+      const card = data.saved_card;
+      await api('undo-collection', {id:card.id, created:card.created, version:card.card_json});
       if (currentResult?.query === data.query) { currentResult.saved_card = null; renderResult(); }
       await refreshStats({force:true}); toast('已从生词本移除');
     }});
@@ -332,6 +368,12 @@ function bindFolds(root) {
 }
 document.addEventListener('toggle', event => {
   const el = event.target;
+  if (el.open && el.hasAttribute('data-review-details') && review.card) {
+    el.removeAttribute('data-review-details');
+    const card = review.card, body = el.querySelector('.fold-body');
+    body.innerHTML = explanationHTML(card.explanation, false, 'review', card.word, false);
+    bindFolds(body);
+  }
   if (el.open && el.foldSenses) { el.querySelector('.fold-body').innerHTML = el.foldSenses.map(s => senseHTML(s)).join(''); el.foldSenses = null; }
 }, true);
 function senseHTML(sense, hideDefinition = false) {
@@ -341,8 +383,8 @@ function senseHTML(sense, hideDefinition = false) {
 function coreHTML(meaning, scope) {
   return `<section class="core"><div class="core-head"><span class="label">${escapeHTML(meaning.core_label || '核心释义')}${meaning.custom_definition ? '<span class="pill accent tiny">我的释义</span>' : ''}</span><button class="link-button" data-edit-definition="${scope}">${icon('edit')}用自己的话改写</button></div><p class="core-text">${escapeHTML(meaning.core_meaning)}</p></section>`;
 }
-function explanationHTML(meaning, hasContext, scope, word) {
-  const parts = [coreHTML(meaning, scope)];
+function explanationHTML(meaning, hasContext, scope, word, includeCore = true) {
+  const parts = includeCore ? [coreHTML(meaning, scope)] : [];
   if (hasContext && meaning.context_meaning) parts.push(`<section class="in-context"><span class="label">在这句话里</span><p>${escapeHTML(meaning.context_meaning)}</p>${meaning.context_translation ? `<p class="muted">${escapeHTML(meaning.context_translation)}</p>` : ''}${meaning.explanation ? `<p class="muted small">${escapeHTML(meaning.explanation)}</p>` : ''}</section>`);
   else if (meaning.explanation) parts.push(`<p class="note">${escapeHTML(meaning.explanation)}</p>`);
   if (meaning.word_family) parts.push(`<p class="note">${escapeHTML(meaning.word_family)}</p>`);
@@ -416,7 +458,13 @@ async function persistDefinition(reset = false) {
     if (sheetResult?.query === editor.word) { apply(sheetResult.explanation); const el = $('#sheet-body .core'); if (el) el.outerHTML = coreHTML(sheetResult.explanation, 'sheet'); }
     $('#definition-dialog').close();
     refreshStats({force:true}).catch(() => {});
-    if (currentView === 'library') loadLibrary().catch(() => {});
+    if (currentView === 'library') {
+      if ($('#library-search').value.trim()) await loadLibrary();
+      else {
+        const row = [...$('#library-list').querySelectorAll('.word-row')].find(el => el.querySelector('strong').textContent === editor.word);
+        if (row) row.querySelector('.row-meaning').textContent = change.meaning ?? $('#definition-original').textContent;
+      }
+    }
     toast(reset ? '已恢复原释义' : '已保存，查词和复习都会用你的释义');
   } catch (error) {
     $('#definition-error').textContent = error.message; $('#definition-error').hidden = false;
@@ -428,7 +476,7 @@ async function persistDefinition(reset = false) {
 }
 
 // ------------------------------------------------------------------ review
-async function loadReview({focus = null, last = null} = {}) {
+async function loadReview({focus = null, last = lastRated?.card_id ?? null} = {}) {
   stopSpeech(); clearTimeout(waitTimer);
   const request = reviewRequest.start();
   review = {card:null, shown:false, busy:false, loading:true, startedAt:0, check:null, hintLevel:0, suggested:null};
@@ -441,40 +489,68 @@ async function loadReview({focus = null, last = null} = {}) {
     const {card, stats} = await api('review?' + params, undefined, request.signal);
     if (!request.current()) return;
     renderStats(stats);
-    review.card = card;
-    if (!card) { renderReviewDone(stats, last); return; }
-    renderReviewCard(card);
+    presentReview(card, stats, last);
   } catch (error) {
     if (request.current() && error.name !== 'AbortError') box.innerHTML = `<div class="notice glass"><p>${escapeHTML(error.message)}</p><button class="button secondary" id="retry-review">重新加载</button></div>`;
   } finally { if (request.current()) review.loading = false; }
 }
-function renderReviewDone(stats, last) {
-  const q = stats.queue, box = $('#review-content');
-  if (!stats.total) {
-    box.innerHTML = `<div class="done glass strong"><div class="done-icon">${icon('leaf')}</div><h2>从阅读里带回第一个词</h2><p class="muted">查词后点“加入生词本”，回来就能开始复习。</p><button class="button primary" data-view="lookup">去查词</button></div>`;
-    return;
+function presentReview(card, stats, last) {
+  review = {card, shown:false, busy:false, loading:false, startedAt:0, check:null, hintLevel:0, suggested:null};
+  if (card) renderReviewCard(card);
+  else renderReviewDone(stats, last);
+}
+function scheduleIdleReview(stats) {
+  clearTimeout(waitTimer);
+  waitTimer = setTimeout(() => {
+    if (currentView !== 'review' || review.card || review.loading || review.busy) return;
+    if (document.hidden || anyDialogOpen() || extraBusy || undoBusy) { scheduleIdleReview(stats); return; }
+    loadReview();
+  }, Study.nextRefreshDelay(stats));
+}
+function renderReviewDone(stats) {
+  const q = stats.queue, g = stats.goal, plan = Study.reviewPlan(stats);
+  const ready = plan.ready > 0;
+  const action = !stats.total ? '<button class="button primary" data-view="lookup">去查词</button>'
+    : !stats.active ? '<button class="button primary" data-view="library">查看生词本</button>'
+    : ready ? '<button class="button primary" id="retry-review">继续学习</button>'
+    : plan.batch ? `<button class="button primary continue-learning" data-extra-new="${plan.batch}">${icon('plus')}再学 ${plan.batch} 个新词</button>`
+    : '<button class="button primary" data-view="lookup">继续阅读</button>';
+  const next = q.next_due ? `下一次复习：${dateLabel(q.next_due, {hour:'2-digit', minute:'2-digit'})}${q.later_today ? ` · 今天稍后还有 ${q.later_today} 个词` : ''}。留在这里，到时间会自动出现。` : '';
+  $('#review-content').innerHTML = `<div class="done glass strong">
+    <div class="done-icon ${g.met_goal ? 'ok' : ''}">${icon(g.met_goal ? 'check' : q.next_due ? 'clock' : 'leaf')}</div>
+    <h2>${plan.title}</h2><p class="muted done-description">${plan.description}</p>
+    ${stats.total ? `<div class="done-progress"><strong>${g.done}</strong><span>个词已学<span class="muted small">今日目标 ${g.target} 个 · 重复练习不累加</span></span>${g.met_goal ? '<span class="pill ok">已达成</span>' : ''}</div>` : ''}
+    <div class="done-actions">${action}${stats.total && stats.active && (plan.batch || ready) ? '<button class="button ghost" data-view="lookup">回到阅读</button>' : ''}</div>
+    ${plan.batch && stats.active ? `<p class="muted small">还有 ${q.new_total} 个未学新词 · 每轮学完可继续添加</p>` : ''}
+    ${next ? `<div class="next-review">${icon('clock')}<span>${next}</span></div>` : ''}
+  </div>`;
+  scheduleIdleReview(stats);
+}
+async function continueLearning(count) {
+  if (extraBusy || review.busy || review.loading) return;
+  extraBusy = true;
+  const session = review;
+  clearTimeout(waitTimer);
+  if (!extraRequest || extraRequest.day !== statsData.today || extraRequest.count !== count) {
+    extraRequest = {count, day:statsData.today, request_id:crypto.randomUUID()};
   }
-  const soon = q.next_learning && Date.parse(q.next_learning) - Date.now() < 30 * 60000;
-  if (soon) {
-    const wait = Math.max(0, Date.parse(q.next_learning) - Date.now());
-    box.innerHTML = `<div class="done glass strong"><div class="done-icon">${icon('clock')}</div><h2>${Study.intervalLabel(q.next_learning)}再看一次</h2><p class="muted">刚学的词需要隔一小会儿再回忆，间隔本身就是记忆的一部分。到时间会自动出现。</p><div class="button-row center">${!stats.goal.met_goal && q.new_total > 0 ? `<button class="button primary" data-extra-new="${Math.min(stats.goal.remaining, q.new_total)}">先学 ${Math.min(stats.goal.remaining, q.new_total)} 个新词</button>` : ''}<button class="button secondary" id="review-now">现在就看</button><button class="button ghost" data-view="lookup">先去阅读</button></div></div>`;
-    waitTimer = setTimeout(() => { if (currentView === 'review' && !review.card) loadReview(); }, Math.min(wait + 800, 30 * 60000));
-    return;
+  $$('[data-extra-new]').forEach(button => { button.disabled = true; });
+  try {
+    const data = await api('extra-new', extraRequest);
+    extraRequest = null;
+    renderStats(data);
+    if (currentView === 'review' && review === session) await loadReview();
+  } catch (error) {
+    if (error.status === 409) {
+      extraRequest = null;
+      if (currentView === 'review' && review === session) await loadReview();
+    }
+    throw error;
+  } finally {
+    extraBusy = false;
+    $$('[data-extra-new]').forEach(button => { button.disabled = false; });
+    if (currentView === 'review' && !review.card && !review.loading) scheduleIdleReview(statsData);
   }
-  const g = stats.goal;
-  const tomorrow = Object.values(stats.forecast || {})[0] || 0;
-  const topUp = !g.met_goal && q.new_total > 0 ? Math.min(g.remaining, q.new_total) : 0;
-  const title = g.met_goal ? '今天的目标完成了' : g.met_minimum ? '最低目标完成了' : '到期的词复习完了';
-  const gap = (g.met_goal ? '' : g.met_minimum ? `离今天的目标还差 ${g.remaining} 个。` : `离最低目标还差 ${g.to_minimum} 个。`)
-    + (g.forgot ? `今天有 ${g.forgot} 个词还没记住，之后复习时想起来就会计入。` : '');
-  const streak = stats.streak > 1 ? `已连续 <strong>${stats.streak}</strong> 天达到最低目标。` : '';
-  const retention = stats.retention?.reviews >= 20 ? `<p class="muted small">近 30 天复习记住率 ${(stats.retention.rate * 100).toFixed(0)}%（目标 ${Math.round((settings?.retention ?? 0.9) * 100)}%）</p>` : '';
-  box.innerHTML = `<div class="done glass strong"><div class="done-icon ${g.met_minimum ? 'ok' : ''}">${icon(g.met_minimum ? 'check' : 'clock')}</div><h2>${title}</h2>
-    <div class="done-goal"><div class="today-big"><span>${g.done}</span><span class="goal-of">/ ${g.target} 个已记住</span></div><div class="goal-bar" id="done-goal-bar"><span class="goal-fill"></span><span class="goal-min"></span></div></div>
-    ${gap || streak ? `<p>${gap}${streak}</p>` : ''}
-    <p class="muted">${topUp ? `到期的词都复习完了，还有 ${q.new_total} 个新词在排队。` : ''}${tomorrow ? `明天约有 ${tomorrow} 个词到期。` : stats.next_due ? `下一个词 ${Study.intervalLabel(stats.next_due)}到期。` : ''}</p>${retention}
-    <div class="button-row center">${topUp ? `<button class="button primary" data-extra-new="${topUp}">再学 ${topUp} 个新词，完成今天的目标</button><button class="button ghost" data-view="lookup">先去阅读</button>` : '<button class="button primary" data-view="lookup">继续阅读</button>'}</div></div>`;
-  paintGoalBar($('#done-goal-bar'), g);
 }
 function reviewContextHTML(card) {
   const own = card.encounters?.find(e => e.context && e.source !== '我的造句') || (card.context ? {context:card.context, source:card.source} : null);
@@ -512,10 +588,10 @@ function renderReviewCard(card) {
     </article>
     <div id="rating-dock" class="rating-dock glass strong" hidden>
       <div class="rating-buttons">${RATINGS.map(([n, label, help]) => `<button class="rate r${n}" data-rating="${n}"><kbd>${n}</kbd><strong>${label}</strong><small>${help}</small></button>`).join('')}</div>
-      <p class="muted small rating-tip">看了答案才想起来，请选“不记得”。只有“费力想起”和“记得”计入今天记住的词。</p>
+      <p class="muted small rating-tip">按真实回忆情况选，系统自动安排下次复习。看了答案才想起来，请选“不记得”。</p>
     </div>`;
   review.startedAt = Date.now();
-  if (cloze && card.typing) setTimeout(() => $('#cloze-input')?.focus(), 30);
+  if (currentView === 'review' && !anyDialogOpen()) (cloze && card.typing ? $('#cloze-input') : $('#reveal'))?.focus({preventScroll:true});
 }
 function answerHTML(card) {
   const parts = [];
@@ -524,7 +600,11 @@ function answerHTML(card) {
     parts.push(wordHeaderHTML(card.word, card.phonetic, ''));
     parts.push(`<div class="example solved"><p lang="en">${c.segments.map(s => s.blank ? `<mark>${escapeHTML(s.text)}</mark>` : escapeHTML(s.text)).join('')}</p>${c.translation ? `<p>${escapeHTML(c.translation)}</p>` : ''}</div>`);
   }
-  parts.push(explanationHTML(card.explanation, false, 'review', card.word));
+  parts.push(coreHTML(card.explanation, 'review'));
+  const m = card.explanation;
+  if (m.learner_senses?.length || m.usage || m.example_en || m.source_note || m.explanation || m.word_family || m.warning || m.other_uses?.length || m.source_meanings?.length || m.english_definition) {
+    parts.push('<details class="fold" data-review-details><summary>用法与例句</summary><div class="fold-body"></div></details>');
+  }
   const contexts = (card.encounters || []).filter(e => e.context);
   if (contexts.length) parts.push(`<details class="fold" ${card.mode === 'recognize' ? 'open' : ''}><summary>你遇到它的地方<span class="muted">${contexts.length}</span></summary><div class="fold-body">${contexts.slice(0, 5).map(e => `<blockquote>${highlightWord(e.context, card.word)}${e.source ? `<cite>${escapeHTML(e.source)}</cite>` : ''}</blockquote>`).join('')}</div></details>`);
   parts.push(`<form class="own-sentence" id="own-sentence"><label for="own-sentence-text">${icon('pen')}用它造个句子 <span class="muted small">选填 · 会用于以后的填空练习</span></label><div class="inline-field"><input id="own-sentence-text" maxlength="500" placeholder="Write your own sentence with “${escapeHTML(card.word)}”…" lang="en"><button class="button secondary" type="submit">保存</button></div></form>`);
@@ -571,120 +651,177 @@ function useHint() {
   input.focus();
 }
 async function submitRating(rating) {
-  const card = review.card;
-  if (!card || !review.shown || review.busy || anyDialogOpen()) return;
-  review.busy = true;
+  const session = review, card = session.card;
+  if (!card || !session.shown || session.busy || undoBusy || anyDialogOpen()) return;
+  session.busy = true;
   $$('[data-rating]').forEach(el => { el.disabled = true; });
   try {
-    const data = await api('rate', {id:card.id, rating:Number(rating), version:card.card_json, mode:card.mode, duration_ms:Date.now() - review.startedAt});
+    const data = await api('rate', {id:card.id, rating:Number(rating), version:card.card_json, mode:card.mode, duration_ms:Date.now() - session.startedAt, include_next:true});
     const milestone = renderStats(data.stats);
-    lastRated = {review_id:data.review_id, card_id:card.id, word:card.word};
+    lastRated = {review_id:data.review_id, card_id:card.id, word:card.word, version:data.review_version};
+    $('#undo-review').hidden = false;
+    $('#undo-review').title = `撤销对 “${card.word}” 的评分（Ctrl+Z）`;
     const next = `${card.word} · ${Study.intervalLabel(data.due)}再复习`;
     toast(milestone ? `${milestone}　${next}` : next, {action:undoLastRating, duration:milestone ? 8000 : undefined, celebrate:Boolean(milestone)});
-    if (currentView === 'review') { window.scrollTo({top:0, behavior:'instant'}); await loadReview({last:card.id}); }
+    if (currentView === 'review' && review === session) {
+      stopSpeech();
+      window.scrollTo({top:0, behavior:'instant'});
+      presentReview(data.card, data.stats, card.id);
+    }
   } catch (error) {
     if (error.name !== 'AbortError') toast(error.message, true);
-    if (error.status === 409 && currentView === 'review') await loadReview();
+    if (error.status === 409 && currentView === 'review' && review === session) await loadReview();
   } finally {
-    review.busy = false;
-    $$('[data-rating]').forEach(el => { el.disabled = false; });
+    session.busy = false;
+    if (review === session) $$('[data-rating]').forEach(el => { el.disabled = false; });
   }
 }
 async function undoLastRating() {
-  if (!lastRated) return;
-  const target = lastRated; lastRated = null;
-  const data = await api('undo', {review_id:target.review_id});
+  if (!lastRated || undoBusy || review.busy || review.loading || extraBusy || anyDialogOpen()) return;
+  undoBusy = true;
+  $('#undo-review').disabled = true;
+  const target = lastRated;
+  let data;
+  try {
+    data = await api('undo', {review_id:target.review_id, card_id:target.card_id, version:target.version});
+  } catch (error) {
+    if (error.status === 409 && lastRated === target) { lastRated = null; $('#undo-review').hidden = true; }
+    throw error;
+  } finally { undoBusy = false; $('#undo-review').disabled = false; }
+  if (lastRated === target) { lastRated = null; $('#undo-review').hidden = true; }
   renderStats(data.stats);
-  if (currentView !== 'review') await navigate('review');
-  await loadReview({focus:target.card_id});
+  if (currentView !== 'review') await navigate('review', {focus:target.card_id});
+  else await loadReview({focus:target.card_id});
   toast(`已撤销 ${target.word} 的评分`);
 }
 async function saveOwnSentence(form) {
-  const card = review.card || sheetCard, field = form.querySelector('input');
+  const card = form.id === 'sheet-sentence' ? sheetCard : review.card;
+  const field = form.querySelector('input'), button = form.querySelector('button');
   const text = field.value.trim();
   if (!card || !text) { field.focus(); return; }
-  const data = await api('sentence', {id:card.id, text});
-  field.value = '';
-  if (review.card) review.card.encounters = data.encounters;
-  toast(data.contains_word ? '已保存，以后会用你的句子来练习' : `已保存。句子里没找到“${card.word}”，所以不会用于填空`);
+  if (button.disabled) return;
+  button.disabled = true;
+  try {
+    const data = await api('sentence', {id:card.id, text});
+    if (field.value.trim() === text) field.value = '';
+    if (review.card?.id === card.id) review.card.encounters = data.encounters;
+    if (sheetCard?.id === card.id) {
+      const contexts = $('#sheet-contexts');
+      if (contexts) contexts.innerHTML = encountersHTML(data.encounters, card.word);
+    }
+    toast(data.contains_word ? '造句已保存到 ' + card.word : `已保存到 ${card.word}。句中未找到这个词，填空练习会使用其他例句。`);
+  } finally { button.disabled = false; }
 }
 
 // ------------------------------------------------------------------ library
-async function loadLibrary() {
+async function loadLibrary(append = false) {
+  if (append && (libraryBusy || !libraryCursor)) return;
   const request = libraryRequest.start();
-  const list = $('#library-list');
+  const list = $('#library-list'), more = $('#library-more'), summary = $('#library-summary');
+  const q = $('#library-search').value.trim();
+  const params = new URLSearchParams({q, status:libraryFilter, sort:$('#library-sort').value, limit:libraryPageSize});
+  const filtered = Boolean(q || libraryFilter !== 'all');
+  if (append) params.set('cursor', libraryCursor);
+  else {
+    libraryCursor = null;
+    displayedWords.clear();
+    more.hidden = true;
+    list.replaceChildren();
+    summary.textContent = '正在读取…';
+  }
+  libraryBusy = true;
   list.setAttribute('aria-busy', 'true');
+  more.disabled = true;
   try {
-    const q = $('#library-search').value.trim();
-    const data = await api(`library?q=${encodeURIComponent(q)}&status=${libraryFilter}&sort=${$('#library-sort').value}`, undefined, request.signal);
+    const data = await api('library?' + params, undefined, request.signal);
     if (!request.current()) return;
-    libraryRows = data.cards; libraryShown = 0; list.innerHTML = '';
-    const filtered = q || libraryFilter !== 'all';
-    $('#library-summary').textContent = `${filtered ? '找到' : '共'} ${data.cards.length.toLocaleString()} 个词${data.cards.length >= 2000 ? '（显示前 2,000 个，可搜索）' : ''}`;
-    if (data.cards.length) showMoreLibrary();
-    else list.innerHTML = filtered ? '<div class="empty glass"><strong>没有符合条件的词</strong><p class="muted">换个关键词或筛选试试。</p><button class="button secondary" id="reset-library">显示全部</button></div>'
-      : '<div class="empty glass"><strong>留下你想学会的词</strong><p class="muted">查词后点“加入生词本”。</p><button class="button primary" data-view="lookup">去查词</button></div>';
+    libraryCursor = data.next_cursor;
+    const fragment = document.createElement('template'), markup = [];
+    for (const row of data.cards) {
+      if (displayedWords.has(row.id)) continue;
+      displayedWords.add(row.id);
+      markup.push(libraryRowHTML(row));
+    }
+    fragment.innerHTML = markup.join('');
+    applySizes(fragment.content);
+    list.append(fragment.content);
+    summary.textContent = `${filtered ? '找到' : '共'} ${data.total.toLocaleString()} 个词`;
+    more.hidden = !libraryCursor;
+    more.textContent = `再显示 ${Math.min(libraryPageSize, Math.max(1, data.total - displayedWords.size))} 个`;
+    if (!displayedWords.size) list.innerHTML = filtered ? '<div class="empty"><strong>没有符合条件的词</strong><p class="muted">换个关键词或筛选试试。</p><button class="button secondary" id="reset-library">显示全部</button></div>'
+      : '<div class="empty"><strong>留下你想学会的词</strong><button class="button primary" data-view="lookup">去查词</button></div>';
   } catch (error) {
-    if (request.current() && error.name !== 'AbortError') list.innerHTML = `<div class="notice glass"><p>${escapeHTML(error.message)}</p><button class="button secondary" id="retry-library">重新加载</button></div>`;
-  } finally { if (request.current()) list.removeAttribute('aria-busy'); }
+    if (request.current() && error.name !== 'AbortError') {
+      if (append) toast(error.message, true);
+      else {
+        summary.textContent = '';
+        list.innerHTML = `<div class="notice"><p>${escapeHTML(error.message)}</p><button class="button secondary" id="retry-library">重新加载</button></div>`;
+      }
+    }
+  } finally {
+    if (request.current()) { libraryBusy = false; more.disabled = false; list.removeAttribute('aria-busy'); }
+  }
 }
 function strengthHTML(row) {
   if (row.paused) return '<span class="pill">已暂停</span>';
   if (row.state === 'new') return '<span class="pill accent">新词</span>';
   const r = Math.round((row.retrievability ?? 0) * 100);
   const due = new Date(row.due) <= new Date();
-  return `<span class="strength" title="现在记得的概率约 ${r}%"><span class="meter"><span data-w="${r}"></span></span>${due ? '<span class="due-now">待复习</span>' : `<span class="muted">${Study.intervalLabel(row.due)}</span>`}</span>`;
+  return `<span class="strength" title="模型估计的记忆强度 ${r}%，不代表实际测试成绩"><span class="meter"><span data-w="${r}"></span></span>${due ? '<span class="due-now">待复习</span>' : `<span class="muted">${Study.intervalLabel(row.due)}</span>`}</span>`;
 }
 function libraryRowHTML(row) {
-  return `<button class="word-row glass" data-open-card="${row.id}"><span class="row-main"><strong>${escapeHTML(row.word)}</strong><span class="row-meaning">${escapeHTML(row.meaning)}</span></span><span class="row-side">${strengthHTML(row)}${row.failures >= 3 ? '<span class="pill warn">常忘</span>' : ''}</span></button>`;
-}
-function showMoreLibrary() {
-  $('#library-more')?.remove();
-  const next = libraryRows.slice(libraryShown, libraryShown + libraryPageSize);
-  libraryShown += next.length;
-  $('#library-list').insertAdjacentHTML('beforeend', next.map(libraryRowHTML).join(''));
-  applySizes($('#library-list'));
-  if (libraryShown < libraryRows.length) $('#library-list').insertAdjacentHTML('beforeend', `<button class="button secondary wide" id="library-more">再显示 ${Math.min(libraryPageSize, libraryRows.length - libraryShown)} 个</button>`);
+  return `<button class="word-row" data-open-card="${row.id}"><span class="row-main"><strong>${escapeHTML(row.word)}</strong><span class="row-meaning">${escapeHTML(row.meaning)}</span></span><span class="row-side">${strengthHTML(row)}${row.failures >= 3 ? '<span class="pill warn">常忘</span>' : ''}</span></button>`;
 }
 async function openCard(id) {
-  const sheet = $('#card-sheet');
-  $('#sheet-title').innerHTML = '';
+  const sheet = $('#card-sheet'), request = sheetRequest.start();
+  sheetCard = null; sheetResult = null;
+  $('#sheet-title').textContent = '正在打开…';
   $('#sheet-body').innerHTML = '<div class="skeleton"><span></span><span></span><span></span></div>';
   if (!sheet.open) sheet.showModal();
+  sheet.scrollTop = 0;
   try {
-    const detail = await api('card?id=' + Number(id));
+    const detail = await api('card?explain=1&id=' + Number(id), undefined, request.signal);
+    if (!request.current() || !sheet.open) return;
     if (!detail.card) { sheet.close(); toast('这个词已被移除', true); return; }
     sheetCard = detail.card;
-    const result = await api('explain', {query:detail.card.word, context:detail.card.context, source:detail.card.source});
-    sheetResult = result;
-    renderSheet(detail, result);
-  } catch (error) { $('#sheet-body').innerHTML = `<p class="error-text">${escapeHTML(error.message)}</p>`; }
+    sheetResult = detail.result;
+    renderSheet(detail, detail.result);
+  } catch (error) {
+    if (request.current() && error.name !== 'AbortError') $('#sheet-body').innerHTML = `<p class="error-text">${escapeHTML(error.message)}</p>`;
+  }
+}
+function encountersHTML(encounters, word) {
+  const contexts = encounters.filter(e => e.context);
+  if (!contexts.length) return '';
+  return `<details class="fold" open><summary>你遇到它的地方<span class="muted">${contexts.length}</span></summary><div class="fold-body">${contexts.map(e => `<blockquote>${highlightWord(e.context, word)}${e.source ? `<cite>${escapeHTML(e.source)}</cite>` : ''}</blockquote>`).join('')}</div></details>`;
 }
 function renderSheet(detail, result) {
   const card = detail.card, p = card.progress;
   $('#sheet-title').innerHTML = wordHeaderHTML(card.word, result.phonetic, `<span class="pill">${card.paused ? '已暂停' : STATE_LABEL[p.state]}</span>`);
   const facts = [
     p.is_new ? '还没开始复习' : `复习 ${p.reviews} 次 · 忘记 ${p.failures} 次`,
-    card.paused ? '' : (new Date(card.due) <= new Date() ? '现在待复习' : `下次 ${dateLabel(card.due)}（${Study.intervalLabel(card.due)}）`),
-    p.retrievability != null ? `现在记得的概率约 ${Math.round(p.retrievability * 100)}%` : '',
+    card.paused || p.is_new ? '' : (new Date(card.due) <= new Date() ? '现在待复习' : `下次 ${dateLabel(card.due)}（${Study.intervalLabel(card.due)}）`),
+    p.retrievability != null ? `模型估计记忆强度 ${Math.round(p.retrievability * 100)}%` : '',
     p.stability ? `记忆稳定性 ${p.stability} 天` : '',
     `${dateLabel(card.created, {year:'numeric'})} 收录`,
   ].filter(Boolean);
   const history = detail.history.length ? `<div class="history" aria-label="复习记录">${detail.history.slice(-30).map(h => `<span class="dot-r r${Math.min(h.rating, 3)}" title="${dateLabel(h.created)} · ${RATING_NAMES[h.rating] || ''}"></span>`).join('')}</div>` : '';
-  const contexts = detail.encounters.filter(e => e.context);
   $('#sheet-body').innerHTML = `<div class="facts">${facts.map(f => `<span>${escapeHTML(f)}</span>`).join('')}</div>${history}
     ${result.found ? explanationHTML(result.explanation, false, 'sheet', card.word) : `<p>${escapeHTML(card.meaning)}</p>`}
-    ${contexts.length ? `<details class="fold" open><summary>你遇到它的地方<span class="muted">${contexts.length}</span></summary><div class="fold-body">${contexts.map(e => `<blockquote>${highlightWord(e.context, card.word)}${e.source ? `<cite>${escapeHTML(e.source)}</cite>` : ''}</blockquote>`).join('')}</div></details>` : ''}
+    <div id="sheet-contexts">${encountersHTML(detail.encounters, card.word)}</div>
     <form class="own-sentence" id="sheet-sentence"><label for="sheet-sentence-text">${icon('pen')}用它造个句子</label><div class="inline-field"><input id="sheet-sentence-text" maxlength="500" lang="en" placeholder="Write your own sentence…"><button class="button secondary" type="submit">保存</button></div></form>
     <div class="sheet-actions"><button class="button secondary" data-sheet-toggle="${card.id}">${icon(card.paused ? 'play' : 'pause')}${card.paused ? '恢复复习' : '暂停复习'}</button><button class="button ghost danger" data-sheet-delete="${card.id}">${icon('trash')}移除</button></div>`;
   bindFolds($('#sheet-body'));
 }
 
 // ------------------------------------------------------------------ settings
+let settingsRevision = 0, settingsQueue = Promise.resolve();
 async function loadSettings() {
-  const [info] = await Promise.all([api('info'), loadSpeechInfo().catch(() => { $('#speech-status').textContent = '本机语音暂时不可用。'; })]);
-  settings = info.settings;
-  renderSettings();
+  const atEntry = settingsRevision;
+  await settingsQueue;
+  loadSpeechInfo().catch(() => { $('#speech-status').textContent = '本机语音暂时不可用。'; });
+  const info = await api('info');
+  if (atEntry === settingsRevision) { settings = info.settings; renderSettings(); }
   $('#app-info').innerHTML = [
     ['词库', info.dictionary.current], ['中文学习词条', `${Number(info.dictionary.learner?.entries || 0).toLocaleString()} 条`],
     ['复习算法', info.algorithm], ['数据位置', info.data_dir], ['许可', 'Wiktionary / Open Dictionary · CC BY-SA 4.0'],
@@ -692,17 +829,35 @@ async function loadSettings() {
 }
 function renderSettings() {
   if (!settings) return;
+  $('#study-settings').inert = false;
   $('#setting-new').value = settings.new_per_day;
   $('#setting-goal').value = settings.daily_goal;
   $('#setting-minimum').value = settings.daily_minimum;
   $$('#setting-retention [data-retention]').forEach(b => b.setAttribute('aria-checked', String(Number(b.dataset.retention) === settings.retention)));
-  $('#retention-note').textContent = {0.85:'复习最少，适合词很多的时候；忘得会多一些。', 0.9:'推荐。记忆效果和复习量比较平衡。', 0.95:'记得更牢，但复习量大约是 90% 时的两倍。'}[settings.retention] || '';
+  $('#retention-note').textContent = {0.85:'复习最少，适合词很多的时候；忘得会多一些。', 0.9:'推荐。记忆效果和复习量比较平衡。', 0.95:'安排更密集的复习；实际复习量因词而异。这是安排目标，不是测试成绩。'}[settings.retention] || '';
   $('#setting-typing').checked = settings.typing;
   applyTheme(themeChoice);
 }
 async function changeSetting(change) {
-  try { settings = await api('settings', change); renderSettings(); refreshStats({force:true}).catch(() => {}); toast('已保存'); }
-  catch (error) { toast(error.message, true); renderSettings(); }
+  if (!settings) return;
+  const revision = ++settingsRevision;
+  settings = {...settings, ...change};
+  renderSettings();
+  const write = settingsQueue.then(() => api('settings', change));
+  settingsQueue = write.catch(() => {});
+  try {
+    const saved = await write;
+    if (revision === settingsRevision) {
+      settings = saved; renderSettings();
+      refreshStats({force:true}).catch(() => {}); toast('已保存');
+    }
+  } catch (error) {
+    toast(error.message, true);
+    if (revision === settingsRevision) {
+      const saved = await api('settings');
+      if (revision === settingsRevision) { settings = saved; renderSettings(); }
+    }
+  }
 }
 
 // ------------------------------------------------------------------ events
@@ -710,7 +865,13 @@ document.addEventListener('click', async event => {
   const el = event.target.closest('button,[data-open-card],li[data-suggest],a[data-view]');
   if (!el) return;
   try {
-    if (el.dataset.view) { event.preventDefault(); if ($('#card-sheet').open) $('#card-sheet').close(); return navigate(el.dataset.view); }
+    if (el.dataset.view) {
+      event.preventDefault();
+      if ($('#card-sheet').open) $('#card-sheet').close();
+      if (el.dataset.view !== currentView) return navigate(el.dataset.view);
+      if (currentView === 'lookup') $('#query').focus();
+      return;
+    }
     if (el.dataset.suggest) return searchWord(el.dataset.suggest);
     if (el.dataset.search) return searchWord(el.dataset.search);
     if (el.dataset.token) { $('#query').value = el.dataset.token; return searchWord(el.dataset.token); }
@@ -719,15 +880,23 @@ document.addEventListener('click', async event => {
     if (el.dataset.openCard) return openCard(el.dataset.openCard);
     if (el.dataset.rating) return submitRating(el.dataset.rating);
     if (el.dataset.close) return $('#' + el.dataset.close).close();
-    if (el.dataset.filter) { libraryFilter = el.dataset.filter; $$('#library-filter [data-filter]').forEach(b => b.setAttribute('aria-selected', String(b === el))); return loadLibrary(); }
-    if (el.dataset.adjust) return changeSetting(adjustedSetting(el.dataset.adjust, (settings?.[el.dataset.adjust] ?? 0) + Number(el.dataset.by)));
-    if (el.dataset.extraNew) { el.disabled = true; renderStats(await api('extra-new', {count:Number(el.dataset.extraNew)})); return loadReview(); }
+    if (el.dataset.filter) { clearTimeout(libraryTimer); libraryFilter = el.dataset.filter; $$('#library-filter [data-filter]').forEach(b => b.setAttribute('aria-selected', String(b === el))); return loadLibrary(); }
+    if (el.dataset.adjust) return await changeSetting(adjustedSetting(el.dataset.adjust, (settings?.[el.dataset.adjust] ?? 0) + Number(el.dataset.by)));
+    if (el.dataset.extraNew) return await continueLearning(Number(el.dataset.extraNew));
     if (el.dataset.retention) return changeSetting({retention:Number(el.dataset.retention)});
     if (el.dataset.themeChoice) { themeChoice = el.dataset.themeChoice; try { localStorage.setItem('leaf-theme', themeChoice); } catch {} return applyTheme(themeChoice); }
-    if (el.dataset.chartDay && statsData) { const d = el.dataset.chartDay; $('#week-note').textContent = `${dateLabel(d + 'T12:00:00')}：${statsData.week[d]} 个不同的词，${statsData.week_attempts?.[d] ?? 0} 次练习`; return; }
+    if (el.dataset.chartDay) { $('#week-note').textContent = el.title; return; }
     if (el.dataset.sheetToggle) {
-      const data = await api('toggle', {id:Number(el.dataset.sheetToggle)}); renderStats(data.stats);
-      await openCard(el.dataset.sheetToggle); if (currentView === 'library') loadLibrary(); return;
+      const id = Number(el.dataset.sheetToggle);
+      el.disabled = true;
+      try {
+        const data = await api('toggle', {id});
+        renderStats(data.stats);
+        if (currentResult?.saved_card?.id === id) { currentResult.saved_card.paused = data.paused; renderResult(); }
+        if ($('#card-sheet').open && sheetCard?.id === id) await openCard(id);
+        if (currentView === 'library') await loadLibrary();
+      } finally { el.disabled = false; }
+      return;
     }
     if (el.dataset.sheetDelete) {
       if (!await confirmAction('移除这个词？', '它的原句和复习记录也会一起移除，无法恢复。个人释义会保留。', '移除')) return;
@@ -738,7 +907,7 @@ document.addEventListener('click', async event => {
     }
     switch (el.id) {
       case 'save-word': return saveCurrent();
-      case 'clear-query': $('#query').value = ''; el.hidden = true; $('#search-result').innerHTML = ''; currentResult = null; showHome(true); hideSuggestions(); updateContextState(); $('#query').focus(); return;
+      case 'clear-query': $('#query').value = ''; clearLookup(); updateContextState(); $('#query').focus(); return;
       case 'context-toggle': setContextOpen($('#context-panel').hidden); if (!$('#context-panel').hidden) $('#context').focus(); return;
       case 'retry-query': return searchWord($('#query').value);
       case 'reveal': return revealAnswer();
@@ -746,11 +915,11 @@ document.addEventListener('click', async event => {
       case 'cloze-check': return checkCloze();
       case 'cloze-hint': return useHint();
       case 'cloze-giveup': return review.card?.typing ? checkCloze(true) : (review.suggested = 1, revealAnswer());
-      case 'review-now': return loadReview();
+      case 'undo-review': return await undoLastRating();
       case 'retry-review': return loadReview();
       case 'retry-library': return loadLibrary();
       case 'reset-library': $('#library-search').value = ''; libraryFilter = 'all'; $$('#library-filter [data-filter]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.filter === 'all'))); return loadLibrary();
-      case 'library-more': return showMoreLibrary();
+      case 'library-more': return loadLibrary(true);
       case 'definition-cancel': if (!definitionBusy) $('#definition-dialog').close(); return;
       case 'definition-restore': return persistDefinition(true);
       case 'import-button': return $('#import-file').click();
@@ -768,7 +937,7 @@ $('#search-form').addEventListener('submit', event => {
   if (suggestionIndex >= 0 && suggestions[suggestionIndex]) return searchWord(suggestions[suggestionIndex].word);
   searchWord($('#query').value);
 });
-$('#query').addEventListener('input', () => { $('#clear-query').hidden = !$('#query').value; lookupRequest.cancel(); scheduleSuggestions(); });
+$('#query').addEventListener('input', () => { clearLookup(); scheduleSuggestions(); });
 $('#query').addEventListener('paste', event => {
   const text = event.clipboardData?.getData('text') || '';
   if (Study.looksLikePassage(text)) { event.preventDefault(); placePassage(text); }
@@ -778,7 +947,7 @@ $('#query').addEventListener('keydown', event => {
   if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
     event.preventDefault();
     const n = suggestions.length;
-    suggestionIndex = event.key === 'ArrowDown' ? (suggestionIndex + 1) % n : (suggestionIndex - 1 + n) % n;
+    suggestionIndex = event.key === 'ArrowDown' ? (suggestionIndex + 1) % n : (suggestionIndex < 0 ? n - 1 : (suggestionIndex - 1 + n) % n);
     renderSuggestions();
   } else if (event.key === 'Escape') { event.stopPropagation(); hideSuggestions(); }
 });
@@ -790,7 +959,7 @@ $('#definition-form').addEventListener('submit', event => { event.preventDefault
 $('#definition-text').addEventListener('input', updateDefinitionInput);
 $('#definition-dialog').addEventListener('cancel', event => { if (definitionBusy) event.preventDefault(); });
 $('#definition-dialog').addEventListener('close', () => { definitionEditor = null; });
-$('#card-sheet').addEventListener('close', () => { sheetCard = null; sheetResult = null; stopSpeech(); });
+$('#card-sheet').addEventListener('close', () => { if ($('#card-sheet').open) return; sheetRequest.cancel(); sheetCard = null; sheetResult = null; stopSpeech(); });
 $('#card-sheet').addEventListener('click', event => { if (event.target === $('#card-sheet')) $('#card-sheet').close(); });
 document.addEventListener('submit', async event => {
   if (event.target.id === 'own-sentence' || event.target.id === 'sheet-sentence') {
@@ -799,8 +968,8 @@ document.addEventListener('submit', async event => {
   }
 });
 let libraryTimer;
-$('#library-search').addEventListener('input', () => { libraryRequest.cancel(); clearTimeout(libraryTimer); libraryTimer = setTimeout(() => { if (currentView === 'library') loadLibrary().catch(e => toast(e.message, true)); }, 160); });
-$('#library-sort').addEventListener('change', () => loadLibrary());
+$('#library-search').addEventListener('input', () => { libraryRequest.cancel(); libraryCursor = null; $('#library-more').hidden = true; clearTimeout(libraryTimer); libraryTimer = setTimeout(() => { if (currentView === 'library') loadLibrary().catch(e => toast(e.message, true)); }, 160); });
+$('#library-sort').addEventListener('change', () => { clearTimeout(libraryTimer); loadLibrary(); });
 // Keep the minimum at or below the goal, whichever one is changed.
 function adjustedSetting(key, value) {
   const limits = {new_per_day:[0, 100], daily_goal:[1, 500], daily_minimum:[1, 500]};
@@ -810,6 +979,7 @@ function adjustedSetting(key, value) {
   if (key === 'daily_minimum' && value > (settings?.daily_goal ?? 500)) return {daily_minimum:value, daily_goal:value};
   return {[key]:value};
 }
+$('.skip-link').addEventListener('click', event => { event.preventDefault(); $('#main').focus(); });
 $$('[data-setting]').forEach(input => input.addEventListener('change', event => changeSetting(adjustedSetting(event.target.dataset.setting, event.target.value))));
 $('#setting-typing').addEventListener('change', event => changeSetting({typing:event.target.checked}));
 $('#speech-accent').addEventListener('change', event => { stopSpeech(); speechAccent = event.target.value; try { localStorage.setItem('leaf-speech-accent', speechAccent); } catch {} });
@@ -851,11 +1021,10 @@ document.addEventListener('keydown', event => {
 
 // ------------------------------------------------------------------ start
 decorate();
-api('settings').then(data => { settings = data; }).catch(() => {});
-loadSpeechInfo().catch(() => {});
 navigate(location.hash.slice(1) || 'lookup');
-setInterval(() => { if (!document.hidden && !review.busy) refreshStats().catch(() => {}); }, 60000);
+setInterval(() => { if (!document.hidden && !review.busy && !(currentView === 'review' && !review.card)) refreshStats().catch(() => {}); }, 60000);
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) return;
-  refreshStats().then(() => { if (currentView === 'review' && !review.card && !review.loading && statsData?.due) loadReview(); }).catch(() => {});
+  if (currentView === 'review' && !review.card && !review.loading && !extraBusy && !anyDialogOpen()) loadReview();
+  else refreshStats().catch(() => {});
 });

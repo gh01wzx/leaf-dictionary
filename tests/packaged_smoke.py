@@ -37,7 +37,7 @@ def main():
                 html = response.read().decode()
             token = re.search(r'name="leaf-token" content="([^"]+)"',html)[1]
             info=api('info')
-            assert info['version']=='1.0.0' and info['algorithm']=='FSRS-6'
+            assert info['version']=='1.1.0' and info['algorithm']=='FSRS-6'
             assert re.search(r'id="context-panel"[^>]*hidden', html)
             assert 'id="definition-dialog"' in html and 'id="card-sheet"' in html
             for asset, expected in (('requests.js','LatestRequest'),('speech.js','speakWord'),('study.js','checkAnswer'),('app.js','libraryPageSize'),('style.css','prefers-reduced-motion')):
@@ -52,6 +52,11 @@ def main():
             compact=api('library')['cards']
             assert len(compact)==1 and compact[0]['id']==saved['id']
             assert 'explanation_json' not in compact[0] and 'card_json' not in compact[0]
+            page = api('library?limit=40')
+            assert page['total'] == 1 and page['next_cursor'] is None
+            assert page['cards'][0]['id'] == saved['id']
+            detail = api('card?explain=1&id=' + str(saved['id']))
+            assert detail['result']['query'] == 'bank' and detail['card']['id'] == saved['id']
             assert api('review')['card']['id'] == saved['id']
             result = api('rate', {'id':saved['id'],'rating':3,'version':saved['card_json']})
             assert result['stats']['reviewed_today'] == 1
@@ -63,6 +68,15 @@ def main():
             assert generated['found'] and generated['word']=='informed'
             assert any(word in generated['explanation']['context_meaning'] for word in ('影响','塑造','依据','形成','基于','指导','指引'))
             assert generated['saved_card']['id']
+            api('settings', {'daily_goal':1, 'daily_minimum':1, 'new_per_day':1})
+            completed = api('review')
+            assert completed['stats']['goal']['met_goal'] and completed['card'] is None
+            assert completed['stats']['queue']['continue_batch'] == 1
+            top_up = {'count':10, 'request_id':'packaged-continue', 'day':completed['stats']['today']}
+            assert api('extra-new', top_up)['queue']['new_left'] == 1
+            assert api('extra-new', top_up)['queue']['extra_new'] == 1
+            assert api('review')['card']['id'] == generated['saved_card']['id']
+            api('settings', {'new_per_day':10})
             cached=api('explain',{'query':'informed','context':'Her choices are informed by years of experience.','save':False})
             assert cached['explanation']==generated['explanation']
             field=api('explain',{'query':'field','save':False})

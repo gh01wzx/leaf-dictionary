@@ -63,10 +63,37 @@ globalThis.LeafStudy = (() => {
     return `${(days / 365).toFixed(1)} 年后`;
   }
 
+  // Goals describe progress; they never restrict the next learning session.
+  function reviewPlan(stats) {
+    const q = stats.queue, g = stats.goal;
+    const ready = q.ready ?? q.due ?? 0;
+    const batch = Math.min(10, Math.max(0, q.new_total - q.new_left));
+    return {
+      ready, batch,
+      title: !stats.total ? '从阅读里带回第一个词'
+        : !stats.active ? '生词都已暂停'
+        : ready ? '继续学习'
+        : g.met_goal ? '目标达成，想学就继续'
+        : q.later_today ? '这一轮完成了'
+        : '当前到期的词学完了',
+      description: !stats.total ? '查词后点“加入生词本”，就能开始学习。'
+        : !stats.active ? '在生词本恢复想学的词，它们就会重新进入安排。'
+        : g.met_goal ? '每日目标已经完成，继续学多少由你决定。'
+        : '每个词按自己的时间安排回来，不需要为了凑数提前复习。'
+    };
+  }
+
+  function nextRefreshDelay(stats) {
+    const now = Date.parse(stats.as_of);
+    const moments = [stats.queue.next_due, stats.day_ends_at].filter(Boolean).map(Date.parse);
+    const delay = Math.min(60000, ...moments.map(due => due - now + 250));
+    return Number.isFinite(delay) ? Math.max(1000, delay) : 60000;
+  }
+
   // Split a pasted passage into clickable English words.
   function tokens(text) {
     const parts = [];
-    const pattern = /[A-Za-z][A-Za-z'’-]*/g;
+    const pattern = /\p{Script=Latin}[\p{Script=Latin}\p{M}]*(?:['’-]\p{Script=Latin}[\p{Script=Latin}\p{M}]*)*/gu;
     let index = 0, match;
     while ((match = pattern.exec(text))) {
       if (match.index > index) parts.push({text: text.slice(index, match.index), word: false});
@@ -79,8 +106,9 @@ globalThis.LeafStudy = (() => {
 
   function looksLikePassage(text) {
     const value = String(text).trim();
-    return value.split(/\s+/).length > 4 || /[.!?;:。，]\s*\S/.test(value) || value.length > 60;
+    const words = value.split(/\s+/).length;
+    return value.length > 120 || words >= 9 || (words > 1 && /[.!?;:。！？\n]/.test(value));
   }
 
-  return {clean, distance, checkAnswer, suggestedRating, hint, intervalLabel, tokens, looksLikePassage};
+  return {clean, distance, checkAnswer, suggestedRating, hint, intervalLabel, reviewPlan, nextRefreshDelay, tokens, looksLikePassage};
 })();

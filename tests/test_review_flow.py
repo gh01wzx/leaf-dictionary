@@ -70,14 +70,18 @@ class ReviewFlowTests(unittest.TestCase):
         with patch('app.now',return_value=self.start+timedelta(seconds=5)):
             with self.assertRaises(app.ReviewConflict):
                 app.rate({'id':row_id,'rating':3,'version':original['card_json']})
-        # A short learning step may be taken a little early (learn-ahead) ...
-        _,learned=self.answer(row_id,3,self.start+timedelta(minutes=2))
-        self.assertEqual(learned.state,State.Review)
-        updated=self.row(row_id)
-        # ... but a long-term review cannot be answered before it is due.
-        with patch('app.now',return_value=self.start+timedelta(minutes=3)):
+        # Even short steps must wait. Reloading must not compress a ten-minute interval.
+        with patch('app.now', return_value=self.start + timedelta(minutes=2)):
             with self.assertRaises(app.ReviewConflict):
-                app.rate({'id':row_id,'rating':3,'version':updated['card_json']})
+                app.rate({'id':row_id, 'rating':3, 'version':updated['card_json']})
+            self.assertIsNone(app.review_next()['card'])
+            self.assertIsNone(app.review_next(focus=row_id)['card'])
+        _, learned = self.answer(row_id, 3)
+        self.assertEqual(learned.state, State.Review)
+        updated = self.row(row_id)
+        with patch('app.now', return_value=learned.last_review + timedelta(minutes=1)):
+            with self.assertRaises(app.ReviewConflict):
+                app.rate({'id':row_id, 'rating':3, 'version':updated['card_json']})
         with app.connect() as db:
             self.assertEqual(db.execute('SELECT COUNT(*) FROM reviews').fetchone()[0],2)
         self.assertEqual(self.row(row_id)['card_json'],updated['card_json'])

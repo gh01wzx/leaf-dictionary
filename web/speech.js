@@ -15,6 +15,7 @@ function stopSpeech() {
 }
 let speechInfoPending;
 async function loadSpeechInfo() {
+  if (speechInfo?.available) return speechInfo;
   speechInfoPending ||= api('speech').finally(() => { speechInfoPending=null; });
   const info=await speechInfoPending; speechInfo=info;
   const select=$('#speech-accent'), status=$('#speech-status');

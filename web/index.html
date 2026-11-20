@@ -14,7 +14,7 @@
   <script src="/app.js?v=__VERSION__" defer></script>
 </head>
 <body>
-  <div class="backdrop" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="backdrop" aria-hidden="true"></div>
   <a class="skip-link" href="#main">跳到主要内容</a>
 
   <div class="shell">
@@ -38,7 +38,7 @@
     <main id="main" tabindex="-1">
       <!-- Lookup -->
       <section id="view-lookup" class="view" aria-labelledby="lookup-title">
-        <h1 id="lookup-title" class="sr-only">查词</h1>
+        <header class="view-head lookup-head"><h1 id="lookup-title">阅读查词</h1><span class="muted small"><kbd>/</kbd> 定位查词框</span></header>
         <form id="search-form" class="search glass strong" autocomplete="off" role="search">
           <div class="search-row">
             <span class="search-icon" data-icon="search"></span>
@@ -51,7 +51,7 @@
           <ul id="suggestions" class="suggestions" role="listbox" aria-label="建议" hidden></ul>
           <div class="context-row">
             <button type="button" id="context-toggle" class="chip-button" aria-expanded="false" aria-controls="context-panel"><span data-icon="quote"></span>阅读原句<span id="context-state" class="muted"></span></button>
-            <span class="muted small hint-text">查词不会自动收录</span>
+            <span class="muted small hint-text">点「加入生词本」收录</span>
           </div>
           <div id="context-panel" class="context-panel" hidden>
             <label for="context" class="field-label">原句 <span class="muted">粘贴后点句中的词即可查</span></label>
@@ -66,7 +66,7 @@
           <div class="home-grid">
             <article class="glass today-card">
               <div class="card-top"><div class="eyebrow">今日目标</div><span class="pill" id="goal-state" hidden></span></div>
-              <div class="today-big"><span id="goal-done">0</span><span class="goal-of">/ <span id="goal-target">30</span> 个已记住</span></div>
+              <div class="today-big"><span id="goal-done">0</span><span class="goal-of">/ <span id="goal-target">30</span> 个已学</span></div>
               <div class="goal-bar" id="home-goal-bar" role="progressbar" aria-label="今日目标进度" aria-valuemin="0"><span class="goal-fill"></span><span class="goal-min" title="最低目标"></span></div>
               <p class="goal-mix" id="goal-mix"></p>
               <p class="goal-text" id="goal-text"></p>
@@ -74,8 +74,8 @@
             </article>
             <article class="glass stat-card">
               <div class="eyebrow">近 7 天</div>
-              <div id="week-chart" class="week-chart" role="group" aria-label="近 7 天每天复习的不同单词数"></div>
-              <p class="muted small" id="week-note">每天记住的单词数 · 虚线是每日目标</p>
+              <div id="week-chart" class="week-chart" role="group" aria-label="近 7 天每天学过的不同单词数"></div>
+              <p class="muted small" id="week-note">每天学过的词数，已去重 · 虚线是每日目标</p>
             </article>
           </div>
           <div class="section-head"><h2>最近收录</h2><button class="link-button" data-view="library">全部生词 →</button></div>
@@ -87,10 +87,21 @@
       <section id="view-review" class="view" hidden aria-labelledby="review-title">
         <header class="view-head">
           <div><h1 id="review-title">复习</h1><p class="muted" id="review-sub">先回忆，再看答案</p></div>
-          <div class="queue-pills" id="queue-pills"></div>
+          <div class="review-tools"><button class="link-button" id="undo-review" hidden>撤销上次评分</button><div class="queue-pills" id="queue-pills"></div></div>
         </header>
         <div class="goal-strip"><div class="goal-bar" id="review-goal-bar" role="progressbar" aria-label="今日目标进度" aria-valuemin="0"><span class="goal-fill"></span><span class="goal-min" title="最低目标"></span></div><span class="goal-label" id="review-goal-label"></span></div>
         <div id="review-content" aria-live="polite"></div>
+        <details class="review-overview glass" id="review-overview" hidden>
+          <summary>学习记录与安排 <span class="muted small" id="overview-summary"></span></summary>
+          <div class="overview-body">
+            <div class="practice-stats" id="review-today-stats"></div>
+            <p class="muted small" id="review-count-note"></p>
+            <div class="section-head"><h3>未来 7 天</h3><span class="muted small">按当前计划到期的词</span></div>
+            <div class="review-forecast" id="review-forecast" role="group" aria-label="未来七天到期的单词数"></div>
+            <p class="muted small">这里只统计已经学过的词；新学、评分或暂停后，安排会随之变化。今天稍后到期的词单独显示在上方。</p>
+            <p class="muted small" id="recall-note"></p>
+          </div>
+        </details>
       </section>
 
       <!-- Library -->
@@ -111,25 +122,26 @@
             <button role="tab" data-filter="paused">已暂停</button>
           </div>
         </div>
-        <div id="library-list" class="library-list"></div>
+        <div id="library-list" class="library-list glass"></div>
+        <button class="button secondary wide" id="library-more" hidden>再显示 40 个</button>
       </section>
 
       <!-- Settings -->
       <section id="view-settings" class="view" hidden aria-labelledby="settings-title">
         <header class="view-head"><div><h1 id="settings-title">设置</h1><p class="muted">所有数据只保存在这台电脑上</p></div></header>
         <div class="settings-grid">
-          <article class="glass panel">
+          <article id="study-settings" class="glass panel" inert>
             <h2>复习</h2>
             <div class="setting">
-              <div><strong>每日目标</strong><p class="muted small">每天想<strong>记住</strong>多少个词。只有答“费力想起”或“记得”的词才计入；答“不记得”的词要等你之后想起来才算。同一个词一天只算一次。</p></div>
+              <div><strong>每日目标</strong><p class="muted small">每天想学多少个不同的词。答过就计入，重复练不累加；达成后可以继续学。</p></div>
               <div class="stepper"><button class="icon-button" data-adjust="daily_goal" data-by="-5" aria-label="减少每日目标">−</button><input id="setting-goal" data-setting="daily_goal" type="number" min="1" max="500" step="1" aria-label="每日目标"><button class="icon-button" data-adjust="daily_goal" data-by="5" aria-label="增加每日目标">＋</button></div>
             </div>
             <div class="setting">
-              <div><strong>最低目标</strong><p class="muted small">状态不好的日子，记住这么多个就算没有中断。连续天数按它计算。</p></div>
+              <div><strong>最低目标</strong><p class="muted small">状态不好的日子，学过这些词就算没有中断。连续天数按它计算。</p></div>
               <div class="stepper"><button class="icon-button" data-adjust="daily_minimum" data-by="-1" aria-label="减少最低目标">−</button><input id="setting-minimum" data-setting="daily_minimum" type="number" min="1" max="500" step="1" aria-label="最低目标"><button class="icon-button" data-adjust="daily_minimum" data-by="1" aria-label="增加最低目标">＋</button></div>
             </div>
             <div class="setting">
-              <div><strong>每天新词</strong><p class="muted small">每天开始学的新词上限。到期的复习不设上限，所以不会悄悄积压。建议 10–20 个；到期的词不够完成目标时，复习完成页可以一键加学新词。</p></div>
+              <div><strong>每日新词计划</strong><p class="muted small">每天自动安排的新词数。完成后仍可一轮轮加学，不受每日目标限制。</p></div>
               <div class="stepper"><button class="icon-button" data-adjust="new_per_day" data-by="-5" aria-label="减少每天新词">−</button><input id="setting-new" data-setting="new_per_day" type="number" min="0" max="100" step="1" aria-label="每天新词数"><button class="icon-button" data-adjust="new_per_day" data-by="5" aria-label="增加每天新词">＋</button></div>
             </div>
             <div class="setting">
@@ -160,11 +172,11 @@
             <h2>复习是怎样安排的</h2>
             <ul class="science">
               <li><strong>先想再看。</strong>主动回忆比反复阅读记得牢得多（检索练习效应，Roediger &amp; Karpicke 2006）。</li>
-              <li><strong>间隔重复。</strong>FSRS-6 为每个词估算遗忘曲线，在快要忘记时安排复习（Ye 等，2022；间隔效应，Cepeda 等 2006）。</li>
+              <li><strong>间隔重复。</strong>FSRS-6 根据每次回忆情况和实际间隔安排复习。先学到期的词，再学计划内的新词；刚答过的词等到时间再回来。</li>
               <li><strong>从认得到会用。</strong>新词先练“看词想意思”；记牢后交替练“看句子写出词”，产出型回忆更能迁移到使用（Nation 2013；Laufer &amp; Goldstein 2004）。</li>
               <li><strong>换着语境练。</strong>填空句子在你的原句、你的造句和词典例句之间轮换，帮助形成可迁移的理解。</li>
               <li><strong>自己造句。</strong>写出自己的句子是生成式学习，造的句子也会用于以后的填空。</li>
-              <li><strong>三档诚实评分。</strong>不记得 / 费力想起 / 记得。看了答案才想起来，请选“不记得”，否则会高估记忆，间隔会拉得太长。只有想起来的词才计入每日目标。</li>
+              <li><strong>三档诚实评分。</strong>不记得 / 费力想起 / 记得。看了答案才想起来，请选“不记得”，否则会高估记忆，间隔会拉得太长。评分只影响复习安排；每日进度按学过的不同词数计算。</li>
             </ul>
           </article>
           <article class="glass panel">
@@ -206,7 +218,7 @@
 
   <div id="toast" class="toast glass strong" role="status" hidden><span id="toast-text"></span><button id="toast-action" class="link-button" hidden></button></div>
 
-  <dialog id="card-sheet" class="sheet glass strong" aria-labelledby="sheet-word">
+  <dialog id="card-sheet" class="sheet glass strong" aria-labelledby="sheet-title">
     <div class="sheet-head"><div id="sheet-title"></div><button class="icon-button" data-close="card-sheet" aria-label="关闭" data-icon="close"></button></div>
     <div id="sheet-body" class="sheet-body"></div>
   </dialog>
@@ -225,6 +237,6 @@
     </form>
   </dialog>
 
-  <dialog id="confirm-dialog" class="dialog glass strong small-dialog"><form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-message" class="muted"></p><div class="dialog-foot"><span class="spacer"></span><button value="cancel" class="button secondary">取消</button><button value="ok" class="button primary" id="confirm-ok">确认</button></div></form></dialog>
+  <dialog id="confirm-dialog" class="dialog glass strong small-dialog" aria-labelledby="confirm-title"><form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-message" class="muted"></p><div class="dialog-foot"><span class="spacer"></span><button value="cancel" class="button secondary">取消</button><button value="ok" class="button primary" id="confirm-ok">确认</button></div></form></dialog>
 </body>
 </html>

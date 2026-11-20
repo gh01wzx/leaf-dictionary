@@ -49,9 +49,40 @@ test('interval labels are readable', () => {
   assert.equal(Study.intervalLabel('2027-02-18T10:00:00Z', now), '3 个月后');
 });
 
+test('goals never hide continuation; only the available word pool limits a batch', () => {
+  const stats = {total:915, active:915, goal:{met_goal:true}, queue:{ready:0, new_total:854, new_left:0}};
+  assert.equal(Study.reviewPlan(stats).batch, 10);
+  assert.equal(Study.reviewPlan(stats).title, '目标达成，想学就继续');
+  stats.goal.met_goal = false;
+  assert.equal(Study.reviewPlan(stats).batch, 10);
+  stats.queue.new_total = 4;
+  assert.equal(Study.reviewPlan(stats).batch, 4);
+  stats.queue.new_left = 4;
+  assert.equal(Study.reviewPlan(stats).batch, 0);
+  stats.queue.ready = 4;
+  assert.equal(Study.reviewPlan(stats).title, '继续学习');
+  stats.active = 0;
+  assert.equal(Study.reviewPlan(stats).title, '生词都已暂停');
+  stats.total = 0;
+  assert.equal(Study.reviewPlan(stats).title, '从阅读里带回第一个词');
+});
+
+test('idle refresh respects actual due time and the study-day boundary', () => {
+  const stats = {as_of:'2026-11-20T10:00:00Z', queue:{next_due:'2026-11-20T10:00:20Z'}, day_ends_at:'2026-11-20T15:00:00Z'};
+  assert.equal(Study.nextRefreshDelay(stats), 20250);
+  stats.queue.next_due = '2026-11-21T10:00:00Z';
+  assert.equal(Study.nextRefreshDelay(stats), 60000);
+  stats.day_ends_at = '2026-11-20T10:00:03Z';
+  assert.equal(Study.nextRefreshDelay(stats), 3250);
+  stats.queue.next_due = '2026-11-20T09:00:00Z';
+  assert.equal(Study.nextRefreshDelay(stats), 1000, 'never spin in an immediate request loop');
+});
+
 test('pasted passages are detected and split into clickable words', () => {
   assert.equal(Study.looksLikePassage('take off'), false);
   assert.equal(Study.looksLikePassage('put up with'), false);
+  assert.equal(Study.looksLikePassage('a storm in a teacup'), false);
+  assert.equal(Study.tokens('ménage, déjà vu.')[0].text, 'ménage');
   assert.equal(Study.looksLikePassage('Her choices are informed by years of experience.'), true);
   const parts = Study.tokens("It's informed, isn't it?");
   assert.equal(JSON.stringify(parts.filter(p => p.word).map(p => p.text)), JSON.stringify(["It's", 'informed', "isn't", 'it']));

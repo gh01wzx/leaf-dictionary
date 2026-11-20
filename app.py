@@ -45,7 +45,7 @@ from learner_dictionary import info as learner_info  # noqa: E402
 from learner_dictionary import stored_explanation  # noqa: E402
 from offline_speech import SpeechUnavailable, pronounce, speech_status  # noqa: E402
 
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 APP_ID = 'leaf-offline-dictionary-v1'
 TOKEN = secrets.token_urlsafe(32)
 CURATED = json.loads(data_file('insights.json').read_text(encoding='utf-8'))
@@ -56,8 +56,8 @@ DICTIONARY_PATH = data_file('dictionary.sqlite3')
 # A study day starts at 04:00 local time, so late-night reading counts toward
 # the day you are still living in (the convention used by Anki and SuperMemo).
 DAY_START_HOUR = 4
-# Short learning steps may be taken a little early when nothing else is waiting.
-LEARN_AHEAD = timedelta(minutes=20)
+# Learning steps are shown only when due. Daily goals never gate the queue.
+CONTINUE_BATCH_SIZE = 10
 # daily_goal / daily_minimum: how many different words to review per study day
 # (a habit target and the smallest amount that still counts as a "kept" day).
 DEFAULT_SETTINGS = {'new_per_day':10, 'retention':0.9, 'typing':True, 'daily_goal':30, 'daily_minimum':8}
@@ -65,8 +65,8 @@ GOAL_LIMIT = 500
 RETENTION_CHOICES = (0.85, 0.9, 0.95)
 MASTERED_DAYS = 21          # stability at which a word is counted as mastered
 # Three answers: 1 不记得, 2 费力想起, 3 记得 (FSRS Again / Hard / Good). FSRS's
-# fourth grade, Easy, is not offered: it is the least reliable self-judgement and
-# leaving it out keeps answers quick. Older Easy reviews still count as 记得.
+# fourth grade, Easy, is omitted to keep answers quick. Older Easy reviews
+# still count as successful recall.
 RATINGS = {1:'不记得', 2:'费力想起', 3:'记得'}
 REMEMBERED_RATING = 2       # 费力想起 and 记得 are successful recalls
 LEECH_FAILURES = 5          # repeated forgetting suggests rewriting the definition
@@ -158,6 +158,8 @@ def initialize():
             CREATE INDEX IF NOT EXISTS reviews_card_idx ON reviews(card_id,created);
             CREATE INDEX IF NOT EXISTS encounters_card_idx ON encounters(card_id);
             CREATE INDEX IF NOT EXISTS cards_due_idx ON cards(paused,due);
+            CREATE INDEX IF NOT EXISTS cards_recent_idx ON cards(created DESC,id DESC);
+            CREATE INDEX IF NOT EXISTS cards_word_nocase_idx ON cards(word COLLATE NOCASE);
         ''')
         columns = {row[1] for row in db.execute('PRAGMA table_info(cards)')}
         if 'explanation_json' not in columns:
@@ -217,6 +219,7 @@ def update_settings(data):
                 raise ValueError(f'{label}请填写 1 到 {GOAL_LIMIT} 之间的整数。')
             changes[key] = value
     with connect() as db:
+        db.execute('BEGIN IMMEDIATE')
         merged = {**get_settings(db), **changes}
         if merged['daily_minimum'] > merged['daily_goal']:
             raise ValueError('最低目标不能高于每日目标。')
@@ -327,7 +330,7 @@ def suggest(prefix):
     with connect() as db:
         own = [dict(r) for r in db.execute('''SELECT c.word, COALESCE(d.meaning,c.meaning) AS gloss FROM cards c
             LEFT JOIN definition_overrides d ON d.word=c.word
-            WHERE lower(c.word)>=? AND lower(c.word)<? ORDER BY length(c.word), c.word LIMIT 4''', (text, upper))]
+            WHERE c.word COLLATE NOCASE>=? AND c.word COLLATE NOCASE<? ORDER BY length(c.word), c.word LIMIT 4''', (text, upper))]
     seen = {row['word'] for row in own}
     rows = lexicon().execute('''SELECT word, translation FROM words WHERE word>=? AND word<?
         ORDER BY (word=?) DESC, rank LIMIT 12''', (text, upper, text)).fetchall() if len(text) >= 2 else \
@@ -383,7 +386,9 @@ def dictionary_explain(data):
     if result['found']:
         result['saved_card'] = compact_card(existing) if existing else None
         if data.get('save') is True and result.get('can_save'):
-            result['saved_card'] = compact_card(collect(result))
+            saved, created = collect(result, with_status=True)
+            result['saved_card'] = compact_card(saved)
+            result['newly_collected'] = created
             with connect() as db:
                 custom = db.execute('SELECT * FROM definition_overrides WHERE word=?', (query,)).fetchone()
         apply_core_definition(result['explanation'], custom)
@@ -467,7 +472,7 @@ def refresh_dictionary_cards():
             db.executemany('UPDATE cards SET meaning=?,explanation_json=? WHERE id=?', updates)
 
 
-def collect(result):
+def collect(result, *, with_status=False):
     """Add a looked-up word to the collection, or record another reading context."""
     explanation = result['explanation']
     meaning = (explanation['context_meaning'] if result['context'] else '') or explanation['core_meaning']
@@ -486,31 +491,65 @@ def collect(result):
             card_id = db.execute('INSERT INTO cards(word,sense_key,meaning,context,source,card_json,due,created,updated,explanation_json) VALUES(?,?,?,?,?,?,?,?,?,?)',
                 (result['query'], result['sense_key'], meaning, result['context'], result['source'], card.to_json(), card.due.isoformat(), stamp, stamp, rich_json)).lastrowid
         remember_encounter(db, card_id, result['context'], result['source'], stamp)
-        return dict(db.execute('SELECT * FROM cards WHERE id=?', (card_id,)).fetchone())
+        saved = dict(db.execute('SELECT * FROM cards WHERE id=?', (card_id,)).fetchone())
+        return (saved, existing is None) if with_status else saved
+
+
+def undo_collection(data):
+    """Undo the original add only while the saved card is still untouched."""
+    with connect() as db:
+        db.execute('BEGIN IMMEDIATE')
+        removed = db.execute('''DELETE FROM cards WHERE id=:id AND created=:stamp AND updated=:stamp
+            AND lookups=1 AND paused=0 AND card_json=:version
+            AND NOT EXISTS(SELECT 1 FROM reviews WHERE card_id=cards.id)
+            AND NOT EXISTS(SELECT 1 FROM encounters WHERE card_id=cards.id
+                AND (context!=cards.context OR source!=cards.source OR created!=cards.created))''',
+            {'id':int(data['id']), 'stamp':data['created'], 'version':data['version']}).rowcount
+        if not removed:
+            raise ReviewConflict('这个词已有其他改动，已保留在生词本中。')
+    return {'ok':True}
 
 
 # ------------------------------------------------------------------- review
 
-def queue_counts(db, current):
+def queue_counts(db, current, settings=None):
     stamp = current.isoformat()
-    start = day_start(study_day(current)).isoformat()
-    settings = get_settings(db)
-    row = db.execute(f'''SELECT
+    start = day_start(study_day(current))
+    settings = settings or get_settings(db)
+    row = db.execute(f'''SELECT COUNT(*) AS total, SUM(c.paused=0) AS active,
+        SUM(c.paused=0 AND {STATE_SQL}=2 AND {STABILITY_SQL}>=:mastered) AS mastered,
         SUM(c.paused=0 AND {SEEN_SQL} AND {STATE_SQL} IN (1,3) AND c.due<=:now) AS learning_due,
         SUM(c.paused=0 AND {SEEN_SQL} AND {STATE_SQL}=2 AND c.due<=:now) AS review_due,
         SUM(c.paused=0 AND NOT {SEEN_SQL}) AS new_total,
+        SUM(c.paused=0 AND {SEEN_SQL} AND c.due>:now AND c.due<:end) AS later_today,
         MIN(CASE WHEN c.paused=0 AND {SEEN_SQL} AND {STATE_SQL} IN (1,3) AND c.due>:now THEN c.due END) AS next_learning,
         MIN(CASE WHEN c.paused=0 AND {SEEN_SQL} AND c.due>:now THEN c.due END) AS next_due
-        FROM cards c''', {'now':stamp}).fetchone()
-    new_today = db.execute('''SELECT COUNT(*) FROM (SELECT MIN(created) AS first FROM reviews
-        GROUP BY card_id HAVING first>=?)''', (start,)).fetchone()[0]
-    attempts_today = db.execute('SELECT COUNT(*) FROM reviews WHERE created>=?', (start,)).fetchone()[0]
+        FROM cards c''', {'now':stamp, 'end':day_start(study_day(current) + timedelta(days=1)).isoformat(),
+                            'mastered':MASTERED_DAYS}).fetchone()
+    # Look at today's candidate words first. The time index narrows the range;
+    # the offset-aware comparison also accepts records from older backups.
+    activity = db.execute('''WITH today_reviews AS (
+        SELECT card_id,prev_card_json FROM reviews WHERE created>=:low AND created<:high
+        AND julianday(created) BETWEEN julianday(:start) AND julianday(:now))
+        SELECT (SELECT COUNT(*) FROM today_reviews) AS attempts,
+        COUNT(*) AS introduced FROM (SELECT DISTINCT card_id FROM today_reviews
+            WHERE prev_card_json IS NULL OR json_extract(prev_card_json,'$.last_review') IS NULL) AS t
+        WHERE NOT EXISTS (SELECT 1 FROM reviews old WHERE old.card_id=t.card_id
+            AND old.created<:prior_high AND julianday(old.created)<julianday(:start))''',
+        {'low':(start - timedelta(days=1)).isoformat(), 'high':(current + timedelta(days=1)).isoformat(),
+         'start':start.isoformat(), 'now':stamp, 'prior_high':(start + timedelta(days=1)).isoformat()}).fetchone()
+    new_today, attempts_today = activity['introduced'], activity['attempts']
     extra = extra_new_today(db, current)
     new_left = min(row['new_total'] or 0, max(0, settings['new_per_day'] + extra - new_today))
     learning_due, review_due = row['learning_due'] or 0, row['review_due'] or 0
-    return {'learning_due':learning_due, 'review_due':review_due, 'new_left':new_left,
+    return {'total':row['total'], 'active':row['active'] or 0, 'mastered':row['mastered'] or 0,
+        'learning_due':learning_due, 'review_due':review_due, 'new_left':new_left,
         'new_total':row['new_total'] or 0, 'new_today':new_today, 'new_per_day':settings['new_per_day'], 'extra_new':extra,
         'attempts_today':attempts_today, 'due':learning_due + review_due + new_left,
+        'review_ready':learning_due + review_due, 'ready':learning_due + review_due + new_left,
+        'later_today':row['later_today'] or 0,
+        'can_add_new':max(0, (row['new_total'] or 0) - new_left),
+        'continue_batch':min(CONTINUE_BATCH_SIZE, max(0, (row['new_total'] or 0) - new_left)),
         'next_learning':row['next_learning'], 'next_due':row['next_due']}
 
 
@@ -524,46 +563,50 @@ def extra_new_today(db, current):
 
 
 def add_new_today(data):
-    """Top up today's new words, e.g. to reach the daily goal when the due list is done."""
+    """Add a bounded new-word batch, independent of goal progress; retries are idempotent."""
     count = data.get('count')
     if not isinstance(count, int) or isinstance(count, bool) or not 1 <= count <= GOAL_LIMIT:
         raise ValueError('请填写要加学的新词数量。')
-    current = now()
+    request_id = text_field(data, 'request_id', 100)
     with connect() as db:
-        total = count + extra_new_today(db, current)
+        db.execute('BEGIN IMMEDIATE')
+        current = now()
+        day = str(study_day(current))
+        if data.get('day', day) != day:
+            raise ReviewConflict('已经进入新的学习日，已更新今天的安排。')
+        previous = db.execute("SELECT value FROM settings WHERE key='extra_new'").fetchone()
+        previous = json.loads(previous[0]) if previous else {}
+        requests = previous.get('requests', []) if previous.get('day') == day else []
+        if request_id and request_id in requests:
+            return stats(db, current)
+        queue = queue_counts(db, current)
+        added = min(count, queue['can_add_new'])
+        total = added + extra_new_today(db, current)
+        if request_id:
+            requests.append(request_id)
         db.execute("INSERT INTO settings(key,value) VALUES('extra_new',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value",
-            (json.dumps({'day':str(study_day(current)), 'count':total}),))
+            (json.dumps({'day':day, 'count':total, 'requests':requests}),))
     return stats()
 
 
-def pick_next(db, current, last=None, focus=None):
-    """Choose the next card. Returns (row, learned_ahead)."""
-    stamp = current.isoformat()
-    ahead = (current + LEARN_AHEAD).isoformat()
+def pick_next(db, current, last=None, focus=None, counts=None):
+    """One queue for due retrievals followed by the planned first encounters."""
+    counts = counts or queue_counts(db, current)
+    params = {'now':current.isoformat(), 'new_left':counts['new_left'], 'focus':focus}
     if focus:
-        row = db.execute('SELECT c.* FROM cards c WHERE c.id=? AND c.paused=0 AND c.due<=?', (focus, ahead)).fetchone()
+        row = db.execute(f'''SELECT c.* FROM cards c WHERE c.id=:focus AND c.paused=0
+            AND (({SEEN_SQL} AND c.due<=:now) OR (NOT {SEEN_SQL} AND :new_left>0))''', params).fetchone()
         if row:
-            return row, row['due'] > stamp
-    # 1. Short learning steps are time-critical.
-    row = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND {SEEN_SQL} AND {STATE_SQL} IN (1,3)
-        AND c.due<=? ORDER BY c.due, c.id LIMIT 1''', (stamp,)).fetchone()
+            return row, False
+    row = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND {SEEN_SQL} AND c.due<=:now
+        ORDER BY CASE WHEN {STATE_SQL} IN (1,3) THEN 0 ELSE 1 END, c.due, c.id LIMIT 1''', params).fetchone()
     if row:
         return row, False
-    counts = queue_counts(db, current)
-    review = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND {SEEN_SQL} AND {STATE_SQL}=2
-        AND c.due<=? ORDER BY c.due, c.id LIMIT 1''', (stamp,)).fetchone()
-    new = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND NOT {SEEN_SQL}
-        ORDER BY c.created DESC, c.id DESC LIMIT 1''').fetchone() if counts['new_left'] > 0 else None
-    # 2. Interleave: about one new word for every three reviews.
-    if review and new:
-        return (new if counts['attempts_today'] % 4 == 3 else review), False
-    if review or new:
-        return review or new, False
-    # 3. Nothing else waiting: take a learning step a little early, but never
-    #    the card just answered (that would remove the spacing entirely).
-    row = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND {SEEN_SQL} AND {STATE_SQL} IN (1,3)
-        AND c.due<=? AND c.id IS NOT ? ORDER BY c.due LIMIT 1''', (ahead, last)).fetchone()
-    return (row, True) if row else (None, False)
+    if counts['new_left']:
+        row = db.execute(f'''SELECT c.* FROM cards c WHERE c.paused=0 AND NOT {SEEN_SQL}
+            ORDER BY c.created DESC,c.id DESC LIMIT 1''').fetchone()
+        return row, False
+    return None, False
 
 
 def word_forms(word, lemma=''):
@@ -687,7 +730,7 @@ def review_payload(row, learned_ahead):
     card['progress'] = card_progress(fs, history, current, settings['retention'])
     # Receptive first, productive once the word is established.
     mode, cloze = 'recognize', None
-    if fs.state == State.Review and (fs.stability or 0) >= 3 and len(history) % 2 == 1:
+    if settings['typing'] and fs.state == State.Review and (fs.stability or 0) >= 3 and len(history) % 2 == 1:
         cloze = build_cloze(card['word'], word_forms(card['word'], explanation.get('lemma', '')),
             example_pool(card, encounters, explanation), len(history) // 2)
         if cloze:
@@ -698,12 +741,12 @@ def review_payload(row, learned_ahead):
 
 
 def review_next(last=None, focus=None):
-    current = now()
     with connect() as db:
-        row, learned_ahead = pick_next(db, current, last, focus)
-    if not row:
-        return {'card':None, 'stats':stats()}
-    return {'card':review_payload(row, learned_ahead), 'stats':stats()}
+        db.execute('BEGIN')
+        current = now()
+        summary = stats(db, current)
+        row, ahead = pick_next(db, current, last, focus, summary['queue'])
+    return {'card':review_payload(row, ahead) if row else None, 'stats':summary}
 
 
 class ReviewConflict(ValueError):
@@ -727,9 +770,9 @@ def rate(data):
             raise ReviewConflict('这个词已经记录过本次回答，已为你更新复习列表。')
         reviewed_at = now()
         previous = Card.from_json(row['card_json'])
-        early = datetime.fromisoformat(row['due']) > reviewed_at
-        learning = previous.last_review is not None and previous.state in (State.Learning, State.Relearning)
-        if early and not (learning and datetime.fromisoformat(row['due']) <= reviewed_at + LEARN_AHEAD):
+        if previous.last_review is None and queue_counts(db, reviewed_at)['new_left'] == 0:
+            raise ReviewConflict('今天的新词名额已经用完，已更新复习列表。')
+        if previous.last_review is not None and datetime.fromisoformat(row['due']) > reviewed_at:
             raise ReviewConflict('这个词还没到复习时间，系统会在到期后安排。')
         retention = get_settings(db)['retention']
         card, log = scheduler(retention).review_card(previous, rating, review_datetime=reviewed_at, review_duration=duration)
@@ -737,7 +780,12 @@ def rate(data):
         db.execute('UPDATE cards SET card_json=?,due=?,updated=? WHERE id=?', (card.to_json(), card.due.isoformat(), stamp, card_id))
         review_id = db.execute('''INSERT INTO reviews(card_id,rating,created,log_json,prev_card_json,prev_due,mode,duration_ms)
             VALUES(?,?,?,?,?,?,?,?)''', (card_id, int(rating), stamp, log.to_json(), row['card_json'], row['due'], mode, duration)).lastrowid
-    return {'due':card.due.isoformat(), 'review_id':review_id, 'card_id':card_id, 'stats':stats()}
+    result = {'due':card.due.isoformat(), 'review_id':review_id, 'card_id':card_id, 'review_version':card.to_json()}
+    if data.get('include_next') is True:
+        result.update(review_next(last=card_id))
+    else:
+        result['stats'] = stats()
+    return result
 
 
 def undo_review(data):
@@ -747,6 +795,10 @@ def undo_review(data):
         row = db.execute('SELECT * FROM reviews WHERE id=(SELECT MAX(id) FROM reviews)').fetchone()
         if not row or row['id'] != review_id or not row['prev_card_json']:
             raise ReviewConflict('只能撤销刚才的最后一次评分。')
+        current = db.execute('SELECT card_json FROM cards WHERE id=?', (row['card_id'],)).fetchone()
+        if ('card_id' in data and int(data['card_id']) != row['card_id']) or (
+                'version' in data and data['version'] != current['card_json']):
+            raise ReviewConflict('这次评分已发生变化，请刷新后查看当前记录。')
         db.execute('UPDATE cards SET card_json=?,due=?,updated=? WHERE id=?',
             (row['prev_card_json'], row['prev_due'], now().isoformat(), row['card_id']))
         db.execute('DELETE FROM reviews WHERE id=?', (review_id,))
@@ -773,17 +825,23 @@ def add_sentence(data):
 
 # -------------------------------------------------------------- statistics
 
-def daily_outcomes(rows):
+def daily_outcomes(rows, since=None, through=None):
     """Per study day: each word's latest rating that day, and the number of attempts.
 
     A word counts as remembered on a day when its last answer that day was a
     successful recall (费力想起 or 记得). Forgetting it later the same day takes it
     back out; recalling it after relearning puts it back in.
     """
-    latest, attempts = {}, {}
+    latest, attempts, last_at = {}, {}, {}
     for card_id, created, rating in rows:
-        day = str(study_day(datetime.fromisoformat(created)))
-        latest.setdefault(day, {})[card_id] = rating
+        instant = datetime.fromisoformat(created)
+        if (since is not None and instant < since) or (through is not None and instant > through):
+            continue
+        day = str(study_day(instant))
+        key = (day, card_id)
+        if key not in last_at or instant >= last_at[key]:
+            latest.setdefault(day, {})[card_id] = rating
+            last_at[key] = instant
         attempts[day] = attempts.get(day, 0) + 1
     return latest, attempts
 
@@ -792,39 +850,67 @@ def remembered(ratings):
     return sum(1 for rating in ratings.values() if rating >= REMEMBERED_RATING)
 
 
-def stats():
-    current = now()
+def outcomes_between(db, since, through):
+    # ISO strings from older clients can carry a local offset. Widen the
+    # indexed search by one day, then compare the exact instants in Python.
+    rows = db.execute('''SELECT card_id,created,rating FROM reviews
+        WHERE created>=? AND created<? ORDER BY id''',
+        ((since - timedelta(days=1)).isoformat(), (through + timedelta(days=1)).isoformat()))
+    return daily_outcomes(rows, since, through)
+
+
+def stats(db=None, current=None):
+    if db is None:
+        with connect() as conn:
+            conn.execute('BEGIN')
+            return stats(conn, now())
+    current = current or now()
     stamp = current.isoformat()
     today = study_day(current)
     days = [str(today - timedelta(days=i)) for i in reversed(range(7))]
-    with connect() as db:
-        db.execute('BEGIN')
-        counts = queue_counts(db, current)
-        settings = get_settings(db)
-        totals = db.execute(f'''SELECT COUNT(*) AS total, SUM(paused=0) AS active,
-            SUM(paused=0 AND {STATE_SQL}=2 AND {STABILITY_SQL}>=?) AS mastered FROM cards c''', (MASTERED_DAYS,)).fetchone()
-        # Filter by real time in Python: imported timestamps may carry a non-UTC offset,
-        # which would make a plain string comparison misplace them.
-        history = [row for row in db.execute('SELECT card_id,created,rating FROM reviews WHERE created>=? ORDER BY created,id',
-            ((current - timedelta(days=401)).isoformat(),)) if datetime.fromisoformat(row[1]) <= current]
-        history.sort(key=lambda row: datetime.fromisoformat(row[1]))
-        mature = [r[0] for r in db.execute('''SELECT rating FROM reviews WHERE created>=? AND prev_card_json IS NOT NULL
-            AND json_extract(prev_card_json,'$.state')=2''', ((current - timedelta(days=30)).isoformat(),))]
-        forecast_rows = [r[0] for r in db.execute(f'''SELECT c.due FROM cards c WHERE c.paused=0 AND {SEEN_SQL}
-            AND c.due>? AND c.due<?''', (stamp, day_start(today + timedelta(days=8)).isoformat()))]
-        recent = [dict(r) for r in db.execute('''SELECT c.id,c.word,COALESCE(d.meaning,c.meaning) AS meaning,
-            c.context,c.source,c.lookups,c.updated FROM cards c LEFT JOIN definition_overrides d ON d.word=c.word
-            ORDER BY c.created DESC,c.id DESC LIMIT 6''')]
-    latest, attempts = daily_outcomes(history)
-    week = {day:remembered(latest.get(day, {})) for day in days}
+    settings = get_settings(db)
+    counts = queue_counts(db, current, settings)
+    first_day = today - timedelta(days=6)
+    latest, attempts = outcomes_between(db, day_start(first_day), current)
+    # Use the first delayed retrieval for each word/day. Immediate repeats and
+    # spelling exercises measure different things from delayed meaning recall.
+    mature = {}
+    since = current - timedelta(days=30)
+    rows = db.execute('''SELECT card_id,rating,created,prev_card_json,mode FROM reviews
+        WHERE created>=? AND created<? AND prev_card_json IS NOT NULL
+        AND json_extract(prev_card_json,'$.state')=2 ORDER BY id''',
+        ((since - timedelta(days=1)).isoformat(), (current + timedelta(days=1)).isoformat()))
+    for r in rows:
+        moment = datetime.fromisoformat(r['created'])
+        prior = json.loads(r['prev_card_json'])
+        last_review = prior.get('last_review')
+        if not since <= moment <= current or r['mode'] == 'cloze' or not last_review:
+            continue
+        if moment - datetime.fromisoformat(last_review) < timedelta(days=1):
+            continue
+        key = (r['card_id'], study_day(moment))
+        if key not in mature or moment < mature[key][0]:
+            mature[key] = (moment, r['rating'])
+    forecast_rows = [r[0] for r in db.execute(f'''SELECT c.due FROM cards c WHERE c.paused=0 AND {SEEN_SQL}
+        AND c.due>? AND c.due<?''', (stamp, day_start(today + timedelta(days=8)).isoformat()))]
+    recent = [dict(r) for r in db.execute('''SELECT c.id,c.word,COALESCE(d.meaning,c.meaning) AS meaning,
+        c.context,c.source,c.lookups,c.updated FROM cards c LEFT JOIN definition_overrides d ON d.word=c.word
+        ORDER BY c.created DESC,c.id DESC LIMIT 6''')]
+    week = {day:len(latest.get(day, {})) for day in days}
+    week_recalled = {day:remembered(latest.get(day, {})) for day in days}
     week_reviewed = {day:len(latest.get(day, {})) for day in days}
     week_attempts = {day:attempts.get(day, 0) for day in days}
-    # A day counts toward the streak once enough words were remembered. Today
-    # only joins after its minimum is met, so an unfinished day never breaks it.
+    # Habit progress counts distinct words practised, independent of recall success.
     minimum, target = settings['daily_minimum'], settings['daily_goal']
-    kept = {day for day, ratings in latest.items() if remembered(ratings) >= minimum}
-    streak, cursor = 0, today if str(today) in kept else today - timedelta(days=1)
-    while str(cursor) in kept:
+    cursor = today if week[str(today)] >= minimum else today - timedelta(days=1)
+    streak, period = 0, latest
+    while True:
+        if cursor < first_day:
+            end = day_start(first_day) - timedelta(microseconds=1)
+            first_day -= timedelta(days=28)
+            period, _ = outcomes_between(db, day_start(first_day), end)
+        if len(period.get(str(cursor), {})) < minimum:
+            break
         streak += 1
         cursor -= timedelta(days=1)
     forecast = {str(today + timedelta(days=i)):0 for i in range(1, 8)}
@@ -833,22 +919,26 @@ def stats():
         if day in forecast:
             forecast[day] += 1
     todays = latest.get(str(today), {})
-    done = remembered(todays)
+    done = len(todays)
+    due_by_tonight = db.execute(f'''SELECT c.id FROM cards c WHERE c.paused=0 AND {SEEN_SQL} AND c.due<?''',
+        (day_start(today + timedelta(days=1)).isoformat(),))
+    reachable = done + counts['new_left'] + sum(r[0] not in todays for r in due_by_tonight)
     breakdown = {'forgot':sum(r == 1 for r in todays.values()), 'hard':sum(r == 2 for r in todays.values()),
         'good':sum(r >= 3 for r in todays.values())}
-    goal = {'target':target, 'minimum':minimum, 'done':done, 'reviewed':len(todays), **breakdown,
+    goal = {'target':target, 'minimum':minimum, 'done':done, 'reviewed':done,
+        'recalled':remembered(todays), 'new_today':counts['new_today'],
+        'old_today':max(0, done - counts['new_today']), **breakdown,
         'met_minimum':done >= minimum, 'met_goal':done >= target,
         'remaining':max(0, target - done), 'to_minimum':max(0, minimum - done),
-        # Remembered words still reachable today: forgotten words come back after
-        # a short relearning step, plus everything due now.
-        'reachable':done + breakdown['forgot'] + counts['due'],
+        'reachable':reachable,
         'new_available':max(0, counts['new_total'] - counts['new_left'])}
-    return {'goal':goal, 'total':totals['total'], 'active':totals['active'] or 0, 'mastered':totals['mastered'] or 0,
-        'due':counts['due'], 'queue':counts, 'reviewed_today':len(todays), 'remembered_today':done,
+    return {'goal':goal, 'total':counts['total'], 'active':counts['active'], 'mastered':counts['mastered'],
+        'due':counts['due'], 'queue':counts, 'reviewed_today':done, 'remembered_today':remembered(todays),
         'review_attempts_today':week_attempts[str(today)], 'week':week, 'week_reviewed':week_reviewed,
-        'week_attempts':week_attempts, 'today':str(today), 'as_of':stamp, 'recent':recent,
+        'week_attempts':week_attempts, 'week_recalled':week_recalled, 'today':str(today), 'as_of':stamp, 'recent':recent,
+        'day_ends_at':day_start(today + timedelta(days=1)).isoformat(),
         'next_due':counts['next_due'], 'streak':streak, 'forecast':forecast,
-        'retention':{'reviews':len(mature), 'rate':round(sum(r > 1 for r in mature) / len(mature), 3) if mature else None}}
+        'retention':{'target':settings['retention'], 'reviews':len(mature), 'rate':round(sum(rating > 1 for _, rating in mature.values()) / len(mature), 3) if mature else None}}
 
 
 # ------------------------------------------------------------------ library
@@ -863,28 +953,66 @@ LIBRARY_FILTERS = {
     'paused':'c.paused=1',
     'active':'c.paused=0',
 }
-LIBRARY_SORTS = {'recent':'c.created DESC, c.id DESC', 'alpha':'lower(c.word), c.id',
-    'due':'c.paused, c.due, c.id', 'updated':'c.updated DESC, c.id DESC'}
+LIBRARY_ORDERS = {
+    'recent':(('created', 'id'), 'DESC'), 'alpha':(('word', 'id'), 'ASC'),
+    'due':(('paused', 'due', 'id'), 'ASC'), 'updated':(('updated', 'id'), 'DESC'),
+}
 
 
 def library(q='', status='all', *, brief=False, sort='recent', limit=2000):
-    params = {'now':now().isoformat()}
+    return _read_library(q, status, brief, sort, limit, paged=False)['cards']
+
+
+def library_page(q='', status='all', *, sort='recent', limit=40, cursor=''):
+    if not 1 <= limit <= 100:
+        raise ValueError('每次可以读取 1 到 100 个词。')
+    return _read_library(q, status, True, sort, limit, paged=True, cursor=cursor)
+
+
+def _read_library(q, status, brief, sort, limit, *, paged, cursor=''):
+    current = now()
+    params = {'now':current.isoformat(), 'limit':limit + int(paged)}
     where = [LIBRARY_FILTERS.get(status, '1')]
     if q:
         params['q'] = '%' + q.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_') + '%'
         where.append("(c.word LIKE :q ESCAPE '\\' OR COALESCE(d.meaning,c.meaning) LIKE :q ESCAPE '\\' OR c.source LIKE :q ESCAPE '\\')")
-    keys = ('id', 'word', 'meaning', 'context', 'source', 'due', 'paused', 'created', 'updated', 'lookups', 'card_json')
-    columns = ','.join('c.' + key for key in keys) if brief else 'c.*'
+    table = ' FROM cards c'
+    joined = table + ' LEFT JOIN definition_overrides d ON d.word=c.word'
+    count_sql = 'SELECT COUNT(*)' + (joined if q else table) + ' WHERE ' + ' AND '.join(where)
+    keys, direction = LIBRARY_ORDERS.get(sort, LIBRARY_ORDERS['recent'])
+    order = ['c.word COLLATE NOCASE' if k == 'word' else 'c.' + k for k in keys]
+    if cursor:
+        values = json.loads(cursor)
+        if not isinstance(values, list) or len(values) != len(keys):
+            raise ValueError('翻页位置无效，请刷新生词本。')
+        for key, value in zip(keys, values):
+            if key in ('id', 'paused'):
+                if type(value) is not int or not 0 <= value < 2**63:
+                    raise ValueError('翻页位置无效。')
+            elif not isinstance(value, str) or len(value) > 200:
+                raise ValueError('翻页位置无效。')
+            params['after_' + key] = value
+        after = ','.join(':after_' + key for key in keys)
+        where.append(f"({','.join(order)}) {'>' if direction == 'ASC' else '<'} ({after})")
+    if paged:
+        fields = ['id', 'word', 'meaning', 'due', 'paused', 'card_json', *keys]
+    else:
+        fields = ['id', 'word', 'meaning', 'context', 'source', 'due', 'paused', 'created', 'updated', 'lookups', 'card_json']
+    columns = ','.join('c.' + k for k in dict.fromkeys(fields)) if brief else 'c.*'
+    counts = '' if paged else ', (SELECT COUNT(*) FROM reviews r WHERE r.card_id=c.id) AS reviews'
     sql = (f'''SELECT {columns}, d.meaning AS personal_meaning,
-        (SELECT COUNT(*) FROM reviews r WHERE r.card_id=c.id) AS reviews,
-        (SELECT COUNT(*) FROM reviews r WHERE r.card_id=c.id AND r.rating=1) AS failures
-        FROM cards c LEFT JOIN definition_overrides d ON d.word=c.word
-        WHERE {' AND '.join(where)} ORDER BY {LIBRARY_SORTS.get(sort, LIBRARY_SORTS['recent'])} LIMIT :limit''')
-    params['limit'] = limit
+        (SELECT COUNT(*) FROM reviews r WHERE r.card_id=c.id AND r.rating=1) AS failures {counts}
+        {joined} WHERE {' AND '.join(where)}
+        ORDER BY {', '.join(expr + ' ' + direction for expr in order)} LIMIT :limit''')
     with connect() as db:
+        db.execute('BEGIN')
+        total = db.execute(count_sql, params).fetchone()[0] if paged else None
         rows = [dict(r) for r in db.execute(sql, params)]
         retention = get_settings(db)['retention']
-    current = now()
+    next_cursor = None
+    if paged and len(rows) > limit:
+        rows.pop()
+        next_cursor = json.dumps([rows[-1][k] for k in keys], ensure_ascii=False)
     for row in rows:
         custom = row.pop('personal_meaning')
         if custom is not None:
@@ -896,10 +1024,10 @@ def library(q='', status='all', *, brief=False, sort='recent', limit=2000):
         row['retrievability'] = round(scheduler(retention).get_card_retrievability(fs, current), 3) if seen else None
         if brief:
             del row['card_json']
-    return rows
+    return {'cards':rows, 'total':total, 'next_cursor':next_cursor}
 
 
-def card_detail(card_id):
+def card_detail(card_id, include_explanation=False):
     with connect() as db:
         row = db.execute('SELECT * FROM cards WHERE id=?', (card_id,)).fetchone()
         if not row:
@@ -909,7 +1037,10 @@ def card_detail(card_id):
         retention = get_settings(db)['retention']
     card = compact_card(row)
     card['progress'] = card_progress(Card.from_json(card['card_json']), history, now(), retention)
-    return {'card':card, 'encounters':encounters, 'history':history}
+    detail = {'card':card, 'encounters':encounters, 'history':history}
+    if include_explanation:
+        detail['result'] = dictionary_explain({'query':card['word'], 'context':card['context'], 'source':card['source']})
+    return detail
 
 
 # ------------------------------------------------------------------ backups
@@ -1037,10 +1168,13 @@ class Handler(BaseHTTPRequestHandler):
             if path == '/api/suggest':
                 return self.send({'items':suggest(arg('q')[:60])})
             if path == '/api/card':
-                return self.send(card_detail(int(arg('id', '0'))))
+                return self.send(card_detail(int(arg('id', '0')), include_explanation=arg('explain') == '1'))
             if path == '/api/stats':
                 return self.send(stats())
             if path == '/api/library':
+                if 'limit' in qs:
+                    return self.send(library_page(arg('q')[:200], arg('status', 'all'), sort=arg('sort', 'recent'),
+                        limit=int(arg('limit')), cursor=arg('cursor')))
                 return self.send({'cards':library(arg('q')[:200], arg('status', 'all'), brief=True, sort=arg('sort', 'recent'))})
             if path == '/api/review':
                 last, focus = arg('last'), arg('focus')
@@ -1051,6 +1185,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send({'error':'Not found'}, 404)
             name, mime = ASSETS[path]
             self.send(asset(name), mime=mime, cache=name != 'index.html')
+        except (ValueError, TypeError):
+            self.send({'error':'查询条件无效，请重新选择。'}, 400)
         except Exception:
             self.send({'error':'读取失败，请重新打开应用。'}, 500)
 
@@ -1069,7 +1205,7 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError('数据格式不正确。')
             path = urlsplit(self.path).path
             routes = {
-                '/api/explain':dictionary_explain, '/api/definition':edit_definition,
+                '/api/explain':dictionary_explain, '/api/definition':edit_definition, '/api/undo-collection':undo_collection,
                 '/api/rate':rate, '/api/undo':undo_review, '/api/sentence':add_sentence,
                 '/api/settings':update_settings, '/api/import':import_backup, '/api/extra-new':add_new_today,
             }
@@ -1079,8 +1215,11 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(pronounce(data), mime='audio/wav')
             if path == '/api/toggle':
                 with connect() as db:
-                    db.execute('UPDATE cards SET paused=1-paused WHERE id=?', (int(data['id']),))
-                return self.send({'ok':True, 'stats':stats()})
+                    card_id = int(data['id'])
+                    if not db.execute('UPDATE cards SET paused=1-paused WHERE id=?', (card_id,)).rowcount:
+                        raise ReviewConflict('这个词已被移除。')
+                    paused = bool(db.execute('SELECT paused FROM cards WHERE id=?', (card_id,)).fetchone()[0])
+                return self.send({'ok':True, 'paused':paused, 'stats':stats()})
             if path == '/api/delete':
                 with connect() as db:
                     db.execute('DELETE FROM cards WHERE id=?', (int(data['id']),))

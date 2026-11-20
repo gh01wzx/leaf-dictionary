@@ -1,5 +1,5 @@
 """Review science: daily new-word cap, interleaving, receptive -> productive, undo, own sentences."""
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
 import unittest
 
@@ -45,7 +45,7 @@ class StudyTests(helpers.TempData, unittest.TestCase):
         newest = helpers.collect('field')
         self.assertEqual(app.review_next()['card']['id'], newest['id'])
 
-    def test_new_words_interleave_with_reviews(self):
+    def test_due_reviews_take_priority_over_new_words(self):
         old = [helpers.collect(w)['id'] for w in ('bank', 'subtle', 'reluctant', 'field')]
         for card_id in old:
             self.mature(card_id, reviews=2)
@@ -55,8 +55,8 @@ class StudyTests(helpers.TempData, unittest.TestCase):
             card = app.review_next()['card']
             order.append(card['id'])
             app.rate({'id':card['id'], 'rating':3, 'version':card['card_json']})
-        self.assertIn(new, order)
-        self.assertNotEqual(order[0], new)
+        self.assertEqual(set(order[:4]), set(old))
+        self.assertEqual(order[4], new)
 
     def test_established_words_alternate_with_productive_cloze(self):
         card_id = helpers.collect('exert')['id']
@@ -150,6 +150,91 @@ class StudyTests(helpers.TempData, unittest.TestCase):
         self.assertNotIn('card_json', row)
         self.assertGreater(row['retrievability'], 0.5)
 
+    def test_library_pages_cover_large_collections_and_survive_a_removed_cursor(self):
+        seed = helpers.collect('bank')
+        with app.connect() as db:
+            db.executemany('''INSERT INTO cards(word,sense_key,meaning,card_json,due,created,updated)
+                VALUES (?, 'test', '测试词', ?, ?, ?, ?)''',
+                ((f'word{i:04d}', seed['card_json'], seed['due'], seed['created'], seed['updated'])
+                 for i in range(2005)))
+        for sort in ('alpha', 'recent', 'due', 'updated'):
+            rows, cursor = [], ''
+            while True:
+                page = app.library_page('word', sort=sort, cursor=cursor, limit=100)
+                self.assertEqual(page['total'], 2005)
+                rows.extend(card['id'] for card in page['cards'])
+                cursor = page['next_cursor']
+                if not cursor:
+                    break
+            expected = app.library('word', sort=sort, brief=True, limit=3000)
+            self.assertEqual(rows, [c['id'] for c in expected])
+        first = app.library_page('word', sort='alpha', limit=2)
+        with app.connect() as db:
+            db.execute('DELETE FROM cards WHERE id=?', (first['cards'][-1]['id'],))
+        second = app.library_page('word', sort='alpha', limit=1, cursor=first['next_cursor'])
+        self.assertEqual(second['cards'][0]['word'], 'word0002')
+        self.assertEqual(second['total'], 2004)
+        with self.assertRaises(ValueError):
+            app.library_page(sort='alpha', cursor='[2, "bad"]')
+
+    def test_combined_rating_returns_next_card_and_respects_last_new_slot(self):
+        app.update_settings({'new_per_day':1})
+        other = helpers.collect('bank')
+        first = helpers.collect('field')
+        result = app.rate({'id':first['id'], 'rating':3, 'version':first['card_json'], 'include_next':True})
+        self.assertIsNone(result['card'])
+        self.assertEqual(result['stats']['goal']['done'], 1)
+        self.assertEqual(result['stats']['goal']['reachable'], 1)
+        self.assertIsNone(app.review_next(focus=other['id'], last=first['id'])['card'])
+        with self.assertRaises(app.ReviewConflict):
+            app.rate({'id':other['id'], 'rating':3, 'version':other['card_json']})
+        app.undo_review({'review_id':result['review_id']})
+        self.assertEqual(app.review_next(focus=first['id'])['card']['id'], first['id'])
+
+    def test_streak_beyond_a_year_and_future_attempts(self):
+        app.update_settings({'daily_minimum':1})
+        card = helpers.collect('bank')
+        moment = app.day_start(app.study_day(app.now())) + timedelta(hours=6)
+        rows = [(card['id'], 3, (moment - timedelta(days=n)).isoformat(), '{}') for n in range(410)]
+        rows += [(card['id'], 1, (moment + timedelta(hours=1)).isoformat(), '{}')]
+        with app.connect() as db:
+            db.executemany('INSERT INTO reviews(card_id,rating,created,log_json) VALUES(?,?,?,?)', rows)
+        with patch('app.now', return_value=moment):
+            stats = app.stats()
+        self.assertEqual(stats['streak'], 410)
+        self.assertEqual(stats['goal']['done'], 1)
+        self.assertEqual(stats['queue']['attempts_today'], 1)
+
+    def test_offsets_preserve_the_latest_answer_and_daily_quota(self):
+        card = helpers.collect('bank')
+        start = app.day_start(app.study_day(app.now()))
+        earlier = (start - timedelta(minutes=1)).astimezone(timezone(timedelta(hours=12)))
+        later = (start + timedelta(minutes=5)).astimezone(timezone(timedelta(hours=-8)))
+        with app.connect() as db:
+            db.executemany('INSERT INTO reviews(card_id,rating,created,log_json) VALUES(?,?,?,?)', [
+                (card['id'], 3, earlier.isoformat(), '{}'), (card['id'], 1, later.isoformat(), '{}')])
+        with patch('app.now', return_value=start + timedelta(hours=1)):
+            stats = app.stats()
+        self.assertEqual(stats['goal']['forgot'], 1)
+        self.assertEqual(stats['queue']['new_today'], 0)
+        self.assertEqual(stats['queue']['attempts_today'], 1)
+
+    def test_undo_collect_will_only_remove_a_fresh_untouched_card(self):
+        result = app.dictionary_explain({'query':'bank', 'context':'On the bank.', 'save':True})
+        self.assertTrue(result['newly_collected'])
+        card = result['saved_card']
+        undo = {'id':card['id'], 'created':card['created'], 'version':card['card_json']}
+        app.undo_collection(undo)
+        self.assertEqual(app.stats()['total'], 0)
+        result = app.dictionary_explain({'query':'bank', 'save':True})
+        card = result['saved_card']
+        app.add_sentence({'id':card['id'], 'text':'We reached the bank.'})
+        with self.assertRaises(app.ReviewConflict):
+            app.undo_collection({'id':card['id'], 'created':card['created'], 'version':card['card_json']})
+        again = app.dictionary_explain({'query':'bank', 'save':True})
+        self.assertFalse(again['newly_collected'])
+        self.assertEqual(app.stats()['total'], 1)
+
     def test_suggestions_prefer_own_words_and_exact_match(self):
         helpers.collect('subtle')
         items = app.suggest('sub')
@@ -190,8 +275,10 @@ class StudyTests(helpers.TempData, unittest.TestCase):
         self.assertEqual(goal['to_minimum'], 2)
         card = app.review_next()['card']
         app.rate({'id':card['id'], 'rating':1, 'version':card['card_json']})
-        again = app.review_next(focus=card['id'])['card']
-        app.rate({'id':again['id'], 'rating':3, 'version':again['card_json']})
+        due = datetime.fromisoformat(helpers.full_row(card['id'])['due'])
+        with patch('app.now', return_value=due):
+            again = app.review_next(focus=card['id'])['card']
+            app.rate({'id':again['id'], 'rating':3, 'version':again['card_json']})
         goal = app.stats()['goal']
         self.assertEqual(goal['done'], 1, 'the same word twice counts once')
         for _ in range(2):
@@ -201,23 +288,31 @@ class StudyTests(helpers.TempData, unittest.TestCase):
         self.assertTrue(goal['met_minimum'] and goal['met_goal'])
         self.assertEqual(goal['remaining'], 0)
 
-    def test_goal_counts_only_words_remembered(self):
+    def test_goal_counts_practice_once_and_recall_is_separate(self):
+        start = app.day_start(app.study_day(app.now())) + timedelta(hours=3)
         card_id = helpers.collect('bank')['id']
         helpers.collect('field')
-        first = app.review_next(focus=card_id)['card']
-        app.rate({'id':card_id, 'rating':1, 'version':first['card_json']})
-        goal = app.stats()['goal']
-        self.assertEqual((goal['done'], goal['reviewed'], goal['forgot']), (0, 1, 1), '不记得 does not count')
-        again = app.review_next(focus=card_id)['card']
-        app.rate({'id':card_id, 'rating':2, 'version':again['card_json']})
-        goal = app.stats()['goal']
-        self.assertEqual((goal['done'], goal['hard'], goal['forgot']), (1, 1, 0), 'recalled later the same day counts')
-        other = app.review_next(last=card_id)['card']
-        app.rate({'id':other['id'], 'rating':3, 'version':other['card_json']})
-        stats = app.stats()
-        self.assertEqual((stats['goal']['done'], stats['goal']['good']), (2, 1))
-        self.assertEqual(stats['week'][stats['today']], 2)
-        self.assertEqual(stats['week_reviewed'][stats['today']], 2)
+        with patch('app.now', return_value=start):
+            first = app.review_next(focus=card_id)['card']
+            result = app.rate({'id':card_id, 'rating':1, 'version':first['card_json']})
+            goal = result['stats']['goal']
+            self.assertEqual((goal['done'], goal['recalled'], goal['forgot']), (1, 0, 1))
+        with patch('app.now', return_value=datetime.fromisoformat(result['due'])):
+            again = app.review_next(focus=card_id)['card']
+            result = app.rate({'id':card_id, 'rating':2, 'version':again['card_json']})
+            goal = result['stats']['goal']
+            self.assertEqual((goal['done'], goal['hard'], goal['forgot']), (1, 1, 0))
+            other = app.review_next(last=card_id)['card']
+            app.rate({'id':other['id'], 'rating':3, 'version':other['card_json']})
+            stats = app.stats()
+            self.assertEqual((stats['goal']['done'], stats['goal']['good']), (2, 1))
+            self.assertEqual(stats['week'][stats['today']], 2)
+            self.assertEqual(stats['review_attempts_today'], 3)
+        with patch('app.now', return_value=datetime.fromisoformat(result['due'])):
+            again = app.review_next(focus=card_id)['card']
+            result = app.rate({'id':card_id, 'rating':1, 'version':again['card_json']})
+            self.assertEqual(result['stats']['goal']['done'], 2, 'forgetting never reduces daily practice progress')
+            self.assertEqual(result['stats']['goal']['recalled'], 1)
 
     def test_only_three_answers_are_accepted_and_old_easy_counts_as_remembered(self):
         card = helpers.collect('bank')
